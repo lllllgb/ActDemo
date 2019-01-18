@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 1501867787
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 63c07cb5a004e054e722000b53a1e8d2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 96fd03f3d1e5d17693e813140f3adeee
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 124
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Misc/CameraControl.prefab
+Dependencies: []

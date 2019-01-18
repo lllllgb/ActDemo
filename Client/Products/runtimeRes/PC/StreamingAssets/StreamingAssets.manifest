@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 1595059672
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: assets/bundles/scene/testaction.unity3d
+      Dependencies: {}
+    Info_1:
+      Name: assets/bundles/shadercollect.unity3d
+      Dependencies: {}
+    Info_2:
+      Name: assets/bundles/unit/ms_diyushibin.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+    Info_3:
+      Name: assets/bundles/unit/ms_shoufukuilei.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+    Info_4:
+      Name: assets/bundles/unit/warrior.unity3d
+      Dependencies: {}
+    Info_5:
+      Name: assets/bundles/misc/cameracontrol.unity3d
+      Dependencies: {}
