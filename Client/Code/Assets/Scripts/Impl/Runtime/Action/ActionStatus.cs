@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Data1.Helper;
+using ActData.Helper;
 
 namespace ACT
 {
     public class ActionStatus
     {
-        private Data1.ActionGroup mActionGroup = null;
-        private Data1.Action mActiveAction = null;
-        private Data1.ActionInterrupt mQueuedInterrupt = null;
+        private ActData.ActionGroup mActionGroup = null;
+        private ActData.Action mActiveAction = null;
+        private ActData.ActionInterrupt mQueuedInterrupt = null;
 
-        public string StartupAction = Data1.CommonAction.Idle;
+        public string StartupAction = ActData.CommonAction.Idle;
         public float PushPower = 1.0f;
 
         bool mInitialized = false;
@@ -27,7 +27,7 @@ namespace ACT
         int mEventIndex = 0;
         int mHitDefIndex = 0;
         int mActionInterruptEnabled = 0;
-        Data1.HeightStatusFlag mHeightState = Data1.HeightStatusFlag.None;
+        ActData.HeightStatusFlag mHeightState = ActData.HeightStatusFlag.None;
         int mActionLevel = 0;
         int mLashTime = 0;
         int mStraightTime = 0;
@@ -41,7 +41,7 @@ namespace ACT
         Vector3 mBounding = Vector3.zero;
         IActUnit mOwner = null;
         IActionListener mListener = null;
-        List<GameObject> mActionEffects = null;
+        ActEffectMgr mActionEffectMgr = new ActEffectMgr();
         SkillInput mQueuedSkillInput = null;
 
         GameObject mListTargetFrame;
@@ -51,10 +51,10 @@ namespace ACT
 
         public IActUnit ActionTarget;
         public SkillItem SkillItem;
-        public Data1.ActionGroup ActionGroup { get { return mActionGroup; } }
-        public Data1.Action ActiveAction { get { return mActiveAction; } }
-        public Data1.HeightStatusFlag HeightState { get { return mHeightState; } }
-        public Data1.EActionState ActionState { get { return (Data1.EActionState)mActiveAction.ActionStatus; } }
+        public ActData.ActionGroup ActionGroup { get { return mActionGroup; } }
+        public ActData.Action ActiveAction { get { return mActiveAction; } }
+        public ActData.HeightStatusFlag HeightState { get { return mHeightState; } }
+        public ActData.EActionState ActionState { get { return (ActData.EActionState)mActiveAction.ActionStatus; } }
         public Vector3 Bounding { get { return mBounding; } }
         public Vector3 Velocity { get { return mVelocity; } }
         public bool HasQueuedAction { get { return mQueuedInterrupt != null; } }
@@ -95,6 +95,8 @@ namespace ACT
                 mListener.Update(deltaTime);
 
             UpdateBeatenFram();
+
+            UpdateEffect(deltaTime);
         }
 
         void UpdateBeatenFram()
@@ -123,6 +125,7 @@ namespace ACT
             mBeatenFramObj.transform.localEulerAngles = mOwner.UGameObject.transform.localEulerAngles;
             GameObject.Destroy(mBeatenFramObj, 1.0f);
         }
+
         void Reset()
         {
             mEventIndex = 0;
@@ -160,14 +163,14 @@ namespace ACT
                 else
                     mActionLevel = mActionGroup.DefaultActionLevel;
 
-                mHeightState = (Data1.HeightStatusFlag)(1 << mActiveAction.HeightStatus);
+                mHeightState = (ActData.HeightStatusFlag)(1 << mActiveAction.HeightStatus);
                 mCanMove = mActiveAction.CanMove;
                 mCanRotate = mActiveAction.CanRotate;
 
                 // copy the action request enabled/disabled flags.
                 for (int i = 0; i < mActiveAction.ActionInterrupts.Count; i++)
                 {
-                    Data1.ActionInterrupt actionInterrupt = mActiveAction.ActionInterrupts[i];
+                    ActData.ActionInterrupt actionInterrupt = mActiveAction.ActionInterrupts[i];
                     if (actionInterrupt.Enabled)
                         mActionInterruptEnabled |= (1 << i);
                 }
@@ -177,13 +180,12 @@ namespace ACT
                     SkillItem = null;
             }
 
-            // clear the effect walk with action.
-            if (mActionEffects != null && mActionEffects.Count > 0)
-            {
-                foreach (GameObject effect in mActionEffects)
-                    GameObject.Destroy(effect);
-                mActionEffects.Clear();
-            }
+            mActionEffectMgr.Clear();
+        }
+
+        public void Release()
+        {
+            mActionEffectMgr.Clear();
         }
 
         public bool ChangeActionGroup(int groupIndex)
@@ -194,8 +196,8 @@ namespace ACT
                 return false;
             }
 
-            Data1.UnitActionInfo unitInfo = ActionManager.Instance.GetUnitActionInfo(mOwner.ActionID);
-            foreach (Data1.UnitActionInfo.Types.UnitVarible v in unitInfo.UnitVaribleList)
+            ActData.UnitActionInfo unitInfo = ActionManager.Instance.GetUnitActionInfo(mOwner.ActionID);
+            foreach (ActData.UnitActionInfo.Types.UnitVarible v in unitInfo.UnitVaribleList)
                 mOwner.GetVariable(v.Index).Set(v.Value, v.Max);
 
             mActionGroup = unitInfo.ActionGroups[groupIndex];
@@ -374,11 +376,11 @@ namespace ACT
             int nextAction = mActiveAction.NextActionCache;
             if (mOwner.Dead && mActionGroup.CheckDeath)
             {
-                if (mHeightState == Data1.HeightStatusFlag.Stand)
+                if (mHeightState == ActData.HeightStatusFlag.Stand)
                 {
                     nextAction = mActionGroup.GetActionIdx(mActionGroup.StandDeath);
                 }
-                else if (mHeightState == Data1.HeightStatusFlag.Ground)
+                else if (mHeightState == ActData.HeightStatusFlag.Ground)
                 {
                     nextAction = mActionGroup.GetActionIdx(mActionGroup.DownDeath);
                 }
@@ -407,8 +409,8 @@ namespace ACT
 
         public void ChangeAction(int actionIdx, int deltaTime)
         {
-            Data1.Action oldAction = mActiveAction;
-            Data1.Action action = mActionGroup.GetAction(actionIdx);
+            ActData.Action oldAction = mActiveAction;
+            ActData.Action action = mActionGroup.GetAction(actionIdx);
 
             // velocity.
             if (action.ResetVelocity)
@@ -469,7 +471,7 @@ namespace ACT
             bool ret = false;
             while (mEventIndex < mActiveAction.Events.Count)
             {
-                Data1.Event actionEvent = mActiveAction.Events[mEventIndex];
+                ActData.Event actionEvent = mActiveAction.Events[mEventIndex];
                 if (actionEvent.TriggerTime > nextKey)
                     break;
 
@@ -484,7 +486,7 @@ namespace ACT
             return ret;
         }
 
-        bool OnTriggerEvent(Data1.Event actionEvent, int deltaTime)
+        bool OnTriggerEvent(ActData.Event actionEvent, int deltaTime)
         {
             return true;
         }
@@ -511,7 +513,7 @@ namespace ACT
             }
         }
 
-        void SetVelocity(Data1.Event actionEvent, float x, float y, float z, int deltaTime)
+        void SetVelocity(ActData.Event actionEvent, float x, float y, float z, int deltaTime)
         {
             int triggerTime = GetCheckTime(actionEvent.TriggerTime);
 
@@ -527,21 +529,21 @@ namespace ACT
             mIgnoreMove = true;
         }
 
-        void SetDirection(Data1.Event actionEvent, int angle, bool local)
+        void SetDirection(ActData.Event actionEvent, int angle, bool local)
         {
             float rad = Mathf.Deg2Rad * angle;
             mOwner.SetOrientation(local ? mOwner.Orientation + rad : rad);
         }
 
-        void PlaySound(Data1.Event actionEvent, int soundIndex, bool checkMaterial)
+        void PlaySound(ActData.Event actionEvent, int soundIndex, bool checkMaterial)
         {
             //float volume = checkMaterial ? 0.5f : 1.0f;
             //SoundManager.Instance.Play3DSound(soundIndex, mOwner.Position, volume);
         }
 
-        void PlayEffect(Data1.EventPlayEffect data)
+        void PlayEffect(ActData.EventPlayEffect data)
         {
-            /*
+            
             //[Description("0=所有玩家阵营可见（默认） 1=自己与友方阵营可见 2=敌方阵营可见 3=仅自己可见")]//
             switch (data.VisibleType)
             {
@@ -559,47 +561,35 @@ namespace ACT
                     break;
             }
 
-            Object effectObj = Resources.Load(data.EffectName);
-
-            if (effectObj == null)
-            {
-                Debug.LogError(string.Format("Effect not found at PlayEffect: [{0}][{1}][{2}]",
-                    mOwner.ActionID,
-                    mActiveAction.Id,
-                    data.EffectName));
-                return;
-            }
-
-            Vector3 position = mOwner.UGameObject.transform.position;
-            Quaternion rotation = mOwner.UGameObject.transform.rotation;
-            Vector3 offset = new Vector3(data.OffsetX * 0.01f, data.OffsetY * 0.01f, data.OffsetZ * 0.01f);
-            position += rotation * offset;
-
-            GameObject effect = GameObject.Instantiate(effectObj, position, rotation) as GameObject;
-            if (effect == null)
-            {
-                Debug.LogError(string.Format("Effect error at PlayEffect: [{0}][{1}][{2}]",
-                    mOwner.ActionID,
-                    mActiveAction.Id,
-                    data.EffectName));
-                return;
-            }
+            Vector3 tmpPos = mOwner.UGameObject.transform.position;
+            Quaternion tmpRotation = mOwner.UGameObject.transform.rotation;
+            Vector3 tmpOffset = new Vector3(data.OffsetX * 0.01f, data.OffsetY * 0.01f, data.OffsetZ * 0.01f);
+            tmpPos += tmpRotation * tmpOffset;
+            Transform tmpParent = null;
 
             if (data.BindMode == 0)
-                effect.transform.parent = mOwner.UGameObject.transform;
-            effect.transform.localScale = new Vector3(1, 1, 1);
+            {
+                tmpParent = mOwner.Transform;
+            }
 
             // stop while action changed.
             if (data.StopMode == 1)
             {
-                if (mActionEffects == null)
-                    mActionEffects = new List<GameObject>();
-                mActionEffects.Add(effect);
-            }*/
+                mActionEffectMgr.PlayEffect(tmpParent, data.EffectName, data.Duration * 0.001f, tmpPos, tmpRotation);
+            }
+            else
+            {
+                ActionSystem.Instance.EffectMgr.PlayEffect(tmpParent, data.EffectName, data.Duration * 0.001f, tmpPos, tmpRotation);
+            }
+        }
+
+        void UpdateEffect(float deltaTime)
+        {
+            mActionEffectMgr.Update(deltaTime);
         }
 
         const float FTOffset = 0.2f;
-        void ListTargets(Data1.EventListTargets data)
+        void ListTargets(ActData.EventListTargets data)
         {
             ActionTarget = null;
 
@@ -616,7 +606,7 @@ namespace ACT
             {
                 switch (data.ListType)
                 {
-                    case Data1.ListTargetFrameType.CuboidListType:
+                    case ActData.ListTargetFrameType.CuboidListType:
                         if (mListTargetFrame != null)
                             GameObject.Destroy(mListTargetFrame);
                         GameObject cubeListTarObj = GameObject.Instantiate(Resources.Load("ListTargetCube")) as GameObject;
@@ -641,7 +631,7 @@ namespace ACT
                         mListTargetFrame = cubeListTarObj;
                         break;
 
-                    case Data1.ListTargetFrameType.FanListType:
+                    case ActData.ListTargetFrameType.FanListType:
                         if (mListTargetFrame != null)
                             GameObject.Destroy(mListTargetFrame);
                         GameObject fanListTarObj = GameObject.Instantiate(Resources.Load("ListTargetCylinder")) as GameObject;
@@ -671,7 +661,7 @@ namespace ACT
                     GameObject.Destroy(mListTargetFrame, 2.0f);
             }
 
-            ActionHelper.LoopAllActUnits(target => {
+            ActionSystem.Instance.LoopAllActUnits(target => {
 
                 if (target == mOwner ||
                     target.Dead ||
@@ -683,7 +673,7 @@ namespace ACT
                 trans.y = 0;
 
                 float sqrMagnitude = trans.sqrMagnitude;
-                if (data.ListType == Data1.ListTargetFrameType.FanListType)
+                if (data.ListType == ActData.ListTargetFrameType.FanListType)
                 {
                     if (sqrMagnitude > fanSqrSqrDistance ||
                         Vector3.Dot(trans, forward) < fanRadin)
@@ -702,9 +692,9 @@ namespace ACT
                 }
 
                 float thisCheck = sqrMagnitude;
-                if (data.ListMode == Data1.ListTargetMode.MinAngle)
+                if (data.ListMode == ActData.ListTargetMode.MinAngle)
                     thisCheck = Mathf.Abs(Mathf.Atan2(trans.x, trans.z) - mOwner.Orientation);
-                else if (data.ListMode == Data1.ListTargetMode.Random)
+                else if (data.ListMode == ActData.ListTargetMode.Random)
                     thisCheck = Random.Range(1, 100);
 
                 if (ActionTarget == null || thisCheck < minCheck)
@@ -739,19 +729,19 @@ namespace ACT
             line.SetPosition(2, rightPos + parentPos);
         }
 
-        void UpdateMaterialCol(GameObject go, Data1.ListTargetMode mode)
+        void UpdateMaterialCol(GameObject go, ActData.ListTargetMode mode)
         {
             switch (mode)
             {
-                case Data1.ListTargetMode.MinAngle:
+                case ActData.ListTargetMode.MinAngle:
                     go.transform.GetComponent<Renderer>().material.SetColor("_TintColor", Color.yellow);
                     Debug.Log("The Color of MinAngle is red");
                     break;
-                case Data1.ListTargetMode.MinDistance:
+                case ActData.ListTargetMode.MinDistance:
                     go.transform.GetComponent<Renderer>().material.SetColor("_TintColor", Color.blue);
                     Debug.Log("The Color of MinDistance is blue");
                     break;
-                case Data1.ListTargetMode.Random:
+                case ActData.ListTargetMode.Random:
                     go.transform.GetComponent<Renderer>().material.SetColor("_TintColor", Color.green);
                     Debug.Log("The Color of Random is green");
                     break;
@@ -759,7 +749,7 @@ namespace ACT
                     break;
             }
         }
-        void FaceTargets(Data1.EventFaceTargets data)
+        void FaceTargets(ActData.EventFaceTargets data)
         {
             if (ActionTarget == null || !ActionTarget.UGameObject || ActionTarget.Dead)
                 return;
@@ -773,7 +763,7 @@ namespace ACT
                 mListener.OnFaceTarget();
         }
 
-        void GoToTargets(Data1.EventGoToTargets data)
+        void GoToTargets(ActData.EventGoToTargets data)
         {
             if (ActionTarget == null || !ActionTarget.UGameObject || ActionTarget.Dead)
                 return;
@@ -797,7 +787,7 @@ namespace ACT
             mOwner.Move(targetPos - mOwner.Position);
         }
 
-        bool SenseTarget(Data1.ActionInterrupt interrupt)
+        bool SenseTarget(ActData.ActionInterrupt interrupt)
         {
             if (ActionTarget == null || !ActionTarget.UGameObject || ActionTarget.Dead)
                 return false;
@@ -807,7 +797,7 @@ namespace ACT
                 distance >= interrupt.TargetDistanceMin * interrupt.TargetDistanceMin;
         }
 
-        void AddUnit(Data1.EventAddUnit data)
+        void AddUnit(ActData.EventAddUnit data)
         {
             /*
             UnitBase unitBase = UnitBaseManager.Instance.GetItem(data.Id);
@@ -838,55 +828,55 @@ namespace ACT
             unitInfo.Unit.ActionStatus.SkillItem = SkillItem;*/
         }
 
-        bool TriggerEvent(Data1.Event actionEvent, int deltaTime)
+        bool TriggerEvent(ActData.Event actionEvent, int deltaTime)
         {
             switch (actionEvent.EventType)
             {
-                case Data1.EventType.StatusOn:
+                case ActData.EventType.StatusOn:
                     {
-                        Data1.EventStatusOn data = actionEvent.EventDetailData.EventStatusOn;
+                        ActData.EventStatusOn data = actionEvent.EventDetailData.EventStatusOn;
                         SwitchStatus(data.StatusName, true);
                     }
                     break;
-                case Data1.EventType.StatusOff:
+                case ActData.EventType.StatusOff:
                     {
-                        Data1.EventStatusOff data = actionEvent.EventDetailData.EventStatusOff;
+                        ActData.EventStatusOff data = actionEvent.EventDetailData.EventStatusOff;
                         SwitchStatus(data.StatusName, false);
                     }
                     break;
-                case Data1.EventType.SetVelocity:
+                case ActData.EventType.SetVelocity:
                     {
-                        Data1.EventSetVelocity data = actionEvent.EventDetailData.EventSetVelocity;
+                        ActData.EventSetVelocity data = actionEvent.EventDetailData.EventSetVelocity;
                         SetVelocity(actionEvent, data.VelocityX * -0.01f, data.VelocityY * 0.01f, data.VelocityZ * 0.01f, deltaTime);
                     }
                     break;
-                case Data1.EventType.SetVelocityX:
+                case ActData.EventType.SetVelocityX:
                     {
-                        Data1.EventSetVelocity_X data = actionEvent.EventDetailData.EventSetVelocityX;
+                        ActData.EventSetVelocity_X data = actionEvent.EventDetailData.EventSetVelocityX;
                         SetVelocity(actionEvent, data.VelocityX * -0.01f, mVelocity.y, mVelocity.z, deltaTime);
                     }
                     break;
-                case Data1.EventType.SetVelocityY:
+                case ActData.EventType.SetVelocityY:
                     {
-                        Data1.EventSetVelocity_Y data = actionEvent.EventDetailData.EventSetVelocityY;
+                        ActData.EventSetVelocity_Y data = actionEvent.EventDetailData.EventSetVelocityY;
                         SetVelocity(actionEvent, mVelocity.x, data.VelocityY * 0.01f, mVelocity.z, deltaTime);
                     }
                     break;
-                case Data1.EventType.SetVelocityZ:
+                case ActData.EventType.SetVelocityZ:
                     {
-                        Data1.EventSetVelocity_Z data = actionEvent.EventDetailData.EventSetVelocityZ;
+                        ActData.EventSetVelocity_Z data = actionEvent.EventDetailData.EventSetVelocityZ;
                         SetVelocity(actionEvent, mVelocity.x, mVelocity.y, data.VelocityZ * 0.01f, deltaTime);
                     }
                     break;
-                case Data1.EventType.SetDirection:
+                case ActData.EventType.SetDirection:
                     {
-                        Data1.EventSetDirection data = actionEvent.EventDetailData.EventSetDirection;
+                        ActData.EventSetDirection data = actionEvent.EventDetailData.EventSetDirection;
                         SetDirection(actionEvent, data.Angle, data.Local);
                     }
                     break;
-                case Data1.EventType.PlaySound:
+                case ActData.EventType.PlaySound:
                     {
-                        Data1.EventPlaySound data = actionEvent.EventDetailData.EventPlaySound;
+                        ActData.EventPlaySound data = actionEvent.EventDetailData.EventPlaySound;
                         if (data.SoundIndex == -2)
                         {
                             //               data.SoundIndex = SoundManager.Instance.GetSoundIndex(data.SoundName);
@@ -898,54 +888,54 @@ namespace ACT
                             PlaySound(actionEvent, data.SoundIndex, data.CheckMatril);
                     }
                     break;
-                case Data1.EventType.SetGravity:
+                case ActData.EventType.SetGravity:
                     {
-                        Data1.EventSetGravity data = actionEvent.EventDetailData.EventSetGravity;
+                        ActData.EventSetGravity data = actionEvent.EventDetailData.EventSetGravity;
                         mGravity = data.Gravity * 0.01f;
                     }
                     break;
-                case Data1.EventType.RemoveMyself:
+                case ActData.EventType.RemoveMyself:
                     //Debug.Log("Unit " + mOwner.UnitID + " RemoveMyself");
                     mOwner.Destory();
                     break;
-                case Data1.EventType.AdjustVarible:
+                case ActData.EventType.AdjustVarible:
                     {
-                        Data1.EventAdjustVarible data = actionEvent.EventDetailData.EventAdjustVarible;
+                        ActData.EventAdjustVarible data = actionEvent.EventDetailData.EventAdjustVarible;
                         CustomVariable variable = mOwner.GetVariable(data.Slot);
                         variable.Adjust(data.Value);
                     }
                     break;
-                case Data1.EventType.SetVariable:
+                case ActData.EventType.SetVariable:
                     {
-                        Data1.EventSetVariable data = actionEvent.EventDetailData.EventSetVariable;
+                        ActData.EventSetVariable data = actionEvent.EventDetailData.EventSetVariable;
                         CustomVariable variable = mOwner.GetVariable(data.Slot);
                         variable.Set(data.Value, data.MaxValue);
                     }
                     break;
-                case Data1.EventType.ListTargets:
+                case ActData.EventType.ListTargets:
                     ListTargets(actionEvent.EventDetailData.EventListTargets);
                     break;
-                case Data1.EventType.ClearTargets:
+                case ActData.EventType.ClearTargets:
                     ActionTarget = null;
                     break;
-                case Data1.EventType.FaceTargets:
+                case ActData.EventType.FaceTargets:
                     FaceTargets(actionEvent.EventDetailData.EventFaceTargets);
                     break;
-                case Data1.EventType.GoToTargets:
+                case ActData.EventType.GoToTargets:
                     GoToTargets(actionEvent.EventDetailData.EventGoToTargets);
                     break;
-                case Data1.EventType.PlayEffect:
+                case ActData.EventType.PlayEffect:
                     PlayEffect(actionEvent.EventDetailData.EventPlayEffect);
                     break;
-                case Data1.EventType.HasCollision:
+                case ActData.EventType.HasCollision:
                     {
-                        Data1.EventHasCollision data = actionEvent.EventDetailData.EventHasCollision;
+                        ActData.EventHasCollision data = actionEvent.EventDetailData.EventHasCollision;
                         mOwner.EnableCollision(data.HasCollision);
                     }
                     break;
-                case Data1.EventType.ExeScript:
+                case ActData.EventType.ExeScript:
                     {
-                        Data1.EventExeScript data = actionEvent.EventDetailData.EventExeScript;
+                        ActData.EventExeScript data = actionEvent.EventDetailData.EventExeScript;
                         string[] strs = data.ScriptCmd.Split('(');
                         string scriptname = strs[0];
                         string parameter = strs[1];
@@ -953,13 +943,13 @@ namespace ACT
                         //Debug.Log(scriptname);
                     }
                     break;
-                case Data1.EventType.ActionLevel:
+                case ActData.EventType.ActionLevel:
                     {
-                        Data1.EventActionLevel data = actionEvent.EventDetailData.EventActionLevel;
+                        ActData.EventActionLevel data = actionEvent.EventDetailData.EventActionLevel;
                         mActionLevel = data.Level;
                     }
                     break;
-                case Data1.EventType.AddUnit:
+                case ActData.EventType.AddUnit:
                     AddUnit(actionEvent.EventDetailData.EventAddUnit);
                     break;
             }
@@ -975,7 +965,7 @@ namespace ACT
             bool ret = false;
             while (mHitDefIndex < mActiveAction.AttackDefs.Count)
             {
-                Data1.AttackDef hit_data = mActiveAction.AttackDefs[mHitDefIndex];
+                ActData.AttackDef hit_data = mActiveAction.AttackDefs[mHitDefIndex];
                 if (hit_data.TriggerTime > nextKey)
                     break;
 
@@ -989,7 +979,7 @@ namespace ACT
             return ret;
         }
 
-        bool CreateHitDefine(Data1.AttackDef hit_data, Vector3 position, string action)
+        bool CreateHitDefine(ActData.AttackDef hit_data, Vector3 position, string action)
         {
             GameObject hitDefObject = new GameObject("HitDefinition");
             HitDefinition hitDefinition = hitDefObject.AddComponent<HitDefinition>();
@@ -1008,7 +998,7 @@ namespace ACT
                 return false;
 
             int interruptIdx = 0;
-            foreach (Data1.ActionInterrupt interrupt in mActiveAction.ActionInterrupts)
+            foreach (ActData.ActionInterrupt interrupt in mActiveAction.ActionInterrupts)
             {
                 if (interrupt.EnableBegin != 0 && interrupt.EnableBegin > preKey && interrupt.EnableBegin <= nextKey)
                     EnableActionRequest(interruptIdx, true);
@@ -1039,7 +1029,7 @@ namespace ACT
             return (mActionInterruptEnabled & (1 << idx)) != 0;
         }
 
-        bool ProcessActionInterrupt(Data1.ActionInterrupt interrupt)
+        bool ProcessActionInterrupt(ActData.ActionInterrupt interrupt)
         {
             if (!interrupt.ConditionInterrupte)
                 return false;
@@ -1055,7 +1045,7 @@ namespace ACT
             return LinkAction(interrupt, null);
         }
 
-        bool DetectVariable(Data1.ActionInterrupt interrupt)
+        bool DetectVariable(ActData.ActionInterrupt interrupt)
         {
             switch (interrupt.Variable)
             {
@@ -1077,7 +1067,7 @@ namespace ACT
         }
 
         //---------------------------------------------------------------------
-        public bool CheckActionInterrupt(Data1.ActionInterrupt interrupt)
+        public bool CheckActionInterrupt(ActData.ActionInterrupt interrupt)
         {
             bool ret = false;
             if (interrupt.CheckAllCondition)
@@ -1106,7 +1096,7 @@ namespace ACT
             return ret;
         }
         //---------------------------------------------------------------------
-        public bool LinkAction(Data1.ActionInterrupt interrupt, SkillInput skillInput)
+        public bool LinkAction(ActData.ActionInterrupt interrupt, SkillInput skillInput)
         {
             if (interrupt.ConnectMode >= 2)
                 return false;
@@ -1143,12 +1133,12 @@ namespace ACT
             return true;
         }
 
-        public bool OnHit(Data1.HitResultType HitResult, bool remoteAttacks)
+        public bool OnHit(ActData.HitResultType HitResult, bool remoteAttacks)
         {
             // copy the action request enabled/disabled flags.
             for (int interruptIdx = 0; interruptIdx < mActiveAction.ActionInterrupts.Count; interruptIdx++)
             {
-                Data1.ActionInterrupt interrupt = mActiveAction.ActionInterrupts[interruptIdx];
+                ActData.ActionInterrupt interrupt = mActiveAction.ActionInterrupts[interruptIdx];
                 if (GetInterruptEnabled(interruptIdx) &&
                     interrupt.Hurted &&
                     (interrupt.HurtType & (1 << (int)HitResult)) != 0 &&
@@ -1165,93 +1155,93 @@ namespace ACT
             bool handled = true;
             switch (HitResult)
             {
-                case Data1.HitResultType.StandHit:
+                case ActData.HitResultType.StandHit:
                     {
-                        if (mHeightState == Data1.HeightStatusFlag.Stand)
+                        if (mHeightState == ActData.HeightStatusFlag.Stand)
                             changeAction = mActionGroup.StandStandHit;
-                        else if (mHeightState == Data1.HeightStatusFlag.LowAir || mHeightState == Data1.HeightStatusFlag.HighAir)
+                        else if (mHeightState == ActData.HeightStatusFlag.LowAir || mHeightState == ActData.HeightStatusFlag.HighAir)
                             changeAction = mActionGroup.AirStandHit;
-                        else if (mHeightState == Data1.HeightStatusFlag.Ground)
+                        else if (mHeightState == ActData.HeightStatusFlag.Ground)
                             changeAction = mActionGroup.FloorStandHit;
                     }
                     break;
-                case Data1.HitResultType.KnockOut:
+                case ActData.HitResultType.KnockOut:
                     {
-                        if (mHeightState == Data1.HeightStatusFlag.Stand)
+                        if (mHeightState == ActData.HeightStatusFlag.Stand)
                             changeAction = mActionGroup.StandKnockOut;
-                        else if (mHeightState == Data1.HeightStatusFlag.LowAir || mHeightState == Data1.HeightStatusFlag.HighAir)
+                        else if (mHeightState == ActData.HeightStatusFlag.LowAir || mHeightState == ActData.HeightStatusFlag.HighAir)
                             changeAction = mActionGroup.AirKnockOut;
-                        else if (mHeightState == Data1.HeightStatusFlag.Ground)
+                        else if (mHeightState == ActData.HeightStatusFlag.Ground)
                             changeAction = mActionGroup.FloorKnockOut;
                     }
                     break;
-                case Data1.HitResultType.KnockBack:
+                case ActData.HitResultType.KnockBack:
                     {
-                        if (mHeightState == Data1.HeightStatusFlag.Stand)
+                        if (mHeightState == ActData.HeightStatusFlag.Stand)
                             changeAction = mActionGroup.StandKnockBack;
-                        else if (mHeightState == Data1.HeightStatusFlag.LowAir || mHeightState == Data1.HeightStatusFlag.HighAir)
+                        else if (mHeightState == ActData.HeightStatusFlag.LowAir || mHeightState == ActData.HeightStatusFlag.HighAir)
                             changeAction = mActionGroup.AirKnockBack;
-                        else if (mHeightState == Data1.HeightStatusFlag.Ground)
+                        else if (mHeightState == ActData.HeightStatusFlag.Ground)
                             changeAction = mActionGroup.FloorKnockBack;
                     }
                     break;
-                case Data1.HitResultType.KnockDown:
+                case ActData.HitResultType.KnockDown:
                     {
-                        if (mHeightState == Data1.HeightStatusFlag.Stand)
+                        if (mHeightState == ActData.HeightStatusFlag.Stand)
                             changeAction = mActionGroup.StandKnockDown;
-                        else if (mHeightState == Data1.HeightStatusFlag.LowAir || mHeightState == Data1.HeightStatusFlag.HighAir)
+                        else if (mHeightState == ActData.HeightStatusFlag.LowAir || mHeightState == ActData.HeightStatusFlag.HighAir)
                             changeAction = mActionGroup.AirKnockDown;
-                        else if (mHeightState == Data1.HeightStatusFlag.Ground)
+                        else if (mHeightState == ActData.HeightStatusFlag.Ground)
                             changeAction = mActionGroup.FloorKnockDown;
                     }
                     break;
-                case Data1.HitResultType.DiagUp:
+                case ActData.HitResultType.DiagUp:
                     {
-                        if (mHeightState == Data1.HeightStatusFlag.Stand)
+                        if (mHeightState == ActData.HeightStatusFlag.Stand)
                             changeAction = mActionGroup.StandDiagUp;
-                        else if (mHeightState == Data1.HeightStatusFlag.LowAir || mHeightState == Data1.HeightStatusFlag.HighAir)
+                        else if (mHeightState == ActData.HeightStatusFlag.LowAir || mHeightState == ActData.HeightStatusFlag.HighAir)
                             changeAction = mActionGroup.AirDiagUp;
-                        else if (mHeightState == Data1.HeightStatusFlag.Ground)
+                        else if (mHeightState == ActData.HeightStatusFlag.Ground)
                             changeAction = mActionGroup.FloorDiagUp;
                     }
                     break;
-                case Data1.HitResultType.HitResultHold:
+                case ActData.HitResultType.HitResultHold:
                     {
-                        if (mHeightState == Data1.HeightStatusFlag.Stand)
+                        if (mHeightState == ActData.HeightStatusFlag.Stand)
                             changeAction = mActionGroup.StandHold;
-                        else if (mHeightState == Data1.HeightStatusFlag.LowAir || mHeightState == Data1.HeightStatusFlag.HighAir)
+                        else if (mHeightState == ActData.HeightStatusFlag.LowAir || mHeightState == ActData.HeightStatusFlag.HighAir)
                             changeAction = mActionGroup.AirHold;
-                        else if (mHeightState == Data1.HeightStatusFlag.Ground)
+                        else if (mHeightState == ActData.HeightStatusFlag.Ground)
                             changeAction = mActionGroup.FloorHold;
                     }
                     break;
-                case Data1.HitResultType.AirHit:
+                case ActData.HitResultType.AirHit:
                     {
-                        if (mHeightState == Data1.HeightStatusFlag.Stand)
+                        if (mHeightState == ActData.HeightStatusFlag.Stand)
                             changeAction = mActionGroup.StandAirHit;
-                        else if (mHeightState == Data1.HeightStatusFlag.LowAir || mHeightState == Data1.HeightStatusFlag.HighAir)
+                        else if (mHeightState == ActData.HeightStatusFlag.LowAir || mHeightState == ActData.HeightStatusFlag.HighAir)
                             changeAction = mActionGroup.AirAirHit;
-                        else if (mHeightState == Data1.HeightStatusFlag.Ground)
+                        else if (mHeightState == ActData.HeightStatusFlag.Ground)
                             changeAction = mActionGroup.FloorAirHit;
                     }
                     break;
-                case Data1.HitResultType.DownHit:
+                case ActData.HitResultType.DownHit:
                     {
-                        if (mHeightState == Data1.HeightStatusFlag.Stand)
+                        if (mHeightState == ActData.HeightStatusFlag.Stand)
                             changeAction = mActionGroup.StandDownHit;
-                        else if (mHeightState == Data1.HeightStatusFlag.LowAir || mHeightState == Data1.HeightStatusFlag.HighAir)
+                        else if (mHeightState == ActData.HeightStatusFlag.LowAir || mHeightState == ActData.HeightStatusFlag.HighAir)
                             changeAction = mActionGroup.AirDownHit;
-                        else if (mHeightState == Data1.HeightStatusFlag.Ground)
+                        else if (mHeightState == ActData.HeightStatusFlag.Ground)
                             changeAction = mActionGroup.FloorDownHit;
                     }
                     break;
-                case Data1.HitResultType.FallDown:
+                case ActData.HitResultType.FallDown:
                     {
-                        if (mHeightState == Data1.HeightStatusFlag.Stand)
+                        if (mHeightState == ActData.HeightStatusFlag.Stand)
                             changeAction = mActionGroup.StandFallDown;
-                        else if (mHeightState == Data1.HeightStatusFlag.LowAir || mHeightState == Data1.HeightStatusFlag.HighAir)
+                        else if (mHeightState == ActData.HeightStatusFlag.LowAir || mHeightState == ActData.HeightStatusFlag.HighAir)
                             changeAction = mActionGroup.AirFallDown;
-                        else if (mHeightState == Data1.HeightStatusFlag.Ground)
+                        else if (mHeightState == ActData.HeightStatusFlag.Ground)
                             changeAction = mActionGroup.FloorFallDown;
                     }
                     break;
@@ -1285,7 +1275,7 @@ namespace ACT
                 return false;
 
             // ³å»÷Ê±ŒäÍê³É¡£
-            if (mHeightState == Data1.HeightStatusFlag.Stand || mHeightState == Data1.HeightStatusFlag.Ground)
+            if (mHeightState == ActData.HeightStatusFlag.Stand || mHeightState == ActData.HeightStatusFlag.Ground)
             {
                 mVelocity.x = 0.0f;
                 mVelocity.z = 0.0f;

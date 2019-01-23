@@ -10,7 +10,7 @@ namespace ACT
 {
     public class HitDefinition : MonoBehaviour
     {
-        Data1.AttackDef mAttackDef;
+        ActData.AttackDef mAttackDef;
         IActUnit mOwner;
         string mAction;
         Vector3 mInitPos = Vector3.zero;
@@ -38,8 +38,9 @@ namespace ACT
         Vector4 mFanSize = Vector4.zero;
 
         Dictionary<GameObject, int> mHitedPassedMap = new Dictionary<GameObject, int>();
+        ActEffectMgr mHitDefEffectMgr = new ActEffectMgr();
 
-        public void Init(Data1.AttackDef data, IActUnit owner, string action, SkillItem skillItem)
+        public void Init(ActData.AttackDef data, IActUnit owner, string action, SkillItem skillItem)
         {
             mAttackDef = data;
             mOwner = owner;
@@ -58,33 +59,21 @@ namespace ACT
 
             mDelayTime = mAttackDef.Delay * 0.001f;
 
-            /*
             if (!string.IsNullOrEmpty(mAttackDef.SelfEffect))
             {
-                Object effectObj = Resources.Load(mAttackDef.SelfEffect);
-                if (effectObj != null)
-                {
-                    GameObject effect = GameObject.Instantiate(effectObj) as GameObject;
-                    if (effect)
-                    {
-                        effect.transform.parent = gameObject.transform;
-                        effect.transform.localPosition = new Vector3(
-                            mAttackDef.SelfEffectOffset.X * 0.01f,
+                Vector3 tmpPos = new Vector3(mAttackDef.SelfEffectOffset.X * 0.01f,
                             mAttackDef.SelfEffectOffset.Y * 0.01f,
                             mAttackDef.SelfEffectOffset.Z * 0.01f);
-                        effect.transform.rotation = mOwner.UGameObject.transform.rotation;
-                    }
-                    else
-                        Debug.LogError("Effect is not effect: " + mAttackDef.SelfEffect);
-                }
-                else
-                    Debug.LogError("Fail to create hit self effect:" + mAttackDef.SelfEffect);
-            }*/
+                mHitDefEffectMgr.PlayEffect(transform, mAttackDef.SelfEffect, 
+                    mAttackDef.SelfEffectDuration * 0.001f, tmpPos, mOwner.Transform.rotation);
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
+            mHitDefEffectMgr.Update(Time.deltaTime);
+
             float deltaTime = Time.deltaTime;
             if (mDelayTime > deltaTime)
             {
@@ -129,7 +118,7 @@ namespace ACT
 
         void UpdatePosition(float ratio)
         {
-            if (mAttackDef.FllowReleaser != 0 || mAttackDef.KeepLocal != 0 || mAttackDef.FramType == Data1.HitDefnitionFramType.SomatoType)
+            if (mAttackDef.FllowReleaser != 0 || mAttackDef.KeepLocal != 0 || mAttackDef.FramType == ActData.HitDefnitionFramType.SomatoType)
                 mInitPos = mOwner.Position;//FllowReleaser是否跟随释放者。KeepLocal是否相对施放者位移，
                                            //FramType技能击中框的类型:CuboidType为长方体;CylinderType为立方体; RingType:为圆环形; SomatoType:为受击体"
 
@@ -148,9 +137,9 @@ namespace ACT
             //Debug.Log("mHaveHitOrt is false!");
             switch (mAttackDef.FramType)
             {
-                case Data1.HitDefnitionFramType.CuboidType:
+                case ActData.HitDefnitionFramType.CuboidType:
                     {
-                        Data1.FrameCuboid data = mAttackDef.AttackType.FrameCuboid;
+                        ActData.FrameCuboid data = mAttackDef.AttackType.FrameCuboid;
                         mCubeHitDefSize.x = data.Width * 0.01f;//攻击x范围
                         mCubeHitDefSize.y = data.Height * 0.01f;//攻击y范围
                         mCubeHitDefSize.z = data.Length * 0.01f;//攻击z范围						
@@ -178,9 +167,9 @@ namespace ACT
                         }
                     }
                     break;
-                case Data1.HitDefnitionFramType.CylinderType:
+                case ActData.HitDefnitionFramType.CylinderType:
                     {
-                        Data1.FrameCylinder data = mAttackDef.AttackType.FrameCylinder;
+                        ActData.FrameCylinder data = mAttackDef.AttackType.FrameCylinder;
                         mCylinderSize.x = data.Radius * 0.01f;
                         mCylinderSize.y = data.Height * 0.01f;
 
@@ -203,22 +192,22 @@ namespace ACT
                         }
                     }
                     break;
-                case Data1.HitDefnitionFramType.RingType:
+                case ActData.HitDefnitionFramType.RingType:
                     {
-                        Data1.FrameRing data = mAttackDef.AttackType.FrameRing;
+                        ActData.FrameRing data = mAttackDef.AttackType.FrameRing;
                         mRingSize.x = data.InnerRadius * 0.01f;
                         mRingSize.y = data.Height * 0.01f;
                         mRingSize.z = data.OuterRadius * 0.01f;
                     }
                     break;
-                case Data1.HitDefnitionFramType.SomatoType:
+                case ActData.HitDefnitionFramType.SomatoType:
                     {
                         mCubeHitDefSize = mOwner.ActStatus.Bounding;
                     }
                     break;
-                case Data1.HitDefnitionFramType.FanType:
+                case ActData.HitDefnitionFramType.FanType:
                     {
-                        Data1.FrameFan data = mAttackDef.AttackType.FrameFan;
+                        ActData.FrameFan data = mAttackDef.AttackType.FrameFan;
                         mFanSize.x = data.Radius * 0.01f;
                         mFanSize.y = data.Height * 0.01f;
                         mFanSize.z = data.StartAngle;
@@ -243,8 +232,8 @@ namespace ACT
             {
                 for (int i = 1; i < mAttackDef.Path.Count; i++)
                 {
-                    Data1.AttackDef.Types.PathNode preNode = mAttackDef.Path[i - 1];//路径上的前一个节点
-                    Data1.AttackDef.Types.PathNode curNode = mAttackDef.Path[i];//路径上的当前节点
+                    ActData.AttackDef.Types.PathNode preNode = mAttackDef.Path[i - 1];//路径上的前一个节点
+                    ActData.AttackDef.Types.PathNode curNode = mAttackDef.Path[i];//路径上的当前节点
                     if (ratio < curNode.Ratio)//百分比
                     {
                         float alpha = (ratio - preNode.Ratio) / (curNode.Ratio - preNode.Ratio);
@@ -287,7 +276,7 @@ namespace ACT
             //}
 
             int comboHit = 0;
-            ActionHelper.LoopAllActUnits(target=>
+            ActionSystem.Instance.LoopAllActUnits(target=>
             {
                 if (!target.UGameObject || !CanHit(self, target))
                     return;
@@ -303,7 +292,7 @@ namespace ACT
         {
             // 转换offset到世界坐标系
             ActionStatus targetActionStatus = target.ActStatus;
-            Data1.Action targetAction = targetActionStatus.ActiveAction;
+            ActData.Action targetAction = targetActionStatus.ActiveAction;
             float BoundOffsetX = targetAction.BoundingOffsetX;
             float BoundOffsetY = targetAction.BoundingOffsetY;
             float BoundOffsetZ = targetAction.BoundingOffsetZ;
@@ -316,8 +305,8 @@ namespace ACT
 
             switch (mAttackDef.FramType)
             {
-                case Data1.HitDefnitionFramType.CuboidType:
-                case Data1.HitDefnitionFramType.SomatoType:
+                case ActData.HitDefnitionFramType.CuboidType:
+                case ActData.HitDefnitionFramType.SomatoType:
                     // 四面体求交。
                     if (MathUtility.RectangleHitDefineCollision(
                         mPos, mOrientation,
@@ -328,7 +317,7 @@ namespace ACT
                         hitSuccess = true;
                     }
                     break;
-                case Data1.HitDefnitionFramType.CylinderType:
+                case ActData.HitDefnitionFramType.CylinderType:
                     // 圆柱求交
                     if (MathUtility.CylinderHitDefineCollision(
                         mPos, mOrientation,
@@ -339,7 +328,7 @@ namespace ACT
                         hitSuccess = true;
                     }
                     break;
-                case Data1.HitDefnitionFramType.RingType:
+                case ActData.HitDefnitionFramType.RingType:
                     if (MathUtility.RingHitDefineCollision(
                         mPos, mOrientation,
                         mRingSize.x, mRingSize.y, mRingSize.z,
@@ -349,7 +338,7 @@ namespace ACT
                         hitSuccess = true;
                     }
                     break;
-                case Data1.HitDefnitionFramType.FanType:
+                case ActData.HitDefnitionFramType.FanType:
                     if (MathUtility.FanDefineCollision(
                         mPos, mOrientation,
                         mFanSize.x, mFanSize.y, mFanSize.z, mFanSize.w,
@@ -369,13 +358,13 @@ namespace ACT
 
         bool CanHit(IActUnit self, IActUnit target)
         {
-            if (mAttackDef.Race != Data1.RaceType.Self && self == target)
+            if (mAttackDef.Race != ActData.RaceType.Self && self == target)
                 return false;
 
-            if (mAttackDef.Race == Data1.RaceType.Enemy && self.Camp == target.Camp)
+            if (mAttackDef.Race == ActData.RaceType.Enemy && self.Camp == target.Camp)
                 return false;
 
-            if (mAttackDef.Race == Data1.RaceType.TeamMember && self.Camp != target.Camp)
+            if (mAttackDef.Race == ActData.RaceType.TeamMember && self.Camp != target.Camp)
                 return false;
 
             // 如果攻击高度不符合要求，停止击中判定
@@ -430,7 +419,7 @@ namespace ACT
                 if (mAttackDef.IsRemoteAttacks == 0 && mSkillItem == null)
                 {
                     mHitBlocked = true;
-                    owner.PlayAction(Data1.CommonAction.Bounce);
+                    owner.PlayAction(ActData.CommonAction.Bounce);
                     return false;
                 }
             }
@@ -470,8 +459,9 @@ namespace ACT
             {
                 Vector3 effectPos = target.Position;
                 effectPos.y += targetActionStatus.Bounding.y * 0.5f;
-                //GameEventManager.Instance.EnQueue(
-                //    new InstantiateResourcesEvent(mData1.HitedEffect, effectPos), true);
+
+                ActionSystem.Instance.EffectMgr.PlayEffect(null, mAttackDef.HitedEffect, mAttackDef.HitedEffectDuration * 0.001f, effectPos,
+                    0 == mAttackDef.BaseGround ? Quaternion.identity : Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
             }
 
             // execute script
@@ -500,7 +490,7 @@ namespace ACT
             bool rotateOnHit = targetActionStatus.RotateOnHit;
             if (rotateOnHit)
             {
-                if (mAttackDef.FramType == Data1.HitDefnitionFramType.CylinderType)
+                if (mAttackDef.FramType == ActData.HitDefnitionFramType.CylinderType)
                 {
                     float x = target.Position.x - mPos.x;
                     float z = target.Position.z - mPos.z;
@@ -527,7 +517,7 @@ namespace ACT
 
             // 攻击等级调整。
             int attackLevel = mAttackDef.AttackLevel;
-            Data1.HeightStatusFlag targetHeightStatus = targetActionStatus.HeightState;
+            ActData.HeightStatusFlag targetHeightStatus = targetActionStatus.HeightState;
             if (attackLevel < targetActionStatus.ActionLevel)
             {
                 // 设置受击者的霸体硬直时间?
@@ -583,10 +573,10 @@ namespace ACT
             target.OnHit(tmpHitData, false);
         }
 
-        void LashProcess(Data1.AttackDef attackDef,
+        void LashProcess(ActData.AttackDef attackDef,
             ref HitData hitData,
             IActUnit target,
-            Data1.HeightStatusFlag targetHeightStatus,
+            ActData.HeightStatusFlag targetHeightStatus,
             bool processLash,
             bool rotateOnHit)
         {
@@ -596,16 +586,16 @@ namespace ACT
             float AttackeeLashZ = attackDef.AttackeeLash.Z;
             int AttackeeTime = attackDef.AttackeeTime;
 
-            Data1.AttackDef.Types.HitResultData hitResultData = null;
+            ActData.AttackDef.Types.HitResultData hitResultData = null;
             switch (targetHeightStatus)
             {
-                case Data1.HeightStatusFlag.Ground:
+                case ActData.HeightStatusFlag.Ground:
                     hitResultData = attackDef.GroundHit;
                     break;
-                case Data1.HeightStatusFlag.LowAir:
+                case ActData.HeightStatusFlag.LowAir:
                     hitResultData = attackDef.LowAirHit;
                     break;
-                case Data1.HeightStatusFlag.HighAir:
+                case ActData.HeightStatusFlag.HighAir:
                     hitResultData = attackDef.HighAirHit;
                     break;
             }
@@ -625,7 +615,7 @@ namespace ACT
                 if (!rotateOnHit)
                 {
                     Quaternion rotate = Quaternion.AngleAxis(mOrientation * Mathf.Rad2Deg + 180, Vector3.up);
-                    if (mAttackDef.FramType != Data1.HitDefnitionFramType.CuboidType)
+                    if (mAttackDef.FramType != ActData.HitDefnitionFramType.CuboidType)
                     {
                         Vector3 targetToOwner = mPos - target.Position;
                         targetToOwner.y = 0;

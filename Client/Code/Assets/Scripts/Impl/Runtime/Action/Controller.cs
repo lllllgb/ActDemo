@@ -41,7 +41,7 @@ namespace ACT
             if (mActionStatus != null)
             {
                 mInputBox = new InputBox(mOwner, this);
-                ActionHelper.GInputBox = mInputBox;
+                ActionSystem.Instance.GInputBox = mInputBox;
             }
         }
 
@@ -70,7 +70,7 @@ namespace ACT
                 return;
 
             int interruptIdx = 0;
-            foreach (Data1.ActionInterrupt interrupt in mActionStatus.ActiveAction.ActionInterrupts)
+            foreach (ActData.ActionInterrupt interrupt in mActionStatus.ActiveAction.ActionInterrupts)
             {
                 if (!mActionStatus.GetInterruptEnabled(interruptIdx++))
                     continue;

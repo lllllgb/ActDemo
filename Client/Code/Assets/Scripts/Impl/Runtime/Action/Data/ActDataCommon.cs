@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace Data1
+namespace ActData
 {
     [Flags]
     public enum HeightStatusFlag

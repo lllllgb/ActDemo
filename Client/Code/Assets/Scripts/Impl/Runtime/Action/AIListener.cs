@@ -18,9 +18,9 @@ namespace ACT
         };
 
         ActionStatus mActionStatus;
-        Data1.AIGroup mAIGroup;
-        Data1.AIStatus mActiveStatus;
-        Data1.AIList mActiveList;
+        ActData.AIGroup mAIGroup;
+        ActData.AIStatus mActiveStatus;
+        ActData.AIList mActiveList;
         int mStatusIdx = 0;
         int mQueuedStatusIdx = -1;
         int mLoopCount = 0;
@@ -77,7 +77,7 @@ namespace ACT
                 mActionCDMap.RemoveRange(0, count);
         }
 
-        public void OnActionChanging(Data1.Action oldAction, Data1.Action newAction)
+        public void OnActionChanging(ActData.Action oldAction, ActData.Action newAction)
         {
             if (mOwner.Dead)
                 return;
@@ -107,7 +107,7 @@ namespace ACT
                         // 循环次数减1
                         mLoopCount--;
 
-                        if (newAction.Id == Data1.CommonAction.Idle || mLoopCount > 0)
+                        if (newAction.Id == ActData.CommonAction.Idle || mLoopCount > 0)
                             doActionChoose = true;
                     }
                     else
@@ -120,7 +120,7 @@ namespace ACT
                 {
                     // 非AI选择动作结束，属于被中断的动作流程。
                     // 继续执行到自循环动作
-                    if (newAction.Id == Data1.CommonAction.Idle)
+                    if (newAction.Id == ActData.CommonAction.Idle)
                     {
                         // 进入AI选择流程。
                         doActionChoose = true;
@@ -150,7 +150,7 @@ namespace ACT
             // 当AI活动，并且没有AI状态在队列中。
             if (mActiveStatus != null && mQueuedStatusIdx < 0)
             {
-                foreach (Data1.AIStatusSwitch sw in mActiveStatus.AIStatusSwitchList)
+                foreach (ActData.AIStatusSwitch sw in mActiveStatus.AIStatusSwitchList)
                 {
                     if (sw.SwitchStatusID == mStatusIdx || sw.SwitchStatusID >= mAIGroup.AIStatusList.Count)
                         continue;
@@ -358,7 +358,7 @@ namespace ACT
         {
             if (mActiveStatus != null && mActiveStatus.AIActionCDList.Count != 0)
             {
-                foreach (Data1.AIActionCD actionCD in mActiveStatus.AIActionCDList)
+                foreach (ActData.AIActionCD actionCD in mActiveStatus.AIActionCDList)
                 {
                     if (actionCD.ActionCache == id)
                     {
@@ -404,7 +404,7 @@ namespace ACT
 
                     // choose a action set base the distance.
                     int checkDist = (int)(targetDistanceSqr * 10000);
-                    foreach (Data1.AIList aiList in mActiveStatus.AILists)
+                    foreach (ActData.AIList aiList in mActiveStatus.AILists)
                     {
                         if (aiList.DistanceSqr < checkDist)
                             break;
@@ -423,7 +423,7 @@ namespace ACT
                 // 计算出总共的动作几率。
                 int totalProability = 0, idx = 0;
                 int action_enabled = 0;
-                foreach (Data1.AISlot slot in mActiveList.AISlots)
+                foreach (ActData.AISlot slot in mActiveList.AISlots)
                 {
                     if (!string.IsNullOrEmpty(slot.SwitchActionID))
                     {
@@ -443,8 +443,8 @@ namespace ACT
 
                 // 取出随机值范围值。
                 int randValue = UnityEngine.Random.Range(0, totalProability);
-                Data1.AISlot targetSlot = null;
-                foreach (Data1.AISlot slot in mActiveList.AISlots)
+                ActData.AISlot targetSlot = null;
+                foreach (ActData.AISlot slot in mActiveList.AISlots)
                 {
                     if ((action_enabled & (1 << idx)) != 0)
                     {
@@ -496,7 +496,7 @@ namespace ACT
 
         IActUnit selectEnemy()
         {
-            return ActionHelper.LocalPlayer;
+            return ActionSystem.Instance.LocalPlayer;
         }
 
         //-----------------------------------------------------------------------

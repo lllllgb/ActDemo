@@ -48,6 +48,7 @@ namespace ACT
         public int Level { get { return mLevel; } }
         public float Radius { get { return mRadius; } }
         public GameObject UGameObject { get { return mGameObject; } }
+        public Transform Transform { get { return mTransform; } }
         public Transform ModelTrans { get { return mModelTrans; } }
         public EUnitCamp Camp { get { return mCamp; } protected set { mCamp = value; } }
         public int ActionID { get { return mUnitID; } }
@@ -80,6 +81,7 @@ namespace ACT
 
         public virtual void Destory()
         {
+            mActionStatus.Release();
             //UnitManager.Instance.Destroy(this);
         }
 
@@ -190,12 +192,12 @@ namespace ACT
         public void SetSyncMove(float x, float z, float time, bool faceDir)
         {
             // the unit should not be in hurt mode. [ActionStatus == 3]
-            if (mActionStatus.ActionState == Data1.EActionState.Hit)
+            if (mActionStatus.ActionState == ActData.EActionState.Hit)
                 return;
 
             // force the unit to be run action.
-            if (mActionStatus.ActiveAction.Id != Data1.CommonAction.Run)
-                PlayAction(Data1.CommonAction.Run);
+            if (mActionStatus.ActiveAction.Id != ActData.CommonAction.Run)
+                PlayAction(ActData.CommonAction.Run);
 
             mSyncOffset = new Vector3(x - mPosition.x, 0, z - mPosition.z);
             mSyncTime = time;
@@ -331,12 +333,12 @@ namespace ACT
             mPosition = mTransform.position;
         }
 
-        AnimationState FetchAnimation(Data1.Action action, float speed)
+        AnimationState FetchAnimation(ActData.Action action, float speed)
         {
             if (action == null || action.AnimSlotList.Count == 0 || !mCachedAnimation)
                 return null;
 
-            Data1.AnimSlot animSlot = action.AnimSlotList[UnityEngine.Random.Range(0, action.AnimSlotList.Count)];
+            ActData.AnimSlot animSlot = action.AnimSlotList[UnityEngine.Random.Range(0, action.AnimSlotList.Count)];
             AnimationState animState = mCachedAnimation[animSlot.Animation];
             if (animState == null)
             {
@@ -349,7 +351,7 @@ namespace ACT
             return animState;
         }
 
-        public void PlayAnimation(Data1.Action action, float speed)
+        public void PlayAnimation(ActData.Action action, float speed)
         {
             AnimationState animState = FetchAnimation(action, speed);
             if (animState == null)

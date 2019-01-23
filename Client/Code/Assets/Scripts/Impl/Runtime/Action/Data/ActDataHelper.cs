@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace Data1.Helper
+namespace ActData.Helper
 {
     public static class ActDataHelper
     {
-        public static Data1.Action GetAction(this ActionGroup actionGroup, int idx)
+        public static ActData.Action GetAction(this ActionGroup actionGroup, int idx)
         {
             return idx < actionGroup.ActionList.Count ? actionGroup.ActionList[idx] : null;
         }
@@ -20,7 +20,7 @@ namespace Data1.Helper
 
             for (int i = 0, max = actionGroup.ActionList.Count; i < max; i++)
             {
-                Data1.Action action = actionGroup.ActionList[i];
+                ActData.Action action = actionGroup.ActionList[i];
                 idx++;
                 if (action.Id == actionID)
                     return idx;

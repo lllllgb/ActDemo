@@ -34,7 +34,7 @@ namespace AosHotfixRunTime
 
                 Monster tmpMonster = new Monster(3001);
                 tmpMonster.Init();
-                ACT.ActionHelper.UnitList.Add(tmpMonster);
+                ACT.ActionSystem.UnitList.Add(tmpMonster);
             }, null);
         }
 
@@ -47,7 +47,7 @@ namespace AosHotfixRunTime
                 mTestPlayer.Update(deltaTime);
             }
 
-            ACT.ActionHelper.LoopAllActUnits(unit=> { unit.Update(deltaTime); });
+            ACT.ActionSystem.Instance.LoopAllActUnits(unit=> { unit.Update(deltaTime); });
         }
 
         protected internal override void OnLateUpdate(ProcedureOwner fsm, float deltaTime)

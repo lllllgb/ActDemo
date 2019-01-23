@@ -29,8 +29,6 @@ namespace AosHotfixRunTime
             //依赖
             ResourcesMgr.LoadManifest();
             ResourcesMgr.LoadBundleByType(EABType.Shader, "shaderCollect");
-
-            ACT.ActionManager.Instance.LoadFileDelegate = LoadAction;
             //UI
             //ResourcesMgr.LoadBundleByType(EABType.UI, "UIRoot");
             //GameObject tmpUIRoot = Hotfix.Instantiate(ResourcesMgr.GetAssetByType<GameObject>(EABType.UI, "UIRoot"));
@@ -52,6 +50,7 @@ namespace AosHotfixRunTime
             //CameraHelper.InitHudCamera(tmpHudGo);
 
             LoadTbl();
+            InitActionSystem();
 
             //流程
             ProcedureMgr.Initialize(FsmMgr);
@@ -64,9 +63,11 @@ namespace AosHotfixRunTime
             ProcedureMgr.StartProcedure<ProcedureTestAction>();
         }
 
-        static byte[] LoadAction(string actionName)
+        static void InitActionSystem()
         {
-            return AosBaseFramework.FileHelper.LoadBytesFile($"{actionName}.bytes", AosBaseFramework.PathHelper.EBytesFileType.Action);
+            ACT.ActionSystem.Instance.LoadActionFileDelegate = (actionName) => {
+                return AosBaseFramework.FileHelper.LoadBytesFile($"{actionName}.bytes", AosBaseFramework.PathHelper.EBytesFileType.Action);
+            };
         }
 
         static void LoadTbl()

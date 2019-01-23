@@ -6,7 +6,7 @@
 using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using scg = global::System.Collections.Generic;
-namespace Data1 {
+namespace ActData {
 
   #region Enums
   public enum MaterialType {
@@ -690,11 +690,11 @@ namespace Data1 {
 
     /// <summary>Field number for the "aISlots" field.</summary>
     public const int AISlotsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Data1.AISlot> _repeated_aISlots_codec
-        = pb::FieldCodec.ForMessage(26, global::Data1.AISlot.Parser);
-    private readonly pbc::RepeatedField<global::Data1.AISlot> aISlots_ = new pbc::RepeatedField<global::Data1.AISlot>();
+    private static readonly pb::FieldCodec<global::ActData.AISlot> _repeated_aISlots_codec
+        = pb::FieldCodec.ForMessage(26, global::ActData.AISlot.Parser);
+    private readonly pbc::RepeatedField<global::ActData.AISlot> aISlots_ = new pbc::RepeatedField<global::ActData.AISlot>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.AISlot> AISlots {
+    public pbc::RepeatedField<global::ActData.AISlot> AISlots {
       get { return aISlots_; }
     }
 
@@ -1490,31 +1490,31 @@ namespace Data1 {
 
     /// <summary>Field number for the "AILists" field.</summary>
     public const int AIListsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Data1.AIList> _repeated_aILists_codec
-        = pb::FieldCodec.ForMessage(26, global::Data1.AIList.Parser);
-    private readonly pbc::RepeatedField<global::Data1.AIList> aILists_ = new pbc::RepeatedField<global::Data1.AIList>();
+    private static readonly pb::FieldCodec<global::ActData.AIList> _repeated_aILists_codec
+        = pb::FieldCodec.ForMessage(26, global::ActData.AIList.Parser);
+    private readonly pbc::RepeatedField<global::ActData.AIList> aILists_ = new pbc::RepeatedField<global::ActData.AIList>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.AIList> AILists {
+    public pbc::RepeatedField<global::ActData.AIList> AILists {
       get { return aILists_; }
     }
 
     /// <summary>Field number for the "AIStatusSwitchList" field.</summary>
     public const int AIStatusSwitchListFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Data1.AIStatusSwitch> _repeated_aIStatusSwitchList_codec
-        = pb::FieldCodec.ForMessage(34, global::Data1.AIStatusSwitch.Parser);
-    private readonly pbc::RepeatedField<global::Data1.AIStatusSwitch> aIStatusSwitchList_ = new pbc::RepeatedField<global::Data1.AIStatusSwitch>();
+    private static readonly pb::FieldCodec<global::ActData.AIStatusSwitch> _repeated_aIStatusSwitchList_codec
+        = pb::FieldCodec.ForMessage(34, global::ActData.AIStatusSwitch.Parser);
+    private readonly pbc::RepeatedField<global::ActData.AIStatusSwitch> aIStatusSwitchList_ = new pbc::RepeatedField<global::ActData.AIStatusSwitch>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.AIStatusSwitch> AIStatusSwitchList {
+    public pbc::RepeatedField<global::ActData.AIStatusSwitch> AIStatusSwitchList {
       get { return aIStatusSwitchList_; }
     }
 
     /// <summary>Field number for the "AIActionCDList" field.</summary>
     public const int AIActionCDListFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Data1.AIActionCD> _repeated_aIActionCDList_codec
-        = pb::FieldCodec.ForMessage(42, global::Data1.AIActionCD.Parser);
-    private readonly pbc::RepeatedField<global::Data1.AIActionCD> aIActionCDList_ = new pbc::RepeatedField<global::Data1.AIActionCD>();
+    private static readonly pb::FieldCodec<global::ActData.AIActionCD> _repeated_aIActionCDList_codec
+        = pb::FieldCodec.ForMessage(42, global::ActData.AIActionCD.Parser);
+    private readonly pbc::RepeatedField<global::ActData.AIActionCD> aIActionCDList_ = new pbc::RepeatedField<global::ActData.AIActionCD>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.AIActionCD> AIActionCDList {
+    public pbc::RepeatedField<global::ActData.AIActionCD> AIActionCDList {
       get { return aIActionCDList_; }
     }
 
@@ -1602,11 +1602,11 @@ namespace Data1 {
 
     /// <summary>Field number for the "AIStatusList" field.</summary>
     public const int AIStatusListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Data1.AIStatus> _repeated_aIStatusList_codec
-        = pb::FieldCodec.ForMessage(18, global::Data1.AIStatus.Parser);
-    private readonly pbc::RepeatedField<global::Data1.AIStatus> aIStatusList_ = new pbc::RepeatedField<global::Data1.AIStatus>();
+    private static readonly pb::FieldCodec<global::ActData.AIStatus> _repeated_aIStatusList_codec
+        = pb::FieldCodec.ForMessage(18, global::ActData.AIStatus.Parser);
+    private readonly pbc::RepeatedField<global::ActData.AIStatus> aIStatusList_ = new pbc::RepeatedField<global::ActData.AIStatus>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.AIStatus> AIStatusList {
+    public pbc::RepeatedField<global::ActData.AIStatus> AIStatusList {
       get { return aIStatusList_; }
     }
 
@@ -1658,12 +1658,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "easyGroup" field.</summary>
     public const int EasyGroupFieldNumber = 1;
-    private global::Data1.AIGroup easyGroup_;
+    private global::ActData.AIGroup easyGroup_;
     /// <summary>
     ///简单
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.AIGroup EasyGroup {
+    public global::ActData.AIGroup EasyGroup {
       get { return easyGroup_; }
       set {
         easyGroup_ = value;
@@ -1672,12 +1672,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "normalGroup" field.</summary>
     public const int NormalGroupFieldNumber = 2;
-    private global::Data1.AIGroup normalGroup_;
+    private global::ActData.AIGroup normalGroup_;
     /// <summary>
     ///普通
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.AIGroup NormalGroup {
+    public global::ActData.AIGroup NormalGroup {
       get { return normalGroup_; }
       set {
         normalGroup_ = value;
@@ -1686,12 +1686,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "hardGroup" field.</summary>
     public const int HardGroupFieldNumber = 3;
-    private global::Data1.AIGroup hardGroup_;
+    private global::ActData.AIGroup hardGroup_;
     /// <summary>
     ///困难
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.AIGroup HardGroup {
+    public global::ActData.AIGroup HardGroup {
       get { return hardGroup_; }
       set {
         hardGroup_ = value;
@@ -1700,12 +1700,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "nightmareGroup" field.</summary>
     public const int NightmareGroupFieldNumber = 4;
-    private global::Data1.AIGroup nightmareGroup_;
+    private global::ActData.AIGroup nightmareGroup_;
     /// <summary>
     ///噩梦
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.AIGroup NightmareGroup {
+    public global::ActData.AIGroup NightmareGroup {
       get { return nightmareGroup_; }
       set {
         nightmareGroup_ = value;
@@ -1760,28 +1760,28 @@ namespace Data1 {
             break;
           case 10: {
             if (easyGroup_ == null) {
-              easyGroup_ = new global::Data1.AIGroup();
+              easyGroup_ = new global::ActData.AIGroup();
             }
             input.ReadMessage(easyGroup_);
             break;
           }
           case 18: {
             if (normalGroup_ == null) {
-              normalGroup_ = new global::Data1.AIGroup();
+              normalGroup_ = new global::ActData.AIGroup();
             }
             input.ReadMessage(normalGroup_);
             break;
           }
           case 26: {
             if (hardGroup_ == null) {
-              hardGroup_ = new global::Data1.AIGroup();
+              hardGroup_ = new global::ActData.AIGroup();
             }
             input.ReadMessage(hardGroup_);
             break;
           }
           case 34: {
             if (nightmareGroup_ == null) {
-              nightmareGroup_ = new global::Data1.AIGroup();
+              nightmareGroup_ = new global::ActData.AIGroup();
             }
             input.ReadMessage(nightmareGroup_);
             break;
@@ -1799,11 +1799,11 @@ namespace Data1 {
 
     /// <summary>Field number for the "actionList" field.</summary>
     public const int ActionListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Data1.Action> _repeated_actionList_codec
-        = pb::FieldCodec.ForMessage(10, global::Data1.Action.Parser);
-    private readonly pbc::RepeatedField<global::Data1.Action> actionList_ = new pbc::RepeatedField<global::Data1.Action>();
+    private static readonly pb::FieldCodec<global::ActData.Action> _repeated_actionList_codec
+        = pb::FieldCodec.ForMessage(10, global::ActData.Action.Parser);
+    private readonly pbc::RepeatedField<global::ActData.Action> actionList_ = new pbc::RepeatedField<global::ActData.Action>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.Action> ActionList {
+    public pbc::RepeatedField<global::ActData.Action> ActionList {
       get { return actionList_; }
     }
 
@@ -1837,12 +1837,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "materialType" field.</summary>
     public const int MaterialTypeFieldNumber = 4;
-    private global::Data1.MaterialType materialType_ = 0;
+    private global::ActData.MaterialType materialType_ = 0;
     /// <summary>
     ///Unit的材质
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.MaterialType MaterialType {
+    public global::ActData.MaterialType MaterialType {
       get { return materialType_; }
       set {
         materialType_ = value;
@@ -1949,12 +1949,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "AISetting" field.</summary>
     public const int AISettingFieldNumber = 12;
-    private global::Data1.AISetting aISetting_;
+    private global::ActData.AISetting aISetting_;
     /// <summary>
     ///AI设置
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.AISetting AISetting {
+    public global::ActData.AISetting AISetting {
       get { return aISetting_; }
       set {
         aISetting_ = value;
@@ -2075,12 +2075,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "lashModifier" field.</summary>
     public const int LashModifierFieldNumber = 21;
-    private global::Data1.Vector3 lashModifier_;
+    private global::ActData.Vector3 lashModifier_;
     /// <summary>
     ///冲击减免,当怪物受到攻击时，冲击速度减免量，默认为不减免(1 1 1)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 LashModifier {
+    public global::ActData.Vector3 LashModifier {
       get { return lashModifier_; }
       set {
         lashModifier_ = value;
@@ -2089,12 +2089,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "holdOffset" field.</summary>
     public const int HoldOffsetFieldNumber = 22;
-    private global::Data1.Vector3 holdOffset_;
+    private global::ActData.Vector3 holdOffset_;
     /// <summary>
     ///被抓偏移
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 HoldOffset {
+    public global::ActData.Vector3 HoldOffset {
       get { return holdOffset_; }
       set {
         holdOffset_ = value;
@@ -2537,12 +2537,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "idlePabodyEffectOffset" field.</summary>
     public const int IdlePabodyEffectOffsetFieldNumber = 54;
-    private global::Data1.Vector3 idlePabodyEffectOffset_;
+    private global::ActData.Vector3 idlePabodyEffectOffset_;
     /// <summary>
     ///待机霸体特效偏移量
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 IdlePabodyEffectOffset {
+    public global::ActData.Vector3 IdlePabodyEffectOffset {
       get { return idlePabodyEffectOffset_; }
       set {
         idlePabodyEffectOffset_ = value;
@@ -2565,12 +2565,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "movePabodyEffectOffset" field.</summary>
     public const int MovePabodyEffectOffsetFieldNumber = 56;
-    private global::Data1.Vector3 movePabodyEffectOffset_;
+    private global::ActData.Vector3 movePabodyEffectOffset_;
     /// <summary>
     ///霸体受击特效偏移量,怪物是霸体的时候，播放特效的偏移量
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 MovePabodyEffectOffset {
+    public global::ActData.Vector3 MovePabodyEffectOffset {
       get { return movePabodyEffectOffset_; }
       set {
         movePabodyEffectOffset_ = value;
@@ -2593,12 +2593,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "attackPabodyEffectOffset" field.</summary>
     public const int AttackPabodyEffectOffsetFieldNumber = 58;
-    private global::Data1.Vector3 attackPabodyEffectOffset_;
+    private global::ActData.Vector3 attackPabodyEffectOffset_;
     /// <summary>
     ///霸体受击特效偏移量,怪物是霸体的时候，播放特效的偏移量
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 AttackPabodyEffectOffset {
+    public global::ActData.Vector3 AttackPabodyEffectOffset {
       get { return attackPabodyEffectOffset_; }
       set {
         attackPabodyEffectOffset_ = value;
@@ -2621,12 +2621,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "hitPabodyEffectOffset" field.</summary>
     public const int HitPabodyEffectOffsetFieldNumber = 60;
-    private global::Data1.Vector3 hitPabodyEffectOffset_;
+    private global::ActData.Vector3 hitPabodyEffectOffset_;
     /// <summary>
     ///受伤霸体特效偏移量
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 HitPabodyEffectOffset {
+    public global::ActData.Vector3 HitPabodyEffectOffset {
       get { return hitPabodyEffectOffset_; }
       set {
         hitPabodyEffectOffset_ = value;
@@ -2649,12 +2649,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "defensePabodyEffectOffset" field.</summary>
     public const int DefensePabodyEffectOffsetFieldNumber = 62;
-    private global::Data1.Vector3 defensePabodyEffectOffset_;
+    private global::ActData.Vector3 defensePabodyEffectOffset_;
     /// <summary>
     ///防御霸体特效偏移量
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 DefensePabodyEffectOffset {
+    public global::ActData.Vector3 DefensePabodyEffectOffset {
       get { return defensePabodyEffectOffset_; }
       set {
         defensePabodyEffectOffset_ = value;
@@ -3310,7 +3310,7 @@ namespace Data1 {
             break;
           }
           case 32: {
-            materialType_ = (global::Data1.MaterialType) input.ReadEnum();
+            materialType_ = (global::ActData.MaterialType) input.ReadEnum();
             break;
           }
           case 40: {
@@ -3343,7 +3343,7 @@ namespace Data1 {
           }
           case 98: {
             if (aISetting_ == null) {
-              aISetting_ = new global::Data1.AISetting();
+              aISetting_ = new global::ActData.AISetting();
             }
             input.ReadMessage(aISetting_);
             break;
@@ -3382,14 +3382,14 @@ namespace Data1 {
           }
           case 170: {
             if (lashModifier_ == null) {
-              lashModifier_ = new global::Data1.Vector3();
+              lashModifier_ = new global::ActData.Vector3();
             }
             input.ReadMessage(lashModifier_);
             break;
           }
           case 178: {
             if (holdOffset_ == null) {
-              holdOffset_ = new global::Data1.Vector3();
+              holdOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(holdOffset_);
             break;
@@ -3520,7 +3520,7 @@ namespace Data1 {
           }
           case 434: {
             if (idlePabodyEffectOffset_ == null) {
-              idlePabodyEffectOffset_ = new global::Data1.Vector3();
+              idlePabodyEffectOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(idlePabodyEffectOffset_);
             break;
@@ -3531,7 +3531,7 @@ namespace Data1 {
           }
           case 450: {
             if (movePabodyEffectOffset_ == null) {
-              movePabodyEffectOffset_ = new global::Data1.Vector3();
+              movePabodyEffectOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(movePabodyEffectOffset_);
             break;
@@ -3542,7 +3542,7 @@ namespace Data1 {
           }
           case 466: {
             if (attackPabodyEffectOffset_ == null) {
-              attackPabodyEffectOffset_ = new global::Data1.Vector3();
+              attackPabodyEffectOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(attackPabodyEffectOffset_);
             break;
@@ -3553,7 +3553,7 @@ namespace Data1 {
           }
           case 482: {
             if (hitPabodyEffectOffset_ == null) {
-              hitPabodyEffectOffset_ = new global::Data1.Vector3();
+              hitPabodyEffectOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(hitPabodyEffectOffset_);
             break;
@@ -3564,7 +3564,7 @@ namespace Data1 {
           }
           case 498: {
             if (defensePabodyEffectOffset_ == null) {
-              defensePabodyEffectOffset_ = new global::Data1.Vector3();
+              defensePabodyEffectOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(defensePabodyEffectOffset_);
             break;
@@ -3710,14 +3710,14 @@ namespace Data1 {
 
     /// <summary>Field number for the "animSlotList" field.</summary>
     public const int AnimSlotListFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Data1.AnimSlot> _repeated_animSlotList_codec
-        = pb::FieldCodec.ForMessage(66, global::Data1.AnimSlot.Parser);
-    private readonly pbc::RepeatedField<global::Data1.AnimSlot> animSlotList_ = new pbc::RepeatedField<global::Data1.AnimSlot>();
+    private static readonly pb::FieldCodec<global::ActData.AnimSlot> _repeated_animSlotList_codec
+        = pb::FieldCodec.ForMessage(66, global::ActData.AnimSlot.Parser);
+    private readonly pbc::RepeatedField<global::ActData.AnimSlot> animSlotList_ = new pbc::RepeatedField<global::ActData.AnimSlot>();
     /// <summary>
     ///动画列表
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.AnimSlot> AnimSlotList {
+    public pbc::RepeatedField<global::ActData.AnimSlot> AnimSlotList {
       get { return animSlotList_; }
     }
 
@@ -4059,40 +4059,40 @@ namespace Data1 {
 
     /// <summary>Field number for the "events" field.</summary>
     public const int EventsFieldNumber = 33;
-    private static readonly pb::FieldCodec<global::Data1.Event> _repeated_events_codec
-        = pb::FieldCodec.ForMessage(266, global::Data1.Event.Parser);
-    private readonly pbc::RepeatedField<global::Data1.Event> events_ = new pbc::RepeatedField<global::Data1.Event>();
+    private static readonly pb::FieldCodec<global::ActData.Event> _repeated_events_codec
+        = pb::FieldCodec.ForMessage(266, global::ActData.Event.Parser);
+    private readonly pbc::RepeatedField<global::ActData.Event> events_ = new pbc::RepeatedField<global::ActData.Event>();
     /// <summary>
     ///内部事件,该动作内能够触发的事件列表
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.Event> Events {
+    public pbc::RepeatedField<global::ActData.Event> Events {
       get { return events_; }
     }
 
     /// <summary>Field number for the "actionInterrupts" field.</summary>
     public const int ActionInterruptsFieldNumber = 34;
-    private static readonly pb::FieldCodec<global::Data1.ActionInterrupt> _repeated_actionInterrupts_codec
-        = pb::FieldCodec.ForMessage(274, global::Data1.ActionInterrupt.Parser);
-    private readonly pbc::RepeatedField<global::Data1.ActionInterrupt> actionInterrupts_ = new pbc::RepeatedField<global::Data1.ActionInterrupt>();
+    private static readonly pb::FieldCodec<global::ActData.ActionInterrupt> _repeated_actionInterrupts_codec
+        = pb::FieldCodec.ForMessage(274, global::ActData.ActionInterrupt.Parser);
+    private readonly pbc::RepeatedField<global::ActData.ActionInterrupt> actionInterrupts_ = new pbc::RepeatedField<global::ActData.ActionInterrupt>();
     /// <summary>
     ///中断列表,该动作内能够被中断的动作
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.ActionInterrupt> ActionInterrupts {
+    public pbc::RepeatedField<global::ActData.ActionInterrupt> ActionInterrupts {
       get { return actionInterrupts_; }
     }
 
     /// <summary>Field number for the "attackDefs" field.</summary>
     public const int AttackDefsFieldNumber = 35;
-    private static readonly pb::FieldCodec<global::Data1.AttackDef> _repeated_attackDefs_codec
-        = pb::FieldCodec.ForMessage(282, global::Data1.AttackDef.Parser);
-    private readonly pbc::RepeatedField<global::Data1.AttackDef> attackDefs_ = new pbc::RepeatedField<global::Data1.AttackDef>();
+    private static readonly pb::FieldCodec<global::ActData.AttackDef> _repeated_attackDefs_codec
+        = pb::FieldCodec.ForMessage(282, global::ActData.AttackDef.Parser);
+    private readonly pbc::RepeatedField<global::ActData.AttackDef> attackDefs_ = new pbc::RepeatedField<global::ActData.AttackDef>();
     /// <summary>
     ///攻击定义,该动作所包含的攻击定义列表
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.AttackDef> AttackDefs {
+    public pbc::RepeatedField<global::ActData.AttackDef> AttackDefs {
       get { return attackDefs_; }
     }
 
@@ -4898,13 +4898,13 @@ namespace Data1 {
 
     /// <summary>Field number for the "animControlList" field.</summary>
     public const int AnimControlListFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Data1.AnimControl> _repeated_animControlList_codec
-        = pb::FieldCodec.ForMessage(42, global::Data1.AnimControl.Parser);
-    private readonly pbc::RepeatedField<global::Data1.AnimControl> animControlList_ = new pbc::RepeatedField<global::Data1.AnimControl>();
+    private static readonly pb::FieldCodec<global::ActData.AnimControl> _repeated_animControlList_codec
+        = pb::FieldCodec.ForMessage(42, global::ActData.AnimControl.Parser);
+    private readonly pbc::RepeatedField<global::ActData.AnimControl> animControlList_ = new pbc::RepeatedField<global::ActData.AnimControl>();
     /// <summary>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.AnimControl> AnimControlList {
+    public pbc::RepeatedField<global::ActData.AnimControl> AnimControlList {
       get { return animControlList_; }
     }
 
@@ -5082,12 +5082,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventType" field.</summary>
     public const int EventTypeFieldNumber = 2;
-    private global::Data1.EventType eventType_ = 0;
+    private global::ActData.EventType eventType_ = 0;
     /// <summary>
     ///触发类型,事件触发的类型，默认为None
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventType EventType {
+    public global::ActData.EventType EventType {
       get { return eventType_; }
       set {
         eventType_ = value;
@@ -5110,12 +5110,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventDetailData" field.</summary>
     public const int EventDetailDataFieldNumber = 4;
-    private global::Data1.EventData eventDetailData_;
+    private global::ActData.EventData eventDetailData_;
     /// <summary>
     ///事件详细数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventData EventDetailData {
+    public global::ActData.EventData EventDetailData {
       get { return eventDetailData_; }
       set {
         eventDetailData_ = value;
@@ -5194,7 +5194,7 @@ namespace Data1 {
             break;
           }
           case 16: {
-            eventType_ = (global::Data1.EventType) input.ReadEnum();
+            eventType_ = (global::ActData.EventType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -5203,7 +5203,7 @@ namespace Data1 {
           }
           case 34: {
             if (eventDetailData_ == null) {
-              eventDetailData_ = new global::Data1.EventData();
+              eventDetailData_ = new global::ActData.EventData();
             }
             input.ReadMessage(eventDetailData_);
             break;
@@ -5228,9 +5228,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventPlayEffect" field.</summary>
     public const int EventPlayEffectFieldNumber = 1;
-    private global::Data1.EventPlayEffect eventPlayEffect_;
+    private global::ActData.EventPlayEffect eventPlayEffect_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventPlayEffect EventPlayEffect {
+    public global::ActData.EventPlayEffect EventPlayEffect {
       get { return eventPlayEffect_; }
       set {
         eventPlayEffect_ = value;
@@ -5239,9 +5239,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSetColor" field.</summary>
     public const int EventSetColorFieldNumber = 2;
-    private global::Data1.EventSetColor eventSetColor_;
+    private global::ActData.EventSetColor eventSetColor_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSetColor EventSetColor {
+    public global::ActData.EventSetColor EventSetColor {
       get { return eventSetColor_; }
       set {
         eventSetColor_ = value;
@@ -5250,9 +5250,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventLinkActionOn" field.</summary>
     public const int EventLinkActionOnFieldNumber = 3;
-    private global::Data1.EventLinkActionOn eventLinkActionOn_;
+    private global::ActData.EventLinkActionOn eventLinkActionOn_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventLinkActionOn EventLinkActionOn {
+    public global::ActData.EventLinkActionOn EventLinkActionOn {
       get { return eventLinkActionOn_; }
       set {
         eventLinkActionOn_ = value;
@@ -5261,9 +5261,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventLinkActionOff" field.</summary>
     public const int EventLinkActionOffFieldNumber = 4;
-    private global::Data1.EventLinkActionOff eventLinkActionOff_;
+    private global::ActData.EventLinkActionOff eventLinkActionOff_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventLinkActionOff EventLinkActionOff {
+    public global::ActData.EventLinkActionOff EventLinkActionOff {
       get { return eventLinkActionOff_; }
       set {
         eventLinkActionOff_ = value;
@@ -5272,9 +5272,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSetVelocity" field.</summary>
     public const int EventSetVelocityFieldNumber = 5;
-    private global::Data1.EventSetVelocity eventSetVelocity_;
+    private global::ActData.EventSetVelocity eventSetVelocity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSetVelocity EventSetVelocity {
+    public global::ActData.EventSetVelocity EventSetVelocity {
       get { return eventSetVelocity_; }
       set {
         eventSetVelocity_ = value;
@@ -5283,9 +5283,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSetDirection" field.</summary>
     public const int EventSetDirectionFieldNumber = 6;
-    private global::Data1.EventSetDirection eventSetDirection_;
+    private global::ActData.EventSetDirection eventSetDirection_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSetDirection EventSetDirection {
+    public global::ActData.EventSetDirection EventSetDirection {
       get { return eventSetDirection_; }
       set {
         eventSetDirection_ = value;
@@ -5294,9 +5294,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSetGravity" field.</summary>
     public const int EventSetGravityFieldNumber = 7;
-    private global::Data1.EventSetGravity eventSetGravity_;
+    private global::ActData.EventSetGravity eventSetGravity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSetGravity EventSetGravity {
+    public global::ActData.EventSetGravity EventSetGravity {
       get { return eventSetGravity_; }
       set {
         eventSetGravity_ = value;
@@ -5305,9 +5305,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSetHeightStatus" field.</summary>
     public const int EventSetHeightStatusFieldNumber = 8;
-    private global::Data1.EventSetHeightStatus eventSetHeightStatus_;
+    private global::ActData.EventSetHeightStatus eventSetHeightStatus_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSetHeightStatus EventSetHeightStatus {
+    public global::ActData.EventSetHeightStatus EventSetHeightStatus {
       get { return eventSetHeightStatus_; }
       set {
         eventSetHeightStatus_ = value;
@@ -5316,9 +5316,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSetActionStatus" field.</summary>
     public const int EventSetActionStatusFieldNumber = 9;
-    private global::Data1.EventSetActionStatus eventSetActionStatus_;
+    private global::ActData.EventSetActionStatus eventSetActionStatus_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSetActionStatus EventSetActionStatus {
+    public global::ActData.EventSetActionStatus EventSetActionStatus {
       get { return eventSetActionStatus_; }
       set {
         eventSetActionStatus_ = value;
@@ -5327,9 +5327,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSetFragmentStatus" field.</summary>
     public const int EventSetFragmentStatusFieldNumber = 10;
-    private global::Data1.EventSetFragmentStatus eventSetFragmentStatus_;
+    private global::ActData.EventSetFragmentStatus eventSetFragmentStatus_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSetFragmentStatus EventSetFragmentStatus {
+    public global::ActData.EventSetFragmentStatus EventSetFragmentStatus {
       get { return eventSetFragmentStatus_; }
       set {
         eventSetFragmentStatus_ = value;
@@ -5338,9 +5338,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventAddUnit" field.</summary>
     public const int EventAddUnitFieldNumber = 11;
-    private global::Data1.EventAddUnit eventAddUnit_;
+    private global::ActData.EventAddUnit eventAddUnit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventAddUnit EventAddUnit {
+    public global::ActData.EventAddUnit EventAddUnit {
       get { return eventAddUnit_; }
       set {
         eventAddUnit_ = value;
@@ -5349,9 +5349,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventListTargets" field.</summary>
     public const int EventListTargetsFieldNumber = 12;
-    private global::Data1.EventListTargets eventListTargets_;
+    private global::ActData.EventListTargets eventListTargets_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventListTargets EventListTargets {
+    public global::ActData.EventListTargets EventListTargets {
       get { return eventListTargets_; }
       set {
         eventListTargets_ = value;
@@ -5360,9 +5360,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSetVariable" field.</summary>
     public const int EventSetVariableFieldNumber = 13;
-    private global::Data1.EventSetVariable eventSetVariable_;
+    private global::ActData.EventSetVariable eventSetVariable_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSetVariable EventSetVariable {
+    public global::ActData.EventSetVariable EventSetVariable {
       get { return eventSetVariable_; }
       set {
         eventSetVariable_ = value;
@@ -5371,9 +5371,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventAdjustVarible" field.</summary>
     public const int EventAdjustVaribleFieldNumber = 14;
-    private global::Data1.EventAdjustVarible eventAdjustVarible_;
+    private global::ActData.EventAdjustVarible eventAdjustVarible_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventAdjustVarible EventAdjustVarible {
+    public global::ActData.EventAdjustVarible EventAdjustVarible {
       get { return eventAdjustVarible_; }
       set {
         eventAdjustVarible_ = value;
@@ -5382,9 +5382,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventAttackTargets" field.</summary>
     public const int EventAttackTargetsFieldNumber = 15;
-    private global::Data1.EventAttackTargets eventAttackTargets_;
+    private global::ActData.EventAttackTargets eventAttackTargets_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventAttackTargets EventAttackTargets {
+    public global::ActData.EventAttackTargets EventAttackTargets {
       get { return eventAttackTargets_; }
       set {
         eventAttackTargets_ = value;
@@ -5393,9 +5393,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventGoToTargets" field.</summary>
     public const int EventGoToTargetsFieldNumber = 16;
-    private global::Data1.EventGoToTargets eventGoToTargets_;
+    private global::ActData.EventGoToTargets eventGoToTargets_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventGoToTargets EventGoToTargets {
+    public global::ActData.EventGoToTargets EventGoToTargets {
       get { return eventGoToTargets_; }
       set {
         eventGoToTargets_ = value;
@@ -5404,9 +5404,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSummonUnit" field.</summary>
     public const int EventSummonUnitFieldNumber = 17;
-    private global::Data1.EventSummonUnit eventSummonUnit_;
+    private global::ActData.EventSummonUnit eventSummonUnit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSummonUnit EventSummonUnit {
+    public global::ActData.EventSummonUnit EventSummonUnit {
       get { return eventSummonUnit_; }
       set {
         eventSummonUnit_ = value;
@@ -5415,9 +5415,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventControlUnit" field.</summary>
     public const int EventControlUnitFieldNumber = 18;
-    private global::Data1.EventControlUnit eventControlUnit_;
+    private global::ActData.EventControlUnit eventControlUnit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventControlUnit EventControlUnit {
+    public global::ActData.EventControlUnit EventControlUnit {
       get { return eventControlUnit_; }
       set {
         eventControlUnit_ = value;
@@ -5426,9 +5426,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventActionLevel" field.</summary>
     public const int EventActionLevelFieldNumber = 19;
-    private global::Data1.EventActionLevel eventActionLevel_;
+    private global::ActData.EventActionLevel eventActionLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventActionLevel EventActionLevel {
+    public global::ActData.EventActionLevel EventActionLevel {
       get { return eventActionLevel_; }
       set {
         eventActionLevel_ = value;
@@ -5437,9 +5437,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventRotateOnHit" field.</summary>
     public const int EventRotateOnHitFieldNumber = 20;
-    private global::Data1.EventRotateOnHit eventRotateOnHit_;
+    private global::ActData.EventRotateOnHit eventRotateOnHit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventRotateOnHit EventRotateOnHit {
+    public global::ActData.EventRotateOnHit EventRotateOnHit {
       get { return eventRotateOnHit_; }
       set {
         eventRotateOnHit_ = value;
@@ -5448,9 +5448,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventHasCollision" field.</summary>
     public const int EventHasCollisionFieldNumber = 21;
-    private global::Data1.EventHasCollision eventHasCollision_;
+    private global::ActData.EventHasCollision eventHasCollision_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventHasCollision EventHasCollision {
+    public global::ActData.EventHasCollision EventHasCollision {
       get { return eventHasCollision_; }
       set {
         eventHasCollision_ = value;
@@ -5459,9 +5459,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventPlaySound" field.</summary>
     public const int EventPlaySoundFieldNumber = 22;
-    private global::Data1.EventPlaySound eventPlaySound_;
+    private global::ActData.EventPlaySound eventPlaySound_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventPlaySound EventPlaySound {
+    public global::ActData.EventPlaySound EventPlaySound {
       get { return eventPlaySound_; }
       set {
         eventPlaySound_ = value;
@@ -5470,9 +5470,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventStatusOn" field.</summary>
     public const int EventStatusOnFieldNumber = 23;
-    private global::Data1.EventStatusOn eventStatusOn_;
+    private global::ActData.EventStatusOn eventStatusOn_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventStatusOn EventStatusOn {
+    public global::ActData.EventStatusOn EventStatusOn {
       get { return eventStatusOn_; }
       set {
         eventStatusOn_ = value;
@@ -5481,9 +5481,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventStatusOff" field.</summary>
     public const int EventStatusOffFieldNumber = 24;
-    private global::Data1.EventStatusOff eventStatusOff_;
+    private global::ActData.EventStatusOff eventStatusOff_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventStatusOff EventStatusOff {
+    public global::ActData.EventStatusOff EventStatusOff {
       get { return eventStatusOff_; }
       set {
         eventStatusOff_ = value;
@@ -5492,9 +5492,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSetVelocity_X" field.</summary>
     public const int EventSetVelocityXFieldNumber = 25;
-    private global::Data1.EventSetVelocity_X eventSetVelocityX_;
+    private global::ActData.EventSetVelocity_X eventSetVelocityX_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSetVelocity_X EventSetVelocityX {
+    public global::ActData.EventSetVelocity_X EventSetVelocityX {
       get { return eventSetVelocityX_; }
       set {
         eventSetVelocityX_ = value;
@@ -5503,9 +5503,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSetVelocity_Y" field.</summary>
     public const int EventSetVelocityYFieldNumber = 26;
-    private global::Data1.EventSetVelocity_Y eventSetVelocityY_;
+    private global::ActData.EventSetVelocity_Y eventSetVelocityY_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSetVelocity_Y EventSetVelocityY {
+    public global::ActData.EventSetVelocity_Y EventSetVelocityY {
       get { return eventSetVelocityY_; }
       set {
         eventSetVelocityY_ = value;
@@ -5514,9 +5514,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventSetVelocity_Z" field.</summary>
     public const int EventSetVelocityZFieldNumber = 27;
-    private global::Data1.EventSetVelocity_Z eventSetVelocityZ_;
+    private global::ActData.EventSetVelocity_Z eventSetVelocityZ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventSetVelocity_Z EventSetVelocityZ {
+    public global::ActData.EventSetVelocity_Z EventSetVelocityZ {
       get { return eventSetVelocityZ_; }
       set {
         eventSetVelocityZ_ = value;
@@ -5525,9 +5525,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventExeScript" field.</summary>
     public const int EventExeScriptFieldNumber = 28;
-    private global::Data1.EventExeScript eventExeScript_;
+    private global::ActData.EventExeScript eventExeScript_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventExeScript EventExeScript {
+    public global::ActData.EventExeScript EventExeScript {
       get { return eventExeScript_; }
       set {
         eventExeScript_ = value;
@@ -5536,9 +5536,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventCameraEffect" field.</summary>
     public const int EventCameraEffectFieldNumber = 29;
-    private global::Data1.EventCameraEffect eventCameraEffect_;
+    private global::ActData.EventCameraEffect eventCameraEffect_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventCameraEffect EventCameraEffect {
+    public global::ActData.EventCameraEffect EventCameraEffect {
       get { return eventCameraEffect_; }
       set {
         eventCameraEffect_ = value;
@@ -5547,9 +5547,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventChat" field.</summary>
     public const int EventChatFieldNumber = 30;
-    private global::Data1.EventChat eventChat_;
+    private global::ActData.EventChat eventChat_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventChat EventChat {
+    public global::ActData.EventChat EventChat {
       get { return eventChat_; }
       set {
         eventChat_ = value;
@@ -5558,9 +5558,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventFaceTargets" field.</summary>
     public const int EventFaceTargetsFieldNumber = 31;
-    private global::Data1.EventFaceTargets eventFaceTargets_;
+    private global::ActData.EventFaceTargets eventFaceTargets_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventFaceTargets EventFaceTargets {
+    public global::ActData.EventFaceTargets EventFaceTargets {
       get { return eventFaceTargets_; }
       set {
         eventFaceTargets_ = value;
@@ -5569,9 +5569,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "eventEarlyWarning" field.</summary>
     public const int EventEarlyWarningFieldNumber = 32;
-    private global::Data1.EventEarlyWarning eventEarlyWarning_;
+    private global::ActData.EventEarlyWarning eventEarlyWarning_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventEarlyWarning EventEarlyWarning {
+    public global::ActData.EventEarlyWarning EventEarlyWarning {
       get { return eventEarlyWarning_; }
       set {
         eventEarlyWarning_ = value;
@@ -5822,224 +5822,224 @@ namespace Data1 {
             break;
           case 10: {
             if (eventPlayEffect_ == null) {
-              eventPlayEffect_ = new global::Data1.EventPlayEffect();
+              eventPlayEffect_ = new global::ActData.EventPlayEffect();
             }
             input.ReadMessage(eventPlayEffect_);
             break;
           }
           case 18: {
             if (eventSetColor_ == null) {
-              eventSetColor_ = new global::Data1.EventSetColor();
+              eventSetColor_ = new global::ActData.EventSetColor();
             }
             input.ReadMessage(eventSetColor_);
             break;
           }
           case 26: {
             if (eventLinkActionOn_ == null) {
-              eventLinkActionOn_ = new global::Data1.EventLinkActionOn();
+              eventLinkActionOn_ = new global::ActData.EventLinkActionOn();
             }
             input.ReadMessage(eventLinkActionOn_);
             break;
           }
           case 34: {
             if (eventLinkActionOff_ == null) {
-              eventLinkActionOff_ = new global::Data1.EventLinkActionOff();
+              eventLinkActionOff_ = new global::ActData.EventLinkActionOff();
             }
             input.ReadMessage(eventLinkActionOff_);
             break;
           }
           case 42: {
             if (eventSetVelocity_ == null) {
-              eventSetVelocity_ = new global::Data1.EventSetVelocity();
+              eventSetVelocity_ = new global::ActData.EventSetVelocity();
             }
             input.ReadMessage(eventSetVelocity_);
             break;
           }
           case 50: {
             if (eventSetDirection_ == null) {
-              eventSetDirection_ = new global::Data1.EventSetDirection();
+              eventSetDirection_ = new global::ActData.EventSetDirection();
             }
             input.ReadMessage(eventSetDirection_);
             break;
           }
           case 58: {
             if (eventSetGravity_ == null) {
-              eventSetGravity_ = new global::Data1.EventSetGravity();
+              eventSetGravity_ = new global::ActData.EventSetGravity();
             }
             input.ReadMessage(eventSetGravity_);
             break;
           }
           case 66: {
             if (eventSetHeightStatus_ == null) {
-              eventSetHeightStatus_ = new global::Data1.EventSetHeightStatus();
+              eventSetHeightStatus_ = new global::ActData.EventSetHeightStatus();
             }
             input.ReadMessage(eventSetHeightStatus_);
             break;
           }
           case 74: {
             if (eventSetActionStatus_ == null) {
-              eventSetActionStatus_ = new global::Data1.EventSetActionStatus();
+              eventSetActionStatus_ = new global::ActData.EventSetActionStatus();
             }
             input.ReadMessage(eventSetActionStatus_);
             break;
           }
           case 82: {
             if (eventSetFragmentStatus_ == null) {
-              eventSetFragmentStatus_ = new global::Data1.EventSetFragmentStatus();
+              eventSetFragmentStatus_ = new global::ActData.EventSetFragmentStatus();
             }
             input.ReadMessage(eventSetFragmentStatus_);
             break;
           }
           case 90: {
             if (eventAddUnit_ == null) {
-              eventAddUnit_ = new global::Data1.EventAddUnit();
+              eventAddUnit_ = new global::ActData.EventAddUnit();
             }
             input.ReadMessage(eventAddUnit_);
             break;
           }
           case 98: {
             if (eventListTargets_ == null) {
-              eventListTargets_ = new global::Data1.EventListTargets();
+              eventListTargets_ = new global::ActData.EventListTargets();
             }
             input.ReadMessage(eventListTargets_);
             break;
           }
           case 106: {
             if (eventSetVariable_ == null) {
-              eventSetVariable_ = new global::Data1.EventSetVariable();
+              eventSetVariable_ = new global::ActData.EventSetVariable();
             }
             input.ReadMessage(eventSetVariable_);
             break;
           }
           case 114: {
             if (eventAdjustVarible_ == null) {
-              eventAdjustVarible_ = new global::Data1.EventAdjustVarible();
+              eventAdjustVarible_ = new global::ActData.EventAdjustVarible();
             }
             input.ReadMessage(eventAdjustVarible_);
             break;
           }
           case 122: {
             if (eventAttackTargets_ == null) {
-              eventAttackTargets_ = new global::Data1.EventAttackTargets();
+              eventAttackTargets_ = new global::ActData.EventAttackTargets();
             }
             input.ReadMessage(eventAttackTargets_);
             break;
           }
           case 130: {
             if (eventGoToTargets_ == null) {
-              eventGoToTargets_ = new global::Data1.EventGoToTargets();
+              eventGoToTargets_ = new global::ActData.EventGoToTargets();
             }
             input.ReadMessage(eventGoToTargets_);
             break;
           }
           case 138: {
             if (eventSummonUnit_ == null) {
-              eventSummonUnit_ = new global::Data1.EventSummonUnit();
+              eventSummonUnit_ = new global::ActData.EventSummonUnit();
             }
             input.ReadMessage(eventSummonUnit_);
             break;
           }
           case 146: {
             if (eventControlUnit_ == null) {
-              eventControlUnit_ = new global::Data1.EventControlUnit();
+              eventControlUnit_ = new global::ActData.EventControlUnit();
             }
             input.ReadMessage(eventControlUnit_);
             break;
           }
           case 154: {
             if (eventActionLevel_ == null) {
-              eventActionLevel_ = new global::Data1.EventActionLevel();
+              eventActionLevel_ = new global::ActData.EventActionLevel();
             }
             input.ReadMessage(eventActionLevel_);
             break;
           }
           case 162: {
             if (eventRotateOnHit_ == null) {
-              eventRotateOnHit_ = new global::Data1.EventRotateOnHit();
+              eventRotateOnHit_ = new global::ActData.EventRotateOnHit();
             }
             input.ReadMessage(eventRotateOnHit_);
             break;
           }
           case 170: {
             if (eventHasCollision_ == null) {
-              eventHasCollision_ = new global::Data1.EventHasCollision();
+              eventHasCollision_ = new global::ActData.EventHasCollision();
             }
             input.ReadMessage(eventHasCollision_);
             break;
           }
           case 178: {
             if (eventPlaySound_ == null) {
-              eventPlaySound_ = new global::Data1.EventPlaySound();
+              eventPlaySound_ = new global::ActData.EventPlaySound();
             }
             input.ReadMessage(eventPlaySound_);
             break;
           }
           case 186: {
             if (eventStatusOn_ == null) {
-              eventStatusOn_ = new global::Data1.EventStatusOn();
+              eventStatusOn_ = new global::ActData.EventStatusOn();
             }
             input.ReadMessage(eventStatusOn_);
             break;
           }
           case 194: {
             if (eventStatusOff_ == null) {
-              eventStatusOff_ = new global::Data1.EventStatusOff();
+              eventStatusOff_ = new global::ActData.EventStatusOff();
             }
             input.ReadMessage(eventStatusOff_);
             break;
           }
           case 202: {
             if (eventSetVelocityX_ == null) {
-              eventSetVelocityX_ = new global::Data1.EventSetVelocity_X();
+              eventSetVelocityX_ = new global::ActData.EventSetVelocity_X();
             }
             input.ReadMessage(eventSetVelocityX_);
             break;
           }
           case 210: {
             if (eventSetVelocityY_ == null) {
-              eventSetVelocityY_ = new global::Data1.EventSetVelocity_Y();
+              eventSetVelocityY_ = new global::ActData.EventSetVelocity_Y();
             }
             input.ReadMessage(eventSetVelocityY_);
             break;
           }
           case 218: {
             if (eventSetVelocityZ_ == null) {
-              eventSetVelocityZ_ = new global::Data1.EventSetVelocity_Z();
+              eventSetVelocityZ_ = new global::ActData.EventSetVelocity_Z();
             }
             input.ReadMessage(eventSetVelocityZ_);
             break;
           }
           case 226: {
             if (eventExeScript_ == null) {
-              eventExeScript_ = new global::Data1.EventExeScript();
+              eventExeScript_ = new global::ActData.EventExeScript();
             }
             input.ReadMessage(eventExeScript_);
             break;
           }
           case 234: {
             if (eventCameraEffect_ == null) {
-              eventCameraEffect_ = new global::Data1.EventCameraEffect();
+              eventCameraEffect_ = new global::ActData.EventCameraEffect();
             }
             input.ReadMessage(eventCameraEffect_);
             break;
           }
           case 242: {
             if (eventChat_ == null) {
-              eventChat_ = new global::Data1.EventChat();
+              eventChat_ = new global::ActData.EventChat();
             }
             input.ReadMessage(eventChat_);
             break;
           }
           case 250: {
             if (eventFaceTargets_ == null) {
-              eventFaceTargets_ = new global::Data1.EventFaceTargets();
+              eventFaceTargets_ = new global::ActData.EventFaceTargets();
             }
             input.ReadMessage(eventFaceTargets_);
             break;
           }
           case 258: {
             if (eventEarlyWarning_ == null) {
-              eventEarlyWarning_ = new global::Data1.EventEarlyWarning();
+              eventEarlyWarning_ = new global::ActData.EventEarlyWarning();
             }
             input.ReadMessage(eventEarlyWarning_);
             break;
@@ -6189,6 +6189,20 @@ namespace Data1 {
       }
     }
 
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 11;
+    private int duration_;
+    /// <summary>
+    ///特效持续时间
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (EffectName.Length != 0) {
@@ -6231,6 +6245,10 @@ namespace Data1 {
         output.WriteRawTag(82);
         output.WriteString(BindName);
       }
+      if (Duration != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(Duration);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6265,6 +6283,9 @@ namespace Data1 {
       }
       if (BindName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BindName);
+      }
+      if (Duration != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Duration);
       }
       return size;
     }
@@ -6315,6 +6336,10 @@ namespace Data1 {
           }
           case 82: {
             BindName = input.ReadString();
+            break;
+          }
+          case 88: {
+            Duration = input.ReadInt32();
             break;
           }
         }
@@ -7479,12 +7504,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "listType" field.</summary>
     public const int ListTypeFieldNumber = 7;
-    private global::Data1.ListTargetFrameType listType_ = 0;
+    private global::ActData.ListTargetFrameType listType_ = 0;
     /// <summary>
     ///列举类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.ListTargetFrameType ListType {
+    public global::ActData.ListTargetFrameType ListType {
       get { return listType_; }
       set {
         listType_ = value;
@@ -7493,12 +7518,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "listMode" field.</summary>
     public const int ListModeFieldNumber = 8;
-    private global::Data1.ListTargetMode listMode_ = 0;
+    private global::ActData.ListTargetMode listMode_ = 0;
     /// <summary>
     ///列举方式
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.ListTargetMode ListMode {
+    public global::ActData.ListTargetMode ListMode {
       get { return listMode_; }
       set {
         listMode_ = value;
@@ -7646,11 +7671,11 @@ namespace Data1 {
             break;
           }
           case 56: {
-            listType_ = (global::Data1.ListTargetFrameType) input.ReadEnum();
+            listType_ = (global::ActData.ListTargetFrameType) input.ReadEnum();
             break;
           }
           case 64: {
-            listMode_ = (global::Data1.ListTargetMode) input.ReadEnum();
+            listMode_ = (global::ActData.ListTargetMode) input.ReadEnum();
             break;
           }
           case 72: {
@@ -9189,11 +9214,11 @@ namespace Data1 {
 
     /// <summary>Field number for the "charDataList" field.</summary>
     public const int CharDataListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Data1.EventCharData> _repeated_charDataList_codec
-        = pb::FieldCodec.ForMessage(10, global::Data1.EventCharData.Parser);
-    private readonly pbc::RepeatedField<global::Data1.EventCharData> charDataList_ = new pbc::RepeatedField<global::Data1.EventCharData>();
+    private static readonly pb::FieldCodec<global::ActData.EventCharData> _repeated_charDataList_codec
+        = pb::FieldCodec.ForMessage(10, global::ActData.EventCharData.Parser);
+    private readonly pbc::RepeatedField<global::ActData.EventCharData> charDataList_ = new pbc::RepeatedField<global::ActData.EventCharData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.EventCharData> CharDataList {
+    public pbc::RepeatedField<global::ActData.EventCharData> CharDataList {
       get { return charDataList_; }
     }
 
@@ -9367,12 +9392,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "warningType" field.</summary>
     public const int WarningTypeFieldNumber = 1;
-    private global::Data1.EventEarlyWarning.Types.WarningType warningType_ = 0;
+    private global::ActData.EventEarlyWarning.Types.WarningType warningType_ = 0;
     /// <summary>
     ///预警框类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.EventEarlyWarning.Types.WarningType WarningType {
+    public global::ActData.EventEarlyWarning.Types.WarningType WarningType {
       get { return warningType_; }
       set {
         warningType_ = value;
@@ -9594,7 +9619,7 @@ namespace Data1 {
             input.SkipLastField();
             break;
           case 8: {
-            warningType_ = (global::Data1.EventEarlyWarning.Types.WarningType) input.ReadEnum();
+            warningType_ = (global::ActData.EventEarlyWarning.Types.WarningType) input.ReadEnum();
             break;
           }
           case 21: {
@@ -11376,12 +11401,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "race" field.</summary>
     public const int RaceFieldNumber = 17;
-    private global::Data1.RaceType race_ = 0;
+    private global::ActData.RaceType race_ = 0;
     /// <summary>
     ///释放者动作改变
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.RaceType Race {
+    public global::ActData.RaceType Race {
       get { return race_; }
       set {
         race_ = value;
@@ -11446,12 +11471,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "movingSpeed" field.</summary>
     public const int MovingSpeedFieldNumber = 22;
-    private global::Data1.Vector3 movingSpeed_;
+    private global::ActData.Vector3 movingSpeed_;
     /// <summary>
     ///移动速度
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 MovingSpeed {
+    public global::ActData.Vector3 MovingSpeed {
       get { return movingSpeed_; }
       set {
         movingSpeed_ = value;
@@ -11460,14 +11485,14 @@ namespace Data1 {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 23;
-    private static readonly pb::FieldCodec<global::Data1.AttackDef.Types.PathNode> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(186, global::Data1.AttackDef.Types.PathNode.Parser);
-    private readonly pbc::RepeatedField<global::Data1.AttackDef.Types.PathNode> path_ = new pbc::RepeatedField<global::Data1.AttackDef.Types.PathNode>();
+    private static readonly pb::FieldCodec<global::ActData.AttackDef.Types.PathNode> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(186, global::ActData.AttackDef.Types.PathNode.Parser);
+    private readonly pbc::RepeatedField<global::ActData.AttackDef.Types.PathNode> path_ = new pbc::RepeatedField<global::ActData.AttackDef.Types.PathNode>();
     /// <summary>
     ///移动路径
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.AttackDef.Types.PathNode> Path {
+    public pbc::RepeatedField<global::ActData.AttackDef.Types.PathNode> Path {
       get { return path_; }
     }
 
@@ -11515,12 +11540,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "frameSize" field.</summary>
     public const int FrameSizeFieldNumber = 27;
-    private global::Data1.Vector3 frameSize_;
+    private global::ActData.Vector3 frameSize_;
     /// <summary>
     ///技能击中框,技能击中框(长方体分别对应:宽,高,长; 圆柱体前2个参数分别为半径和高度，第三个无效;圆环为内半径,外半径,高度)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 FrameSize {
+    public global::ActData.Vector3 FrameSize {
       get { return frameSize_; }
       set {
         frameSize_ = value;
@@ -11529,12 +11554,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "frameFinalFactor" field.</summary>
     public const int FrameFinalFactorFieldNumber = 28;
-    private global::Data1.Vector3 frameFinalFactor_;
+    private global::ActData.Vector3 frameFinalFactor_;
     /// <summary>
     ///技能框缩放比例,最终的技能框相对于初始技能框架的缩放比例:圆柱为半径，高度;圆环为内半径,外半径,高度
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 FrameFinalFactor {
+    public global::ActData.Vector3 FrameFinalFactor {
       get { return frameFinalFactor_; }
       set {
         frameFinalFactor_ = value;
@@ -11543,12 +11568,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "framType" field.</summary>
     public const int FramTypeFieldNumber = 29;
-    private global::Data1.HitDefnitionFramType framType_ = 0;
+    private global::ActData.HitDefnitionFramType framType_ = 0;
     /// <summary>
     ///技能击中框的类型,技能击中框的类型:CuboidType为长方体;CylinderType为立方体; RingType:为圆环形; SomatoType:为受击体
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.HitDefnitionFramType FramType {
+    public global::ActData.HitDefnitionFramType FramType {
       get { return framType_; }
       set {
         framType_ = value;
@@ -11571,11 +11596,11 @@ namespace Data1 {
 
     /// <summary>Field number for the "attackType" field.</summary>
     public const int AttackTypeFieldNumber = 31;
-    private global::Data1.AttackFrame attackType_;
+    private global::ActData.AttackFrame attackType_;
     /// <summary>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.AttackFrame AttackType {
+    public global::ActData.AttackFrame AttackType {
       get { return attackType_; }
       set {
         attackType_ = value;
@@ -11584,12 +11609,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "offset" field.</summary>
     public const int OffsetFieldNumber = 32;
-    private global::Data1.Vector3 offset_;
+    private global::ActData.Vector3 offset_;
     /// <summary>
     ///偏移
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 Offset {
+    public global::ActData.Vector3 Offset {
       get { return offset_; }
       set {
         offset_ = value;
@@ -11710,12 +11735,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "attackerLash" field.</summary>
     public const int AttackerLashFieldNumber = 41;
-    private global::Data1.Vector3 attackerLash_;
+    private global::ActData.Vector3 attackerLash_;
     /// <summary>
     ///攻击者的冲击速度
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 AttackerLash {
+    public global::ActData.Vector3 AttackerLash {
       get { return attackerLash_; }
       set {
         attackerLash_ = value;
@@ -11752,12 +11777,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "hitResult" field.</summary>
     public const int HitResultFieldNumber = 44;
-    private global::Data1.HitResultType hitResult_ = 0;
+    private global::ActData.HitResultType hitResult_ = 0;
     /// <summary>
     ///击中结果
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.HitResultType HitResult {
+    public global::ActData.HitResultType HitResult {
       get { return hitResult_; }
       set {
         hitResult_ = value;
@@ -11766,12 +11791,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "groundHit" field.</summary>
     public const int GroundHitFieldNumber = 45;
-    private global::Data1.AttackDef.Types.HitResultData groundHit_;
+    private global::ActData.AttackDef.Types.HitResultData groundHit_;
     /// <summary>
     ///倒地受击数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.AttackDef.Types.HitResultData GroundHit {
+    public global::ActData.AttackDef.Types.HitResultData GroundHit {
       get { return groundHit_; }
       set {
         groundHit_ = value;
@@ -11780,12 +11805,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "lowAirHit" field.</summary>
     public const int LowAirHitFieldNumber = 46;
-    private global::Data1.AttackDef.Types.HitResultData lowAirHit_;
+    private global::ActData.AttackDef.Types.HitResultData lowAirHit_;
     /// <summary>
     ///低空受击数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.AttackDef.Types.HitResultData LowAirHit {
+    public global::ActData.AttackDef.Types.HitResultData LowAirHit {
       get { return lowAirHit_; }
       set {
         lowAirHit_ = value;
@@ -11794,12 +11819,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "highAirHit" field.</summary>
     public const int HighAirHitFieldNumber = 47;
-    private global::Data1.AttackDef.Types.HitResultData highAirHit_;
+    private global::ActData.AttackDef.Types.HitResultData highAirHit_;
     /// <summary>
     ///低空受击数据
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.AttackDef.Types.HitResultData HighAirHit {
+    public global::ActData.AttackDef.Types.HitResultData HighAirHit {
       get { return highAirHit_; }
       set {
         highAirHit_ = value;
@@ -11808,12 +11833,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "attackeeLash" field.</summary>
     public const int AttackeeLashFieldNumber = 48;
-    private global::Data1.Vector3 attackeeLash_;
+    private global::ActData.Vector3 attackeeLash_;
     /// <summary>
     ///受击者冲击速度
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 AttackeeLash {
+    public global::ActData.Vector3 AttackeeLash {
       get { return attackeeLash_; }
       set {
         attackeeLash_ = value;
@@ -11850,12 +11875,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "damageType" field.</summary>
     public const int DamageTypeFieldNumber = 51;
-    private global::Data1.DamageType damageType_ = 0;
+    private global::ActData.DamageType damageType_ = 0;
     /// <summary>
     ///击中伤害类型
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.DamageType DamageType {
+    public global::ActData.DamageType DamageType {
       get { return damageType_; }
       set {
         damageType_ = value;
@@ -11914,12 +11939,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "holdOffset" field.</summary>
     public const int HoldOffsetFieldNumber = 56;
-    private global::Data1.Vector3 holdOffset_;
+    private global::ActData.Vector3 holdOffset_;
     /// <summary>
     ///抓取偏移
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 HoldOffset {
+    public global::ActData.Vector3 HoldOffset {
       get { return holdOffset_; }
       set {
         holdOffset_ = value;
@@ -11970,12 +11995,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "hitedEffectOffset" field.</summary>
     public const int HitedEffectOffsetFieldNumber = 60;
-    private global::Data1.Vector3 hitedEffectOffset_;
+    private global::ActData.Vector3 hitedEffectOffset_;
     /// <summary>
     ///站立击中特效偏移
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 HitedEffectOffset {
+    public global::ActData.Vector3 HitedEffectOffset {
       get { return hitedEffectOffset_; }
       set {
         hitedEffectOffset_ = value;
@@ -11984,12 +12009,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "groundHitedEffectOffset" field.</summary>
     public const int GroundHitedEffectOffsetFieldNumber = 61;
-    private global::Data1.Vector3 groundHitedEffectOffset_;
+    private global::ActData.Vector3 groundHitedEffectOffset_;
     /// <summary>
     ///倒地击中特效偏移
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 GroundHitedEffectOffset {
+    public global::ActData.Vector3 GroundHitedEffectOffset {
       get { return groundHitedEffectOffset_; }
       set {
         groundHitedEffectOffset_ = value;
@@ -11998,12 +12023,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "lowAirHitedEffectOffset" field.</summary>
     public const int LowAirHitedEffectOffsetFieldNumber = 62;
-    private global::Data1.Vector3 lowAirHitedEffectOffset_;
+    private global::ActData.Vector3 lowAirHitedEffectOffset_;
     /// <summary>
     ///低空击中特效偏移
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 LowAirHitedEffectOffset {
+    public global::ActData.Vector3 LowAirHitedEffectOffset {
       get { return lowAirHitedEffectOffset_; }
       set {
         lowAirHitedEffectOffset_ = value;
@@ -12012,12 +12037,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "highAirHitedEffectOffset" field.</summary>
     public const int HighAirHitedEffectOffsetFieldNumber = 63;
-    private global::Data1.Vector3 highAirHitedEffectOffset_;
+    private global::ActData.Vector3 highAirHitedEffectOffset_;
     /// <summary>
     ///高空击中特效偏移
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 HighAirHitedEffectOffset {
+    public global::ActData.Vector3 HighAirHitedEffectOffset {
       get { return highAirHitedEffectOffset_; }
       set {
         highAirHitedEffectOffset_ = value;
@@ -12109,12 +12134,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "selfEffectOffset" field.</summary>
     public const int SelfEffectOffsetFieldNumber = 70;
-    private global::Data1.Vector3 selfEffectOffset_;
+    private global::ActData.Vector3 selfEffectOffset_;
     /// <summary>
     ///本体特效偏移
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 SelfEffectOffset {
+    public global::ActData.Vector3 SelfEffectOffset {
       get { return selfEffectOffset_; }
       set {
         selfEffectOffset_ = value;
@@ -12165,12 +12190,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "weaponType" field.</summary>
     public const int WeaponTypeFieldNumber = 74;
-    private global::Data1.WeaponType weaponType_ = 0;
+    private global::ActData.WeaponType weaponType_ = 0;
     /// <summary>
     ///攻击定义的材质
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.WeaponType WeaponType {
+    public global::ActData.WeaponType WeaponType {
       get { return weaponType_; }
       set {
         weaponType_ = value;
@@ -12188,6 +12213,34 @@ namespace Data1 {
       get { return weaponTypeInt_; }
       set {
         weaponTypeInt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hitedEffectDuration" field.</summary>
+    public const int HitedEffectDurationFieldNumber = 76;
+    private int hitedEffectDuration_;
+    /// <summary>
+    ///击中特效时间
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int HitedEffectDuration {
+      get { return hitedEffectDuration_; }
+      set {
+        hitedEffectDuration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "selfEffectDuration" field.</summary>
+    public const int SelfEffectDurationFieldNumber = 77;
+    private int selfEffectDuration_;
+    /// <summary>
+    ///本体特效时间
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SelfEffectDuration {
+      get { return selfEffectDuration_; }
+      set {
+        selfEffectDuration_ = value;
       }
     }
 
@@ -12490,6 +12543,14 @@ namespace Data1 {
         output.WriteRawTag(216, 4);
         output.WriteInt32(WeaponTypeInt);
       }
+      if (HitedEffectDuration != 0) {
+        output.WriteRawTag(224, 4);
+        output.WriteInt32(HitedEffectDuration);
+      }
+      if (SelfEffectDuration != 0) {
+        output.WriteRawTag(232, 4);
+        output.WriteInt32(SelfEffectDuration);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12718,6 +12779,12 @@ namespace Data1 {
       if (WeaponTypeInt != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(WeaponTypeInt);
       }
+      if (HitedEffectDuration != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(HitedEffectDuration);
+      }
+      if (SelfEffectDuration != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(SelfEffectDuration);
+      }
       return size;
     }
 
@@ -12794,7 +12861,7 @@ namespace Data1 {
             break;
           }
           case 136: {
-            race_ = (global::Data1.RaceType) input.ReadEnum();
+            race_ = (global::ActData.RaceType) input.ReadEnum();
             break;
           }
           case 144: {
@@ -12815,7 +12882,7 @@ namespace Data1 {
           }
           case 178: {
             if (movingSpeed_ == null) {
-              movingSpeed_ = new global::Data1.Vector3();
+              movingSpeed_ = new global::ActData.Vector3();
             }
             input.ReadMessage(movingSpeed_);
             break;
@@ -12838,20 +12905,20 @@ namespace Data1 {
           }
           case 218: {
             if (frameSize_ == null) {
-              frameSize_ = new global::Data1.Vector3();
+              frameSize_ = new global::ActData.Vector3();
             }
             input.ReadMessage(frameSize_);
             break;
           }
           case 226: {
             if (frameFinalFactor_ == null) {
-              frameFinalFactor_ = new global::Data1.Vector3();
+              frameFinalFactor_ = new global::ActData.Vector3();
             }
             input.ReadMessage(frameFinalFactor_);
             break;
           }
           case 232: {
-            framType_ = (global::Data1.HitDefnitionFramType) input.ReadEnum();
+            framType_ = (global::ActData.HitDefnitionFramType) input.ReadEnum();
             break;
           }
           case 240: {
@@ -12860,14 +12927,14 @@ namespace Data1 {
           }
           case 250: {
             if (attackType_ == null) {
-              attackType_ = new global::Data1.AttackFrame();
+              attackType_ = new global::ActData.AttackFrame();
             }
             input.ReadMessage(attackType_);
             break;
           }
           case 258: {
             if (offset_ == null) {
-              offset_ = new global::Data1.Vector3();
+              offset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(offset_);
             break;
@@ -12906,7 +12973,7 @@ namespace Data1 {
           }
           case 330: {
             if (attackerLash_ == null) {
-              attackerLash_ = new global::Data1.Vector3();
+              attackerLash_ = new global::ActData.Vector3();
             }
             input.ReadMessage(attackerLash_);
             break;
@@ -12920,33 +12987,33 @@ namespace Data1 {
             break;
           }
           case 352: {
-            hitResult_ = (global::Data1.HitResultType) input.ReadEnum();
+            hitResult_ = (global::ActData.HitResultType) input.ReadEnum();
             break;
           }
           case 362: {
             if (groundHit_ == null) {
-              groundHit_ = new global::Data1.AttackDef.Types.HitResultData();
+              groundHit_ = new global::ActData.AttackDef.Types.HitResultData();
             }
             input.ReadMessage(groundHit_);
             break;
           }
           case 370: {
             if (lowAirHit_ == null) {
-              lowAirHit_ = new global::Data1.AttackDef.Types.HitResultData();
+              lowAirHit_ = new global::ActData.AttackDef.Types.HitResultData();
             }
             input.ReadMessage(lowAirHit_);
             break;
           }
           case 378: {
             if (highAirHit_ == null) {
-              highAirHit_ = new global::Data1.AttackDef.Types.HitResultData();
+              highAirHit_ = new global::ActData.AttackDef.Types.HitResultData();
             }
             input.ReadMessage(highAirHit_);
             break;
           }
           case 386: {
             if (attackeeLash_ == null) {
-              attackeeLash_ = new global::Data1.Vector3();
+              attackeeLash_ = new global::ActData.Vector3();
             }
             input.ReadMessage(attackeeLash_);
             break;
@@ -12960,7 +13027,7 @@ namespace Data1 {
             break;
           }
           case 408: {
-            damageType_ = (global::Data1.DamageType) input.ReadEnum();
+            damageType_ = (global::ActData.DamageType) input.ReadEnum();
             break;
           }
           case 416: {
@@ -12981,7 +13048,7 @@ namespace Data1 {
           }
           case 450: {
             if (holdOffset_ == null) {
-              holdOffset_ = new global::Data1.Vector3();
+              holdOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(holdOffset_);
             break;
@@ -13000,28 +13067,28 @@ namespace Data1 {
           }
           case 482: {
             if (hitedEffectOffset_ == null) {
-              hitedEffectOffset_ = new global::Data1.Vector3();
+              hitedEffectOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(hitedEffectOffset_);
             break;
           }
           case 490: {
             if (groundHitedEffectOffset_ == null) {
-              groundHitedEffectOffset_ = new global::Data1.Vector3();
+              groundHitedEffectOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(groundHitedEffectOffset_);
             break;
           }
           case 498: {
             if (lowAirHitedEffectOffset_ == null) {
-              lowAirHitedEffectOffset_ = new global::Data1.Vector3();
+              lowAirHitedEffectOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(lowAirHitedEffectOffset_);
             break;
           }
           case 506: {
             if (highAirHitedEffectOffset_ == null) {
-              highAirHitedEffectOffset_ = new global::Data1.Vector3();
+              highAirHitedEffectOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(highAirHitedEffectOffset_);
             break;
@@ -13052,7 +13119,7 @@ namespace Data1 {
           }
           case 562: {
             if (selfEffectOffset_ == null) {
-              selfEffectOffset_ = new global::Data1.Vector3();
+              selfEffectOffset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(selfEffectOffset_);
             break;
@@ -13070,11 +13137,19 @@ namespace Data1 {
             break;
           }
           case 592: {
-            weaponType_ = (global::Data1.WeaponType) input.ReadEnum();
+            weaponType_ = (global::ActData.WeaponType) input.ReadEnum();
             break;
           }
           case 600: {
             WeaponTypeInt = input.ReadInt32();
+            break;
+          }
+          case 608: {
+            HitedEffectDuration = input.ReadInt32();
+            break;
+          }
+          case 616: {
+            SelfEffectDuration = input.ReadInt32();
             break;
           }
         }
@@ -13106,12 +13181,12 @@ namespace Data1 {
 
         /// <summary>Field number for the "attackeeLash" field.</summary>
         public const int AttackeeLashFieldNumber = 2;
-        private global::Data1.Vector3 attackeeLash_;
+        private global::ActData.Vector3 attackeeLash_;
         /// <summary>
         ///受击者冲击速度
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public global::Data1.Vector3 AttackeeLash {
+        public global::ActData.Vector3 AttackeeLash {
           get { return attackeeLash_; }
           set {
             attackeeLash_ = value;
@@ -13198,7 +13273,7 @@ namespace Data1 {
               }
               case 18: {
                 if (attackeeLash_ == null) {
-                  attackeeLash_ = new global::Data1.Vector3();
+                  attackeeLash_ = new global::ActData.Vector3();
                 }
                 input.ReadMessage(attackeeLash_);
                 break;
@@ -13361,9 +13436,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "frameCuboid" field.</summary>
     public const int FrameCuboidFieldNumber = 1;
-    private global::Data1.FrameCuboid frameCuboid_;
+    private global::ActData.FrameCuboid frameCuboid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.FrameCuboid FrameCuboid {
+    public global::ActData.FrameCuboid FrameCuboid {
       get { return frameCuboid_; }
       set {
         frameCuboid_ = value;
@@ -13372,9 +13447,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "frameCylinder" field.</summary>
     public const int FrameCylinderFieldNumber = 2;
-    private global::Data1.FrameCylinder frameCylinder_;
+    private global::ActData.FrameCylinder frameCylinder_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.FrameCylinder FrameCylinder {
+    public global::ActData.FrameCylinder FrameCylinder {
       get { return frameCylinder_; }
       set {
         frameCylinder_ = value;
@@ -13383,9 +13458,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "frameRing" field.</summary>
     public const int FrameRingFieldNumber = 3;
-    private global::Data1.FrameRing frameRing_;
+    private global::ActData.FrameRing frameRing_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.FrameRing FrameRing {
+    public global::ActData.FrameRing FrameRing {
       get { return frameRing_; }
       set {
         frameRing_ = value;
@@ -13394,9 +13469,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "frameSomato" field.</summary>
     public const int FrameSomatoFieldNumber = 4;
-    private global::Data1.FrameSomato frameSomato_;
+    private global::ActData.FrameSomato frameSomato_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.FrameSomato FrameSomato {
+    public global::ActData.FrameSomato FrameSomato {
       get { return frameSomato_; }
       set {
         frameSomato_ = value;
@@ -13405,9 +13480,9 @@ namespace Data1 {
 
     /// <summary>Field number for the "frameFan" field.</summary>
     public const int FrameFanFieldNumber = 5;
-    private global::Data1.FrameFan frameFan_;
+    private global::ActData.FrameFan frameFan_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.FrameFan FrameFan {
+    public global::ActData.FrameFan FrameFan {
       get { return frameFan_; }
       set {
         frameFan_ = value;
@@ -13469,35 +13544,35 @@ namespace Data1 {
             break;
           case 10: {
             if (frameCuboid_ == null) {
-              frameCuboid_ = new global::Data1.FrameCuboid();
+              frameCuboid_ = new global::ActData.FrameCuboid();
             }
             input.ReadMessage(frameCuboid_);
             break;
           }
           case 18: {
             if (frameCylinder_ == null) {
-              frameCylinder_ = new global::Data1.FrameCylinder();
+              frameCylinder_ = new global::ActData.FrameCylinder();
             }
             input.ReadMessage(frameCylinder_);
             break;
           }
           case 26: {
             if (frameRing_ == null) {
-              frameRing_ = new global::Data1.FrameRing();
+              frameRing_ = new global::ActData.FrameRing();
             }
             input.ReadMessage(frameRing_);
             break;
           }
           case 34: {
             if (frameSomato_ == null) {
-              frameSomato_ = new global::Data1.FrameSomato();
+              frameSomato_ = new global::ActData.FrameSomato();
             }
             input.ReadMessage(frameSomato_);
             break;
           }
           case 42: {
             if (frameFan_ == null) {
-              frameFan_ = new global::Data1.FrameFan();
+              frameFan_ = new global::ActData.FrameFan();
             }
             input.ReadMessage(frameFan_);
             break;
@@ -14316,12 +14391,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "offset" field.</summary>
     public const int OffsetFieldNumber = 5;
-    private global::Data1.Vector3 offset_;
+    private global::ActData.Vector3 offset_;
     /// <summary>
     ///相对位移,摄像机的相对位移值，单位为厘米
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 Offset {
+    public global::ActData.Vector3 Offset {
       get { return offset_; }
       set {
         offset_ = value;
@@ -14330,12 +14405,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "rotate" field.</summary>
     public const int RotateFieldNumber = 6;
-    private global::Data1.Vector3 rotate_;
+    private global::ActData.Vector3 rotate_;
     /// <summary>
     ///相对旋转,摄像机的相对位移值，单位为角度
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 Rotate {
+    public global::ActData.Vector3 Rotate {
       get { return rotate_; }
       set {
         rotate_ = value;
@@ -14462,14 +14537,14 @@ namespace Data1 {
           }
           case 42: {
             if (offset_ == null) {
-              offset_ = new global::Data1.Vector3();
+              offset_ = new global::ActData.Vector3();
             }
             input.ReadMessage(offset_);
             break;
           }
           case 50: {
             if (rotate_ == null) {
-              rotate_ = new global::Data1.Vector3();
+              rotate_ = new global::ActData.Vector3();
             }
             input.ReadMessage(rotate_);
             break;
@@ -14565,11 +14640,11 @@ namespace Data1 {
 
     /// <summary>Field number for the "cameraSlots" field.</summary>
     public const int CameraSlotsFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Data1.CameraSlot> _repeated_cameraSlots_codec
-        = pb::FieldCodec.ForMessage(50, global::Data1.CameraSlot.Parser);
-    private readonly pbc::RepeatedField<global::Data1.CameraSlot> cameraSlots_ = new pbc::RepeatedField<global::Data1.CameraSlot>();
+    private static readonly pb::FieldCodec<global::ActData.CameraSlot> _repeated_cameraSlots_codec
+        = pb::FieldCodec.ForMessage(50, global::ActData.CameraSlot.Parser);
+    private readonly pbc::RepeatedField<global::ActData.CameraSlot> cameraSlots_ = new pbc::RepeatedField<global::ActData.CameraSlot>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.CameraSlot> CameraSlots {
+    public pbc::RepeatedField<global::ActData.CameraSlot> CameraSlots {
       get { return cameraSlots_; }
     }
 
@@ -14679,27 +14754,27 @@ namespace Data1 {
 
     /// <summary>Field number for the "unitVaribleList" field.</summary>
     public const int UnitVaribleListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Data1.UnitActionInfo.Types.UnitVarible> _repeated_unitVaribleList_codec
-        = pb::FieldCodec.ForMessage(18, global::Data1.UnitActionInfo.Types.UnitVarible.Parser);
-    private readonly pbc::RepeatedField<global::Data1.UnitActionInfo.Types.UnitVarible> unitVaribleList_ = new pbc::RepeatedField<global::Data1.UnitActionInfo.Types.UnitVarible>();
+    private static readonly pb::FieldCodec<global::ActData.UnitActionInfo.Types.UnitVarible> _repeated_unitVaribleList_codec
+        = pb::FieldCodec.ForMessage(18, global::ActData.UnitActionInfo.Types.UnitVarible.Parser);
+    private readonly pbc::RepeatedField<global::ActData.UnitActionInfo.Types.UnitVarible> unitVaribleList_ = new pbc::RepeatedField<global::ActData.UnitActionInfo.Types.UnitVarible>();
     /// <summary>
     ///变量列表
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.UnitActionInfo.Types.UnitVarible> UnitVaribleList {
+    public pbc::RepeatedField<global::ActData.UnitActionInfo.Types.UnitVarible> UnitVaribleList {
       get { return unitVaribleList_; }
     }
 
     /// <summary>Field number for the "actionGroups" field.</summary>
     public const int ActionGroupsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Data1.ActionGroup> _repeated_actionGroups_codec
-        = pb::FieldCodec.ForMessage(26, global::Data1.ActionGroup.Parser);
-    private readonly pbc::RepeatedField<global::Data1.ActionGroup> actionGroups_ = new pbc::RepeatedField<global::Data1.ActionGroup>();
+    private static readonly pb::FieldCodec<global::ActData.ActionGroup> _repeated_actionGroups_codec
+        = pb::FieldCodec.ForMessage(26, global::ActData.ActionGroup.Parser);
+    private readonly pbc::RepeatedField<global::ActData.ActionGroup> actionGroups_ = new pbc::RepeatedField<global::ActData.ActionGroup>();
     /// <summary>
     ///动作组列表
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.ActionGroup> ActionGroups {
+    public pbc::RepeatedField<global::ActData.ActionGroup> ActionGroups {
       get { return actionGroups_; }
     }
 
@@ -14719,12 +14794,12 @@ namespace Data1 {
 
     /// <summary>Field number for the "scale" field.</summary>
     public const int ScaleFieldNumber = 5;
-    private global::Data1.Vector3 scale_;
+    private global::ActData.Vector3 scale_;
     /// <summary>
     ///缩放比例
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Data1.Vector3 Scale {
+    public global::ActData.Vector3 Scale {
       get { return scale_; }
       set {
         scale_ = value;
@@ -14792,7 +14867,7 @@ namespace Data1 {
           }
           case 42: {
             if (scale_ == null) {
-              scale_ = new global::Data1.Vector3();
+              scale_ = new global::ActData.Vector3();
             }
             input.ReadMessage(scale_);
             break;
@@ -14946,21 +15021,21 @@ namespace Data1 {
 
     /// <summary>Field number for the "objectTypes" field.</summary>
     public const int ObjectTypesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Data1.UnitActionInfo> _repeated_objectTypes_codec
-        = pb::FieldCodec.ForMessage(10, global::Data1.UnitActionInfo.Parser);
-    private readonly pbc::RepeatedField<global::Data1.UnitActionInfo> objectTypes_ = new pbc::RepeatedField<global::Data1.UnitActionInfo>();
+    private static readonly pb::FieldCodec<global::ActData.UnitActionInfo> _repeated_objectTypes_codec
+        = pb::FieldCodec.ForMessage(10, global::ActData.UnitActionInfo.Parser);
+    private readonly pbc::RepeatedField<global::ActData.UnitActionInfo> objectTypes_ = new pbc::RepeatedField<global::ActData.UnitActionInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.UnitActionInfo> ObjectTypes {
+    public pbc::RepeatedField<global::ActData.UnitActionInfo> ObjectTypes {
       get { return objectTypes_; }
     }
 
     /// <summary>Field number for the "cameraGroups" field.</summary>
     public const int CameraGroupsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Data1.CameraGroup> _repeated_cameraGroups_codec
-        = pb::FieldCodec.ForMessage(18, global::Data1.CameraGroup.Parser);
-    private readonly pbc::RepeatedField<global::Data1.CameraGroup> cameraGroups_ = new pbc::RepeatedField<global::Data1.CameraGroup>();
+    private static readonly pb::FieldCodec<global::ActData.CameraGroup> _repeated_cameraGroups_codec
+        = pb::FieldCodec.ForMessage(18, global::ActData.CameraGroup.Parser);
+    private readonly pbc::RepeatedField<global::ActData.CameraGroup> cameraGroups_ = new pbc::RepeatedField<global::ActData.CameraGroup>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Data1.CameraGroup> CameraGroups {
+    public pbc::RepeatedField<global::ActData.CameraGroup> CameraGroups {
       get { return cameraGroups_; }
     }
 

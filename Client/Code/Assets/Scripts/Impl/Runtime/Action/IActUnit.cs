@@ -10,6 +10,8 @@ namespace ACT
 
         GameObject UGameObject { get; }
 
+        Transform Transform { get; }
+
         Transform ModelTrans { get; }
 
         Vector3 Position { get; }
@@ -69,7 +71,7 @@ namespace ACT
 
         void PlayAction(string action);
 
-        void PlayAnimation(Data1.Action action, float speed);
+        void PlayAnimation(ActData.Action action, float speed);
 
         void Destory();
 

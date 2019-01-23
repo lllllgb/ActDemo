@@ -1,0 +1,13 @@
+##############################
+## Folders                  ##
+##############################
+Client/Code/Library
+Client/Code/Temp
+ 
+##############################
+## files            ##
+##############################
+Client/Code/Code.csproj
+Client/Code/Code.Editor.csproj
+Client/Code/Code.sln
+Client/Code/.vs

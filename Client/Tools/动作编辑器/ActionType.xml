@@ -592,7 +592,13 @@
               <BoundingWidthRadio>110</BoundingWidthRadio>
               <ActionStatus>2</ActionStatus>
               <ActionLevel>9</ActionLevel>
-              <Events />
+              <Events>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_test" Duration="1000" />
+                </Event>
+              </Events>
               <ActionInterrupts />
               <AttackDefs>
                 <AttackDef>
@@ -14896,12 +14902,12 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" BindMode="2" />
                 </Event>
                 <Event>
                   <EventType>SetVelocity</EventType>
@@ -16803,13 +16809,13 @@
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" />
                 </Event>
                 <Event>
                   <EventType>SetVelocity</EventType>
@@ -16920,13 +16926,13 @@
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" />
                 </Event>
                 <Event>
                   <TriggerTime>50</TriggerTime>
@@ -17047,13 +17053,13 @@
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" />
                 </Event>
                 <Event>
                   <TriggerTime>50</TriggerTime>
@@ -17174,13 +17180,13 @@
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" />
                 </Event>
                 <Event>
                   <TriggerTime>50</TriggerTime>
@@ -17301,13 +17307,13 @@
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" />
                 </Event>
                 <Event>
                   <TriggerTime>50</TriggerTime>
@@ -20126,12 +20132,12 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" BindMode="2" />
                 </Event>
                 <Event>
                   <EventType>SetVelocity</EventType>
@@ -21536,13 +21542,13 @@
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" />
                 </Event>
                 <Event>
                   <EventType>SetVelocity</EventType>
@@ -21663,13 +21669,13 @@
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" />
                 </Event>
                 <Event>
                   <TriggerTime>50</TriggerTime>
@@ -21792,13 +21798,13 @@
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" />
                 </Event>
                 <Event>
                   <TriggerTime>50</TriggerTime>
@@ -21921,13 +21927,13 @@
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" />
                 </Event>
                 <Event>
                   <TriggerTime>50</TriggerTime>
@@ -22050,13 +22056,13 @@
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s" BindMode="2" />
                 </Event>
                 <Event>
                   <TriggerTime>11</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" RotateX="90" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="tx_assassin_shunyizhan_s1" />
                 </Event>
                 <Event>
                   <TriggerTime>50</TriggerTime>
@@ -26376,7 +26382,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="Effect_qishi_shenshengcaijue_skill_01" RotateZ="220" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="Effect_qishi_shenshengcaijue_skill_01" />
                 </Event>
                 <Event>
                   <EventType>PlayEffect</EventType>
@@ -31159,7 +31165,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="Effect_qishi_shenshengcaijue_skill_01" RotateZ="220" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="Effect_qishi_shenshengcaijue_skill_01" />
                 </Event>
               </Events>
               <ActionInterrupts>

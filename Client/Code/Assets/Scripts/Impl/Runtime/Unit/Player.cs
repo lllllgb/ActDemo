@@ -58,7 +58,7 @@ namespace AosHotfixRunTime
                 mNavMeshAgent.destination = pos;
                 mNavMeshAgent.speed = GetAttrib(EPA.MoveSpeed) * 0.01f;
 
-                PlayAction(Data1.CommonAction.RunInTown);
+                PlayAction(ActData.CommonAction.RunInTown);
             }
             else
                 SetPosition(pos);
@@ -73,7 +73,7 @@ namespace AosHotfixRunTime
             {
                 mNavigating = 0;
                 mNavMeshAgent.enabled = false;
-                PlayAction(Data1.CommonAction.IdleInTown);
+                PlayAction(ActData.CommonAction.IdleInTown);
                 return;
             }
 

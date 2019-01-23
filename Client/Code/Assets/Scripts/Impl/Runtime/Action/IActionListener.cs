@@ -8,7 +8,7 @@ namespace ACT
     public interface IActionListener
     {
         void Update(float deltaTime);
-        void OnActionChanging(Data1.Action oldAction, Data1.Action newAction);
+        void OnActionChanging(ActData.Action oldAction, ActData.Action newAction);
         void OnInputMove();
         void OnHitData(HitData hitData);
         void OnHurt(int damage);
