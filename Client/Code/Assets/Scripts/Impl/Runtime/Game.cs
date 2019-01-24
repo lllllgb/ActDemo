@@ -89,14 +89,15 @@ namespace AosHotfixRunTime
             FsmMgr = GameModuleManager.GetModule<IFsmManager>();
             GameModuleManager.CreateModule<ProcedureManager>();
             ProcedureMgr = GameModuleManager.GetModule<IProcedureManager>();
-            GameModuleManager.CreateModule<ControllerManager>();
-            ControllerMgr = GameModuleManager.GetModule<IControllerManager>();
-            GameModuleManager.CreateModule<WindowsManager>();
-            WindowsMgr = GameModuleManager.GetModule<IWindowsManager>();
-            GameModuleManager.CreateModule<ObjectManager>();
-            ObjectMgr = GameModuleManager.GetModule<IObjectManager>();
             GameModuleManager.CreateModule<TimerManager>();
             TimerMgr = GameModuleManager.GetModule<ITimerManager>();
+            GameModuleManager.CreateModule<ActionManager>();
+            GameModuleManager.CreateModule<ControllerManager>();
+            ControllerMgr = GameModuleManager.GetModule<IControllerManager>();
+            GameModuleManager.CreateModule<ObjectManager>();
+            ObjectMgr = GameModuleManager.GetModule<IObjectManager>();
+            GameModuleManager.CreateModule<WindowsManager>();
+            WindowsMgr = GameModuleManager.GetModule<IWindowsManager>();
         }
     }
 }

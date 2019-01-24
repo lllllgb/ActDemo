@@ -5,14 +5,21 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 namespace ACT
 {
-    public class HitDefinition : MonoBehaviour
+    public class HitDefinition
     {
-        ActData.AttackDef mAttackDef;
+        public static bool ShowAttackFrame = false; //是否显示攻击框
+        public const int MAX_HIT_SOUND = 1;//最大击中音效
+
+        ActData.AttackDef mAttackDef; //攻击定义
+        Transform mCacheTransform; //
         IActUnit mOwner;
         string mAction;
+        Action<HitDefinition> mFinishHandle; //结束回调
+
         Vector3 mInitPos = Vector3.zero;
         Vector3 mPos = Vector3.zero;
         float mOrientation = 0;
@@ -22,15 +29,12 @@ namespace ACT
         int mHitSucessCount = 0;
         int mLastHitCount = 0;
         int mHitSoundCount = 0;
-        Transform mCacheTransform;
         GameObject mAttackFrame;
         bool mHitBlocked = false;
         SkillItem mSkillItem = null;
 
         bool mHaveHitOrt = false;
         Vector3 mHitOrientation = Vector3.zero;
-        public static bool ShowAttackFrame = false;
-        public const int MAX_HIT_SOUND = 1;
 
         Vector3 mCubeHitDefSize = Vector3.zero;
         Vector2 mCylinderSize = Vector2.zero;
@@ -38,9 +42,15 @@ namespace ACT
         Vector4 mFanSize = Vector4.zero;
 
         Dictionary<GameObject, int> mHitedPassedMap = new Dictionary<GameObject, int>();
-        ActEffectMgr mHitDefEffectMgr = new ActEffectMgr();
+        ActEffectMgr mHitDefEffectMgr = new ActEffectMgr(); //特效管理
+        bool mIsFinish; //是否已结束
 
-        public void Init(ActData.AttackDef data, IActUnit owner, string action, SkillItem skillItem)
+        public HitDefinition()
+        {
+            mCacheTransform = new GameObject("HitDefinition").transform;
+        }
+
+        public void Init(ActData.AttackDef data, IActUnit owner, string action, SkillItem skillItem, Action<HitDefinition> finishHandle)
         {
             mAttackDef = data;
             mOwner = owner;
@@ -48,33 +58,52 @@ namespace ACT
             mInitPos = owner.Position;
             mOrientation = owner.Orientation;
             mSkillItem = skillItem;
-        }
+            mFinishHandle = finishHandle;
 
-        // Use this for initialization
-        void Start()
-        {
-            mCacheTransform = transform;
-
-            UpdatePosition(0);
-
+            mIsFinish = false;
             mDelayTime = mAttackDef.Delay * 0.001f;
-
+            UpdatePosition(0);
+            
             if (!string.IsNullOrEmpty(mAttackDef.SelfEffect))
             {
                 Vector3 tmpPos = new Vector3(mAttackDef.SelfEffectOffset.X * 0.01f,
                             mAttackDef.SelfEffectOffset.Y * 0.01f,
                             mAttackDef.SelfEffectOffset.Z * 0.01f);
-                mHitDefEffectMgr.PlayEffect(transform, mAttackDef.SelfEffect, 
+
+                mHitDefEffectMgr.PlayEffect(mCacheTransform, mAttackDef.SelfEffect,
                     mAttackDef.SelfEffectDuration * 0.001f, tmpPos, mOwner.Transform.rotation);
             }
         }
 
-        // Update is called once per frame
-        void Update()
+        //重置
+        public void Reset()
         {
-            mHitDefEffectMgr.Update(Time.deltaTime);
+            mLifeTime = 0.0f;
+            mOutofDate = false;
+            mHitSucessCount = 0;
+            mLastHitCount = 0;
+            mHitSoundCount = 0;
+            mHitBlocked = false;
+            mHaveHitOrt = false;
+            mHitedPassedMap.Clear();
+            mHitDefEffectMgr.Clear();
+        }
 
-            float deltaTime = Time.deltaTime;
+        //释放
+        public void Release()
+        {
+        }
+
+        //更新
+        public void Update(float deltaTime)
+        {
+            if (mIsFinish)
+            {
+                return;
+            }
+
+            mHitDefEffectMgr.Update(deltaTime);
+            
             if (mDelayTime > deltaTime)
             {
                 mDelayTime -= deltaTime;
@@ -92,8 +121,9 @@ namespace ACT
 
             if (mOutofDate || mHitBlocked || !mOwner.UGameObject)
             {
-                Destroy(mAttackFrame);
-                GameObject.Destroy(gameObject);
+                mIsFinish = true;
+                mFinishHandle?.Invoke(this);
+                mFinishHandle = null;
                 return;
             }
 
@@ -147,9 +177,9 @@ namespace ACT
                         if (ShowAttackFrame)
                         {
                             if (mAttackFrame != null)
-                                Destroy(mAttackFrame);
+                                GameObject.Destroy(mAttackFrame);
 
-                            mAttackFrame = (GameObject)Instantiate(Resources.Load("HitDefinitionCube"));
+                            mAttackFrame = (GameObject)GameObject.Instantiate(Resources.Load("HitDefinitionCube"));
                             mAttackFrame.transform.localScale = mCubeHitDefSize;
 
                             mAttackFrame.transform.localPosition = new Vector3(
@@ -176,9 +206,9 @@ namespace ACT
                         if (ShowAttackFrame)
                         {
                             if (mAttackFrame != null)
-                                Destroy(mAttackFrame);
+                                GameObject.Destroy(mAttackFrame);
 
-                            mAttackFrame = (GameObject)Instantiate(Resources.Load("HitDefinitionCylinder"));
+                            mAttackFrame = (GameObject)GameObject.Instantiate(Resources.Load("HitDefinitionCylinder"));
                             mAttackFrame.transform.localPosition = new Vector3(mCacheTransform.position.x,
                             mCacheTransform.position.y + mCylinderSize.y / 2.0f, mCacheTransform.position.z);
                             mAttackFrame.transform.localScale = new Vector3(2 * mCylinderSize.x, mCylinderSize.y / 2.0f, 2 * mCylinderSize.x);
@@ -461,7 +491,7 @@ namespace ACT
                 effectPos.y += targetActionStatus.Bounding.y * 0.5f;
 
                 ActionSystem.Instance.EffectMgr.PlayEffect(null, mAttackDef.HitedEffect, mAttackDef.HitedEffectDuration * 0.001f, effectPos,
-                    0 == mAttackDef.BaseGround ? Quaternion.identity : Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
+                    0 == mAttackDef.BaseGround ? Quaternion.identity : Quaternion.Euler(0f, 0f, UnityEngine.Random.Range(0f, 360f)));
             }
 
             // execute script

@@ -11,10 +11,6 @@ namespace ACT
         public static ActionSystem Instance { get { return msInstance; } }
         
 
-        protected ActionSystem()
-        {
-        }
-
         //输入
         public InputBox GInputBox { get; set; }
 
@@ -40,6 +36,26 @@ namespace ACT
         private ActEffectMgr msActEffectMgr = new ActEffectMgr();
         public ActEffectMgr EffectMgr { get { return msActEffectMgr; } }
 
+        //攻击定义管理
+        private HitDefinitionMgr mHitDefinitionMgr = new HitDefinitionMgr();
+        public HitDefinitionMgr HitDefMgr { get { return mHitDefinitionMgr; } }
 
+
+        protected ActionSystem()
+        {
+        }
+
+        public void Init()
+        {
+        }
+
+        public void Update(float deltaTime)
+        {
+            mHitDefinitionMgr.Update(deltaTime);
+        }
+
+        public void Release()
+        {
+        }
     }
 }

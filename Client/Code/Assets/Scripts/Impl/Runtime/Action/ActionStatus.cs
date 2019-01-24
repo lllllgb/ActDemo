@@ -981,9 +981,7 @@ namespace ACT
 
         bool CreateHitDefine(ActData.AttackDef hit_data, Vector3 position, string action)
         {
-            GameObject hitDefObject = new GameObject("HitDefinition");
-            HitDefinition hitDefinition = hitDefObject.AddComponent<HitDefinition>();
-            hitDefinition.Init(hit_data, mOwner, action, SkillItem);
+            ActionSystem.Instance.HitDefMgr.CreateHitDefinition(hit_data, mOwner, action, SkillItem);
             return true;
         }
 
