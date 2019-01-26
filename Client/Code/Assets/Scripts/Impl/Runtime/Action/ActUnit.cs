@@ -405,7 +405,7 @@ namespace ACT
             mHitTarget = null;
         }
 
-        public virtual ECombatResult Combat(IActUnit target, int damageCoff, int damageBase, bool skillAttack, int actionCoff)
+        public virtual ECombatResult Combat(IActUnit target, ISkillItem skillItem)
         {
             return ECombatResult.ECR_Normal;
         }

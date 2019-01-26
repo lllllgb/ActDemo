@@ -54,6 +54,11 @@ namespace ACT
             mHitDefinitionMgr.Update(deltaTime);
         }
 
+        public void LateUpdate(float deltaTime)
+        {
+
+        }
+
         public void Release()
         {
         }

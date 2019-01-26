@@ -42,15 +42,16 @@ namespace ACT
         IActUnit mOwner = null;
         IActionListener mListener = null;
         ActEffectMgr mActionEffectMgr = new ActEffectMgr();
-        SkillInput mQueuedSkillInput = null;
+        ISkillInput mQueuedSkillInput = null;
 
         GameObject mListTargetFrame;
         public static bool ShowListTarFrame = false;
         GameObject mBeatenFramObj;
         public static bool ShowBeatenFrame = false;
 
-        public IActUnit ActionTarget;
-        public SkillItem SkillItem;
+        public IActUnit ActionTarget { get; set; } //目标
+        public ISkillItem SkillItem { get; set; } //技能
+        
         public ActData.ActionGroup ActionGroup { get { return mActionGroup; } }
         public ActData.Action ActiveAction { get { return mActiveAction; } }
         public ActData.HeightStatusFlag HeightState { get { return mHeightState; } }
@@ -175,7 +176,6 @@ namespace ACT
                         mActionInterruptEnabled |= (1 << i);
                 }
 
-                // clear the skill info when we get a normal action.
                 if (mActiveAction.Id[0] == 'N' && SkillItem != null)
                     SkillItem = null;
             }
@@ -1094,7 +1094,7 @@ namespace ACT
             return ret;
         }
         //---------------------------------------------------------------------
-        public bool LinkAction(ActData.ActionInterrupt interrupt, SkillInput skillInput)
+        public bool LinkAction(ActData.ActionInterrupt interrupt, ISkillInput skillInput)
         {
             if (interrupt.ConnectMode >= 2)
                 return false;

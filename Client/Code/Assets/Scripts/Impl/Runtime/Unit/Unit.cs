@@ -63,24 +63,10 @@ namespace AosHotfixRunTime
         public virtual void Equip() { }
         public virtual void Revive() { }
 
-        public override ACT.ECombatResult Combat(ACT.IActUnit target, int damageCoff, int damageBase, bool skillAttack, int actionCoff)
+        public override ACT.ECombatResult Combat(ACT.IActUnit target, ACT.ISkillItem skillItem)
         {
             int damage = 0;
             ACT.ECombatResult result = ACT.ECombatResult.ECR_Normal;
-
-            if (result != ACT.ECombatResult.ECR_Block)
-            {
-                // 技能的影响。
-                damage = damage * damageCoff / 100 + damageBase;
-
-                // 动作的系数调整在最后面。
-                damage = damage * actionCoff / 50;
-
-                // damage should not be 0.
-                damage = Mathf.Max(damage, 1);
-
-                (target as Unit).Hurt(this, damage, result);
-            }
 
             return result;
         }

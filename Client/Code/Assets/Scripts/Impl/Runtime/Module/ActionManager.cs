@@ -17,6 +17,7 @@ namespace AosHotfixRunTime
 
         internal override void LateUpdate(float deltaTime)
         {
+            ACT.ActionSystem.Instance.LateUpdate(deltaTime);
         }
 
         internal override void Shutdown()

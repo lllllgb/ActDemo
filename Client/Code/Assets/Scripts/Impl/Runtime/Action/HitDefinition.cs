@@ -16,8 +16,10 @@ namespace ACT
 
         ActData.AttackDef mAttackDef; //攻击定义
         Transform mCacheTransform; //
+        public Transform CacheTransform { get { return mCacheTransform; } }
         IActUnit mOwner;
         string mAction;
+        ISkillItem mSkillItem;
         Action<HitDefinition> mFinishHandle; //结束回调
 
         Vector3 mInitPos = Vector3.zero;
@@ -31,7 +33,6 @@ namespace ACT
         int mHitSoundCount = 0;
         GameObject mAttackFrame;
         bool mHitBlocked = false;
-        SkillItem mSkillItem = null;
 
         bool mHaveHitOrt = false;
         Vector3 mHitOrientation = Vector3.zero;
@@ -50,17 +51,17 @@ namespace ACT
             mCacheTransform = new GameObject("HitDefinition").transform;
         }
 
-        public void Init(ActData.AttackDef data, IActUnit owner, string action, SkillItem skillItem, Action<HitDefinition> finishHandle)
+        public void Init(ActData.AttackDef data, IActUnit owner, string action, ISkillItem skillItem, Action<HitDefinition> finishHandle)
         {
             mAttackDef = data;
             mOwner = owner;
             mAction = action;
-            mInitPos = owner.Position;
-            mOrientation = owner.Orientation;
             mSkillItem = skillItem;
             mFinishHandle = finishHandle;
 
             mIsFinish = false;
+            mInitPos = owner.Position;
+            mOrientation = owner.Orientation;
             mDelayTime = mAttackDef.Delay * 0.001f;
             UpdatePosition(0);
             
@@ -431,16 +432,12 @@ namespace ACT
             if (owner.Owner != null)
                 owner = owner.Owner;
 
-            // 攻击伤害的计算。
-            int damageCoff = (mSkillItem != null) ? mSkillItem.DamageCoff : 100;
-            int damageBase = (mSkillItem != null) ? mSkillItem.DamageBase : 0;
-
             // 击中目标的技能Buff
-            //if (mSkillItem != null && mSkillItem.SkillInput != null)
-            //    mSkillItem.SkillInput.OnHitTarget(target);
+            if (mSkillItem != null && mSkillItem.SkillInput != null)
+                mSkillItem.SkillInput.OnHitTarget(target);
 
             // 被格挡住了，执行格挡回弹动作。
-            if (owner.Combat(target, damageCoff, damageBase, mSkillItem != null, mAttackDef.Damage) == ECombatResult.ECR_Block)
+            if (owner.Combat(target, mSkillItem) == ECombatResult.ECR_Block)
             {
                 // do not process hit result in pvp mode.
                 //if (PvpClient.Instance != null && mOwner.UnitType != EUnitType.EUT_LocalPlayer)
@@ -565,8 +562,8 @@ namespace ACT
             }
 
             // 处理buff的东东
-            //if (targetActionStatus.SkillItem != null)
-            //    targetActionStatus.SkillItem.SkillInput.OnHit(self);
+            if (targetActionStatus.SkillItem != null)
+                targetActionStatus.SkillItem.SkillInput.OnHit(self);
 
             // 设置攻击者的冲击速度及冲击时间。
             int attackerLashTime = mAttackDef.AttackerTime;

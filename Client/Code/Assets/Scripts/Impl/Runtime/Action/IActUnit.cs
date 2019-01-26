@@ -79,7 +79,7 @@ namespace ACT
 
         void EndStaight();
 
-        ECombatResult Combat(IActUnit target, int damageCoff, int damageBase, bool skillAttack, int actionCoff);
+        ECombatResult Combat(IActUnit target, ISkillItem skillItem);
 
         void OnHitTarget(IActUnit target);
 
