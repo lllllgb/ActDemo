@@ -5,26 +5,24 @@ using AosHotfixFramework;
 
 namespace AosHotfixRunTime
 {
-    public class EffectPlayer
+    public class EffectManager
     {
         List<EffectObject> mEffectList = new List<EffectObject>();
 
-        public EffectPlayer()
+        public EffectManager()
         {
         }
 
         public void Update(float deltaTime)
         {
-            var tmpPool = Game.PoolMgr.GetObjectPool<EffectObject>() as ObjectPoolBase;
-
             for (int i = mEffectList.Count - 1; i >= 0; --i)
             {
                 var tmpEffectObj = mEffectList[i];
-                tmpEffectObj.Duration -= deltaTime;
+                tmpEffectObj.Update(deltaTime);
 
-                if (tmpEffectObj.Duration <= 0f)
+                if (tmpEffectObj.IsInvalid)
                 {
-                    tmpPool.Unspawn(tmpEffectObj);
+                    tmpEffectObj.Dispose();
                     mEffectList.RemoveAt(i);
                 }
             }
@@ -42,15 +40,11 @@ namespace AosHotfixRunTime
             mEffectList.Clear();
         }
 
-        public EffectObject PlayEffect(Transform parent, string effectName, float duration, float offsetX, float offsetY)
+        public EffectObject PlayEffect(string effectName, float duration, Transform parent, Vector3 pos, Quaternion rotate)
         {
             EffectObject tmpEffectObj = Game.PoolMgr.GetObjectPool<EffectObject>().Spawn();
-            tmpEffectObj.Initialize(effectName);
-            tmpEffectObj.Duration = duration;
-            tmpEffectObj.EffectTrans.SetParent(parent, false);
-            tmpEffectObj.EffectTrans.localPosition = new Vector3(offsetX, offsetY, 0f);
+            tmpEffectObj.Init(effectName, duration, parent, pos, rotate);
             tmpEffectObj.Play();
-
             mEffectList.Add(tmpEffectObj);
 
             return tmpEffectObj;
@@ -60,8 +54,7 @@ namespace AosHotfixRunTime
         {
             if (mEffectList.Remove(effectObject))
             {
-                var tmpPool = Game.PoolMgr.GetObjectPool<EffectObject>() as ObjectPoolBase;
-                tmpPool.Unspawn(effectObject);
+                effectObject.Dispose();
             }
         }
     }

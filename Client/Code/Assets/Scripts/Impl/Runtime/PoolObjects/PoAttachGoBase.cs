@@ -98,6 +98,12 @@ namespace AosHotfixRunTime
             string tmpResName = ResName;
             await Game.ResourcesMgr.LoadBundleByTypeAsync(tmpResType, tmpResName);
             GameObject tmpGo = Game.ResourcesMgr.GetAssetByType<GameObject>(tmpResType, tmpResName);
+
+            if (null == tmpGo)
+            {
+                return;
+            }
+
             tmpGo = Hotfix.Instantiate(tmpGo);
             InitGameObject(tmpGo);
 
@@ -115,6 +121,12 @@ namespace AosHotfixRunTime
         {
             Game.ResourcesMgr.LoadBundleByType(ResType, ResName);
             GameObject tmpGo = Game.ResourcesMgr.GetAssetByType<GameObject>(ResType, ResName);
+
+            if (null == tmpGo)
+            {
+                return;
+            }
+
             tmpGo = Hotfix.Instantiate(tmpGo);
             InitGameObject(tmpGo);
             OnResLoaded();

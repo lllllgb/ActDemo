@@ -62,7 +62,7 @@ namespace AosBaseFramework
 
         public bool Update()
         {
-            if (!mAbRequest.isDone)
+            if (null == mAbRequest || !mAbRequest.isDone)
             {
                 return false;
             }
@@ -78,7 +78,22 @@ namespace AosBaseFramework
 
             if (null == mAbRequest)
             {
-                mAbRequest = AssetBundle.LoadFromFileAsync(PathHelper.BundleName2ResPath(bundleName));
+                string tmpResPath = PathHelper.BundleName2ResPath(bundleName);
+
+#if UNITY_EDITOR
+                if (!System.IO.File.Exists(tmpResPath))
+                {
+                    Logger.LogError($"找不到文件 -> {tmpResPath}");
+                }
+                else
+                {
+                    mAbRequest = AssetBundle.LoadFromFileAsync(tmpResPath);
+                }
+#else
+                mAbRequest = AssetBundle.LoadFromFileAsync(tmpResPath);
+#endif
+
+                mAbRequest = AssetBundle.LoadFromFileAsync(tmpResPath);
             }
 
             if (null == mTcsAb)
@@ -229,10 +244,10 @@ namespace AosBaseFramework
 			UnityEngine.Object resource = null;
 			if (!this.mResourceCache.TryGetValue(path, out resource))
 			{
-				throw new Exception($"not found asset: {path}");
+				Logger.LogError($"not found asset: {path}");
 			}
 			
-			return resource as K;
+			return null == resource ? null : resource as K;
 		}
 
 
@@ -324,7 +339,15 @@ namespace AosBaseFramework
 				return;
 			}
 
-			AssetBundle assetBundle = AssetBundle.LoadFromFile(PathHelper.BundleName2ResPath(assetBundleName));
+            string tmpResPath = PathHelper.BundleName2ResPath(assetBundleName);
+
+            if (!System.IO.File.Exists(tmpResPath))
+            {
+                Logger.LogError($"找不到文件 -> {tmpResPath}");
+                return;
+            }
+
+            AssetBundle assetBundle = AssetBundle.LoadFromFile(tmpResPath);
 
 			if (!assetBundle.isStreamedSceneAssetBundle)
 			{

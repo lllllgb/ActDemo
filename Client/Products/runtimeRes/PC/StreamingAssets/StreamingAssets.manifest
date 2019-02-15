@@ -1,10 +1,11 @@
 ManifestFileVersion: 0
-CRC: 1595059672
+CRC: 1401710334
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: assets/bundles/scene/testaction.unity3d
-      Dependencies: {}
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
     Info_1:
       Name: assets/bundles/shadercollect.unity3d
       Dependencies: {}
@@ -13,12 +14,18 @@ AssetBundleManifest:
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
     Info_3:
+      Name: assets/bundles/unit/warrior.unity3d
+      Dependencies: {}
+    Info_4:
+      Name: assets/bundles/misc/cameracontrol.unity3d
+      Dependencies: {}
+    Info_5:
       Name: assets/bundles/unit/ms_shoufukuilei.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
-    Info_4:
-      Name: assets/bundles/unit/warrior.unity3d
+    Info_6:
+      Name: assets/bundles/ui/testactionwnd.unity3d
       Dependencies: {}
-    Info_5:
-      Name: assets/bundles/misc/cameracontrol.unity3d
+    Info_7:
+      Name: assets/bundles/ui/uiroot.unity3d
       Dependencies: {}

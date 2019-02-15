@@ -10,7 +10,7 @@ namespace ACT
 
         bool IsInvalid { get; }
 
-        void Init(string name, float duration, Vector3 pos, Quaternion rotation);
+        void Init(string name, float duration, Transform parent, Vector3 pos, Quaternion rotation);
 
         void Play();
 

@@ -496,7 +496,7 @@ namespace ACT
 
         IActUnit selectEnemy()
         {
-            return ActionSystem.Instance.LocalPlayer;
+            return ActionSystem.Instance.ActUnitMgr.LocalPlayer;
         }
 
         //-----------------------------------------------------------------------

@@ -31,10 +31,11 @@ namespace AosHotfixRunTime
             {
                 mTestPlayer = new LocalPlayer(1010);
                 mTestPlayer.Init();
+                ACT.ActionSystem.Instance.ActUnitMgr.Add(mTestPlayer);
 
                 Monster tmpMonster = new Monster(3001);
                 tmpMonster.Init();
-                ACT.ActionSystem.UnitList.Add(tmpMonster);
+                ACT.ActionSystem.Instance.ActUnitMgr.Add(tmpMonster);
             }, null);
         }
 
@@ -42,12 +43,10 @@ namespace AosHotfixRunTime
         {
             base.OnUpdate(procedureOwner, deltaTime);
 
-            if (null != mTestPlayer)
+            for (int i = 0, max = ACT.ActionSystem.Instance.ActUnitMgr.Units.Count; i < max; ++i)
             {
-                mTestPlayer.Update(deltaTime);
+                ACT.ActionSystem.Instance.ActUnitMgr.Units[i].Update(deltaTime);
             }
-
-            ACT.ActionSystem.Instance.LoopAllActUnits(unit=> { unit.Update(deltaTime); });
         }
 
         protected internal override void OnLateUpdate(ProcedureOwner fsm, float deltaTime)

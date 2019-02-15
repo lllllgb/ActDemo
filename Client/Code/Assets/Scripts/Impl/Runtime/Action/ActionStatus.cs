@@ -575,11 +575,11 @@ namespace ACT
             // stop while action changed.
             if (data.StopMode == 1)
             {
-                mActionEffectMgr.PlayEffect(tmpParent, data.EffectName, data.Duration * 0.001f, tmpPos, tmpRotation);
+                mActionEffectMgr.PlayEffect(data.EffectName, data.Duration * 0.001f, tmpParent, tmpPos, tmpRotation);
             }
             else
             {
-                ActionSystem.Instance.EffectMgr.PlayEffect(tmpParent, data.EffectName, data.Duration * 0.001f, tmpPos, tmpRotation);
+                ActionSystem.Instance.EffectMgr.PlayEffect(data.EffectName, data.Duration * 0.001f, tmpParent, tmpPos, tmpRotation);
             }
         }
 
@@ -661,15 +661,17 @@ namespace ACT
                     GameObject.Destroy(mListTargetFrame, 2.0f);
             }
 
-            ActionSystem.Instance.LoopAllActUnits(target => {
+            for (int i = 0, max = ActionSystem.Instance.ActUnitMgr.Units.Count; i < max; ++i)
+            {
+                var tmpTarget = ActionSystem.Instance.ActUnitMgr.Units[i];
 
-                if (target == mOwner ||
-                    target.Dead ||
-                    target.Camp == EUnitCamp.EUC_FRIEND ||
-                    target.Camp == mOwner.Camp)
+                if (tmpTarget == mOwner ||
+                    tmpTarget.Dead ||
+                    tmpTarget.Camp == EUnitCamp.EUC_FRIEND ||
+                    tmpTarget.Camp == mOwner.Camp)
                     return;
 
-                Vector3 trans = target.Position - basePos;
+                Vector3 trans = tmpTarget.Position - basePos;
                 trans.y = 0;
 
                 float sqrMagnitude = trans.sqrMagnitude;
@@ -699,10 +701,10 @@ namespace ACT
 
                 if (ActionTarget == null || thisCheck < minCheck)
                 {
-                    ActionTarget = target;
+                    ActionTarget = tmpTarget;
                     minCheck = thisCheck;
                 }
-            });
+            }
         }
 
         void DrawAngleLine(GameObject go, int angle, int radius)

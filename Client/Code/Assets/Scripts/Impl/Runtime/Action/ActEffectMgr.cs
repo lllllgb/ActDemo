@@ -12,7 +12,7 @@ namespace ACT
         {
         }
 
-        public void PlayEffect(Transform parent, string name, float duration, Vector3 pos, Quaternion rotation)
+        public void PlayEffect(string name, float duration, Transform parent, Vector3 pos, Quaternion rotation)
         {
             Debug.Log($"playeffect {name} -> {duration}");
             var tmpActEffectSpawn = ActionSystem.Instance.SpawnEffectDelegate;
@@ -24,8 +24,7 @@ namespace ACT
             }
 
             IActEffect tmpActEffect = tmpActEffectSpawn();
-            tmpActEffect.Init(name, duration, pos, rotation);
-            tmpActEffect.EffectTrans.SetParent(parent);
+            tmpActEffect.Init(name, duration, parent, pos, rotation);
             tmpActEffect.Play();
             mEffectList.Add(tmpActEffect);
         }

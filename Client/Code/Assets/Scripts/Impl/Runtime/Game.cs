@@ -65,9 +65,13 @@ namespace AosHotfixRunTime
 
         static void InitActionSystem()
         {
+            //动作加载代理
             ACT.ActionSystem.Instance.LoadActionFileDelegate = (actionName) => {
                 return AosBaseFramework.FileHelper.LoadBytesFile($"{actionName}.bytes", AosBaseFramework.PathHelper.EBytesFileType.Action);
             };
+
+            //特效
+            ACT.ActionSystem.Instance.SpawnEffectDelegate = () => { return PoolMgr.GetObjectPool<EffectObject>().Spawn(); };
         }
 
         static void LoadTbl()

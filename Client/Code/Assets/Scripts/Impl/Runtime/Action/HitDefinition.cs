@@ -51,7 +51,8 @@ namespace ACT
             mCacheTransform = new GameObject("HitDefinition").transform;
         }
 
-        public void Init(ActData.AttackDef data, IActUnit owner, string action, ISkillItem skillItem, Action<HitDefinition> finishHandle)
+        public void Init(ActData.AttackDef data, IActUnit owner, string action, ISkillItem skillItem, 
+            Action<HitDefinition> finishHandle)
         {
             mAttackDef = data;
             mOwner = owner;
@@ -71,8 +72,8 @@ namespace ACT
                             mAttackDef.SelfEffectOffset.Y * 0.01f,
                             mAttackDef.SelfEffectOffset.Z * 0.01f);
 
-                mHitDefEffectMgr.PlayEffect(mCacheTransform, mAttackDef.SelfEffect,
-                    mAttackDef.SelfEffectDuration * 0.001f, tmpPos, mOwner.Transform.rotation);
+                mHitDefEffectMgr.PlayEffect(mAttackDef.SelfEffect, mAttackDef.SelfEffectDuration * 0.001f,
+                    mCacheTransform, tmpPos, mOwner.Transform.rotation);
             }
         }
 
@@ -307,16 +308,19 @@ namespace ACT
             //}
 
             int comboHit = 0;
-            ActionSystem.Instance.LoopAllActUnits(target=>
+
+            for (int i = 0, max = ActionSystem.Instance.ActUnitMgr.Units.Count; i < max; ++i)
             {
-                if (!target.UGameObject || !CanHit(self, target))
+                var tmpTarget = ActionSystem.Instance.ActUnitMgr.Units[i];
+
+                if (!tmpTarget.UGameObject || !CanHit(self, tmpTarget))
                     return;
 
-                if (CheckHit(self, target))
+                if (CheckHit(self, tmpTarget))
                 {
                     comboHit++;
                 }
-            });
+            }
         }
 
         bool CheckHit(IActUnit self, IActUnit target)
@@ -487,7 +491,8 @@ namespace ACT
                 Vector3 effectPos = target.Position;
                 effectPos.y += targetActionStatus.Bounding.y * 0.5f;
 
-                ActionSystem.Instance.EffectMgr.PlayEffect(null, mAttackDef.HitedEffect, mAttackDef.HitedEffectDuration * 0.001f, effectPos,
+                ActionSystem.Instance.EffectMgr.PlayEffect(mAttackDef.HitedEffect, mAttackDef.HitedEffectDuration * 0.001f, 
+                    null, effectPos,
                     0 == mAttackDef.BaseGround ? Quaternion.identity : Quaternion.Euler(0f, 0f, UnityEngine.Random.Range(0f, 360f)));
             }
 

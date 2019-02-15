@@ -14,17 +14,9 @@ namespace ACT
         //输入
         public InputBox GInputBox { get; set; }
 
-        public static List<IActUnit> UnitList = new List<IActUnit>();
-
-        public void LoopAllActUnits(Action<IActUnit> loopHandle)
-        {
-            for (int i = 0, max = UnitList.Count; i < max; ++i)
-            {
-                loopHandle?.Invoke(UnitList[i]);
-            }
-        }
-
-        public IActUnit LocalPlayer { get; set; }
+        //动作单位管理
+        private ActionUnitManager mActUnitMgr = new ActionUnitManager();
+        public ActionUnitManager ActUnitMgr { get { return mActUnitMgr; } }
 
         //加载动作资源代理
         public Func<string, byte[]> LoadActionFileDelegate { get; set; }
