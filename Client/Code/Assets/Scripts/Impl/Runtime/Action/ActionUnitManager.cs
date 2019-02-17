@@ -25,5 +25,10 @@ namespace ACT
         {
             mUnits.Remove(actUnit);
         }
+
+        public void ClearAll()
+        {
+            mUnits.Clear();
+        }
     }
 }

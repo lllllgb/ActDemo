@@ -13,3 +13,7 @@ Client/Code/Code.csproj
 Client/Code/Code.Editor.csproj
 Client/Code/Code.sln
 Client/Code/.vs
+Client/Art/Art.csproj
+Client/Art/Art.Editor.csproj
+Client/Art/Art.sln
+Client/Art/.vs

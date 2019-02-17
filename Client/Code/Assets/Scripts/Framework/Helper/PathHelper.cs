@@ -16,7 +16,12 @@ namespace AosBaseFramework
         }
 
         public const string GAME_FOLDER = "GSYZ";
+#if UNITY_EDITOR
         public const string RUN_TIME_RES_PATH = "../Products/runtimeRes";
+#else
+        public const string RUN_TIME_RES_PATH = "../runtimeRes";
+#endif
+
         public const string BUNDLE_FOLDER = "{0}/StreamingAssets";
 
         //非发布AssetBundle路径

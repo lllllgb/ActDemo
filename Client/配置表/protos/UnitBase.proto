@@ -4,4 +4,5 @@ message UnitBase [key=ID,excel="UnitBase.xlsx"]
 	int32 		ID                           	  [option = "id"];
 	string 		Name                              [option = "名称"];
 	string 		Prefab                            [option = "预制物"];
+	int32 		ActionID                          [option = "动作ID"];
 }

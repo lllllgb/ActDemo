@@ -181,6 +181,12 @@ namespace ACT
             }
 
             mActionEffectMgr.Clear();
+
+            if (mListTargetFrame)
+            {
+                GameObject.Destroy(mListTargetFrame);
+                mListTargetFrame = null;
+            }
         }
 
         public void Release()

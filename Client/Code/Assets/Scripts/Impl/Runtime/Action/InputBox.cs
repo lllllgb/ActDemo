@@ -156,8 +156,8 @@ namespace ACT
                 MathUtility.Rotate(ref x, ref y, mController.CameraModify);
 
                 // rotating
-                if (mActionStatus.CanRotate)
-                    mOwner.SetOrientation(Mathf.Atan2(x, y));
+                if (mActionStatus.CanRotate && mInputVector.x != 0)
+                    mOwner.SetOrientation(Mathf.Atan2(x, 0));
 
                 // moving.
                 mOwner.Move(new Vector3(x, 0, y));

@@ -620,7 +620,7 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="300" Height="200" Length="300" />
+                  <AttackType xsi:type="FrameCuboid" Width="300" Height="50" Length="300" />
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
                   <AttackerStraightTime>50</AttackerStraightTime>

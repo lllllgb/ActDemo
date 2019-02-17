@@ -126,6 +126,13 @@ namespace ACT
                 mIsFinish = true;
                 mFinishHandle?.Invoke(this);
                 mFinishHandle = null;
+
+                if (mAttackFrame)
+                {
+                    GameObject.Destroy(mAttackFrame);
+                    mAttackFrame = null;
+                }
+
                 return;
             }
 
@@ -314,7 +321,7 @@ namespace ACT
                 var tmpTarget = ActionSystem.Instance.ActUnitMgr.Units[i];
 
                 if (!tmpTarget.UGameObject || !CanHit(self, tmpTarget))
-                    return;
+                    continue;
 
                 if (CheckHit(self, tmpTarget))
                 {

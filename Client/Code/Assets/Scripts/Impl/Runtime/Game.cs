@@ -30,11 +30,11 @@ namespace AosHotfixRunTime
             ResourcesMgr.LoadManifest();
             ResourcesMgr.LoadBundleByType(EABType.Shader, "shaderCollect");
             //UI
-            //ResourcesMgr.LoadBundleByType(EABType.UI, "UIRoot");
-            //GameObject tmpUIRoot = Hotfix.Instantiate(ResourcesMgr.GetAssetByType<GameObject>(EABType.UI, "UIRoot"));
-            //GameObject.DontDestroyOnLoad(tmpUIRoot);
-            //CameraHelper.InitUICamera(tmpUIRoot);
-            //WindowsMgr.SetWindowsRoot(CameraHelper.UICanvasRootGo.transform);
+            ResourcesMgr.LoadBundleByType(EABType.UI, "UIRoot");
+            GameObject tmpUIRoot = Hotfix.Instantiate(ResourcesMgr.GetAssetByType<GameObject>(EABType.UI, "UIRoot"));
+            GameObject.DontDestroyOnLoad(tmpUIRoot);
+            CameraHelper.InitUICamera(tmpUIRoot);
+            WindowsMgr.SetWindowsRoot(CameraHelper.UICanvasRootGo.transform);
 
             ////主相机
             ResourcesMgr.LoadBundleByType(EABType.Misc, "CameraControl");

@@ -51,7 +51,7 @@ namespace ACT
         public Transform Transform { get { return mTransform; } }
         public Transform ModelTrans { get { return mModelTrans; } }
         public EUnitCamp Camp { get { return mCamp; } protected set { mCamp = value; } }
-        public int ActionID { get { return mUnitID; } }
+        public int ActionID { get { return mActionID; } protected set { mActionID = value; } }
         public int ActionGroupIdx { get { return mActionGroupIdx; } }
         public int AIDiff { get { return mAIDiff; } }
         public ActionStatus ActStatus { get { return mActionStatus; } }
@@ -76,13 +76,12 @@ namespace ACT
 
         public virtual void OnDestroy()
         {
-            GameObject.Destroy(UGameObject);
         }
 
         public virtual void Destory()
         {
             mActionStatus.Release();
-            //UnitManager.Instance.Destroy(this);
+            GameObject.Destroy(UGameObject);
         }
 
         protected void SetIsDead(bool dead)

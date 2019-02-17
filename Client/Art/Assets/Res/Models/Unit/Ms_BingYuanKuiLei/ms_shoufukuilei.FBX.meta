@@ -75,6 +75,8 @@ ModelImporter:
     400066: //RootNode
     400068: ms_shoufukuilei
     400070: topNode
+    2300000: ms_shoufukuilei
+    3300000: ms_shoufukuilei
     4300000: ms_shoufukuilei
     9500000: //RootNode
     11100000: //RootNode
@@ -155,7 +157,7 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 1

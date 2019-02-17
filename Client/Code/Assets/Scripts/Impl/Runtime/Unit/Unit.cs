@@ -43,6 +43,8 @@ namespace AosHotfixRunTime
             }
 
             tmpGo = Hotfix.Instantiate(tmpGo);
+            tmpGo.transform.localEulerAngles = new Vector3(0, 90, 0);
+            ActionID = tmpUnitBase.ActionID;
             InitActUnit(tmpGo, tmpGo.transform.Find("model"));
         }
 
