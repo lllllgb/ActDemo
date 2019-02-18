@@ -370,6 +370,7 @@
                 <ActionInterrupt ActionID="W10000" SkillID="101" CheckInput1="true" InputKey1="2" CheckInput2="true" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="W20000" SkillID="104" CheckInput1="true" InputKey1="3" CheckInput2="true" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="W00000" CheckInput1="true" InputKey1="1" CheckInput2="true" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="W20000" CheckInput1="true" InputKey1="6" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
