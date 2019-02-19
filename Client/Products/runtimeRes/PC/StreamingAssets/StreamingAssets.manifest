@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1534009559
+CRC: 38343432
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -14,37 +14,18 @@ AssetBundleManifest:
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
     Info_3:
-      Name: assets/bundles/unit/warrior.unity3d
-      Dependencies: {}
-    Info_4:
-      Name: assets/bundles/misc/cameracontrol.unity3d
-      Dependencies: {}
-    Info_5:
-      Name: assets/bundles/unit/ms_shoufukuilei.unity3d
-      Dependencies:
-        Dependency_0: assets/bundles/shadercollect.unity3d
-    Info_6:
       Name: assets/bundles/ui/uiroot.unity3d
       Dependencies: {}
-    Info_7:
+    Info_4:
+      Name: assets/bundles/unit/warrior.unity3d
+      Dependencies: {}
+    Info_5:
       Name: assets/bundles/ui/testactionwnd.unity3d
       Dependencies: {}
-    Info_8:
-      Name: assets/bundles/independent/temp.unity3d
+    Info_6:
+      Name: assets/bundles/misc/cameracontrol.unity3d
       Dependencies: {}
-    Info_9:
-      Name: assets/bundles/icon/temp.unity3d
-      Dependencies: {}
-    Info_10:
-      Name: assets/bundles/audio/temp.unity3d
-      Dependencies: {}
-    Info_11:
-      Name: assets/bundles/atlas/temp.unity3d
-      Dependencies: {}
-    Info_12:
-      Name: assets/bundles/effect/temp.unity3d
-      Dependencies: {}
-    Info_13:
-      Name: assets/bundles/unit/1001.unity3d
+    Info_7:
+      Name: assets/bundles/unit/ms_shoufukuilei.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
