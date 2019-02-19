@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 983094991
+CRC: 729993745
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 47f3aa5b6892f241094dcbfcb3474eac
+    Hash: 54cbec8ef6e0cea3d8b11cbe04846ff3
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6370d3f9de9eca57f523bce048404a46
@@ -13,5 +13,6 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Normal-VertexLit.shader
+- Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Standard.shader
 - Assets/Shaders/custom_shaders/DoubleSidedAlpha.shader
 Dependencies: []
