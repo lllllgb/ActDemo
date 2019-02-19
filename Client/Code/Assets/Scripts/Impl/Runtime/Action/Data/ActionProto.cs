@@ -4292,6 +4292,20 @@ namespace ActData {
       }
     }
 
+    /// <summary>Field number for the "SuperArmor" field.</summary>
+    public const int SuperArmorFieldNumber = 50;
+    private bool superArmor_;
+    /// <summary>
+    ///∞‘ÃÂ
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool SuperArmor {
+      get { return superArmor_; }
+      set {
+        superArmor_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (AnimationVersion.Length != 0) {
@@ -4478,6 +4492,10 @@ namespace ActData {
         output.WriteRawTag(136, 3);
         output.WriteInt32(NightmareDiffTimeProp);
       }
+      if (SuperArmor != false) {
+        output.WriteRawTag(144, 3);
+        output.WriteBool(SuperArmor);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4621,6 +4639,9 @@ namespace ActData {
       }
       if (NightmareDiffTimeProp != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(NightmareDiffTimeProp);
+      }
+      if (SuperArmor != false) {
+        size += 2 + 1;
       }
       return size;
     }
@@ -4827,6 +4848,10 @@ namespace ActData {
           }
           case 392: {
             NightmareDiffTimeProp = input.ReadInt32();
+            break;
+          }
+          case 400: {
+            SuperArmor = input.ReadBool();
             break;
           }
         }

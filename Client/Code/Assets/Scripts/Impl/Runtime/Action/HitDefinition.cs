@@ -554,10 +554,9 @@ namespace ACT
             // 单位处于非霸体状态，需要被击中移动～
             bool processLash = true;
 
-            // 攻击等级调整。
-            int attackLevel = mAttackDef.AttackLevel;
+            //受击动作
             ActData.HeightStatusFlag targetHeightStatus = targetActionStatus.HeightState;
-            if (attackLevel < targetActionStatus.ActionLevel)
+            if (targetActionStatus.ActiveAction.SuperArmor)
             {
                 // 设置受击者的霸体硬直时间?
                 tmpHitData.HitAction = byte.MaxValue;
