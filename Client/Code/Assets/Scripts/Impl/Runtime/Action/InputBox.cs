@@ -49,16 +49,7 @@ namespace ACT
             KeyStates[(int)EKeyList.KL_Attack].AxisName = "Attack";
             KeyStates[(int)EKeyList.KL_SubAttack].AxisName = "SubAttack";
             KeyStates[(int)EKeyList.KL_SkillAttack].AxisName = "SkillAttack";
-            KeyStates[(int)EKeyList.KL_Skill0].AxisName = "skill0";
-            KeyStates[(int)EKeyList.KL_Skill1].AxisName = "skill1";
-            KeyStates[(int)EKeyList.KL_Skill2].AxisName = "skill2";
-            KeyStates[(int)EKeyList.KL_Skill3].AxisName = "skill3";
-            KeyStates[(int)EKeyList.KL_Skill4].AxisName = "skill4";
-            KeyStates[(int)EKeyList.KL_Skill5].AxisName = "skill5";
-            KeyStates[(int)EKeyList.KL_Skill6].AxisName = "skill6";
-            KeyStates[(int)EKeyList.KL_Skill7].AxisName = "skill7";
-            KeyStates[(int)EKeyList.KL_Skill8].AxisName = "skill8";
-            KeyStates[(int)EKeyList.KL_Skill9].AxisName = "skill9";
+            KeyStates[(int)EKeyList.KL_AuxKey].AxisName = "AuxKey";
         }
 
         // Update is called once per frame
@@ -235,35 +226,15 @@ namespace ACT
                 case EOperation.EO_Jump:
                     ret = checkInputType(EKeyList.KL_Jump, inputType, deltaTime);
                     break;
-                case EOperation.EO_Skill0:
-                    ret = checkInputType(EKeyList.KL_Skill0, inputType, deltaTime);
+                case EOperation.EO_Grab:
+                case EOperation.EO_Front:
+                case EOperation.EO_Back:
                     break;
-                case EOperation.EO_Skill1:
-                    ret = checkInputType(EKeyList.KL_Skill1, inputType, deltaTime);
+                case EOperation.EO_Last:
+                    ret = checkInputType(EKeyList.KL_LastKey, inputType, deltaTime);
                     break;
-                case EOperation.EO_Skill2:
-                    ret = checkInputType(EKeyList.KL_Skill2, inputType, deltaTime);
-                    break;
-                case EOperation.EO_Skill3:
-                    ret = checkInputType(EKeyList.KL_Skill3, inputType, deltaTime);
-                    break;
-                case EOperation.EO_Skill4:
-                    ret = checkInputType(EKeyList.KL_Skill4, inputType, deltaTime);
-                    break;
-                case EOperation.EO_Skill5:
-                    ret = checkInputType(EKeyList.KL_Skill5, inputType, deltaTime);
-                    break;
-                case EOperation.EO_Skill6:
-                    ret = checkInputType(EKeyList.KL_Skill6, inputType, deltaTime);
-                    break;
-                case EOperation.EO_Skill7:
-                    ret = checkInputType(EKeyList.KL_Skill7, inputType, deltaTime);
-                    break;
-                case EOperation.EO_Skill8:
-                    ret = checkInputType(EKeyList.KL_Skill8, inputType, deltaTime);
-                    break;
-                case EOperation.EO_Skill9:
-                    ret = checkInputType(EKeyList.KL_Skill9, inputType, deltaTime);
+                case EOperation.EO_Auxiliary:
+                    ret = checkInputType(EKeyList.KL_AuxKey, inputType, deltaTime);
                     break;
             }
             return ret;
