@@ -207,7 +207,7 @@ namespace ACT
                 mOwner.GetVariable(v.Index).Set(v.Value, v.Max);
 
             mActionGroup = unitInfo.ActionGroups[groupIndex];
-            ChangeAction(StartupAction, 0);
+            ChangeAction(mActionGroup.StartupAction, 0);
 
             mInitialized = true;
             return true;
