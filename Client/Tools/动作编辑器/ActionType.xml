@@ -34066,100 +34066,20 @@
         <ActionGroup SpasticityCD="0">
           <ActionList>
             <Action>
-              <ID>attack_1_g</ID>
-              <Name>普攻1_攻击</Name>
+              <ID>idle</ID>
+              <Name>待机</Name>
               <Desc>动作</Desc>
-              <DefaultLinkActionID>attack_1_y</DefaultLinkActionID>
+              <DefaultLinkActionID>walk</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="attack_1" End="50">
+                <AnimSlot Animation="idle">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>500</AnimTime>
-              <ActionStatus>2</ActionStatus>
+              <AnimTime>1800</AnimTime>
               <Events />
-              <ActionInterrupts />
-              <AttackDefs>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <TriggerTime>30</TriggerTime>
-                  <Duration>200</Duration>
-                  <MovingSpeed />
-                  <Path />
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" />
-                  <Offset />
-                  <AttackerStraightTime>100</AttackerStraightTime>
-                  <AttackerLash />
-                  <AttackerTime>200</AttackerTime>
-                  <AttackeeStraightTime>100</AttackeeStraightTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <X>100</X>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffectOffset />
-                </AttackDef>
-              </AttackDefs>
-              <CanHurt>true</CanHurt>
-            </Action>
-            <Action>
-              <ID>attack_1_y</ID>
-              <Name>普攻1_攻击</Name>
-              <Desc>动作</Desc>
-              <DefaultLinkActionID>idle</DefaultLinkActionID>
-              <AnimSlotList>
-                <AnimSlot Animation="attack_1" Start="51">
-                  <AnimControlList />
-                </AnimSlot>
-              </AnimSlotList>
-              <AnimTime>500</AnimTime>
-              <ActionStatus>2</ActionStatus>
-              <Events />
-              <ActionInterrupts />
-              <AttackDefs />
-              <CanHurt>true</CanHurt>
-            </Action>
-            <Action>
-              <ID>hit</ID>
-              <Name>受击</Name>
-              <Desc>动作</Desc>
-              <DefaultLinkActionID>idle</DefaultLinkActionID>
-              <AnimSlotList>
-                <AnimSlot Animation="hit">
-                  <AnimControlList />
-                </AnimSlot>
-              </AnimSlotList>
-              <AnimTime>800</AnimTime>
-              <ActionStatus>3</ActionStatus>
-              <Events />
-              <ActionInterrupts />
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" TargetDistanceMax="1000" />
+              </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
@@ -34167,7 +34087,7 @@
               <ID>run</ID>
               <Name>移动</Name>
               <Desc>动作</Desc>
-              <DefaultLinkActionID>run</DefaultLinkActionID>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
                 <AnimSlot Animation="run">
                   <AnimControlList />
@@ -34178,30 +34098,11 @@
               <ActionStatus>1</ActionStatus>
               <Events />
               <ActionInterrupts>
-                <ActionInterrupt ActionID="idle" CheckInput1="true" InputKey1="4" InputType1="3" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="3" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanMove>true</CanMove>
               <CanRotate>true</CanRotate>
-              <CanHurt>true</CanHurt>
-            </Action>
-            <Action>
-              <ID>idle</ID>
-              <Name>待机</Name>
-              <Desc>动作</Desc>
-              <DefaultLinkActionID>idle</DefaultLinkActionID>
-              <AnimSlotList>
-                <AnimSlot Animation="idle">
-                  <AnimControlList />
-                </AnimSlot>
-              </AnimSlotList>
-              <AnimTime>1800</AnimTime>
-              <Events />
-              <ActionInterrupts>
-                <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt InterruptName="普攻" ActionID="attack_1_g" CheckInput1="true" InputKey1="6" TargetDistanceMax="1000" />
-              </ActionInterrupts>
-              <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
           </ActionList>
@@ -34221,13 +34122,14 @@
               <AIStatusList />
             </NightmareGroup>
           </AISetting>
+          <StartupAction>idle</StartupAction>
+          <StartupActionInstance>idle</StartupActionInstance>
           <LashModifier>
             <X>1</X>
             <Y>1</Y>
             <Z>1</Z>
           </LashModifier>
           <HoldOffset />
-          <StandStandHit>hit</StandStandHit>
           <IdlePabodyEffectOffset />
           <MovePabodyEffectOffset />
           <AttackPabodyEffectOffset />

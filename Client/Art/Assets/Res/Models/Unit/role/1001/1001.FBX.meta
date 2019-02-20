@@ -280,6 +280,8 @@ ModelImporter:
     400272: wp_2
     400274: wp_3
     2100000: 1001
+    2300000: 1001
+    3300000: 1001
     4300000: 1001
     9500000: //RootNode
     11100000: //RootNode
@@ -355,7 +357,7 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 1

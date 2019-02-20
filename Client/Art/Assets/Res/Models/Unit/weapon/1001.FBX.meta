@@ -5,12 +5,17 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: 1001_wp
+    100004: 1001
     400000: //RootNode
     400002: 1001_wp
+    400004: 1001
     2100000: 14 - Default
     2300000: 1001_wp
+    2300002: 1001
     3300000: 1001_wp
+    3300002: 1001
     4300000: 1001_wp
+    4300002: 1001
     11100000: //RootNode
   externalObjects: {}
   materials:
