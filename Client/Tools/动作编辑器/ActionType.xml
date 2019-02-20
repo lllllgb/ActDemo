@@ -34066,6 +34066,404 @@
         <ActionGroup SpasticityCD="0">
           <ActionList>
             <Action>
+              <ID>at1_g</ID>
+              <Name>攻击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>at1_y</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="attack_1" End="33">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>334</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" />
+                </Event>
+              </Events>
+              <ActionInterrupts />
+              <AttackDefs>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <TriggerTime>20</TriggerTime>
+                  <Duration>400</Duration>
+                  <MovingSpeed />
+                  <Path>
+                    <PathNode X="200" />
+                  </Path>
+                  <PassNum>1</PassNum>
+                  <MaxHitCount>1</MaxHitCount>
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <AttackType xsi:type="FrameCuboid" Width="200" Height="200" Length="200" />
+                  <Offset />
+                  <AttackerStraightTime>100</AttackerStraightTime>
+                  <AttackerLash />
+                  <AttackerTime>100</AttackerTime>
+                  <AttackeeStraightTime>100</AttackeeStraightTime>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash>
+                    <X>100</X>
+                  </AttackeeLash>
+                  <AttackeeTime>100</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                </AttackDef>
+              </AttackDefs>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>at1_y</ID>
+              <Name>攻击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="attack_1" Start="34">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>666</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events />
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="at2_g" CheckInput1="true" InputKey1="1" InputType1="4" CheckInput2="true" InputKey2="1" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>at2_g</ID>
+              <Name>攻击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>at2_y</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="attack_2" End="33">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>334</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_002" />
+                </Event>
+              </Events>
+              <ActionInterrupts />
+              <AttackDefs>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <TriggerTime>20</TriggerTime>
+                  <Duration>400</Duration>
+                  <MovingSpeed />
+                  <Path>
+                    <PathNode X="200" />
+                  </Path>
+                  <PassNum>1</PassNum>
+                  <MaxHitCount>1</MaxHitCount>
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <AttackType xsi:type="FrameCuboid" Width="200" Height="200" Length="200" />
+                  <Offset />
+                  <AttackerStraightTime>100</AttackerStraightTime>
+                  <AttackerLash />
+                  <AttackerTime>100</AttackerTime>
+                  <AttackeeStraightTime>100</AttackeeStraightTime>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash>
+                    <X>100</X>
+                  </AttackeeLash>
+                  <AttackeeTime>100</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                </AttackDef>
+              </AttackDefs>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>at2_y</ID>
+              <Name>攻击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="attack_2" Start="34">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>666</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events />
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="at3_g" CheckInput1="true" InputKey1="1" InputType1="4" CheckInput2="true" InputKey2="1" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>at3_g</ID>
+              <Name>攻击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>at3_y</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="attack_3" End="40">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>400</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_003" />
+                </Event>
+              </Events>
+              <ActionInterrupts />
+              <AttackDefs>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <TriggerTime>20</TriggerTime>
+                  <Duration>400</Duration>
+                  <MovingSpeed />
+                  <Path>
+                    <PathNode X="200" />
+                  </Path>
+                  <PassNum>1</PassNum>
+                  <MaxHitCount>1</MaxHitCount>
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <AttackType xsi:type="FrameCuboid" Width="200" Height="200" Length="200" />
+                  <Offset />
+                  <AttackerStraightTime>100</AttackerStraightTime>
+                  <AttackerLash />
+                  <AttackerTime>100</AttackerTime>
+                  <AttackeeStraightTime>100</AttackeeStraightTime>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash>
+                    <X>100</X>
+                  </AttackeeLash>
+                  <AttackeeTime>100</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                </AttackDef>
+              </AttackDefs>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>at3_y</ID>
+              <Name>攻击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="attack_3" Start="60">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>600</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events />
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="at4_g" CheckInput1="true" InputKey1="1" InputType1="4" CheckInput2="true" InputKey2="1" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>at4_g</ID>
+              <Name>攻击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>at4_y</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="attack_4" End="68">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>850</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_004" />
+                </Event>
+              </Events>
+              <ActionInterrupts />
+              <AttackDefs>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <TriggerTime>20</TriggerTime>
+                  <Duration>400</Duration>
+                  <MovingSpeed />
+                  <Path>
+                    <PathNode X="200" />
+                  </Path>
+                  <PassNum>1</PassNum>
+                  <MaxHitCount>1</MaxHitCount>
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <AttackType xsi:type="FrameCuboid" Width="200" Height="200" Length="200" />
+                  <Offset />
+                  <AttackerStraightTime>100</AttackerStraightTime>
+                  <AttackerLash />
+                  <AttackerTime>100</AttackerTime>
+                  <AttackeeStraightTime>100</AttackeeStraightTime>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash>
+                    <X>100</X>
+                  </AttackeeLash>
+                  <AttackeeTime>100</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                </AttackDef>
+              </AttackDefs>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>at4_y</ID>
+              <Name>攻击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="attack_4" Start="68">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>500</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events />
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>hit</ID>
+              <Name>受击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>800</AnimTime>
+              <MoveSpeed>700</MoveSpeed>
+              <ActionStatus>1</ActionStatus>
+              <Events />
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanMove>true</CanMove>
+              <CanRotate>true</CanRotate>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
               <ID>idle</ID>
               <Name>待机</Name>
               <Desc>动作</Desc>
@@ -34079,6 +34477,7 @@
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
@@ -34099,6 +34498,7 @@
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="3" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanMove>true</CanMove>
