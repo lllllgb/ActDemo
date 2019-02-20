@@ -34069,7 +34069,7 @@
               <ID>idle</ID>
               <Name>´ý»ú</Name>
               <Desc>¶¯×÷</Desc>
-              <DefaultLinkActionID>walk</DefaultLinkActionID>
+              <DefaultLinkActionID>run</DefaultLinkActionID>
               <AnimSlotList>
                 <AnimSlot Animation="idle">
                   <AnimControlList />
