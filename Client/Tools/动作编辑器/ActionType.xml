@@ -34177,7 +34177,9 @@
               <MoveSpeed>700</MoveSpeed>
               <ActionStatus>1</ActionStatus>
               <Events />
-              <ActionInterrupts />
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="idle" CheckInput1="true" InputKey1="4" InputType1="3" TargetDistanceMax="1000" />
+              </ActionInterrupts>
               <AttackDefs />
               <CanMove>true</CanMove>
               <CanRotate>true</CanRotate>
@@ -34197,7 +34199,7 @@
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt InterruptName="ÆÕ¹¥" ActionID="attack_1_g" CheckInput1="true" InputKey1="6" InputType1="4" TargetDistanceMax="1000" />
+                <ActionInterrupt InterruptName="ÆÕ¹¥" ActionID="attack_1_g" CheckInput1="true" InputKey1="6" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>

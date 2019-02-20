@@ -106,14 +106,12 @@ namespace ACT
                     continue;
 
                 // check the key state.
-#if UNITY_EDITOR
                 bool pressed = Input.GetAxis(keyStatus.AxisName) > 0;
                 if (pressed && keyStatus.Pressed == 0)
                     OnKeyDown(keyStatus);
 
                 if (!pressed && keyStatus.Pressed != 0)
                     OnKeyUp(keyStatus);
-#endif
             }
         }
 
