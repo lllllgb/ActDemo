@@ -14,7 +14,7 @@ namespace ActData.Helper
 
         public static int GetActionIdx(this ActionGroup actionGroup, string actionID)
         {
-            actionID = NormalizeActionID(actionID);
+            //actionID = NormalizeActionID(actionID);
 
             int idx = -1;
 

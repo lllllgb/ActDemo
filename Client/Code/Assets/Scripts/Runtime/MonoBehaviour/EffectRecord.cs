@@ -23,7 +23,7 @@ public class EffectRecord : MonoBehaviour
 
                 if (null != tmpParticle)
                 {
-                    tmpParticle.Stop();
+                    tmpParticle.Simulate(0f, false, true);
                     tmpParticle.Play();
                 }
             }
