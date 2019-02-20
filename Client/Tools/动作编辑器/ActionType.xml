@@ -34075,14 +34075,13 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>334</AnimTime>
+              <AnimTime>200</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
-                  <TriggerTime>20</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetX="500" OffsetZ="10000" Duration="500" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -34096,7 +34095,7 @@
                   <Duration>400</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode X="200" />
+                    <PathNode Z="200" />
                   </Path>
                   <PassNum>1</PassNum>
                   <MaxHitCount>1</MaxHitCount>
@@ -34107,10 +34106,8 @@
                   </FrameFinalFactor>
                   <AttackType xsi:type="FrameCuboid" Width="200" Height="200" Length="200" />
                   <Offset />
-                  <AttackerStraightTime>100</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>100</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -34121,10 +34118,12 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <X>100</X>
+                    <Z>-100</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
+                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
                   </HitedEffectOffset>
@@ -34136,6 +34135,7 @@
                   </LowAirHitedEffectOffset>
                   <HighAirHitedEffectOffset />
                   <SelfEffectOffset />
+                  <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
               <CanHurt>true</CanHurt>
@@ -34169,14 +34169,13 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>334</AnimTime>
+              <AnimTime>200</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
-                  <TriggerTime>20</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_002" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_002" Duration="500" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -34190,7 +34189,7 @@
                   <Duration>400</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode X="200" />
+                    <PathNode Z="200" />
                   </Path>
                   <PassNum>1</PassNum>
                   <MaxHitCount>1</MaxHitCount>
@@ -34204,7 +34203,6 @@
                   <AttackerStraightTime>100</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>100</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -34215,10 +34213,12 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <X>100</X>
+                    <Z>-100</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
+                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
                   </HitedEffectOffset>
@@ -34230,6 +34230,7 @@
                   </LowAirHitedEffectOffset>
                   <HighAirHitedEffectOffset />
                   <SelfEffectOffset />
+                  <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
               <CanHurt>true</CanHurt>
@@ -34263,14 +34264,13 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>400</AnimTime>
+              <AnimTime>350</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
-                  <TriggerTime>20</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_003" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_003" Duration="500" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -34284,7 +34284,7 @@
                   <Duration>400</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode X="200" />
+                    <PathNode Z="200" />
                   </Path>
                   <PassNum>1</PassNum>
                   <MaxHitCount>1</MaxHitCount>
@@ -34295,10 +34295,9 @@
                   </FrameFinalFactor>
                   <AttackType xsi:type="FrameCuboid" Width="200" Height="200" Length="200" />
                   <Offset />
-                  <AttackerStraightTime>100</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>100</AttackeeStraightTime>
+                  <AttackeeStraightTime>50</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -34309,10 +34308,12 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <X>100</X>
+                    <Z>-100</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
+                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
                   </HitedEffectOffset>
@@ -34361,10 +34362,9 @@
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
-                  <TriggerTime>20</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_004" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_004" Duration="1000" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -34374,11 +34374,11 @@
                   <Name />
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
-                  <TriggerTime>20</TriggerTime>
+                  <TriggerTime>40</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode X="200" />
+                    <PathNode Z="200" />
                   </Path>
                   <PassNum>1</PassNum>
                   <MaxHitCount>1</MaxHitCount>
@@ -34403,10 +34403,12 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <X>100</X>
+                    <Z>-100</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
+                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
                   </HitedEffectOffset>
@@ -34418,6 +34420,7 @@
                   </LowAirHitedEffectOffset>
                   <HighAirHitedEffectOffset />
                   <SelfEffectOffset />
+                  <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
               <CanHurt>true</CanHurt>
@@ -34452,8 +34455,7 @@
                 </AnimSlot>
               </AnimSlotList>
               <AnimTime>800</AnimTime>
-              <MoveSpeed>700</MoveSpeed>
-              <ActionStatus>1</ActionStatus>
+              <ActionStatus>3</ActionStatus>
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
@@ -34530,6 +34532,7 @@
             <Z>1</Z>
           </LashModifier>
           <HoldOffset />
+          <StandStandHit>hit</StandStandHit>
           <IdlePabodyEffectOffset />
           <MovePabodyEffectOffset />
           <AttackPabodyEffectOffset />
