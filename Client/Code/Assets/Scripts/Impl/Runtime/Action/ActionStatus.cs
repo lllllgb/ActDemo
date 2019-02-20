@@ -568,14 +568,18 @@ namespace ACT
             }
 
             Vector3 tmpPos = mOwner.UGameObject.transform.position;
-            Quaternion tmpRotation = mOwner.UGameObject.transform.rotation;
+            Quaternion tmpRotation = Quaternion.identity;
             Vector3 tmpOffset = new Vector3(data.OffsetX * 0.01f, data.OffsetY * 0.01f, data.OffsetZ * 0.01f);
-            tmpPos += tmpRotation * tmpOffset;
             Transform tmpParent = null;
 
             if (data.BindMode == 0)
             {
                 tmpParent = mOwner.Transform;
+            }
+            else
+            {
+                tmpRotation = mOwner.UGameObject.transform.rotation;
+                tmpPos += tmpRotation * tmpOffset;
             }
 
             // stop while action changed.

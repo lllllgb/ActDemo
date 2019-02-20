@@ -44,6 +44,7 @@ namespace ACT
         public void Update(float deltaTime)
         {
             mHitDefinitionMgr.Update(deltaTime);
+            msActEffectMgr.Update(deltaTime);
         }
 
         public void LateUpdate(float deltaTime)

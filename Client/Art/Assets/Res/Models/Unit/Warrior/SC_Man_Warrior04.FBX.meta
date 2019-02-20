@@ -237,6 +237,7 @@ ModelImporter:
     4300018: SC_Man_Warrior_bow
     4300020: SC_Man_Warrior04_01
     9500000: //RootNode
+    11100000: //RootNode
     13700000: SC_Man_Warrior04
     13700002: SC_Man_Warrior04_body
     13700004: mesh

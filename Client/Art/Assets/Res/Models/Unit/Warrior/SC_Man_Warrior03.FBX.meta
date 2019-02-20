@@ -152,6 +152,7 @@ ModelImporter:
     4300012: mesh
     4300014: mesh2
     9500000: //RootNode
+    11100000: //RootNode
     13700000: SC_Man_Warrior03
     13700002: SC_Man_Warrior03_body
     13700004: SC_Man_Warrior03_01
