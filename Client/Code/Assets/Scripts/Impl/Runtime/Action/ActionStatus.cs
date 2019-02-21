@@ -575,7 +575,7 @@ namespace ACT
             if (data.BindMode == 0)
             {
                 tmpParent = mOwner.Transform;
-                tmpPos += tmpOffset;
+                tmpPos = tmpOffset;
             }
             else
             {
