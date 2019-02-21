@@ -34371,18 +34371,18 @@
               <Desc>动作</Desc>
               <DefaultLinkActionID>at4_y</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="attack_4" End="68">
+                <AnimSlot Animation="attack_4" End="60">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>850</AnimTime>
+              <AnimTime>700</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
                   <TriggerTime>20</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_004" OffsetY="60" OffsetZ="100" BindMode="1" Duration="1000" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_004" OffsetZ="100" BindMode="1" Duration="1000" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -34449,11 +34449,11 @@
               <Desc>动作</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="attack_4" Start="68">
+                <AnimSlot Animation="attack_4" Start="60">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>500</AnimTime>
+              <AnimTime>600</AnimTime>
               <BlendTime>300</BlendTime>
               <ActionStatus>2</ActionStatus>
               <Events />
@@ -34512,20 +34512,39 @@
               <ID>hit_down</ID>
               <Name>击飞</Name>
               <Desc>落地</Desc>
-              <DefaultLinkActionID>get_up</DefaultLinkActionID>
+              <DefaultLinkActionID>hit_down_f</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_down">
+                <AnimSlot Animation="hit_down" End="60">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>800</AnimTime>
+              <AnimTime>500</AnimTime>
               <BlendTime>0</BlendTime>
-              <HeightStatus>2</HeightStatus>
+              <HeightStatus>3</HeightStatus>
               <ActionStatus>3</ActionStatus>
               <Events />
               <ActionInterrupts />
               <AttackDefs />
               <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>hit_down_f</ID>
+              <Name>击飞</Name>
+              <Desc>落地</Desc>
+              <DefaultLinkActionID>get_up</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit_down" Start="60">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>300</AnimTime>
+              <BlendTime>0</BlendTime>
+              <HeightStatus>2</HeightStatus>
+              <ActionStatus>3</ActionStatus>
+              <FragmentStatus>2</FragmentStatus>
+              <Events />
+              <ActionInterrupts />
+              <AttackDefs />
             </Action>
             <Action>
               <ID>hit_fly</ID>
@@ -34766,8 +34785,8 @@
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
                   <AttackerLash />
-                  <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>100</AttackeeStraightTime>
+                  <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>300</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -34882,8 +34901,8 @@
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
                   <AttackerLash />
-                  <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>100</AttackeeStraightTime>
+                  <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>300</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -34998,8 +35017,8 @@
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
                   <AttackerLash />
-                  <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>100</AttackeeStraightTime>
+                  <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>300</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -35100,7 +35119,7 @@
                   <Duration>2000</Duration>
                   <MovingSpeed />
                   <Path />
-                  <HitCount>100</HitCount>
+                  <HitCount>10</HitCount>
                   <PassNum>10</PassNum>
                   <MaxHitCount>10</MaxHitCount>
                   <FrameFinalFactor>
@@ -35171,61 +35190,7 @@
                 <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
-              <AttackDefs>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>20</TriggerTime>
-                  <Duration>2000</Duration>
-                  <MovingSpeed />
-                  <Path />
-                  <HitCount>10</HitCount>
-                  <PassNum>10</PassNum>
-                  <CoolDownTime>200</CoolDownTime>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <FrameType_Int>1</FrameType_Int>
-                  <FramType>CylinderType</FramType>
-                  <AttackType xsi:type="FrameCylinder" Radius="100" Height="100" />
-                  <Offset />
-                  <FllowReleaser>1</FllowReleaser>
-                  <AttackerLash />
-                  <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>100</AttackeeStraightTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash />
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-              </AttackDefs>
+              <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
             <Action SuperArmor="true">
