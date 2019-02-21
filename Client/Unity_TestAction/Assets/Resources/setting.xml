@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Setup>
+  <!--DNS-->
+  <dns>192.168.3.21</dns>
+  <!--是否发布-->
+  <publish>0</publish>
+</Setup>

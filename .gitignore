@@ -5,6 +5,8 @@ Client/Code/Library
 Client/Code/Temp
 Client/Art/Library
 Client/Art/Temp
+Client/Unity_TestAction/Library
+Client/Unity_TestAction/Temp
  
 ##############################
 ## files            ##
@@ -17,3 +19,8 @@ Client/Art/Art.csproj
 Client/Art/Art.Editor.csproj
 Client/Art/Art.sln
 Client/Art/.vs
+Client/Art/Assets/start.unity
+Client/Unity_TestAction/Unity_TestAction.csproj
+Client/Unity_TestAction/Unity_TestAction.Editor.csproj
+Client/Unity_TestAction/Unity_TestAction.sln
+Client/Unity_TestAction/.vs
