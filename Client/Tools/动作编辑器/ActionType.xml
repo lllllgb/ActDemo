@@ -34398,7 +34398,7 @@
                   <TriggerTime>20</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_004" OffsetZ="100" BindMode="1" Duration="1000" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_004" OffsetZ="100" Duration="1000" />
                 </Event>
                 <Event>
                   <TriggerTime>30</TriggerTime>
@@ -35510,7 +35510,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>400</AnimTime>
+              <AnimTime>300</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events />
               <ActionInterrupts />
@@ -35526,11 +35526,11 @@
                   <MovingSpeed />
                   <Path>
                     <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
+                    <PathNode Ratio="30" Y="50" Z="300" />
+                    <PathNode Ratio="100" Y="50" Z="300" />
                   </Path>
-                  <HitCount>10</HitCount>
-                  <PassNum>1</PassNum>
+                  <HitCount>20</HitCount>
+                  <PassNum>10</PassNum>
                   <FrameFinalFactor>
                     <X>1</X>
                     <Y>1</Y>
@@ -35550,8 +35550,10 @@
                   <HighAirHit>
                     <AttackeeLash />
                   </HighAirHit>
-                  <AttackeeLash />
-                  <AttackeeTime>0</AttackeeTime>
+                  <AttackeeLash>
+                    <Z>-100</Z>
+                  </AttackeeLash>
+                  <AttackeeTime>200</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
