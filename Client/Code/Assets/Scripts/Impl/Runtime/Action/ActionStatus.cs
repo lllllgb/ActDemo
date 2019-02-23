@@ -1318,10 +1318,10 @@ namespace ACT
                 }
                 else if (mOnStarightHit)
                 {
-                    Vector3 straighMove = new Vector3(mStraighExtent, 0f, 0f);
-                    if (mOwner.ModelTrans)
-                        mOwner.ModelTrans.localPosition = straighMove;
-                    mStraighExtent = -mStraighExtent;
+                    //Vector3 straighMove = new Vector3(mStraighExtent, 0f, 0f);
+                    //if (mOwner.ModelTrans)
+                    //    mOwner.ModelTrans.localPosition = straighMove;
+                    //mStraighExtent = -mStraighExtent;
                 }
 
                 return true;
