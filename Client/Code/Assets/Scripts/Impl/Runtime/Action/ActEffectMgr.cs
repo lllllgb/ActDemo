@@ -14,7 +14,7 @@ namespace ACT
 
         public void PlayEffect(string name, float duration, Transform parent, Vector3 pos, Quaternion rotation)
         {
-            Debug.Log($"playeffect {name} -> {duration}");
+            //Debug.Log($"playeffect {name} -> {duration}");
             var tmpActEffectSpawn = ActionSystem.Instance.SpawnEffectDelegate;
 
             if (null == tmpActEffectSpawn)

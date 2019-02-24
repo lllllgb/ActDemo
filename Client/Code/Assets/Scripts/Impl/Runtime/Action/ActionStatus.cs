@@ -1262,7 +1262,10 @@ namespace ACT
             }
 
             if (!string.IsNullOrEmpty(changeAction))
+            {
+                Logger.Log($"OnHit action -> {changeAction}");
                 ChangeAction(changeAction, 0);
+            }
 
             return handled;
         }
