@@ -37771,12 +37771,24 @@
                         <AISlot SkillID="1" SwitchActionID="run" />
                       </AISlots>
                     </AIList>
+                    <AIList Distance="500">
+                      <AISlots>
+                        <AISlot SkillID="1" SwitchActionID="at1_g" />
+                        <AISlot SkillID="1" SwitchActionID="skill_1_g" />
+                        <AISlot SkillID="1" SwitchActionID="skill2_1_q" />
+                        <AISlot SkillID="1" SwitchActionID="skill3_g" />
+                        <AISlot SkillID="1" SwitchActionID="skill4_g" />
+                      </AISlots>
+                    </AIList>
                   </AILists>
                   <AIStatusSwitchList>
                     <AIStatusSwitch />
                   </AIStatusSwitchList>
                   <AIActionCDList>
-                    <AIActionCD Action="N0000" CD="1000" />
+                    <AIActionCD Action="skill_1_g" CD="5000" />
+                    <AIActionCD Action="skill2_1_q" CD="5000" />
+                    <AIActionCD Action="skill3_g" CD="5000" />
+                    <AIActionCD Action="skill4_g" CD="5000" />
                   </AIActionCDList>
                   <Location>
                     <X>0</X>
