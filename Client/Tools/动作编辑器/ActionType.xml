@@ -35114,7 +35114,7 @@
               <Desc>ÂäµØ</Desc>
               <DefaultLinkActionID>get_up</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_down" Start="50">
+                <AnimSlot Animation="hit_down" Start="30">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
@@ -35151,22 +35151,22 @@
               <ID>hit_flying</ID>
               <Name>»÷·É</Name>
               <Desc>¸¡¿Õ</Desc>
-              <DefaultLinkActionID>hit_down</DefaultLinkActionID>
+              <DefaultLinkActionID>hit_flying</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_flying" Start="10">
+                <AnimSlot Animation="hit_flying" Start="57" End="57">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>250</AnimTime>
+              <AnimTime>100</AnimTime>
               <BlendTime>0</BlendTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>3</ActionStatus>
+              <AirStatus>1</AirStatus>
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="hit_flying_b" InputKey1="1" TargetDistanceMax="1000" Variable="3" />
               </ActionInterrupts>
               <AttackDefs />
-              <IgnoreGravity>true</IgnoreGravity>
               <CanHurt>true</CanHurt>
             </Action>
             <Action>
@@ -37816,18 +37816,19 @@
           </LashModifier>
           <HoldOffset />
           <StandStandHit>hit</StandStandHit>
-          <StandKnockOut>hit_flying_b</StandKnockOut>
-          <StandDiagUp>hit_flying_b</StandDiagUp>
-          <StandAirHit>hit_flying_b</StandAirHit>
-          <AirStandHit>hit_flying_b</AirStandHit>
-          <AirKnockOut>hit_flying_b</AirKnockOut>
-          <AirDiagUp>hit_flying_b</AirDiagUp>
-          <AirAirHit>hit_flying_z</AirAirHit>
+          <StandKnockOut>hit_flying</StandKnockOut>
+          <StandDiagUp>hit_flying</StandDiagUp>
+          <StandAirHit>hit_flying</StandAirHit>
+          <AirStandHit>hit_flying</AirStandHit>
+          <AirKnockOut>hit_flying</AirKnockOut>
+          <AirDiagUp>hit_flying</AirDiagUp>
+          <AirAirHit>hit_flying</AirAirHit>
           <IdlePabodyEffectOffset />
           <MovePabodyEffectOffset />
           <AttackPabodyEffectOffset />
           <HitPabodyEffectOffset />
           <DefensePabodyEffectOffset />
+          <Diaup2FloorAction>hit_down_f</Diaup2FloorAction>
         </ActionGroup>
       </ActionGroups>
       <Scale>
