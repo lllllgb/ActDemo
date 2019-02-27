@@ -34065,7 +34065,7 @@
       <ActionGroups>
         <ActionGroup SpasticityCD="0">
           <ActionList>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>at1_g</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34139,7 +34139,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>at1_y</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34170,7 +34170,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>at2_g</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34245,7 +34245,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>at2_y</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34276,7 +34276,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>at3_g</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34363,7 +34363,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>at3_y</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34395,7 +34395,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>at4_g</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34485,7 +34485,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>at4_y</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34688,6 +34688,7 @@
                   <FllowReleaser>1</FllowReleaser>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
+                  <HitResult>KnockOut</HitResult>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -34697,8 +34698,11 @@
                   <HighAirHit>
                     <AttackeeLash />
                   </HighAirHit>
-                  <AttackeeLash />
-                  <AttackeeTime>0</AttackeeTime>
+                  <AttackeeLash>
+                    <Y>300</Y>
+                    <Z>-200</Z>
+                  </AttackeeLash>
+                  <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -34732,12 +34736,12 @@
               <ActionStatus>2</ActionStatus>
               <Events />
               <ActionInterrupts>
-                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" CheckInput2="true" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" CheckInput2="true" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" CheckInput2="true" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" CheckInput2="true" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
@@ -34912,11 +34916,11 @@
               <Desc>前冲攻击</Desc>
               <DefaultLinkActionID>front_attack_y</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="front_attack" End="30">
+                <AnimSlot Animation="front_attack" End="35">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>300</AnimTime>
+              <AnimTime>400</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -34999,11 +35003,11 @@
               <Desc>前冲攻击</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="front_attack" Start="30">
+                <AnimSlot Animation="front_attack" Start="35">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>600</AnimTime>
+              <AnimTime>500</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -35019,7 +35023,6 @@
                 </Event>
               </Events>
               <ActionInterrupts>
-                <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
@@ -35144,7 +35147,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>100</AnimTime>
+              <AnimTime>200</AnimTime>
               <BlendTime>0</BlendTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>3</ActionStatus>
@@ -35171,6 +35174,7 @@
               <Events />
               <ActionInterrupts />
               <AttackDefs />
+              <IgnoreGravity>true</IgnoreGravity>
               <CanHurt>true</CanHurt>
             </Action>
             <Action ResetVelocity="false">
@@ -35190,6 +35194,7 @@
               <Events />
               <ActionInterrupts />
               <AttackDefs />
+              <IgnoreGravity>true</IgnoreGravity>
               <CanHurt>true</CanHurt>
             </Action>
             <Action>
@@ -35266,7 +35271,19 @@
                 </AnimSlot>
               </AnimSlotList>
               <AnimTime>500</AnimTime>
-              <Events />
+              <Events>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="300" />
+                </Event>
+                <Event>
+                  <TriggerTime>100</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
+              </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="skill2_1_g" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill8_g" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
@@ -35314,7 +35331,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>skill_1_g</ID>
               <Name>技能1</Name>
               <Desc>升龙击</Desc>
@@ -35369,10 +35386,10 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Y>400</Y>
+                    <Y>500</Y>
                     <Z>-150</Z>
                   </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
+                  <AttackeeTime>200</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -35406,12 +35423,12 @@
               <ActionStatus>2</ActionStatus>
               <Events />
               <ActionInterrupts>
-                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" CheckInput2="true" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" CheckInput2="true" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
@@ -35624,7 +35641,7 @@
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
                   <AttackeeStraightTime>200</AttackeeStraightTime>
-                  <HitResult>AirHit</HitResult>
+                  <HitResult>KnockOut</HitResult>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -35635,7 +35652,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Y>600</Y>
+                    <Y>700</Y>
                     <Z>-400</Z>
                   </AttackeeLash>
                   <AttackeeTime>500</AttackeeTime>
@@ -36078,7 +36095,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>skill3_g</ID>
               <Name>技能3</Name>
               <Desc>剑气护体</Desc>
@@ -36193,7 +36210,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>skill4_g</ID>
               <Name>技能4</Name>
               <Desc>无锋重剑</Desc>
@@ -36248,7 +36265,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Y>500</Y>
+                    <Y>600</Y>
                     <Z>-300</Z>
                   </AttackeeLash>
                   <AttackeeTime>20</AttackeeTime>
@@ -36291,7 +36308,7 @@
                 <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" CheckInput2="true" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
@@ -36301,7 +36318,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false" SuperArmor="true">
+            <Action SuperArmor="true">
               <ID>skill5_g</ID>
               <Name>技能5</Name>
               <Desc>龙剑突袭</Desc>
@@ -36320,7 +36337,7 @@
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_003" OffsetY="20" OffsetZ="-150" Duration="500" />
                 </Event>
                 <Event>
-                  <TriggerTime>30</TriggerTime>
+                  <TriggerTime>20</TriggerTime>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
                   <EventDetailData xsi:type="EventSetVelocity" VelocityZ="1000" />
@@ -36340,7 +36357,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>35</TriggerTime>
+                  <TriggerTime>20</TriggerTime>
                   <Duration>800</Duration>
                   <MovingSpeed />
                   <Path>
@@ -36359,7 +36376,7 @@
                   <AttackerStraightTime>300</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
-                  <AttackeeStraightTime>1000</AttackeeStraightTime>
+                  <AttackeeStraightTime>800</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -36392,7 +36409,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false" SuperArmor="true">
+            <Action SuperArmor="true">
               <ID>skill5_y</ID>
               <Name>技能5</Name>
               <Desc>龙剑突袭</Desc>
@@ -36417,7 +36434,6 @@
                 </Event>
               </Events>
               <ActionInterrupts>
-                <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
@@ -36434,7 +36450,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>skill6_g</ID>
               <Name>技能6</Name>
               <Desc>剑气绞杀</Desc>
@@ -36444,7 +36460,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>300</AnimTime>
+              <AnimTime>150</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events />
               <ActionInterrupts />
@@ -36539,7 +36555,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false" SuperArmor="true">
+            <Action SuperArmor="true">
               <ID>skill7_g</ID>
               <Name>技能7</Name>
               <Desc>无锋重剑三连</Desc>
@@ -36592,7 +36608,7 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="200" />
+                  <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="250" />
                   <Offset />
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
@@ -36647,12 +36663,13 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="200" />
+                  <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="250" />
                   <Offset />
+                  <AttackerStraightTime>100</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
                   <AttackeeStraightTime>200</AttackeeStraightTime>
-                  <HitResult>AirHit</HitResult>
+                  <HitResult>DiagUp</HitResult>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -36702,12 +36719,12 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="200" />
+                  <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="300" />
                   <Offset />
                   <AttackerStraightTime>300</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>300</AttackeeStraightTime>
+                  <AttackeeStraightTime>400</AttackeeStraightTime>
                   <HitResult>AirHit</HitResult>
                   <GroundHit>
                     <AttackeeLash />
@@ -36719,7 +36736,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Y>700</Y>
+                    <Y>800</Y>
                     <Z>-400</Z>
                   </AttackeeLash>
                   <AttackeeTime>200</AttackeeTime>
@@ -36760,7 +36777,7 @@
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" CheckInput2="true" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
@@ -36772,7 +36789,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>skill8_g</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -36815,10 +36832,11 @@
                   </FrameFinalFactor>
                   <AttackType xsi:type="FrameCuboid" Width="100" Height="300" Length="500" />
                   <Offset />
+                  <AttackerStraightTime>150</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
                   <AttackeeStraightTime>200</AttackeeStraightTime>
-                  <HitResult>AirHit</HitResult>
+                  <HitResult>KnockOut</HitResult>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -36829,7 +36847,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Y>500</Y>
+                    <Y>800</Y>
                     <Z>-300</Z>
                   </AttackeeLash>
                   <AttackeeTime>400</AttackeeTime>
@@ -36888,7 +36906,7 @@
                 <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill9_g" CheckInput1="true" InputKey1="14" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill9_g" CheckInput1="true" InputKey1="14" CheckInput2="true" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="fall_attack_g" CheckInput1="true" InputKey1="2" CheckInput2="true" InputKey2="2" InputType2="4" TargetDistanceMax="1000" />
@@ -36897,7 +36915,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>skill9_g</ID>
               <Name>技能8</Name>
               <Desc>凌空剑阵</Desc>
@@ -36918,7 +36936,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>5</TriggerTime>
+                  <TriggerTime>7</TriggerTime>
                   <Duration>300</Duration>
                   <MovingSpeed />
                   <Path>
@@ -36936,8 +36954,10 @@
                   <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
                   <Offset />
                   <IsRemoteAttacks>1</IsRemoteAttacks>
+                  <AttackerStraightTime>50</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>50</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -36993,8 +37013,10 @@
                   <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
                   <Offset />
                   <IsRemoteAttacks>1</IsRemoteAttacks>
+                  <AttackerStraightTime>50</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>50</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -37796,6 +37818,7 @@
           </AISetting>
           <StartupAction>idle</StartupAction>
           <StartupActionInstance>idle</StartupActionInstance>
+          <Gravtity>2500</Gravtity>
           <LashModifier>
             <X>1</X>
             <Y>1</Y>
