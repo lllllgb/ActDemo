@@ -34065,7 +34065,7 @@
       <ActionGroups>
         <ActionGroup SpasticityCD="0">
           <ActionList>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>at1_g</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34119,7 +34119,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash />
-                  <AttackeeTime>100</AttackeeTime>
+                  <AttackeeTime>0</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -34139,7 +34139,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>at1_y</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34170,7 +34170,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>at2_g</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34225,7 +34225,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash />
-                  <AttackeeTime>100</AttackeeTime>
+                  <AttackeeTime>0</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -34245,7 +34245,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>at2_y</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34276,7 +34276,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>at3_g</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34343,7 +34343,7 @@
                   <AttackeeLash>
                     <Z>-100</Z>
                   </AttackeeLash>
-                  <AttackeeTime>200</AttackeeTime>
+                  <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -34363,7 +34363,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>at3_y</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34395,7 +34395,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>at4_g</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34463,7 +34463,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-400</Z>
+                    <Z>-200</Z>
                   </AttackeeLash>
                   <AttackeeTime>200</AttackeeTime>
                   <HoldOffset />
@@ -34485,7 +34485,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>at4_y</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -34518,7 +34518,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action ResetVelocity="false" SuperArmor="true">
               <ID>block_g</ID>
               <Name>格挡</Name>
               <Desc>格挡持续</Desc>
@@ -34598,7 +34598,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action ResetVelocity="false" SuperArmor="true">
               <ID>block_q</ID>
               <Name>格挡</Name>
               <Desc>前摇</Desc>
@@ -34615,7 +34615,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action ResetVelocity="false" SuperArmor="true">
               <ID>block_y</ID>
               <Name>格挡</Name>
               <Desc>后摇</Desc>
@@ -34645,7 +34645,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>fall_attack_g</ID>
               <Name>空落</Name>
               <Desc>空落攻击</Desc>
@@ -34718,7 +34718,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>fall_attack_y</ID>
               <Name>空落</Name>
               <Desc>空落攻击</Desc>
@@ -34748,7 +34748,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>fly_attack_g</ID>
               <Name>空中攻击</Name>
               <Desc>空中攻击</Desc>
@@ -34875,7 +34875,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>fly_attack_y</ID>
               <Name>空中攻击</Name>
               <Desc>空中攻击</Desc>
@@ -34906,7 +34906,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>front_attack_g</ID>
               <Name>前冲攻击</Name>
               <Desc>前冲攻击</Desc>
@@ -34993,7 +34993,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action ResetVelocity="false" SuperArmor="true">
               <ID>front_attack_y</ID>
               <Name>前冲攻击</Name>
               <Desc>前冲攻击</Desc>
@@ -35057,7 +35057,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>hit</ID>
               <Name>受击</Name>
               <Desc>动作</Desc>
@@ -35077,33 +35077,21 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>hit_down</ID>
               <Name>击飞</Name>
               <Desc>落地</Desc>
               <DefaultLinkActionID>hit_down_f</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_down" End="50">
+                <AnimSlot Animation="hit_down" End="30">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>400</AnimTime>
+              <AnimTime>250</AnimTime>
               <BlendTime>0</BlendTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>3</ActionStatus>
-              <Events>
-                <Event>
-                  <EventType>SetVelocity</EventType>
-                  <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-100" />
-                </Event>
-                <Event>
-                  <TriggerTime>100</TriggerTime>
-                  <EventType>SetVelocity</EventType>
-                  <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" />
-                </Event>
-              </Events>
+              <Events />
               <ActionInterrupts />
               <AttackDefs />
               <CanHurt>true</CanHurt>
@@ -35126,11 +35114,11 @@
               <ActionInterrupts />
               <AttackDefs />
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>hit_fly</ID>
               <Name>击飞</Name>
               <Desc>起飞</Desc>
-              <DefaultLinkActionID>hit_flying_b</DefaultLinkActionID>
+              <DefaultLinkActionID>hit_flying</DefaultLinkActionID>
               <AnimSlotList>
                 <AnimSlot Animation="hit_fly">
                   <AnimControlList />
@@ -35141,13 +35129,12 @@
               <HeightStatus>3</HeightStatus>
               <ActionStatus>3</ActionStatus>
               <Events />
-              <ActionInterrupts>
-                <ActionInterrupt ActionID="hit_fly" InputKey1="1" TargetDistanceMax="1000" />
-              </ActionInterrupts>
+              <ActionInterrupts />
               <AttackDefs />
+              <IgnoreGravity>true</IgnoreGravity>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>hit_flying</ID>
               <Name>击飞</Name>
               <Desc>浮空</Desc>
@@ -35163,55 +35150,46 @@
               <ActionStatus>3</ActionStatus>
               <AirStatus>1</AirStatus>
               <Events />
-              <ActionInterrupts>
-                <ActionInterrupt ActionID="hit_flying_b" InputKey1="1" TargetDistanceMax="1000" Variable="3" />
-              </ActionInterrupts>
+              <ActionInterrupts />
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>hit_flying_b</ID>
               <Name>击飞</Name>
               <Desc>浮空</Desc>
-              <DefaultLinkActionID>hit_flying</DefaultLinkActionID>
+              <DefaultLinkActionID>hit_flying_z</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_flying" End="10">
+                <AnimSlot Animation="hit_flying" End="57">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>50</AnimTime>
+              <AnimTime>200</AnimTime>
               <BlendTime>0</BlendTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>3</ActionStatus>
               <Events />
-              <ActionInterrupts>
-                <ActionInterrupt ActionID="hit_flying_b" InputKey1="1" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="hit_flying" ConnectImmediately="false" ConnectMode="1" InputKey1="1" ReachHighest="true" TargetDistanceMax="1000" />
-              </ActionInterrupts>
+              <ActionInterrupts />
               <AttackDefs />
-              <IgnoreGravity>true</IgnoreGravity>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>hit_flying_z</ID>
               <Name>击飞</Name>
               <Desc>浮空</Desc>
               <DefaultLinkActionID>hit_down</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_flying" Start="10">
+                <AnimSlot Animation="hit_flying" Start="57">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>300</AnimTime>
+              <AnimTime>200</AnimTime>
               <BlendTime>0</BlendTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>3</ActionStatus>
               <Events />
-              <ActionInterrupts>
-                <ActionInterrupt ActionID="hit_flying_b" InputKey1="1" TargetDistanceMax="1000" Variable="3" />
-              </ActionInterrupts>
+              <ActionInterrupts />
               <AttackDefs />
-              <IgnoreGravity>true</IgnoreGravity>
               <CanHurt>true</CanHurt>
             </Action>
             <Action>
@@ -35277,7 +35255,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>jump_q</ID>
               <Name>跳</Name>
               <Desc>起跳</Desc>
@@ -35301,7 +35279,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>run</ID>
               <Name>移动</Name>
               <Desc>动作</Desc>
@@ -35336,7 +35314,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill_1_g</ID>
               <Name>技能1</Name>
               <Desc>升龙击</Desc>
@@ -35391,10 +35369,10 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Y>200</Y>
-                    <Z>-200</Z>
+                    <Y>400</Y>
+                    <Z>-150</Z>
                   </AttackeeLash>
-                  <AttackeeTime>400</AttackeeTime>
+                  <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -35444,7 +35422,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action ResetVelocity="false" SuperArmor="true">
               <ID>skill10_g1</ID>
               <Name>技能10</Name>
               <Desc>寂灭斩</Desc>
@@ -35494,7 +35472,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-1000</Z>
+                    <Z>-800</Z>
                   </AttackeeLash>
                   <AttackeeTime>300</AttackeeTime>
                   <HoldOffset />
@@ -35516,7 +35494,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action ResetVelocity="false" SuperArmor="true">
               <ID>skill10_g2</ID>
               <Name>技能10</Name>
               <Desc>寂灭斩</Desc>
@@ -35599,7 +35577,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action ResetVelocity="false" SuperArmor="true">
               <ID>skill10_g3</ID>
               <Name>技能10</Name>
               <Desc>寂灭斩</Desc>
@@ -35657,10 +35635,10 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Y>2000</Y>
-                    <Z>-2000</Z>
+                    <Y>600</Y>
+                    <Z>-400</Z>
                   </AttackeeLash>
-                  <AttackeeTime>2000</AttackeeTime>
+                  <AttackeeTime>500</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -35683,8 +35661,8 @@
             </Action>
             <Action SuperArmor="true">
               <ID>skill10_y</ID>
-              <Name>技能1</Name>
-              <Desc>升龙击</Desc>
+              <Name>技能10</Name>
+              <Desc>寂灭斩</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
                 <AnimSlot Animation="skill10" Start="80">
@@ -35713,7 +35691,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill2_1_g</ID>
               <Name>技能2</Name>
               <Desc>踏剑行</Desc>
@@ -35796,7 +35774,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill2_1_q</ID>
               <Name>技能2</Name>
               <Desc>踏剑行</Desc>
@@ -35853,7 +35831,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill2_2_g</ID>
               <Name>技能2</Name>
               <Desc>踏剑行</Desc>
@@ -35974,7 +35952,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill2_3_g</ID>
               <Name>技能2</Name>
               <Desc>踏剑行</Desc>
@@ -36100,7 +36078,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill3_g</ID>
               <Name>技能3</Name>
               <Desc>剑气护体</Desc>
@@ -36178,7 +36156,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill3_y</ID>
               <Name>技能3</Name>
               <Desc>剑气护体</Desc>
@@ -36215,7 +36193,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill4_g</ID>
               <Name>技能4</Name>
               <Desc>无锋重剑</Desc>
@@ -36259,7 +36237,7 @@
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
                   <AttackeeStraightTime>200</AttackeeStraightTime>
-                  <HitResult>AirHit</HitResult>
+                  <HitResult>KnockOut</HitResult>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -36270,10 +36248,10 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Y>1000</Y>
-                    <Z>-1200</Z>
+                    <Y>500</Y>
+                    <Z>-300</Z>
                   </AttackeeLash>
-                  <AttackeeTime>1000</AttackeeTime>
+                  <AttackeeTime>20</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -36323,7 +36301,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action ResetVelocity="false" SuperArmor="true">
               <ID>skill5_g</ID>
               <Name>技能5</Name>
               <Desc>龙剑突袭</Desc>
@@ -36414,7 +36392,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action ResetVelocity="false" SuperArmor="true">
               <ID>skill5_y</ID>
               <Name>技能5</Name>
               <Desc>龙剑突袭</Desc>
@@ -36456,7 +36434,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill6_g</ID>
               <Name>技能6</Name>
               <Desc>剑气绞杀</Desc>
@@ -36531,7 +36509,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill6_y</ID>
               <Name>技能6</Name>
               <Desc>剑气绞杀</Desc>
@@ -36561,7 +36539,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action ResetVelocity="false" SuperArmor="true">
               <ID>skill7_g</ID>
               <Name>技能7</Name>
               <Desc>无锋重剑三连</Desc>
@@ -36629,8 +36607,11 @@
                   <HighAirHit>
                     <AttackeeLash />
                   </HighAirHit>
-                  <AttackeeLash />
-                  <AttackeeTime>0</AttackeeTime>
+                  <AttackeeLash>
+                    <Y>100</Y>
+                    <Z>-100</Z>
+                  </AttackeeLash>
+                  <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -36671,7 +36652,7 @@
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
                   <AttackeeStraightTime>200</AttackeeStraightTime>
-                  <HitResult>DiagUp</HitResult>
+                  <HitResult>AirHit</HitResult>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -36681,8 +36662,11 @@
                   <HighAirHit>
                     <AttackeeLash />
                   </HighAirHit>
-                  <AttackeeLash />
-                  <AttackeeTime>0</AttackeeTime>
+                  <AttackeeLash>
+                    <Y>100</Y>
+                    <Z>-100</Z>
+                  </AttackeeLash>
+                  <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -36734,8 +36718,11 @@
                   <HighAirHit>
                     <AttackeeLash />
                   </HighAirHit>
-                  <AttackeeLash />
-                  <AttackeeTime>0</AttackeeTime>
+                  <AttackeeLash>
+                    <Y>700</Y>
+                    <Z>-400</Z>
+                  </AttackeeLash>
+                  <AttackeeTime>200</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -36785,7 +36772,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill8_g</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -36842,10 +36829,10 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Y>1000</Y>
-                    <Z>-1200</Z>
+                    <Y>500</Y>
+                    <Z>-300</Z>
                   </AttackeeLash>
-                  <AttackeeTime>1000</AttackeeTime>
+                  <AttackeeTime>400</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -36865,7 +36852,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill8_q</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -36882,7 +36869,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill8_y</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -36910,7 +36897,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill9_g</ID>
               <Name>技能8</Name>
               <Desc>凌空剑阵</Desc>
@@ -36961,7 +36948,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37018,7 +37005,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37075,7 +37062,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37132,7 +37119,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37189,7 +37176,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37246,7 +37233,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37303,7 +37290,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37360,7 +37347,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37417,7 +37404,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37474,7 +37461,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37531,7 +37518,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37588,7 +37575,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37645,7 +37632,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-100</Z>
+                    <Z>-50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37669,7 +37656,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>skill9_q</ID>
               <Name>技能8</Name>
               <Desc>凌空剑阵</Desc>
@@ -37816,12 +37803,12 @@
           </LashModifier>
           <HoldOffset />
           <StandStandHit>hit</StandStandHit>
-          <StandKnockOut>hit_flying</StandKnockOut>
-          <StandDiagUp>hit_flying</StandDiagUp>
+          <StandKnockOut>hit_fly</StandKnockOut>
+          <StandDiagUp>hit_fly</StandDiagUp>
           <StandAirHit>hit_flying</StandAirHit>
-          <AirStandHit>hit_flying</AirStandHit>
+          <AirStandHit>hit_flying_b</AirStandHit>
           <AirKnockOut>hit_flying</AirKnockOut>
-          <AirDiagUp>hit_flying</AirDiagUp>
+          <AirDiagUp>hit_flying_b</AirDiagUp>
           <AirAirHit>hit_flying</AirAirHit>
           <IdlePabodyEffectOffset />
           <MovePabodyEffectOffset />
