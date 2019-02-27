@@ -23,7 +23,13 @@ namespace ActData
         Attack = 2,
         Hit = 3,
         Defense = 4,
-    };
+    }
+
+    public enum EAirStatus
+    {
+        Normal = 0,
+        Diaup = 1,
+    }
 
     public class CommonAction
     {
