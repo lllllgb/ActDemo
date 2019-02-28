@@ -3,7 +3,7 @@ CRC: 3348878131
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 257dbacd12053cb77f3b94dac77c34a6
+    Hash: 55dc4a46be44a53bd2e5833d4dd468ff
   TypeTreeHash:
     serializedVersion: 2
     Hash: c72fd6479aa1c2cc290a147c657eef88
@@ -38,5 +38,5 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_attack_lyj_004.prefab
 Dependencies:
-- F:/1/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- F:/1/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d

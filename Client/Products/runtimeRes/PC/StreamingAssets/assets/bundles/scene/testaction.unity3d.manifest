@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2050572971
+CRC: 4095040456
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b8cf93821d78c855a11ce39fa5fe24ef
+    Hash: 39b430185e634e4866958ff0d58905a9
   TypeTreeHash:
     serializedVersion: 2
     Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
@@ -12,4 +12,4 @@ ClassTypes: []
 Assets:
 - Assets/Bundles/Scene/TestAction.unity
 Dependencies:
-- F:/1/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

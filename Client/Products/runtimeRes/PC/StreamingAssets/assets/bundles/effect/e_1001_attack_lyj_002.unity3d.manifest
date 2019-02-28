@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 675052104
+CRC: 1472900213
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f8c14fecb79bc55867771c0bbee6da0e
+    Hash: 490f773945d9939e8749b50ff8dfde9e
   TypeTreeHash:
     serializedVersion: 2
     Hash: 49c318d97990f2f843929a8bd7947255
@@ -24,6 +24,6 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_attack_lyj_002.prefab
 Dependencies:
-- F:/1/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_003p_share.unity3d
-- F:/1/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002a_share.unity3d
-- F:/1/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002a_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_003p_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d

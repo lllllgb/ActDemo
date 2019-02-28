@@ -3,7 +3,7 @@ CRC: 4091356120
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f4f19bee1a83f5b89553c47b123757ff
+    Hash: afcdc6d048b62abebbdfa75e4bec44d7
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,4 +18,4 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Materials/E_Line_lyj_003p.mat
 Dependencies:
-- F:/1/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_line_lyj_003_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_line_lyj_003_share.unity3d

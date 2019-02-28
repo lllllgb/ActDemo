@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2000710755
+CRC: 1143401995
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7e01f80cc64ef927257549f38729f1b0
+    Hash: d4231959e54f156354c39d1ef6c6ffc7
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 4bb96948b47ad6ca1df035de75994dde
+    Hash: bdbc43ed64013be0728e9e620401d86d
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,8 +21,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
 Assets:
 - Assets/Res/effect/Model/Plane01.FBX
 Dependencies:
-- F:/1/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/no
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/no
   name_share.unity3d
