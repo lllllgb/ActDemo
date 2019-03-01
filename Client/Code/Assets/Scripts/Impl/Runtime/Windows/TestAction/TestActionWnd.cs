@@ -67,12 +67,13 @@ namespace AosHotfixRunTime
 
         private void OnLoadOtherRoleBtnClick(PointerEventData arg)
         {
-
             int tmpID = 0;
 
             if (int.TryParse(mOtherIDInput.text, out tmpID))
             {
-                TestAction.Instance.AddOtherUnit(tmpID);
+                int tmpAIDiff = 0;
+                bool tmpAIEnable = int.TryParse(mOtherAIInput.text, out tmpAIDiff);
+                TestAction.Instance.AddOtherUnit(tmpID, tmpAIEnable, tmpAIDiff);
             }
             else
             {

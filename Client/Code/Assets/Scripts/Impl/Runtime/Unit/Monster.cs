@@ -10,9 +10,12 @@ namespace AosHotfixRunTime
         MainAttrib mMonsterAttrib;
         bool mIsBoss = false;
         string mName;
+        bool mAIEnable = false;
 
-        public Monster(int unitID) : base(unitID)
+        public Monster(int unitID, bool aiEnable, int aiDiff) : base(unitID)
         {
+            mAIEnable = aiEnable;
+            AIDiff = aiDiff;
         }
 
         public override void Init()
@@ -20,6 +23,11 @@ namespace AosHotfixRunTime
             base.Init();
 
             Camp = ACT.EUnitCamp.EUC_ENEMY;
+
+            if (mAIEnable)
+            {
+                ActStatus.Bind(new ACT.AIListener(this));
+            }
         }
 
         public override bool Hurt(Unit attacker, int damage, ACT.ECombatResult result)

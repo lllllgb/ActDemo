@@ -40,11 +40,12 @@ namespace AosHotfixRunTime
             mTestPlayer = new LocalPlayer(unitID);
             mTestPlayer.Init();
             ACT.ActionSystem.Instance.ActUnitMgr.Add(mTestPlayer);
+            ACT.ActionSystem.Instance.ActUnitMgr.LocalPlayer = mTestPlayer;
         }
 
-        public void AddOtherUnit(int unitID)
+        public void AddOtherUnit(int unitID, bool aiEnable, int aiDiff)
         {
-            Monster tmpMonster = new Monster(unitID);
+            Monster tmpMonster = new Monster(unitID, aiEnable, aiDiff);
             tmpMonster.Init();
             ACT.ActionSystem.Instance.ActUnitMgr.Add(tmpMonster);
         }
