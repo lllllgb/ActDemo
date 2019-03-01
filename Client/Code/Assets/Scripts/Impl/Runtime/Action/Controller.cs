@@ -18,7 +18,7 @@ namespace ACT
 
         Transform mCameraTag;
         Transform mCameraTarget;
-        public Vector3 CameraPos = new Vector3(0, 1, -5);
+        public Vector3 CameraPos = new Vector3(0, 2.5f, -6);
         public Vector3 CameraLookAtOffset = new Vector3(0, 1, 0);
 
         public float CameraModify { get { return mCameraModify; } }
@@ -134,8 +134,9 @@ namespace ACT
                 mCameraPosCache = CameraPos;
             }
 
-            Vector3 targetPos = mOwner.Position;
-            mCameraTag.position = targetPos + CameraPos;
+            Vector3 targetPos = mOwner.Position + CameraPos;
+            targetPos.z = CameraPos.z;
+            mCameraTag.position = targetPos;
             //mCameraTag.LookAt(targetPos + CameraLookAtOffset);
             mCameraTag.Translate(mCameraOffset);
         }

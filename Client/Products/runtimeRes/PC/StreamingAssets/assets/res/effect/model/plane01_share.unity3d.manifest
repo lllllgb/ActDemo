@@ -3,7 +3,7 @@ CRC: 1143401995
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d4231959e54f156354c39d1ef6c6ffc7
+    Hash: 3b4559598ec604bf50b797feb92c3f59
   TypeTreeHash:
     serializedVersion: 2
     Hash: bdbc43ed64013be0728e9e620401d86d
@@ -26,5 +26,5 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Model/Plane01.FBX
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/no
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/no
   name_share.unity3d
