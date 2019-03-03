@@ -77,5 +77,21 @@ namespace AosHotfixRunTime
         {
             ACT.ActionStatus.ShowListTarFrame = flag;
         }
+
+        public void ModifyCamera(float y, float z)
+        {
+            if (null != mTestPlayer && null != mTestPlayer.Controller)
+            {
+                mTestPlayer.Controller.CameraPos = new Vector3(0f, y, z);
+            }
+        }
+
+        public void ModifySpeed(float speed)
+        {
+            if (null != mTestPlayer)
+            {
+                mTestPlayer.MoveZMultiple = speed;
+            }
+        }
     }
 }

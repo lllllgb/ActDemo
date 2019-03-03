@@ -70,6 +70,8 @@ namespace ACT
         public CustomVariable GetVariable(int idx) { return mVariables[idx]; }
         public IActUnit Owner { get; set; }
 
+        public float MoveZMultiple { get; set; } = 1;
+
         public ActUnit()
         {
         }
@@ -248,6 +250,8 @@ namespace ACT
 
         public void Move(Vector3 trans)
         {
+            trans.z *= MoveZMultiple;
+
             if (null != mController)
             {
                 if (trans.y != 0) mOnGround = false;
