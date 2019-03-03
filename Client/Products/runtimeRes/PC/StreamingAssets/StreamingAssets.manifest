@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1969313910
+CRC: 599285820
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -97,3 +97,7 @@ AssetBundleManifest:
       Name: assets/res/effect/model/plane01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/no name_share.unity3d
+    Info_25:
+      Name: assets/bundles/unit/m0002.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d

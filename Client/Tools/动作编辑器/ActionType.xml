@@ -37940,6 +37940,563 @@
         <Z>1</Z>
       </Scale>
     </UnitActionInfo>
+    <UnitActionInfo>
+      <ID>10001</ID>
+      <UnitVaribleList />
+      <ActionGroups>
+        <ActionGroup SpasticityCD="0">
+          <ActionList>
+            <Action>
+              <ID>get_up</ID>
+              <Name>»÷·É</Name>
+              <Desc>ÆðÉí</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="get up">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>300</AnimTime>
+              <BlendTime>0</BlendTime>
+              <ActionStatus>3</ActionStatus>
+              <Events />
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="hit" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="hit_fly" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action ResetVelocity="false">
+              <ID>hit</ID>
+              <Name>ÊÜ»÷</Name>
+              <Desc>¶¯×÷</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>800</AnimTime>
+              <BlendTime>0</BlendTime>
+              <ActionStatus>3</ActionStatus>
+              <Events />
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action ResetVelocity="false">
+              <ID>hit_down</ID>
+              <Name>»÷·É</Name>
+              <Desc>ÂäµØ</Desc>
+              <DefaultLinkActionID>hit_down_f</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit_down" End="30">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>250</AnimTime>
+              <BlendTime>0</BlendTime>
+              <HeightStatus>3</HeightStatus>
+              <ActionStatus>3</ActionStatus>
+              <Events />
+              <ActionInterrupts />
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>hit_down_f</ID>
+              <Name>»÷·É</Name>
+              <Desc>ÂäµØ</Desc>
+              <DefaultLinkActionID>get_up</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit_down" Start="30">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>400</AnimTime>
+              <BlendTime>0</BlendTime>
+              <HeightStatus>2</HeightStatus>
+              <FragmentStatus>2</FragmentStatus>
+              <Events />
+              <ActionInterrupts />
+              <AttackDefs />
+            </Action>
+            <Action ResetVelocity="false">
+              <ID>hit_fly</ID>
+              <Name>»÷·É</Name>
+              <Desc>Æð·É</Desc>
+              <DefaultLinkActionID>hit_flying</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit_fly">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>100</AnimTime>
+              <BlendTime>0</BlendTime>
+              <HeightStatus>3</HeightStatus>
+              <ActionStatus>3</ActionStatus>
+              <Events />
+              <ActionInterrupts />
+              <AttackDefs />
+              <IgnoreGravity>true</IgnoreGravity>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action ResetVelocity="false">
+              <ID>hit_flying</ID>
+              <Name>»÷·É</Name>
+              <Desc>¸¡¿Õ</Desc>
+              <DefaultLinkActionID>hit_flying</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit_flying" Start="57" End="57">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>200</AnimTime>
+              <BlendTime>0</BlendTime>
+              <HeightStatus>3</HeightStatus>
+              <ActionStatus>3</ActionStatus>
+              <AirStatus>1</AirStatus>
+              <Events />
+              <ActionInterrupts />
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action ResetVelocity="false">
+              <ID>hit_flying_b</ID>
+              <Name>»÷·É</Name>
+              <Desc>¸¡¿Õ</Desc>
+              <DefaultLinkActionID>hit_flying_z</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit_flying" End="57">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>200</AnimTime>
+              <BlendTime>0</BlendTime>
+              <HeightStatus>3</HeightStatus>
+              <ActionStatus>3</ActionStatus>
+              <Events />
+              <ActionInterrupts />
+              <AttackDefs />
+              <IgnoreGravity>true</IgnoreGravity>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action ResetVelocity="false">
+              <ID>hit_flying_z</ID>
+              <Name>»÷·É</Name>
+              <Desc>¸¡¿Õ</Desc>
+              <DefaultLinkActionID>hit_down</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit_flying_z">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>200</AnimTime>
+              <BlendTime>0</BlendTime>
+              <HeightStatus>3</HeightStatus>
+              <ActionStatus>3</ActionStatus>
+              <Events />
+              <ActionInterrupts />
+              <AttackDefs />
+              <IgnoreGravity>true</IgnoreGravity>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>idle</ID>
+              <Name>´ý»ú</Name>
+              <Desc>¶¯×÷</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="idle">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>2900</AnimTime>
+              <Events />
+              <ActionInterrupts />
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action ResetVelocity="false">
+              <ID>run_l</ID>
+              <Name>ÒÆ¶¯</Name>
+              <Desc>Ïò×ó</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="run">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>800</AnimTime>
+              <MoveSpeed>700</MoveSpeed>
+              <ActionStatus>1</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="600" />
+                </Event>
+                <Event>
+                  <EventType>SetDirection</EventType>
+                  <EventTypeInt>12</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetDirection" Angle="180" Local="true" />
+                </Event>
+              </Events>
+              <ActionInterrupts />
+              <AttackDefs />
+              <CanMove>true</CanMove>
+              <CanRotate>true</CanRotate>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action ResetVelocity="false">
+              <ID>run_r</ID>
+              <Name>ÒÆ¶¯</Name>
+              <Desc>ÏòÓÒ</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="run">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>800</AnimTime>
+              <MoveSpeed>700</MoveSpeed>
+              <ActionStatus>1</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="600" />
+                </Event>
+              </Events>
+              <ActionInterrupts />
+              <AttackDefs />
+              <CanMove>true</CanMove>
+              <CanRotate>true</CanRotate>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action ResetVelocity="false">
+              <ID>run_s</ID>
+              <Name>ÒÆ¶¯</Name>
+              <Desc>Ïò×ó</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="run">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>800</AnimTime>
+              <MoveSpeed>700</MoveSpeed>
+              <ActionStatus>1</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="600" />
+                </Event>
+                <Event>
+                  <EventType>SetDirection</EventType>
+                  <EventTypeInt>12</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetDirection" Angle="90" Local="true" />
+                </Event>
+              </Events>
+              <ActionInterrupts />
+              <AttackDefs />
+              <CanMove>true</CanMove>
+              <CanRotate>true</CanRotate>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action ResetVelocity="false">
+              <ID>run_w</ID>
+              <Name>ÒÆ¶¯</Name>
+              <Desc>Ïò×ó</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="run">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>800</AnimTime>
+              <MoveSpeed>700</MoveSpeed>
+              <ActionStatus>1</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="600" />
+                </Event>
+                <Event>
+                  <EventType>SetDirection</EventType>
+                  <EventTypeInt>12</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetDirection" Angle="-90" Local="true" />
+                </Event>
+              </Events>
+              <ActionInterrupts />
+              <AttackDefs />
+              <CanMove>true</CanMove>
+              <CanRotate>true</CanRotate>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>skill1</ID>
+              <Name>¼¼ÄÜ1</Name>
+              <Desc>Ç°¿³</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="skill1">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>2050</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                </Event>
+                <Event>
+                  <EventType>ListTargets</EventType>
+                  <EventTypeInt>24</EventTypeInt>
+                  <EventDetailData xsi:type="EventListTargets" Left="-1500" Right="1500" Back="-1500" Front="1500" FanRadius="1500" FanAngle="60" />
+                </Event>
+                <Event>
+                  <EventType>FaceTargets</EventType>
+                  <EventTypeInt>26</EventTypeInt>
+                  <EventDetailData xsi:type="EventFaceTargets" FaceType="1" />
+                </Event>
+              </Events>
+              <ActionInterrupts />
+              <AttackDefs>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <TriggerTime>41</TriggerTime>
+                  <Duration>400</Duration>
+                  <MovingSpeed />
+                  <Path />
+                  <HitCount>10</HitCount>
+                  <PassNum>1</PassNum>
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <AttackType xsi:type="FrameCuboid" Width="50" Height="200" Length="150" />
+                  <Offset />
+                  <AttackerLash />
+                  <AttackerTime>100</AttackerTime>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash />
+                  <AttackeeTime>0</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffectDuration>200</HitedEffectDuration>
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                  <BaseGround>1</BaseGround>
+                </AttackDef>
+              </AttackDefs>
+              <FaceTarget>true</FaceTarget>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action SuperArmor="true">
+              <ID>skill2</ID>
+              <Name>¼¼ÄÜ2</Name>
+              <Desc>Ìø¿³</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="skill2">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>3600</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                </Event>
+                <Event>
+                  <EventType>ListTargets</EventType>
+                  <EventTypeInt>24</EventTypeInt>
+                  <EventDetailData xsi:type="EventListTargets" Left="-1500" Right="1500" Back="-1500" Front="1500" FanRadius="1500" FanAngle="60" />
+                </Event>
+                <Event>
+                  <EventType>FaceTargets</EventType>
+                  <EventTypeInt>26</EventTypeInt>
+                  <EventDetailData xsi:type="EventFaceTargets" FaceType="1" />
+                </Event>
+                <Event>
+                  <TriggerTime>52</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="500" />
+                </Event>
+                <Event>
+                  <TriggerTime>56</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
+              </Events>
+              <ActionInterrupts />
+              <AttackDefs>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <TriggerTime>56</TriggerTime>
+                  <Duration>500</Duration>
+                  <MovingSpeed />
+                  <Path />
+                  <HitCount>10</HitCount>
+                  <PassNum>1</PassNum>
+                  <MaxHitCount>10</MaxHitCount>
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <AttackType xsi:type="FrameCuboid" Width="200" Height="400" Length="500" />
+                  <Offset />
+                  <FllowReleaser>1</FllowReleaser>
+                  <AttackerLash />
+                  <AttackerTime>0</AttackerTime>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash>
+                    <Z>100</Z>
+                  </AttackeeLash>
+                  <AttackeeTime>100</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffectDuration>200</HitedEffectDuration>
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                  <BaseGround>1</BaseGround>
+                </AttackDef>
+              </AttackDefs>
+              <FaceTarget>true</FaceTarget>
+              <CanMove>true</CanMove>
+              <CanHurt>true</CanHurt>
+            </Action>
+          </ActionList>
+          <Race>10001</Race>
+          <AIDistances />
+          <AISetting>
+            <EasyGroup Name="¼òµ¥">
+              <AIStatusList>
+                <AIStatus Name="Ñ°µÐ×´Ì¬">
+                  <AILists>
+                    <AIList Distance="10000">
+                      <AISlots>
+                        <AISlot SkillID="1" SwitchActionID="run_l" />
+                        <AISlot SkillID="1" SwitchActionID="run_r" />
+                        <AISlot SkillID="1" SwitchActionID="run_s" />
+                        <AISlot SkillID="1" SwitchActionID="run_w" />
+                      </AISlots>
+                    </AIList>
+                    <AIList Distance="300">
+                      <AISlots>
+                        <AISlot SkillID="1" SwitchActionID="skill1" />
+                        <AISlot SkillID="1" SwitchActionID="skill2" />
+                      </AISlots>
+                    </AIList>
+                  </AILists>
+                  <AIStatusSwitchList />
+                  <AIActionCDList>
+                    <AIActionCD Action="skill2" CD="5000" />
+                  </AIActionCDList>
+                  <Location>
+                    <X>0</X>
+                    <Y>0</Y>
+                  </Location>
+                </AIStatus>
+              </AIStatusList>
+            </EasyGroup>
+            <NormalGroup Name="ÆÕÍ¨">
+              <AIStatusList />
+            </NormalGroup>
+            <HardGroup Name="À§ÄÑ">
+              <AIStatusList />
+            </HardGroup>
+            <NightmareGroup Name="Ø¬ÃÎ">
+              <AIStatusList />
+            </NightmareGroup>
+          </AISetting>
+          <StartupAction>idle</StartupAction>
+          <StartupActionInstance>idle</StartupActionInstance>
+          <Gravtity>2500</Gravtity>
+          <LashModifier>
+            <X>1</X>
+            <Y>1</Y>
+            <Z>1</Z>
+          </LashModifier>
+          <HoldOffset />
+          <StandStandHit>hit</StandStandHit>
+          <StandKnockOut>hit_fly</StandKnockOut>
+          <StandDiagUp>hit_fly</StandDiagUp>
+          <StandAirHit>hit_flying</StandAirHit>
+          <AirStandHit>hit_flying_b</AirStandHit>
+          <AirKnockOut>hit_flying</AirKnockOut>
+          <AirDiagUp>hit_flying_b</AirDiagUp>
+          <AirAirHit>hit_flying</AirAirHit>
+          <IdlePabodyEffectOffset />
+          <MovePabodyEffectOffset />
+          <AttackPabodyEffectOffset />
+          <HitPabodyEffectOffset />
+          <DefensePabodyEffectOffset />
+          <Diaup2FloorAction>hit_down_f</Diaup2FloorAction>
+        </ActionGroup>
+      </ActionGroups>
+      <Scale>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </Scale>
+    </UnitActionInfo>
   </ObjectTypes>
   <CameraGroups>
     <CameraGroup ID="1002" Name="Ðý·ç°×ÈÐ-À­½ü">
