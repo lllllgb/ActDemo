@@ -1,9 +1,8 @@
 fileFormatVersion: 2
 guid: 4919917466140a649af5a0acacf346dc
-timeCreated: 1521470066
-licenseType: Free
 ShaderImporter:
+  externalObjects: {}
   defaultTextures: []
   userData: 
-  assetBundleName: 
+  assetBundleName: assets/bundles/shadercollect.unity3d
   assetBundleVariant: 

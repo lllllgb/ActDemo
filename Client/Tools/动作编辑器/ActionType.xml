@@ -38030,7 +38030,7 @@
               <Desc>Æð·É</Desc>
               <DefaultLinkActionID>hit_flying</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_fly">
+                <AnimSlot Animation="fly">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
@@ -38050,7 +38050,7 @@
               <Desc>¸¡¿Õ</Desc>
               <DefaultLinkActionID>hit_flying</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_flying" Start="57" End="57">
+                <AnimSlot Animation="flying" Start="57" End="57">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
@@ -38070,7 +38070,7 @@
               <Desc>¸¡¿Õ</Desc>
               <DefaultLinkActionID>hit_flying_z</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_flying" End="57">
+                <AnimSlot Animation="flying" End="57">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
@@ -38090,7 +38090,7 @@
               <Desc>¸¡¿Õ</Desc>
               <DefaultLinkActionID>hit_down</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_flying_z">
+                <AnimSlot Animation="flying" Start="57">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
@@ -38468,7 +38468,7 @@
           </AISetting>
           <StartupAction>idle</StartupAction>
           <StartupActionInstance>idle</StartupActionInstance>
-          <Gravtity>2500</Gravtity>
+          <Gravtity>2000</Gravtity>
           <LashModifier>
             <X>1</X>
             <Y>1</Y>

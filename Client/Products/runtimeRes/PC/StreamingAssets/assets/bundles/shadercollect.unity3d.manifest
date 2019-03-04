@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 729993745
+CRC: 2377881756
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 29aff37bfcaae737b9bb0bea51cd625e
+    Hash: a59c16a7020a8d7ac4720d73827db4f4
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6370d3f9de9eca57f523bce048404a46
@@ -14,5 +14,7 @@ ClassTypes:
 Assets:
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Normal-VertexLit.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Standard.shader
+- Assets/Shaders/shader/Obj-Texture.shader
+- Assets/Shaders/shader/Obj-Soft-Light.shader
 - Assets/Shaders/custom_shaders/DoubleSidedAlpha.shader
 Dependencies: []
