@@ -8,26 +8,26 @@ ModelImporter:
     100004: Baishanglu_HD
     100006: Baishanglu_Wuqi
     100008: Bip001
-    100010: Bip001 Footsteps
-    100012: Bip001 Head
-    100014: Bip001 HeadNub
-    100016: Bip001 L Calf
-    100018: Bip001 L Clavicle
-    100020: Bip001 L Finger0
-    100022: Bip001 L Finger01
-    100024: Bip001 L Finger0Nub
-    100026: Bip001 L Finger1
-    100028: Bip001 L Finger11
-    100030: Bip001 L Finger1Nub
-    100032: Bip001 L Foot
-    100034: Bip001 L Forearm
-    100036: Bip001 L Hand
-    100038: Bip001 L Thigh
-    100040: Bip001 L Toe0
-    100042: Bip001 L Toe0Nub
-    100044: Bip001 L UpperArm
-    100046: Bip001 Neck
-    100048: Bip001 Pelvis
+    100010: Bip001 Head
+    100012: Bip001 HeadNub
+    100014: Bip001 L Calf
+    100016: Bip001 L Clavicle
+    100018: Bip001 L Finger0
+    100020: Bip001 L Finger01
+    100022: Bip001 L Finger0Nub
+    100024: Bip001 L Finger1
+    100026: Bip001 L Finger11
+    100028: Bip001 L Finger1Nub
+    100030: Bip001 L Foot
+    100032: Bip001 L Forearm
+    100034: Bip001 L Hand
+    100036: Bip001 L Thigh
+    100038: Bip001 L Toe0
+    100040: Bip001 L Toe0Nub
+    100042: Bip001 L UpperArm
+    100044: Bip001 Neck
+    100046: Bip001 Pelvis
+    100048: Bip001 Prop1
     100050: Bip001 Prop2
     100052: Bip001 R Calf
     100054: Bip001 R Clavicle
@@ -90,26 +90,26 @@ ModelImporter:
     400004: Baishanglu_HD
     400006: Baishanglu_Wuqi
     400008: Bip001
-    400010: Bip001 Footsteps
-    400012: Bip001 Head
-    400014: Bip001 HeadNub
-    400016: Bip001 L Calf
-    400018: Bip001 L Clavicle
-    400020: Bip001 L Finger0
-    400022: Bip001 L Finger01
-    400024: Bip001 L Finger0Nub
-    400026: Bip001 L Finger1
-    400028: Bip001 L Finger11
-    400030: Bip001 L Finger1Nub
-    400032: Bip001 L Foot
-    400034: Bip001 L Forearm
-    400036: Bip001 L Hand
-    400038: Bip001 L Thigh
-    400040: Bip001 L Toe0
-    400042: Bip001 L Toe0Nub
-    400044: Bip001 L UpperArm
-    400046: Bip001 Neck
-    400048: Bip001 Pelvis
+    400010: Bip001 Head
+    400012: Bip001 HeadNub
+    400014: Bip001 L Calf
+    400016: Bip001 L Clavicle
+    400018: Bip001 L Finger0
+    400020: Bip001 L Finger01
+    400022: Bip001 L Finger0Nub
+    400024: Bip001 L Finger1
+    400026: Bip001 L Finger11
+    400028: Bip001 L Finger1Nub
+    400030: Bip001 L Foot
+    400032: Bip001 L Forearm
+    400034: Bip001 L Hand
+    400036: Bip001 L Thigh
+    400038: Bip001 L Toe0
+    400040: Bip001 L Toe0Nub
+    400042: Bip001 L UpperArm
+    400044: Bip001 Neck
+    400046: Bip001 Pelvis
+    400048: Bip001 Prop1
     400050: Bip001 Prop2
     400052: Bip001 R Calf
     400054: Bip001 R Clavicle
@@ -171,17 +171,15 @@ ModelImporter:
     2100002: Baishanglu_HD
     2100004: Baishanglu_BD
     2100006: Wp01
-    2300000: Wp01
-    3300000: Wp01
     4300000: Baishanglu_Wuqi
     4300002: Baishanglu_HD
     4300004: Baishanglu_BD
     4300006: Wp01
-    7400000: Take 001
     9500000: //RootNode
     13700000: Baishanglu_BD
     13700002: Baishanglu_HD
     13700004: Baishanglu_Wuqi
+    13700006: Wp01
   externalObjects: {}
   materials:
     importMaterials: 1

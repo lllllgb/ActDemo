@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 304351016
+CRC: 1172226600
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -50,58 +50,62 @@ AssetBundleManifest:
       Name: assets/res/effect/materials/no name_share.unity3d
       Dependencies: {}
     Info_13:
-      Name: assets/bundles/unit/1001.unity3d
-      Dependencies:
-        Dependency_0: assets/bundles/shadercollect.unity3d
-    Info_14:
       Name: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_002_share.unity3d
-    Info_15:
+    Info_14:
       Name: assets/bundles/ui/testactionwnd.unity3d
       Dependencies: {}
-    Info_16:
+    Info_15:
       Name: assets/bundles/misc/cameracontrol.unity3d
       Dependencies: {}
-    Info_17:
+    Info_16:
       Name: assets/bundles/effect/e_1001_attack_lyj_001.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
         Dependency_1: assets/res/effect/materials/e_line_lyj_003p_share.unity3d
         Dependency_2: assets/res/effect/model/plane01_share.unity3d
-    Info_18:
+    Info_17:
       Name: assets/bundles/effect/e_1001_hit_lyj_001.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_003_share.unity3d
         Dependency_1: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
         Dependency_2: assets/res/effect/model/plane01_share.unity3d
-    Info_19:
+    Info_18:
       Name: assets/bundles/unit/ms_shoufukuilei.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
+    Info_19:
+      Name: assets/bundles/unit/m0001.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
     Info_20:
+      Name: assets/bundles/unit/b0001.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+    Info_21:
       Name: assets/bundles/atlas/temp.unity3d
       Dependencies: {}
-    Info_21:
+    Info_22:
       Name: assets/bundles/independent/temp.unity3d
       Dependencies: {}
-    Info_22:
+    Info_23:
       Name: assets/res/effect/materials/e_line_lyj_003p_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_003_share.unity3d
-    Info_23:
+    Info_24:
       Name: assets/bundles/effect/e_1001_attack_lyj_004.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/model/plane01_share.unity3d
-    Info_24:
+    Info_25:
       Name: assets/bundles/audio/temp.unity3d
       Dependencies: {}
-    Info_25:
+    Info_26:
       Name: assets/res/effect/model/plane01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/no name_share.unity3d
-    Info_26:
-      Name: assets/bundles/unit/m0001.unity3d
+    Info_27:
+      Name: assets/bundles/unit/1001.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d

@@ -214,6 +214,7 @@ ModelImporter:
     400206: bone_42
     400208: bone_43
     7400000: 1001_@stop
+    7400002: 1001_@stop+
     9500000: //RootNode
     11100000: //RootNode
   externalObjects: {}
