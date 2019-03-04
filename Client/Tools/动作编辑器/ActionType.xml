@@ -38114,7 +38114,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>2900</AnimTime>
+              <AnimTime>9900</AnimTime>
               <Events />
               <ActionInterrupts />
               <AttackDefs />
@@ -38445,10 +38445,33 @@
                       </AISlots>
                     </AIList>
                   </AILists>
-                  <AIStatusSwitchList />
+                  <AIStatusSwitchList>
+                    <AIStatusSwitch SwitchStatusID="1" Condition="1" TargetExist="true" TargetActionID="skill_1_y" TargetSkill="1" SelfActionID="skill_1_y(技能1)" SelfSkill="1" />
+                  </AIStatusSwitchList>
                   <AIActionCDList>
                     <AIActionCD Action="skill2" CD="5000" />
                   </AIActionCDList>
+                  <Location>
+                    <X>0</X>
+                    <Y>0</Y>
+                  </Location>
+                </AIStatus>
+                <AIStatus Name="休息转态">
+                  <AILists>
+                    <AIList Distance="10000">
+                      <AISlots>
+                        <AISlot SkillID="1" SwitchActionID="idle" />
+                        <AISlot SkillID="1" SwitchActionID="run_l" />
+                        <AISlot SkillID="1" SwitchActionID="run_r" />
+                        <AISlot SkillID="1" SwitchActionID="run_s" />
+                        <AISlot SkillID="1" SwitchActionID="run_w" />
+                      </AISlots>
+                    </AIList>
+                  </AILists>
+                  <AIStatusSwitchList>
+                    <AIStatusSwitch Condition="1" TargetExist="true" TargetActionID="skill_1_y" TargetSkill="1" SelfActionID="skill_1_y(技能1)" SelfSkill="1" />
+                  </AIStatusSwitchList>
+                  <AIActionCDList />
                   <Location>
                     <X>0</X>
                     <Y>0</Y>
