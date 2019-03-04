@@ -18,7 +18,7 @@ namespace ACT
 
         Transform mCameraTag;
         Transform mCameraTarget;
-        public Vector3 CameraPos = new Vector3(0, 2.5f, -6);
+        public Vector3 CameraPos = new Vector3(0, 3.2f, -6);
         public Vector3 CameraLookAtOffset = new Vector3(0, 1, 0);
 
         public float CameraModify { get { return mCameraModify; } }
