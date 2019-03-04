@@ -70,7 +70,7 @@ namespace ACT
         public CustomVariable GetVariable(int idx) { return mVariables[idx]; }
         public IActUnit Owner { get; set; }
 
-        public float MoveZMultiple { get; set; } = 1;
+        public float MoveZMultiple { get; set; } = 2;
 
         public ActUnit()
         {
