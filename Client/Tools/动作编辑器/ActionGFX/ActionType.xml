@@ -34154,17 +34154,18 @@
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="at2_g" CheckInput1="true" InputKey1="1" InputType1="4" CheckInput2="true" InputKey2="1" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" CheckInput2="true" InputKey2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" CheckInput2="true" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" CheckInput2="true" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" CheckInput2="true" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" CheckInput2="true" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" CheckInput2="true" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" CheckInput2="true" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" CheckInput2="true" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" CheckInput2="true" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" CheckInput2="true" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanRotate>true</CanRotate>
@@ -34260,17 +34261,18 @@
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="at3_g" CheckInput1="true" InputKey1="1" InputType1="4" CheckInput2="true" InputKey2="1" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" CheckInput2="true" InputKey2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" CheckInput2="true" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" CheckInput2="true" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" CheckInput2="true" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" CheckInput2="true" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" CheckInput2="true" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" CheckInput2="true" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" CheckInput2="true" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" CheckInput2="true" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" CheckInput2="true" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanRotate>true</CanRotate>
@@ -34297,7 +34299,7 @@
                 <Event>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="200" />
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="150" />
                 </Event>
                 <Event>
                   <TriggerTime>30</TriggerTime>
@@ -34380,16 +34382,16 @@
                 <ActionInterrupt ActionID="at4_g" CheckInput1="true" InputKey1="1" InputType1="4" CheckInput2="true" InputKey2="1" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" CheckInput2="true" InputKey2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" CheckInput2="true" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" CheckInput2="true" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" CheckInput2="true" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" CheckInput2="true" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" CheckInput2="true" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" CheckInput2="true" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" CheckInput2="true" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" CheckInput2="true" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" CheckInput2="true" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanRotate>true</CanRotate>
@@ -34417,7 +34419,7 @@
                   <TriggerTime>30</TriggerTime>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="500" />
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="300" />
                 </Event>
                 <Event>
                   <TriggerTime>60</TriggerTime>
@@ -34438,7 +34440,7 @@
                   <Duration>500</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode Z="200" />
+                    <PathNode Z="100" />
                   </Path>
                   <PassNum>1</PassNum>
                   <FrameFinalFactor>
@@ -34502,16 +34504,16 @@
                 <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" CheckInput2="true" InputKey2="1" InputType2="4" CheckInput3="true" InputKey3="1" InputType3="2" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" CheckInput2="true" InputKey2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" CheckInput2="true" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" CheckInput2="true" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" CheckInput2="true" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" CheckInput2="true" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" CheckInput2="true" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" CheckInput2="true" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" CheckInput2="true" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" CheckInput2="true" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" CheckInput2="true" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanRotate>true</CanRotate>
@@ -34735,7 +34737,6 @@
               <ActionStatus>2</ActionStatus>
               <Events />
               <ActionInterrupts>
-                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" CheckInput2="true" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" CheckInput2="true" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" CheckInput2="true" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
@@ -34747,6 +34748,7 @@
                 <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" CheckInput2="true" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
@@ -34896,7 +34898,6 @@
               <ActionStatus>2</ActionStatus>
               <Events />
               <ActionInterrupts>
-                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill2_1_g" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
@@ -35317,13 +35318,13 @@
                 <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" CheckInput2="true" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="stop" CheckInput1="true" InputKey1="4" InputType1="5" CheckInput2="true" InputKey2="4" InputType2="3" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill2_1_g" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill8_g" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill2_1_g" CheckInput1="true" InputKey1="7" CheckInput2="true" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" CheckInput2="true" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" CheckInput2="true" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" CheckInput2="true" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" CheckInput2="true" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" CheckInput2="true" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill8_g" CheckInput1="true" InputKey1="13" CheckInput2="true" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" CheckInput2="true" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" CheckInput2="true" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
@@ -35417,6 +35418,7 @@
                 <ActionInterrupt ActionID="front_attack_g" CheckInput1="true" InputKey1="3" CheckInput2="true" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
+              <FaceTarget>true</FaceTarget>
               <CanMove>true</CanMove>
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
@@ -35431,13 +35433,13 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>300</AnimTime>
+              <AnimTime>150</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill1" BindMode="1" Duration="1000" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill1" OffsetZ="50" BindMode="1" Duration="1000" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -35455,6 +35457,7 @@
                     <PathNode Z="80" />
                     <PathNode Ratio="100" Y="300" Z="80" />
                   </Path>
+                  <HitCount>10</HitCount>
                   <PassNum>1</PassNum>
                   <FrameFinalFactor>
                     <X>1</X>
@@ -35541,7 +35544,14 @@
               </AnimSlotList>
               <AnimTime>400</AnimTime>
               <ActionStatus>2</ActionStatus>
-              <Events />
+              <Events>
+                <Event>
+                  <TriggerTime>42</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill10_001_hit" OffsetZ="500" BindMode="1" />
+                </Event>
+              </Events>
               <ActionInterrupts />
               <AttackDefs>
                 <AttackDef>
@@ -35583,7 +35593,6 @@
                   </AttackeeLash>
                   <AttackeeTime>300</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_fsw_skill10_001_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -35815,13 +35824,13 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>300</AnimTime>
+              <AnimTime>200</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" OffsetY="100" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>SetVelocity</EventType>
@@ -35917,7 +35926,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>500</AnimTime>
+              <AnimTime>800</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -35954,13 +35963,13 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>300</AnimTime>
+              <AnimTime>200</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" OffsetY="100" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>SetVelocity</EventType>
@@ -36037,7 +36046,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>500</AnimTime>
+              <AnimTime>800</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -36074,13 +36083,13 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>400</AnimTime>
+              <AnimTime>300</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" OffsetY="100" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>SetVelocity</EventType>
@@ -36157,7 +36166,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>500</AnimTime>
+              <AnimTime>800</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -36199,7 +36208,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>500</AnimTime>
+              <AnimTime>300</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -36227,7 +36236,6 @@
                   <Path />
                   <HitCount>20</HitCount>
                   <PassNum>20</PassNum>
-                  <MaxHitCount>20</MaxHitCount>
                   <FrameFinalFactor>
                     <X>1</X>
                     <Y>1</Y>
@@ -36235,7 +36243,7 @@
                   </FrameFinalFactor>
                   <FrameType_Int>1</FrameType_Int>
                   <FramType>CylinderType</FramType>
-                  <AttackType xsi:type="FrameCylinder" Radius="100" Height="100" />
+                  <AttackType xsi:type="FrameCylinder" Radius="150" Height="100" />
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
                   <AttackerLash />
@@ -36319,7 +36327,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>500</AnimTime>
+              <AnimTime>400</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -36432,7 +36440,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>400</AnimTime>
+              <AnimTime>200</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -36441,7 +36449,6 @@
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill5" Duration="1500" />
                 </Event>
                 <Event>
-                  <TriggerTime>20</TriggerTime>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
                   <EventDetailData xsi:type="EventSetVelocity" VelocityZ="1000" />
@@ -36549,6 +36556,7 @@
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="run" ConnectImmediately="false" ConnectMode="1" ConnectTime="50" CheckInput1="true" InputKey1="4" InputType1="4" CheckInput2="true" InputKey2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
@@ -36585,8 +36593,8 @@
                   <MovingSpeed />
                   <Path>
                     <PathNode />
-                    <PathNode Ratio="10" Z="500" />
-                    <PathNode Ratio="100" Z="500" />
+                    <PathNode Ratio="10" Z="250" />
+                    <PathNode Ratio="100" Z="250" />
                   </Path>
                   <HitCount>20</HitCount>
                   <PassNum>20</PassNum>
@@ -37026,7 +37034,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>1900</AnimTime>
+              <AnimTime>3000</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -37049,21 +37057,19 @@
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
                   <TriggerTime>7</TriggerTime>
-                  <Duration>300</Duration>
+                  <Duration>3900</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
+                    <PathNode Y="50" Z="400" />
                   </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
+                  <HitCount>40</HitCount>
+                  <PassNum>40</PassNum>
                   <FrameFinalFactor>
                     <X>1</X>
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
+                  <AttackType xsi:type="FrameCuboid" Width="100" Height="200" Length="800" />
                   <Offset />
                   <IsRemoteAttacks>1</IsRemoteAttacks>
                   <AttackerStraightTime>50</AttackerStraightTime>
@@ -37080,7 +37086,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-50</Z>
+                    <Z>50</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -37096,694 +37102,6 @@
                     <Y>100</Y>
                   </LowAirHitedEffectOffset>
                   <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>10</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerStraightTime>50</AttackerStraightTime>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <AttackeeStraightTime>50</AttackeeStraightTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>15</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>20</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>25</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>30</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>35</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>40</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>45</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>50</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>60</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>65</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>70</TriggerTime>
-                  <Duration>300</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="500" />
-                    <PathNode Ratio="100" Y="50" Z="500" />
-                  </Path>
-                  <HitCount>20</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="50" />
-                  <Offset />
-                  <IsRemoteAttacks>1</IsRemoteAttacks>
-                  <AttackerLash />
-                  <AttackerTime>0</AttackerTime>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-50</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
                   <SelfEffectOffset />
                   <BaseGround>1</BaseGround>
                 </AttackDef>
@@ -37813,7 +37131,7 @@
               <Desc>凌空剑阵</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="skill9" Start="57">
+                <AnimSlot Animation="skill9" Start="73">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
@@ -37861,18 +37179,18 @@
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" CheckInput2="true" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="run" ConnectImmediately="false" ConnectMode="1" ConnectTime="50" CheckInput1="true" InputKey1="4" InputKey2="4" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="run" ConnectImmediately="false" ConnectMode="1" ConnectTime="50" CheckInput1="true" InputKey1="4" CheckInput2="true" InputKey2="4" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" CheckInput2="true" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill3_g" CheckInput1="true" InputKey1="8" CheckInput2="true" InputKey2="8" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill4_g" CheckInput1="true" InputKey1="9" CheckInput2="true" InputKey2="9" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" CheckInput2="true" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" CheckInput2="true" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" CheckInput2="true" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" CheckInput2="true" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" CheckInput2="true" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" CheckInput2="true" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanMove>true</CanMove>
@@ -37902,7 +37220,9 @@
                   <AIStatusSwitchList>
                     <AIStatusSwitch SwitchStatusID="1" Condition="2" TargetExist="true" TargetActionID="skill_1_y" TargetSkill="1" SelfActionID="skill_1_y(技能1)" SelfSkill="1" />
                   </AIStatusSwitchList>
-                  <AIActionCDList />
+                  <AIActionCDList>
+                    <AIActionCD Action="skill3_g" CD="30000" />
+                  </AIActionCDList>
                   <Location>
                     <X>0</X>
                     <Y>0</Y>
@@ -37913,13 +37233,17 @@
                     <AIList Distance="300">
                       <AISlots>
                         <AISlot SkillID="1" SwitchActionID="skill3_g" />
+                        <AISlot SkillID="1" SwitchActionID="skill4_g" />
                       </AISlots>
                     </AIList>
                   </AILists>
                   <AIStatusSwitchList>
-                    <AIStatusSwitch Condition="10" TargetExist="true" TargetActionID="skill3_y(技能3)" TargetSkill="1" SelfActionID="skill3_y(技能3)" SelfSkill="1" />
+                    <AIStatusSwitch Condition="2" TargetExist="true" TargetActionID="skill3_y" TargetSkill="1" SelfActionID="skill3_y" SelfSkill="1" />
                   </AIStatusSwitchList>
-                  <AIActionCDList />
+                  <AIActionCDList>
+                    <AIActionCD Action="skill3_g" CD="30000" />
+                    <AIActionCD Action="skill4_g" CD="30000" />
+                  </AIActionCDList>
                   <Location>
                     <X>0</X>
                     <Y>0</Y>
@@ -38481,7 +37805,7 @@
                     <AIStatusSwitch SwitchStatusID="1" Condition="1" TargetExist="true" TargetActionID="skill_1_y" TargetSkill="1" SelfActionID="skill_1_y(技能1)" SelfTime="10000" SelfSkill="1" />
                   </AIStatusSwitchList>
                   <AIActionCDList>
-                    <AIActionCD Action="skill2" CD="10000" />
+                    <AIActionCD Action="skill2" CD="15000" />
                   </AIActionCDList>
                   <Location>
                     <X>0</X>
