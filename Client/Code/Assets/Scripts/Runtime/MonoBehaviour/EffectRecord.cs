@@ -5,6 +5,7 @@ public class EffectRecord : MonoBehaviour
 {
     public ParticleSystem[] Particles;
     public Animation[] Animations;
+    public Animator[] Animators;
 
     public bool mIsInit = false;
 
@@ -38,6 +39,19 @@ public class EffectRecord : MonoBehaviour
                 if (null != tmpAnima)
                 {
                     tmpAnima.Play();
+                }
+            }
+        }
+        
+        if (null != Animators && Animators.Length > 0)
+        {
+            for (int i = 0; i < Animators.Length; i++)
+            {
+                Animator tmpAnimator = Animators[i];
+
+                if (null != tmpAnimator)
+                {
+                    tmpAnimator.Play(0, 0, 0);
                 }
             }
         }
@@ -78,6 +92,7 @@ public class EffectRecord : MonoBehaviour
         mIsInit = true;
         Particles = GetParticles(gameObject);
         Animations = GetAnimations(gameObject);
+        Animators = GetAnimators(gameObject);
     }
 
     public static ParticleSystem[] GetParticles(GameObject go)
@@ -88,5 +103,10 @@ public class EffectRecord : MonoBehaviour
     public static Animation[] GetAnimations(GameObject go)
     {
         return go?.GetComponentsInChildren<Animation>(true);
+    }
+
+    public static Animator[] GetAnimators(GameObject go)
+    {
+        return go?.GetComponentsInChildren<Animator>(true);
     }
 }
