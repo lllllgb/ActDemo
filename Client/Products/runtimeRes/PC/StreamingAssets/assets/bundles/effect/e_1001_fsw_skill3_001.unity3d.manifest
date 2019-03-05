@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 2611942344
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 60eb2992091f547779d2e434134b97c4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6441f4c48b8293a736413520ea1a9530
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Effect/E_1001_fsw_skill3_001.prefab
+Dependencies:
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_smoke_fsw_003_01_share.unity3d

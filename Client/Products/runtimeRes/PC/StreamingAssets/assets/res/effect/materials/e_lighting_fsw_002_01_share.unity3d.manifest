@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 562357007
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f560736f8c3e0ad36fdcea97f2c64c2e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6f165f44e4778b6c9d85e7a145a54cb1
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/effect/Materials/E_Lighting_fsw_002_01.mat
+Dependencies:
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_lighting_fsw_002_share.unity3d

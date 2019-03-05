@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 3119405596
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f8f1998dcf837af4309e6046f2628cb1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6f165f44e4778b6c9d85e7a145a54cb1
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/effect/Materials/E_Trail_fsw_004_01.mat
+Dependencies:
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_trail_fsw_004_share.unity3d

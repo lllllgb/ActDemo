@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3348878131
+CRC: 4096713453
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6a10540a0e14bd10a3adff0950cc9857
+    Hash: 021e0ee78162d53779f8054019c6559a
   TypeTreeHash:
     serializedVersion: 2
     Hash: c72fd6479aa1c2cc290a147c657eef88
@@ -40,3 +40,9 @@ Assets:
 Dependencies:
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_grain_lyj_001a_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_007_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_006_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/jian01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_lyj_002_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_007a_share.unity3d

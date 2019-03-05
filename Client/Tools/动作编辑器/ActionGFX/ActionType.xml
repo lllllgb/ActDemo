@@ -34081,7 +34081,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" BindMode="1" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_attack_001" BindMode="1" Duration="500" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -34121,7 +34121,7 @@
                   <AttackeeLash />
                   <AttackeeTime>0</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -34186,7 +34186,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_002" OffsetY="100" OffsetZ="100" BindMode="1" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_attack_002" BindMode="1" Duration="500" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -34227,7 +34227,7 @@
                   <AttackeeLash />
                   <AttackeeTime>0</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -34292,7 +34292,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_003" OffsetX="-20" OffsetY="50" OffsetZ="-20" BindMode="1" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_attack_003" BindMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>SetVelocity</EventType>
@@ -34345,7 +34345,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -34409,10 +34409,9 @@
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
-                  <TriggerTime>20</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_004" OffsetZ="100" BindMode="1" Duration="1000" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_attack_004" OffsetZ="100" BindMode="1" Duration="1000" />
                 </Event>
                 <Event>
                   <TriggerTime>30</TriggerTime>
@@ -34467,7 +34466,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -34661,7 +34660,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_fall_attack" Duration="500" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -34704,7 +34703,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_front_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -34768,7 +34767,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_fly_attack" BindMode="1" Duration="500" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -34809,7 +34808,7 @@
                   <AttackeeLash />
                   <AttackeeTime>0</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_fly_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -34864,7 +34863,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_fly_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -34930,7 +34929,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_003" OffsetY="20" OffsetZ="-150" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_front_attack" BindMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <TriggerTime>30</TriggerTime>
@@ -34983,7 +34982,7 @@
                   <AttackeeLash />
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_front_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -35438,7 +35437,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill1" BindMode="1" Duration="1000" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -35482,7 +35481,7 @@
                   </AttackeeLash>
                   <AttackeeTime>200</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_fly_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -35584,7 +35583,7 @@
                   </AttackeeLash>
                   <AttackeeTime>300</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_skill10_001_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -35596,6 +35595,8 @@
                     <Y>100</Y>
                   </LowAirHitedEffectOffset>
                   <HighAirHitedEffectOffset />
+                  <SelfEffect>E_1001_fsw_skill10_001</SelfEffect>
+                  <SelfEffectDuration>1000</SelfEffectDuration>
                   <SelfEffectOffset />
                   <BaseGround>1</BaseGround>
                 </AttackDef>
@@ -35626,6 +35627,11 @@
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
                   <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill10_002" Duration="2000" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -35697,7 +35703,13 @@
               </AnimSlotList>
               <AnimTime>1500</AnimTime>
               <ActionStatus>2</ActionStatus>
-              <Events />
+              <Events>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill10_003" Duration="3000" />
+                </Event>
+              </Events>
               <ActionInterrupts />
               <AttackDefs>
                 <AttackDef>
@@ -35742,7 +35754,7 @@
                   </AttackeeLash>
                   <AttackeeTime>500</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_skill10_003_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -35809,7 +35821,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>SetVelocity</EventType>
@@ -35856,7 +35868,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_fly_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -35948,7 +35960,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" OffsetY="100" OffsetZ="20" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>SetVelocity</EventType>
@@ -35995,7 +36007,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_fly_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36068,7 +36080,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" OffsetY="100" OffsetZ="20" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>SetVelocity</EventType>
@@ -36115,7 +36127,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_fly_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36193,7 +36205,12 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill3_001" Duration="500" />
+                </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill3_002" Duration="5000" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -36205,12 +36222,12 @@
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
                   <TriggerTime>15</TriggerTime>
-                  <Duration>2000</Duration>
+                  <Duration>5000</Duration>
                   <MovingSpeed />
                   <Path />
-                  <HitCount>10</HitCount>
-                  <PassNum>10</PassNum>
-                  <MaxHitCount>10</MaxHitCount>
+                  <HitCount>20</HitCount>
+                  <PassNum>20</PassNum>
+                  <MaxHitCount>20</MaxHitCount>
                   <FrameFinalFactor>
                     <X>1</X>
                     <Y>1</Y>
@@ -36237,7 +36254,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_skill3_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36308,7 +36325,12 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill4_001" Duration="500" />
+                </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill4_002" Duration="1000" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -36352,7 +36374,7 @@
                   </AttackeeLash>
                   <AttackeeTime>20</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_skill4_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36416,7 +36438,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_003" OffsetY="20" OffsetZ="-150" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill5" Duration="1500" />
                 </Event>
                 <Event>
                   <TriggerTime>20</TriggerTime>
@@ -36473,7 +36495,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_skill4_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36543,7 +36565,13 @@
               </AnimSlotList>
               <AnimTime>150</AnimTime>
               <ActionStatus>2</ActionStatus>
-              <Events />
+              <Events>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill6_001" OffsetY="80" Duration="1500" />
+                </Event>
+              </Events>
               <ActionInterrupts />
               <AttackDefs>
                 <AttackDef>
@@ -36553,21 +36581,21 @@
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
                   <TriggerTime>20</TriggerTime>
-                  <Duration>2000</Duration>
+                  <Duration>5000</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode Y="50" />
-                    <PathNode Ratio="30" Y="50" Z="300" />
-                    <PathNode Ratio="100" Y="50" Z="300" />
+                    <PathNode />
+                    <PathNode Ratio="10" Z="500" />
+                    <PathNode Ratio="100" Z="500" />
                   </Path>
                   <HitCount>20</HitCount>
-                  <PassNum>10</PassNum>
+                  <PassNum>20</PassNum>
                   <FrameFinalFactor>
                     <X>1</X>
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="100" Length="100" />
+                  <AttackType xsi:type="FrameCuboid" Width="100" Height="150" Length="150" />
                   <Offset />
                   <IsRemoteAttacks>1</IsRemoteAttacks>
                   <AttackerLash />
@@ -36581,12 +36609,10 @@
                   <HighAirHit>
                     <AttackeeLash />
                   </HighAirHit>
-                  <AttackeeLash>
-                    <Z>-100</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>200</AttackeeTime>
+                  <AttackeeLash />
+                  <AttackeeTime>0</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_skill3_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36598,9 +36624,11 @@
                     <Y>100</Y>
                   </LowAirHitedEffectOffset>
                   <HighAirHitedEffectOffset />
-                  <SelfEffect>E_1001_attack_lyj_003</SelfEffect>
-                  <SelfEffectDuration>2000</SelfEffectDuration>
-                  <SelfEffectOffset />
+                  <SelfEffect>E_1001_fsw_skill6_002</SelfEffect>
+                  <SelfEffectDuration>5000</SelfEffectDuration>
+                  <SelfEffectOffset>
+                    <Y>50</Y>
+                  </SelfEffectOffset>
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
@@ -36650,22 +36678,14 @@
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
-                  <TriggerTime>40</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill7_001" Duration="1500" />
                 </Event>
                 <Event>
-                  <TriggerTime>60</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
-                </Event>
-                <Event>
-                  <TriggerTime>70</TriggerTime>
-                  <EventType>PlayEffect</EventType>
-                  <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill7_002" Duration="2000" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -36680,7 +36700,7 @@
                   <Duration>500</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode Y="50" Z="80" />
+                    <PathNode Y="50" Z="200" />
                   </Path>
                   <HitCount>10</HitCount>
                   <PassNum>1</PassNum>
@@ -36689,7 +36709,7 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="250" />
+                  <AttackType xsi:type="FrameCuboid" Width="200" Height="200" Length="500" />
                   <Offset />
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
@@ -36710,7 +36730,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36735,7 +36755,7 @@
                   <Duration>500</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode Y="50" Z="80" />
+                    <PathNode Y="50" Z="200" />
                   </Path>
                   <HitCount>10</HitCount>
                   <PassNum>1</PassNum>
@@ -36744,7 +36764,7 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="250" />
+                  <AttackType xsi:type="FrameCuboid" Width="200" Height="150" Length="500" />
                   <Offset />
                   <AttackerStraightTime>100</AttackerStraightTime>
                   <AttackerLash />
@@ -36766,7 +36786,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36791,7 +36811,7 @@
                   <Duration>1000</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode Y="50" Z="80" />
+                    <PathNode Y="50" Z="200" />
                   </Path>
                   <HitCount>10</HitCount>
                   <PassNum>1</PassNum>
@@ -36800,7 +36820,7 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="300" />
+                  <AttackType xsi:type="FrameCuboid" Width="200" Height="150" Length="500" />
                   <Offset />
                   <AttackerStraightTime>300</AttackerStraightTime>
                   <AttackerLash />
@@ -36822,7 +36842,7 @@
                   </AttackeeLash>
                   <AttackeeTime>200</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36887,7 +36907,7 @@
                   <TriggerTime>20</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill8" Duration="1000" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -36933,7 +36953,7 @@
                   </AttackeeLash>
                   <AttackeeTime>400</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_1001_fsw_skill8_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -37008,7 +37028,18 @@
               </AnimSlotList>
               <AnimTime>1900</AnimTime>
               <ActionStatus>2</ActionStatus>
-              <Events />
+              <Events>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill9_001" Duration="5000" />
+                </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill9_002" Duration="5000" />
+                </Event>
+              </Events>
               <ActionInterrupts />
               <AttackDefs>
                 <AttackDef>

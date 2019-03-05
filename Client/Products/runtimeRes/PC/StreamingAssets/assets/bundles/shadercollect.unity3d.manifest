@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2377881756
+CRC: 1020530464
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a9527570e76efc2247a179a89e11146a
+    Hash: 9e03fb0ea2286a23821c9fbbcd3e1974
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6370d3f9de9eca57f523bce048404a46
@@ -13,8 +13,14 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Normal-VertexLit.shader
+- Assets/Shaders/shader/Particles-Additive-UV.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Standard.shader
+- Assets/Shaders/shader/Particles-Alpha-Blend-UV.shader
 - Assets/Shaders/shader/Obj-Texture.shader
 - Assets/Shaders/shader/Obj-Soft-Light.shader
+- Assets/shader/AnyPlay-Particle-Dissolve-Add-VertexAlpha.shader
+- Assets/Shaders/shader/Particles-Alpha-Blended-Mask.shader
 - Assets/Shaders/custom_shaders/DoubleSidedAlpha.shader
+- Assets/shader/AnyPlay-Particle-Dissolve-Alpha Blend-VertexAlpha.shader
+- Assets/Shaders/shader/Particles-Dissolve-Alpha.shader
 Dependencies: []

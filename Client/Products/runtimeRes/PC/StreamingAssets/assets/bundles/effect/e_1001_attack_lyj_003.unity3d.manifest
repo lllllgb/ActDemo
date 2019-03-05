@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1316606857
+CRC: 2644991100
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6b17ceb4f038a91bdc55ad4f0a90fbe3
+    Hash: 3dd619f62d90e46be1ec5b54b13d6435
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6441f4c48b8293a736413520ea1a9530
@@ -30,3 +30,4 @@ Assets:
 Dependencies:
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_003p_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_004_share.unity3d

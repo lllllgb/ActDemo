@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1923488881
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 54b3810143d6f830eb118379b7b95581
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/effect/Texture/E_Knife_fsw_008.png
+Dependencies: []
