@@ -23,6 +23,8 @@ namespace AosHotfixRunTime
 
         private InputField mSpeedZInput;
 
+        private UGUIJoystick mJoystick;
+
         protected override void AfterInit()
         {
             base.AfterInit();
@@ -49,11 +51,22 @@ namespace AosHotfixRunTime
             RegisterEventClick(Find("Button_DeleteAll"), OnClearAllBtnClick);
             RegisterEventClick(Find("Button_Camera"), OnCameraBtnClick);
             RegisterEventClick(Find("Button_Speed"), OnSpeedBtnClick);
+
+            var tmpJoystickGo = Find("UGUIJoystick");
+            mJoystick = new UGUIJoystick();
+            mJoystick.Init(tmpJoystickGo, Find<Image>(tmpJoystickGo, "Background"), Find<Image>(tmpJoystickGo, "Center"));
         }
 
         protected override void AfterShow()
         {
             base.AfterShow();
+        }
+
+        protected override void Update(float deltaTime)
+        {
+            base.Update(deltaTime);
+
+            mJoystick.Update(deltaTime);
         }
 
         protected override void BeforeClose()

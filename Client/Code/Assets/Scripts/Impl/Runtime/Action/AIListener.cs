@@ -350,7 +350,7 @@ namespace ACT
 
             float x = target.Position.x - mOwner.Position.x;
             float z = target.Position.z - mOwner.Position.z;
-            float dir = Mathf.Atan2(x, z);
+            float dir = Mathf.Atan2(x, 0);
             mOwner.SetOrientation(dir);
         }
         //-----------------------------------------------------------------------

@@ -49,7 +49,7 @@ public class EffectRecord : MonoBehaviour
             {
                 Animator tmpAnimator = Animators[i];
 
-                if (null != tmpAnimator)
+                if (null != tmpAnimator && null != tmpAnimator.runtimeAnimatorController)
                 {
                     tmpAnimator.Play(0, 0, 0);
                 }
