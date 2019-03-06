@@ -230,6 +230,9 @@ namespace ACT
             if (ProcessQueuedAction(deltaTime))
                 return;
 
+            if (ProcessExtraChangeAction(deltaTime))
+                return;
+
             // check we are going to finished, tick current action to the end.
             int nextActionTime = 0;
             bool thisActionIsFinished = false;
@@ -307,6 +310,28 @@ namespace ACT
             // trun off queued actions.
             mQueuedInterrupt = null;
 
+            return true;
+        }
+
+        bool ProcessExtraChangeAction(int deltaTime)
+        {
+            if (mActiveAction.AirStatus == (int)ActData.EAirStatus.Normal)
+            {
+                return false;
+            }
+
+            if (!mOwner.OnGround)
+            {
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(mActionGroup.Diaup2FloorAction))
+            {
+                Logger.LogError($"未配置击飞落地动作 {mOwner.ActionID}");
+                return false;
+            }
+
+            ChangeAction(mActionGroup.Diaup2FloorAction, 0);
             return true;
         }
 
@@ -1262,7 +1287,10 @@ namespace ACT
             }
 
             if (!string.IsNullOrEmpty(changeAction))
+            {
+                Logger.Log($"OnHit action -> {changeAction}");
                 ChangeAction(changeAction, 0);
+            }
 
             return handled;
         }
@@ -1318,10 +1346,10 @@ namespace ACT
                 }
                 else if (mOnStarightHit)
                 {
-                    Vector3 straighMove = new Vector3(mStraighExtent, 0f, 0f);
-                    if (mOwner.ModelTrans)
-                        mOwner.ModelTrans.localPosition = straighMove;
-                    mStraighExtent = -mStraighExtent;
+                    //Vector3 straighMove = new Vector3(mStraighExtent, 0f, 0f);
+                    //if (mOwner.ModelTrans)
+                    //    mOwner.ModelTrans.localPosition = straighMove;
+                    //mStraighExtent = -mStraighExtent;
                 }
 
                 return true;

@@ -53,7 +53,7 @@ namespace ACT
         public EUnitCamp Camp { get { return mCamp; } protected set { mCamp = value; } }
         public int ActionID { get { return mActionID; } protected set { mActionID = value; } }
         public int ActionGroupIdx { get { return mActionGroupIdx; } }
-        public int AIDiff { get { return mAIDiff; } }
+        public int AIDiff { get { return mAIDiff; } protected set { mAIDiff = value; } }
         public ActionStatus ActStatus { get { return mActionStatus; } }
         public abstract int Speed { get; }
         public abstract bool CanHurt { get; }
@@ -69,6 +69,8 @@ namespace ACT
         public EUnitState State { get { return mState; } }
         public CustomVariable GetVariable(int idx) { return mVariables[idx]; }
         public IActUnit Owner { get; set; }
+
+        public float MoveZMultiple { get; set; } = 2;
 
         public ActUnit()
         {
@@ -248,6 +250,8 @@ namespace ACT
 
         public void Move(Vector3 trans)
         {
+            trans.z *= MoveZMultiple;
+
             if (null != mController)
             {
                 if (trans.y != 0) mOnGround = false;
@@ -284,6 +288,7 @@ namespace ACT
 
                         RaycastHit hitInfo;
                         mOnTouchWall = false;
+
                         if (Physics.Raycast(checkPos, direction, out hitInfo, checkLength, mCacheLayerMask))
                         {
                             mOnTouchWall = true;

@@ -177,7 +177,8 @@ namespace ACT
                 float x = -mInputVector.x, y = mInputVector.y;
                 MathUtility.Rotate(ref x, ref y, mController.CameraModify);
 
-                mOwner.SetOrientation(Mathf.Atan2(x, y));
+                if (mInputVector.x != 0)
+                    mOwner.SetOrientation(Mathf.Atan2(x, 0));
             }
         }
 

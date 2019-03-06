@@ -17,7 +17,13 @@ namespace AosHotfixRunTime
         private InputField mOtherAIInput;
 
         private InputField mLocalIDInput;
-        
+
+        private InputField mCameraYInput;
+        private InputField mCameraZInput;
+
+        private InputField mSpeedZInput;
+
+        private UGUIJoystick mJoystick;
 
         protected override void AfterInit()
         {
@@ -35,14 +41,32 @@ namespace AosHotfixRunTime
             tmpDefTge.onValueChanged.AddListener(OnDefToogleValueChange);
             tmpListTargetTge.onValueChanged.AddListener(OnListTargetValueChange);
 
+            mCameraYInput = Find<InputField>("InputField_CameraY");
+            mCameraZInput = Find<InputField>("InputField_CameraZ");
+
+            mSpeedZInput = Find<InputField>("InputField_Speed");
+
             RegisterEventClick(Find("Button_LoadLocal"), OnLoadLocalPlayerBtnClick);
             RegisterEventClick(Find("Button_LoadOther"), OnLoadOtherRoleBtnClick);
             RegisterEventClick(Find("Button_DeleteAll"), OnClearAllBtnClick);
+            RegisterEventClick(Find("Button_Camera"), OnCameraBtnClick);
+            RegisterEventClick(Find("Button_Speed"), OnSpeedBtnClick);
+
+            var tmpJoystickGo = Find("UGUIJoystick");
+            mJoystick = new UGUIJoystick();
+            mJoystick.Init(tmpJoystickGo, Find<Image>(tmpJoystickGo, "Background"), Find<Image>(tmpJoystickGo, "Center"));
         }
 
         protected override void AfterShow()
         {
             base.AfterShow();
+        }
+
+        protected override void Update(float deltaTime)
+        {
+            base.Update(deltaTime);
+
+            mJoystick.Update(deltaTime);
         }
 
         protected override void BeforeClose()
@@ -67,12 +91,13 @@ namespace AosHotfixRunTime
 
         private void OnLoadOtherRoleBtnClick(PointerEventData arg)
         {
-
             int tmpID = 0;
 
             if (int.TryParse(mOtherIDInput.text, out tmpID))
             {
-                TestAction.Instance.AddOtherUnit(tmpID);
+                int tmpAIDiff = 0;
+                bool tmpAIEnable = int.TryParse(mOtherAIInput.text, out tmpAIDiff);
+                TestAction.Instance.AddOtherUnit(tmpID, tmpAIEnable, tmpAIDiff);
             }
             else
             {
@@ -83,6 +108,34 @@ namespace AosHotfixRunTime
         private void OnClearAllBtnClick(PointerEventData arg)
         {
             TestAction.Instance.DeleteAll();
+        }
+
+        private void OnCameraBtnClick(PointerEventData arg)
+        {
+            float tmpY, tmpZ;
+
+            if (float.TryParse(mCameraYInput.text, out tmpY) && float.TryParse(mCameraZInput.text, out tmpZ))
+            {
+                TestAction.Instance.ModifyCamera(tmpY, tmpZ);
+            }
+            else
+            {
+                Logger.LogError("参数填写错误");
+            }
+        }
+
+        private void OnSpeedBtnClick(PointerEventData arg)
+        {
+            float tmpSpeed;
+
+            if (float.TryParse(mSpeedZInput.text, out tmpSpeed))
+            {
+                TestAction.Instance.ModifySpeed(tmpSpeed);
+            }
+            else
+            {
+                Logger.LogError("参数填写错误");
+            }
         }
 
         private void OnAtkToogleValueChange(bool value)

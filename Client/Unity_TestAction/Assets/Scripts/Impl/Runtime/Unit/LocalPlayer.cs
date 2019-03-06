@@ -9,6 +9,7 @@ namespace AosHotfixRunTime
     public class LocalPlayer : Player
     {
         ACT.Controller mController;
+        public ACT.Controller Controller { get { return mController; } }
 
         public LocalPlayer(int unitID) : base(unitID)
         {

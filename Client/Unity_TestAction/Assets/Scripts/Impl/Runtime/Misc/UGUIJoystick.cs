@@ -3,71 +3,92 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public delegate void JoystickMoveDelegate(float deltaX, float deltaY);
 
-public class UGUIJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class UGUIJoystick
 {
-    public GameObject joystickUI;                   //摇杆整体UI,方便Active
-    public RectTransform joystickCenter;            //摇杆重心
-    public RectTransform joystickBackground;        //摇杆背景
+    GameObject mRoot;
+    Image mBackgroundImg;
+    Image mCenterImg;
+    Vector2 mBgInitPos;
+    float mWorld2ScreenModify = 1f;
+    float mRadius;
+    bool mIsTouching;
+    int mTouchedID;
 
-    public RectTransform joystickRect;
-    private float radius;
-    bool isClick;
-    Vector2 clickPosition;
+    Color mInactiveColor = new Color(1, 1, 1, 0.3f);
 
-
-    public static event JoystickMoveDelegate JoystickMoveEvent;
+    public static System.Action<float, float> JoystickMoveHandle;
     
     // Use this for initialization
-    void Start()
+    public void Init(GameObject root, Image background, Image center)
     {
-        radius = 71;
+        mRoot = root;
+        mBackgroundImg = background;
+        mCenterImg = center;
+        mBgInitPos = mBackgroundImg.rectTransform.anchoredPosition;
+
+        ChangeAlpha(false);
+        mWorld2ScreenModify = 1280f / Screen.width;
+        mRadius = mBackgroundImg.rectTransform.sizeDelta.x * 0.5f - mCenterImg.rectTransform.sizeDelta.x * 0.5f;
+
+        UGUIEventListener.Get(root).onDown = OnPointerDown;
+        UGUIEventListener.Get(root).onUp = OnPointerUp;
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update(float deltaTime)
     {
         JoystickController();
     }
 
-    public void JoystickController()
+    void JoystickController()
     {
-        if (isClick)
+        if (mIsTouching)
         {
-            clickPosition = GetClickPosition();
-            float distance = Vector2.Distance(new Vector2(clickPosition.x, clickPosition.y) / Screen.width * 960, joystickRect.anchoredPosition);
+            Vector2 tmpTouchPos = GetClickPosition() * mWorld2ScreenModify;
+            float distance = Vector2.Distance(tmpTouchPos, mBackgroundImg.rectTransform.anchoredPosition);
 
-            if (distance < radius)
+            if (distance < mRadius)
             {
                 //当距离小于半径就开始移动 摇杆重心
-                joystickCenter.anchoredPosition = new Vector2(clickPosition.x / Screen.width * 960 - joystickRect.anchoredPosition.x, clickPosition.y / Screen.width * 960 - joystickRect.anchoredPosition.y);
+                mCenterImg.rectTransform.anchoredPosition = tmpTouchPos - mBackgroundImg.rectTransform.anchoredPosition;
             }
             else
             {
                 //求圆上的一点：(目标点-原点) * 半径/原点到目标点的距离
-                Vector2 endPosition = (new Vector2(clickPosition.x, clickPosition.y) / Screen.width * 960 - joystickRect.anchoredPosition) * radius / distance;
-                joystickCenter.anchoredPosition = endPosition;
+                Vector2 endPosition = (tmpTouchPos - mBackgroundImg.rectTransform.anchoredPosition) * mRadius / distance;
+                mCenterImg.rectTransform.anchoredPosition = endPosition;
             }
 
-            JoystickMoveEvent?.Invoke(joystickCenter.anchoredPosition.x - joystickBackground.anchoredPosition.x, joystickCenter.anchoredPosition.y - joystickBackground.anchoredPosition.y);
-
+            JoystickMoveHandle?.Invoke(mCenterImg.rectTransform.anchoredPosition.x, mCenterImg.rectTransform.anchoredPosition.y);
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    void OnPointerDown(PointerEventData eventData)
     {
-        ChangeAlpha(1);
-        clickPosition = GetClickPosition();
-        joystickRect.anchoredPosition = clickPosition / Screen.width * 960;
-        isClick = true;
+        if (mIsTouching)
+        {
+            return;
+        }
+
+        mTouchedID = eventData.pointerId;
+        Vector2 tmpTouchPos = GetClickPosition();
+        mBackgroundImg.rectTransform.anchoredPosition = tmpTouchPos * mWorld2ScreenModify;
+        mIsTouching = true;
+        ChangeAlpha(true);
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    void OnPointerUp(PointerEventData eventData)
     {
-        ChangeAlpha(0.3f);
-        joystickCenter.anchoredPosition = Vector2.zero;
-        isClick = false;
+        if (!mIsTouching || mTouchedID != eventData.pointerId)
+        {
+            return;
+        }
+
+        ChangeAlpha(false);
+        mBackgroundImg.rectTransform.anchoredPosition = mBgInitPos;
+        mCenterImg.rectTransform.anchoredPosition = Vector2.zero;
+        mIsTouching = false;
     }
 
     /// <summary>
@@ -78,7 +99,7 @@ public class UGUIJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         if (Application.platform == RuntimePlatform.Android)
         {
-            return Input.GetTouch(0).position;
+            return Input.GetTouch(mTouchedID).position;
 
         }
         else if (Application.platform == RuntimePlatform.WindowsEditor)
@@ -92,9 +113,9 @@ public class UGUIJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     /// 改变图片alpha值
     /// </summary>
     /// <param name="alphaValue"></param>
-    void ChangeAlpha(float alphaValue)
+    void ChangeAlpha(bool active)
     {
-        joystickBackground.GetComponent<RawImage>().color = new Color(1, 1, 1, alphaValue);
-        joystickCenter.GetComponent<Image>().color = new Color(1, 1, 1, alphaValue);
+        mBackgroundImg.color = active ? Color.white : mInactiveColor;
+        mCenterImg.color = active ? Color.white : mInactiveColor;
     }
 }

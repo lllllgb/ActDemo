@@ -40,11 +40,12 @@ namespace AosHotfixRunTime
             mTestPlayer = new LocalPlayer(unitID);
             mTestPlayer.Init();
             ACT.ActionSystem.Instance.ActUnitMgr.Add(mTestPlayer);
+            ACT.ActionSystem.Instance.ActUnitMgr.LocalPlayer = mTestPlayer;
         }
 
-        public void AddOtherUnit(int unitID)
+        public void AddOtherUnit(int unitID, bool aiEnable, int aiDiff)
         {
-            Monster tmpMonster = new Monster(unitID);
+            Monster tmpMonster = new Monster(unitID, aiEnable, aiDiff);
             tmpMonster.Init();
             ACT.ActionSystem.Instance.ActUnitMgr.Add(tmpMonster);
         }
@@ -75,6 +76,22 @@ namespace AosHotfixRunTime
         public void ShowListTargeFrame(bool flag)
         {
             ACT.ActionStatus.ShowListTarFrame = flag;
+        }
+
+        public void ModifyCamera(float y, float z)
+        {
+            if (null != mTestPlayer && null != mTestPlayer.Controller)
+            {
+                mTestPlayer.Controller.CameraPos = new Vector3(0f, y, z);
+            }
+        }
+
+        public void ModifySpeed(float speed)
+        {
+            if (null != mTestPlayer)
+            {
+                mTestPlayer.MoveZMultiple = speed;
+            }
         }
     }
 }

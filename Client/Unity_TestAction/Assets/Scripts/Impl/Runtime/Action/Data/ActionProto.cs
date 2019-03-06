@@ -2787,6 +2787,20 @@ namespace ActData {
       }
     }
 
+    /// <summary>Field number for the "Diaup2FloorAction" field.</summary>
+    public const int Diaup2FloorActionFieldNumber = 72;
+    private string diaup2FloorAction_ = "";
+    /// <summary>
+    ///空中到地面的动作ID
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Diaup2FloorAction {
+      get { return diaup2FloorAction_; }
+      set {
+        diaup2FloorAction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       actionList_.WriteTo(output, _repeated_actionList_codec);
@@ -3070,6 +3084,10 @@ namespace ActData {
         output.WriteRawTag(184, 4);
         output.WriteInt32(SpasticityCD);
       }
+      if (Diaup2FloorAction.Length != 0) {
+        output.WriteRawTag(194, 4);
+        output.WriteString(Diaup2FloorAction);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3285,6 +3303,9 @@ namespace ActData {
       }
       if (SpasticityCD != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(SpasticityCD);
+      }
+      if (Diaup2FloorAction.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Diaup2FloorAction);
       }
       return size;
     }
@@ -3603,6 +3624,10 @@ namespace ActData {
           }
           case 568: {
             SpasticityCD = input.ReadInt32();
+            break;
+          }
+          case 578: {
+            Diaup2FloorAction = input.ReadString();
             break;
           }
         }
@@ -4306,6 +4331,20 @@ namespace ActData {
       }
     }
 
+    /// <summary>Field number for the "AirStatus" field.</summary>
+    public const int AirStatusFieldNumber = 51;
+    private int airStatus_;
+    /// <summary>
+    ///空中状态
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AirStatus {
+      get { return airStatus_; }
+      set {
+        airStatus_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (AnimationVersion.Length != 0) {
@@ -4496,6 +4535,10 @@ namespace ActData {
         output.WriteRawTag(144, 3);
         output.WriteBool(SuperArmor);
       }
+      if (AirStatus != 0) {
+        output.WriteRawTag(152, 3);
+        output.WriteInt32(AirStatus);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4642,6 +4685,9 @@ namespace ActData {
       }
       if (SuperArmor != false) {
         size += 2 + 1;
+      }
+      if (AirStatus != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(AirStatus);
       }
       return size;
     }
@@ -4852,6 +4898,10 @@ namespace ActData {
           }
           case 400: {
             SuperArmor = input.ReadBool();
+            break;
+          }
+          case 408: {
+            AirStatus = input.ReadInt32();
             break;
           }
         }
