@@ -68,6 +68,16 @@ ModelImporter:
     100124: Bone35
     100126: Bone36
     100128: Bone37
+    100130: Bip001 HeadNub
+    100132: Bip001 L Finger0Nub
+    100134: Bip001 L Finger1Nub
+    100136: Bip001 L Toe0Nub
+    100138: Bip001 R Finger0Nub
+    100140: Bip001 R Finger1Nub
+    100142: Bip001 R Toe0Nub
+    100144: Dummy001
+    100146: Dummy002
+    100148: Root
     400000: //RootNode
     400002: Bip001
     400004: Bip001 Head
@@ -133,8 +143,19 @@ ModelImporter:
     400124: Bone35
     400126: Bone36
     400128: Bone37
+    400130: Bip001 HeadNub
+    400132: Bip001 L Finger0Nub
+    400134: Bip001 L Finger1Nub
+    400136: Bip001 L Toe0Nub
+    400138: Bip001 R Finger0Nub
+    400140: Bip001 R Finger1Nub
+    400142: Bip001 R Toe0Nub
+    400144: Dummy001
+    400146: Dummy002
+    400148: Root
     7400000: "b0001@skill3\u539F\u5730"
     9500000: //RootNode
+    11100000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
