@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3473465610
+CRC: 4234238095
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -524,7 +524,6 @@ AssetBundleManifest:
         Dependency_4: assets/res/effect/model/fbx_plane_fsw_007_share.unity3d
         Dependency_5: assets/res/effect/materials/e_noise_fsw_003_04_share.unity3d
         Dependency_6: assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
-        Dependency_7: assets/res/effect/model/fbx_plane_fsw_008_share.unity3d
     Info_103:
       Name: assets/bundles/effect/e_1001_fsw_skill3_001.unity3d
       Dependencies:
@@ -873,3 +872,17 @@ AssetBundleManifest:
     Info_166:
       Name: assets/res/effect/texture/e_trail_fsw_009_share.unity3d
       Dependencies: {}
+    Info_167:
+      Name: assets/bundles/effect/e_1001_fsw_gedang.unity3d
+      Dependencies:
+        Dependency_0: assets/res/effect/materials/e_line_lyj_002_02_share.unity3d
+        Dependency_1: assets/res/effect/texture/e_smoke_fsw_002_share.unity3d
+    Info_168:
+      Name: assets/bundles/effect/e_1001_fsw_skill2_004.unity3d
+      Dependencies:
+        Dependency_0: assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
+        Dependency_1: assets/res/effect/model/fbx_plane_fsw_008_share.unity3d
+    Info_169:
+      Name: assets/bundles/effect/e_1001_fsw_wp.unity3d
+      Dependencies:
+        Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d

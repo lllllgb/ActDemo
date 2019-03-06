@@ -34399,9 +34399,10 @@
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
+                  <TriggerTime>35</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_attack_004" OffsetZ="100" BindMode="1" Duration="1000" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_attack_004" BindMode="1" Duration="1000" />
                 </Event>
                 <Event>
                   <TriggerTime>30</TriggerTime>
@@ -34669,11 +34670,15 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="200" Length="150" />
+                  <FrameType_Int>1</FrameType_Int>
+                  <FramType>CylinderType</FramType>
+                  <AttackType xsi:type="FrameCylinder" Radius="160" Height="50" />
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
+                  <AttackerStraightTime>100</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
+                  <AttackeeStraightTime>100</AttackeeStraightTime>
                   <HitResult>KnockOut</HitResult>
                   <GroundHit>
                     <AttackeeLash />
@@ -34782,8 +34787,10 @@
                   <AttackType xsi:type="FrameCuboid" Width="50" Height="200" Length="150" />
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
+                  <AttackerStraightTime>50</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
+                  <AttackeeStraightTime>50</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -34833,8 +34840,10 @@
                   <AttackType xsi:type="FrameCuboid" Width="50" Height="200" Length="150" />
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
+                  <AttackerStraightTime>100</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
+                  <AttackeeStraightTime>100</AttackeeStraightTime>
                   <HitResult>KnockOut</HitResult>
                   <GroundHit>
                     <AttackeeLash />
@@ -34916,7 +34925,7 @@
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_front_attack" BindMode="1" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_front_attack" Duration="500" />
                 </Event>
                 <Event>
                   <TriggerTime>30</TriggerTime>
@@ -34953,8 +34962,10 @@
                   <AttackType xsi:type="FrameCuboid" Width="50" Height="100" Length="100" />
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
+                  <AttackerStraightTime>50</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>50</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -35421,7 +35432,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>150</AnimTime>
+              <AnimTime>200</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -35438,7 +35449,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>10</TriggerTime>
+                  <TriggerTime>60</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
                   <Path>
@@ -35454,8 +35465,10 @@
                   </FrameFinalFactor>
                   <AttackType xsi:type="FrameCuboid" Width="50" Height="200" Length="150" />
                   <Offset />
+                  <AttackerStraightTime>150</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
+                  <AttackeeStraightTime>150</AttackeeStraightTime>
                   <HitResult>KnockOut</HitResult>
                   <GroundHit>
                     <AttackeeLash />
@@ -35468,7 +35481,7 @@
                   </HighAirHit>
                   <AttackeeLash>
                     <Y>500</Y>
-                    <Z>-150</Z>
+                    <Z>-100</Z>
                   </AttackeeLash>
                   <AttackeeTime>200</AttackeeTime>
                   <HoldOffset />
@@ -35822,6 +35835,11 @@
                   <EventTypeInt>8</EventTypeInt>
                   <EventDetailData xsi:type="EventSetVelocity" VelocityZ="600" />
                 </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_004" Duration="500" />
+                </Event>
               </Events>
               <ActionInterrupts />
               <AttackDefs>
@@ -35962,6 +35980,11 @@
                   <EventTypeInt>8</EventTypeInt>
                   <EventDetailData xsi:type="EventSetVelocity" VelocityZ="600" />
                 </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_004" Duration="500" />
+                </Event>
               </Events>
               <ActionInterrupts />
               <AttackDefs>
@@ -36082,6 +36105,11 @@
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
                   <EventDetailData xsi:type="EventSetVelocity" VelocityZ="600" />
+                </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_004" Duration="500" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -36336,7 +36364,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>5</TriggerTime>
+                  <TriggerTime>13</TriggerTime>
                   <Duration>1000</Duration>
                   <MovingSpeed />
                   <Path>
@@ -36350,6 +36378,7 @@
                   </FrameFinalFactor>
                   <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="300" />
                   <Offset />
+                  <AttackerStraightTime>200</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
                   <AttackeeStraightTime>200</AttackeeStraightTime>
@@ -36705,6 +36734,7 @@
                   </FrameFinalFactor>
                   <AttackType xsi:type="FrameCuboid" Width="200" Height="200" Length="500" />
                   <Offset />
+                  <AttackerStraightTime>100</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
                   <AttackeeStraightTime>200</AttackeeStraightTime>
@@ -36902,7 +36932,7 @@
                   <TriggerTime>20</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill8" BindMode="1" Duration="1000" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill8" OffsetX="-100" BindMode="1" Duration="1000" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -36917,7 +36947,7 @@
                   <Duration>1000</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode Y="100" Z="200" />
+                    <PathNode Z="50" />
                   </Path>
                   <HitCount>10</HitCount>
                   <PassNum>1</PassNum>
@@ -36926,7 +36956,7 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="100" Height="300" Length="500" />
+                  <AttackType xsi:type="FrameCuboid" Width="200" Height="320" Length="500" />
                   <Offset />
                   <AttackerStraightTime>150</AttackerStraightTime>
                   <AttackerLash />
@@ -36944,7 +36974,7 @@
                   </HighAirHit>
                   <AttackeeLash>
                     <Y>800</Y>
-                    <Z>-300</Z>
+                    <Z>-200</Z>
                   </AttackeeLash>
                   <AttackeeTime>400</AttackeeTime>
                   <HoldOffset />
