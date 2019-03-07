@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 4187336672
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 99d7cc933b975fe7b11a46e644585046
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 624cdf3ce04e2913c66baa558c5df7a0
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/UI/FightMainWnd.prefab
+Dependencies: []

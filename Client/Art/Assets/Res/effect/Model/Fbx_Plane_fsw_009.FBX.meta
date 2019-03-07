@@ -10,6 +10,7 @@ ModelImporter:
     3300000: //RootNode
     4300000: Fbx_Plane_fsw_008
     4300002: Fbx_Plane_fsw_009
+    11100000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 0
