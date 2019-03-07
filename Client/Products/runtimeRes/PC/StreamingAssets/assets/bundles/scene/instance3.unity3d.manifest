@@ -1,16 +1,16 @@
 ManifestFileVersion: 0
-CRC: 301982986
+CRC: 3280369148
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 20e89881c45dd13f713bc4c212646215
+    Hash: b459fe7e0616dd85e8677e00e55ab3b3
   TypeTreeHash:
     serializedVersion: 2
     Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
 HashAppended: 0
 ClassTypes: []
 Assets:
-- Assets/Bundles/Scene/Instance0.unity
+- Assets/Bundles/Scene/Instance3.unity
 Dependencies:
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/zhongjingzhanche_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/yuanjingshu3_share.unity3d

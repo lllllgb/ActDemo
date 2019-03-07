@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4147006819
+CRC: 3967770221
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ca45369b3c8140fa7687e79fbfdc9e00
+    Hash: 986a7af5aa70f467a388e68a90476251
   TypeTreeHash:
     serializedVersion: 2
     Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
@@ -19,7 +19,6 @@ Dependencies:
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/yuanjingshu1_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/zhongjingshu_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/dimian_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/yuanjingzhanche1_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/zhongjingzawu_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/zhongjingzhanche1_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/zhongjingzawu1_share.unity3d

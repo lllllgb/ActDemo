@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3694611005
+CRC: 3804929815
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -900,78 +900,59 @@ AssetBundleManifest:
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
     Info_169:
-      Name: assets/bundles/scene/instance0.unity3d
-      Dependencies:
-        Dependency_0: assets/res/models/scene/xueshan_1/zhongjingzhanche_share.unity3d
-        Dependency_1: assets/res/models/scene/xueshan_1/yuanjingshu3_share.unity3d
-        Dependency_2: assets/res/models/scene/xueshan_1/zhongjingshu1_share.unity3d
-        Dependency_3: assets/res/models/scene/xueshan_1/zhongjingshu3_share.unity3d
-        Dependency_4: assets/res/models/scene/xueshan_1/yuanjingshu1_share.unity3d
-        Dependency_5: assets/res/models/scene/xueshan_1/zhongjingshu_share.unity3d
-        Dependency_6: assets/res/models/scene/xueshan_1/dimian_share.unity3d
-        Dependency_7: assets/res/models/scene/xueshan_1/yuanjingzhanche1_share.unity3d
-        Dependency_8: assets/res/models/scene/xueshan_1/zhongjingzawu_share.unity3d
-        Dependency_9: assets/res/models/scene/xueshan_1/zhongjingzhanche1_share.unity3d
-        Dependency_10: assets/res/models/scene/xueshan_1/zhongjingzawu1_share.unity3d
-        Dependency_11: assets/res/models/scene/xueshan_1/zhongjingshanshi_share.unity3d
-        Dependency_12: assets/res/models/scene/xueshan_1/qianjingzhanlan_share.unity3d
-        Dependency_13: assets/res/models/scene/xueshan_1/zhongjingshu2_share.unity3d
-        Dependency_14: assets/res/models/scene/testaction/materials/floor_share.unity3d
-        Dependency_15: assets/res/models/scene/testaction/materials/wall_share.unity3d
-    Info_170:
       Name: assets/res/models/scene/xueshan_1/zhongjingzhanche_share.unity3d
       Dependencies: {}
-    Info_171:
+    Info_170:
       Name: assets/res/models/scene/xueshan_1/yuanjingshu3_share.unity3d
       Dependencies: {}
-    Info_172:
+    Info_171:
       Name: assets/res/models/scene/xueshan_1/zhongjingshu1_share.unity3d
       Dependencies: {}
-    Info_173:
+    Info_172:
       Name: assets/res/models/scene/xueshan_1/zhongjingshu3_share.unity3d
       Dependencies: {}
-    Info_174:
+    Info_173:
       Name: assets/res/models/scene/xueshan_1/yuanjingshu1_share.unity3d
       Dependencies: {}
-    Info_175:
+    Info_174:
       Name: assets/res/models/scene/xueshan_1/zhongjingshu_share.unity3d
       Dependencies: {}
-    Info_176:
+    Info_175:
       Name: assets/res/models/scene/xueshan_1/dimian_share.unity3d
       Dependencies: {}
-    Info_177:
+    Info_176:
       Name: assets/res/models/scene/xueshan_1/yuanjingzhanche1_share.unity3d
       Dependencies: {}
-    Info_178:
+    Info_177:
       Name: assets/res/models/scene/xueshan_1/zhongjingzawu_share.unity3d
       Dependencies: {}
-    Info_179:
+    Info_178:
       Name: assets/res/models/scene/xueshan_1/zhongjingzhanche1_share.unity3d
       Dependencies: {}
-    Info_180:
+    Info_179:
       Name: assets/res/models/scene/xueshan_1/zhongjingzawu1_share.unity3d
       Dependencies: {}
-    Info_181:
+    Info_180:
       Name: assets/res/models/scene/xueshan_1/zhongjingshanshi_share.unity3d
       Dependencies: {}
-    Info_182:
+    Info_181:
       Name: assets/res/models/scene/xueshan_1/qianjingzhanlan_share.unity3d
       Dependencies: {}
-    Info_183:
+    Info_182:
       Name: assets/res/models/scene/xueshan_1/zhongjingshu2_share.unity3d
       Dependencies: {}
-    Info_184:
+    Info_183:
       Name: assets/res/models/scene/testaction/materials/floor_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
-    Info_185:
+    Info_184:
       Name: assets/res/models/scene/testaction/materials/wall_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
-    Info_186:
+    Info_185:
       Name: assets/bundles/ui/fightmainwnd.unity3d
       Dependencies: {}
-    Info_187:
+    Info_186:
       Name: assets/bundles/scene/instance1.unity3d
       Dependencies:
         Dependency_0: assets/res/models/scene/xueshan_1/zhongjingzhanche_share.unity3d
@@ -981,17 +962,32 @@ AssetBundleManifest:
         Dependency_4: assets/res/models/scene/xueshan_1/yuanjingshu1_share.unity3d
         Dependency_5: assets/res/models/scene/xueshan_1/zhongjingshu_share.unity3d
         Dependency_6: assets/res/models/scene/xueshan_1/dimian_share.unity3d
+        Dependency_7: assets/res/models/scene/xueshan_1/zhongjingzawu_share.unity3d
+        Dependency_8: assets/res/models/scene/xueshan_1/zhongjingzhanche1_share.unity3d
+        Dependency_9: assets/res/models/scene/xueshan_1/zhongjingzawu1_share.unity3d
+        Dependency_10: assets/res/models/scene/xueshan_1/zhongjingshanshi_share.unity3d
+        Dependency_11: assets/res/models/scene/xueshan_1/qianjingzhanlan_share.unity3d
+        Dependency_12: assets/res/models/scene/xueshan_1/zhongjingshu2_share.unity3d
+        Dependency_13: assets/res/models/scene/testaction/materials/floor_share.unity3d
+        Dependency_14: assets/res/models/scene/testaction/materials/wall_share.unity3d
+    Info_187:
+      Name: assets/bundles/scene/instance2.unity3d
+      Dependencies:
+        Dependency_0: assets/res/models/scene/xueshan_1/zhongjingzhanche_share.unity3d
+        Dependency_1: assets/res/models/scene/xueshan_1/yuanjingshu3_share.unity3d
+        Dependency_2: assets/res/models/scene/xueshan_1/zhongjingshu1_share.unity3d
+        Dependency_3: assets/res/models/scene/xueshan_1/zhongjingshu3_share.unity3d
+        Dependency_4: assets/res/models/scene/xueshan_1/yuanjingshu1_share.unity3d
+        Dependency_5: assets/res/models/scene/xueshan_1/zhongjingshu_share.unity3d
+        Dependency_6: assets/res/models/scene/xueshan_1/dimian_share.unity3d
         Dependency_7: assets/res/models/scene/xueshan_1/yuanjingzhanche1_share.unity3d
         Dependency_8: assets/res/models/scene/xueshan_1/zhongjingzawu_share.unity3d
-        Dependency_9: assets/res/models/scene/xueshan_1/zhongjingzhanche1_share.unity3d
-        Dependency_10: assets/res/models/scene/xueshan_1/zhongjingzawu1_share.unity3d
-        Dependency_11: assets/res/models/scene/xueshan_1/zhongjingshanshi_share.unity3d
-        Dependency_12: assets/res/models/scene/xueshan_1/qianjingzhanlan_share.unity3d
-        Dependency_13: assets/res/models/scene/xueshan_1/zhongjingshu2_share.unity3d
-        Dependency_14: assets/res/models/scene/testaction/materials/floor_share.unity3d
-        Dependency_15: assets/res/models/scene/testaction/materials/wall_share.unity3d
+        Dependency_9: assets/res/models/scene/xueshan_1/zhongjingzawu1_share.unity3d
+        Dependency_10: assets/res/models/scene/xueshan_1/qianjingzhanlan_share.unity3d
+        Dependency_11: assets/res/models/scene/testaction/materials/floor_share.unity3d
+        Dependency_12: assets/res/models/scene/testaction/materials/wall_share.unity3d
     Info_188:
-      Name: assets/bundles/scene/instance2.unity3d
+      Name: assets/bundles/scene/instance3.unity3d
       Dependencies:
         Dependency_0: assets/res/models/scene/xueshan_1/zhongjingzhanche_share.unity3d
         Dependency_1: assets/res/models/scene/xueshan_1/yuanjingshu3_share.unity3d
