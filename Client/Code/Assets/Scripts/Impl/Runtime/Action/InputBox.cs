@@ -4,13 +4,27 @@ using UnityEngine;
 
 namespace ACT
 {
-    public class InputBoxExtend
+    public class InputBoxExtra
     {
-        static bool mJoystickPressed = false;
-        static public bool JoystickPressed { get { return mJoystickPressed; } }
+        private static readonly InputBoxExtra ms_instance = new InputBoxExtra();
+        public static InputBoxExtra Instance { get { return ms_instance; } }
 
-        static Vector2 mJoystickDelta = Vector2.zero;
-        static public Vector2 JoystickDelta { get { return (Time.timeScale != 0) ? mJoystickDelta : Vector2.zero; } }
+        protected InputBoxExtra()
+        {
+        }
+
+        private Func<bool> mJoystickPressedFunc;
+        private Func<Vector2> mJoystickDeltaFunc;
+
+        public void SetJoystickDelegate(Func<bool> pressedFunc, Func<Vector2> deltaFunc)
+        {
+            mJoystickPressedFunc = pressedFunc;
+            mJoystickDeltaFunc = deltaFunc;
+        }
+
+        public bool JoystickPressed { get { return null == mJoystickPressedFunc ? false : mJoystickPressedFunc(); } }
+
+        public Vector2 JoystickDelta { get { return null == mJoystickDeltaFunc ? Vector2.zero : mJoystickDeltaFunc(); } }
     }
 
     public class InputBox
@@ -68,11 +82,12 @@ namespace ACT
             UpdateKeyStatus(deltaTime);
             UpdateMoveInput(deltaTime);
 
-            mInputVector = new Vector2(InputBoxExtend.JoystickDelta.x, -InputBoxExtend.JoystickDelta.y);
+            mInputVector = InputBoxExtra.Instance.JoystickDelta;
+            mInputVector.y = -mInputVector.y;
 
             if (mInputVector == Vector2.zero)
             {
-                if (InputBoxExtend.JoystickPressed)
+                if (InputBoxExtra.Instance.JoystickPressed)
                     mInputVector = mLastInputVector;
                 else
                     mInputVector = new Vector2(Input.GetAxis("Horizontal"), -Input.GetAxis("Vertical"));

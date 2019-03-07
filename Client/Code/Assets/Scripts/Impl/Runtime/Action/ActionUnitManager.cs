@@ -21,6 +21,14 @@ namespace ACT
             mUnits.Add(actUnit);
         }
 
+        public void Update(float deltaTime)
+        {
+            for (int i = 0, max = mUnits.Count; i < max; ++i)
+            {
+                mUnits[i].Update(deltaTime);
+            }
+        }
+
         public void Remove(IActUnit actUnit)
         {
             mUnits.Remove(actUnit);

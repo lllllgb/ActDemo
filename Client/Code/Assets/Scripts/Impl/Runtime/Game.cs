@@ -59,8 +59,9 @@ namespace AosHotfixRunTime
             ProcedureMgr.AddProcedure<ProcedureLogin>();
             ProcedureMgr.AddProcedure<ProcedureChangeScene>();
             ProcedureMgr.AddProcedure<ProcedureMain>();
+            ProcedureMgr.AddProcedure<ProcedurePVE>();
 
-            ProcedureMgr.StartProcedure<ProcedureTestAction>();
+            ProcedureMgr.StartProcedure<ProcedurePVE>();
         }
 
         static void InitActionSystem()
@@ -72,6 +73,9 @@ namespace AosHotfixRunTime
 
             //特效
             ACT.ActionSystem.Instance.SpawnEffectDelegate = () => { return PoolMgr.GetObjectPool<EffectObject>().Spawn(); };
+
+            //
+            ACT.InputBoxExtra.Instance.SetJoystickDelegate(UGUIJoystick.JoystickPressed, UGUIJoystick.JoystickDelta);
         }
 
         static void LoadTbl()
