@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1151383432
+CRC: 2398538288
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f114addb70c457583dfcfee4d1848381
+    Hash: a9859e6f6f7c20792e2d789b58e78962
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6441f4c48b8293a736413520ea1a9530
@@ -41,3 +41,4 @@ Dependencies:
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_dg_fsw_007_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_dg_fsw_009_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_dg_fsw_008_share.unity3d

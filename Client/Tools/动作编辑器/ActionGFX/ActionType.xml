@@ -37690,9 +37690,10 @@
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
+                  <TriggerTime>40</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -37743,7 +37744,7 @@
                   <AttackeeLash />
                   <AttackeeTime>0</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_b0001_fsw_skill1_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -37776,9 +37777,10 @@
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
+                  <TriggerTime>55</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill2" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -37846,7 +37848,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
+                  <HitedEffect>E_b0001_fsw_skill1_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
