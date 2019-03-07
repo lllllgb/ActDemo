@@ -126,7 +126,9 @@ ModelImporter:
     400118: Dummy001
     400120: //RootNode
     7400000: Take 001
+    7400002: m0001@hit_down
     9500000: //RootNode
+    11100000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
