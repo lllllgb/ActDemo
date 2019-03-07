@@ -38993,8 +38993,8 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>50</TriggerTime>
-                  <Duration>500</Duration>
+                  <TriggerTime>46</TriggerTime>
+                  <Duration>600</Duration>
                   <MovingSpeed />
                   <Path>
                     <PathNode Z="150" />
