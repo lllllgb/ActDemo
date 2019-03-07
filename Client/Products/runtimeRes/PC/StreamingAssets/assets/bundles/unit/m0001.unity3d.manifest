@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2632360289
+CRC: 409500644
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e90e81b2e812d8d14da49e11c8ccceaa
+    Hash: 975d5a6ed7379cf8e13db5b257b1931b
   TypeTreeHash:
     serializedVersion: 2
     Hash: d74f6a97f2340464ebb374e24c1ad675
@@ -30,4 +30,4 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Unit/m0001.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

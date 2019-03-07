@@ -141,6 +141,9 @@ ModelImporter:
     100270: wp_1
     100272: wp_2
     100274: wp_3
+    100276: bottomNode
+    100278: midNode
+    100280: topNode
     400000: //RootNode
     400002: 1001
     400004: Bip001
@@ -279,6 +282,9 @@ ModelImporter:
     400270: wp_1
     400272: wp_2
     400274: wp_3
+    400276: bottomNode
+    400278: midNode
+    400280: topNode
     2100000: 1001
     2300000: 1001
     3300000: 1001

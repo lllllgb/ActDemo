@@ -56,6 +56,9 @@ ModelImporter:
     100100: m0002_b
     100102: m0002_h
     100104: m0002_w
+    100106: bottomNode
+    100108: midNode
+    100110: topNode
     400000: Bip001
     400002: Bip001 Head
     400004: Bip001 HeadNub
@@ -109,6 +112,9 @@ ModelImporter:
     400100: m0002_b
     400102: m0002_h
     400104: m0002_w
+    400106: bottomNode
+    400108: midNode
+    400110: topNode
     2100000: 'Material #0'
     2100002: Npc008_Head
     2100004: Npc008_body
@@ -118,6 +124,7 @@ ModelImporter:
     4300006: m0002_b
     4300008: m0002_h
     4300010: m0002_w
+    7400000: SKM_Npc008_02
     9500000: //RootNode
     11100000: //RootNode
     13700000: Npc008_body

@@ -3,7 +3,7 @@ CRC: 2639448681
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 14b82161038775c233db1f6ba9025ae9
+    Hash: c1ad69eae0216b8cc2ee30339ebff5dc
   TypeTreeHash:
     serializedVersion: 2
     Hash: d74f6a97f2340464ebb374e24c1ad675
@@ -30,4 +30,4 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Unit/ms_shoufukuilei.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

@@ -68,6 +68,9 @@ ModelImporter:
     100124: T_Npc033_Bd_C
     100126: T_Npc033_Hd_C
     100128: T_Npc033_Wp_C
+    100130: bottomNode
+    100132: midNode
+    100134: topNode
     400000: Bip001 HeadNub
     400002: Bip001 L Finger0Nub
     400004: Bip001 L Thigh
@@ -133,13 +136,18 @@ ModelImporter:
     400124: T_Npc033_Bd_C
     400126: T_Npc033_Hd_C
     400128: T_Npc033_Wp_C
+    400130: bottomNode
+    400132: midNode
+    400134: topNode
     2100000: 'Material #0'
     2100002: 'Material #4'
     2100004: 'Material #3'
     4300000: T_Npc033_Hd_C
     4300002: T_Npc033_Bd_C
     4300004: T_Npc033_Wp_C
+    7400000: m0001
     9500000: //RootNode
+    11100000: //RootNode
     13700000: T_Npc033_Bd_C
     13700002: T_Npc033_Hd_C
     13700004: T_Npc033_Wp_C

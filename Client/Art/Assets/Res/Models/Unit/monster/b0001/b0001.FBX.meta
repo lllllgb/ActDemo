@@ -85,6 +85,9 @@ ModelImporter:
     100158: Dummy002
     100160: Root
     100162: Wp01
+    100164: bottomNode
+    100166: midNode
+    100168: topNode
     400000: //RootNode
     400002: Baishanglu_BD
     400004: Baishanglu_HD
@@ -167,6 +170,9 @@ ModelImporter:
     400158: Dummy002
     400160: Root
     400162: Wp01
+    400164: bottomNode
+    400166: midNode
+    400168: topNode
     2100000: Baishanglu_Wuqi
     2100002: Baishanglu_HD
     2100004: Baishanglu_BD

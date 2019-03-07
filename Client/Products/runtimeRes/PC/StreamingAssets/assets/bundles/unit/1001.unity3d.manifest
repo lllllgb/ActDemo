@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1232492336
+CRC: 2384282960
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ceb29a52f1fc09face5583a24e7f71d9
+    Hash: 7f142442cb44e8e3de11513696dfefe3
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2307ade049dbdc078e95085d90db243c
+    Hash: d2b838f4e692e32f6de3608d012b797e
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -31,7 +31,12 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 137
   Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
 Assets:
 - Assets/Bundles/Unit/1001.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
