@@ -134,8 +134,7 @@ namespace AosHotfixFramework
             if (null == tmpInstance)
                 tmpInstance = Activator.CreateInstance<T>();
 
-            tmpInstance.IsFromPool = true;
-
+            tmpInstance.OnInit();
             return tmpInstance;
         }
 

@@ -33,21 +33,21 @@ namespace AosHotfixRunTime
             ResourcesMgr.LoadBundleByType(EABType.UI, "UIRoot");
             GameObject tmpUIRoot = Hotfix.Instantiate(ResourcesMgr.GetAssetByType<GameObject>(EABType.UI, "UIRoot"));
             GameObject.DontDestroyOnLoad(tmpUIRoot);
-            CameraHelper.InitUICamera(tmpUIRoot);
-            WindowsMgr.SetWindowsRoot(CameraHelper.UICanvasRootGo.transform);
+            CameraMgr.Instance.InitUICamera(tmpUIRoot);
+            WindowsMgr.SetWindowsRoot(CameraMgr.Instance.UICanvasRootGo.transform);
 
             ////主相机
             ResourcesMgr.LoadBundleByType(EABType.Misc, "CameraControl");
             GameObject tmpMainCameraGo = Hotfix.Instantiate(ResourcesMgr.GetAssetByType<GameObject>(EABType.Misc, "CameraControl"));
             GameObject.DontDestroyOnLoad(tmpMainCameraGo);
-            CameraHelper.Init(tmpMainCameraGo);
+            CameraMgr.Instance.Init(tmpMainCameraGo);
 
             ////HUD相机
-            //ResourcesMgr.LoadBundleByType(EABType.Misc, "HUD");
-            //GameObject tmpHudGo = ResourcesMgr.GetAssetByType<GameObject>(EABType.Misc, "HUD");
-            //tmpHudGo = Hotfix.Instantiate(tmpHudGo);
-            //GameObject.DontDestroyOnLoad(tmpHudGo);
-            //CameraHelper.InitHudCamera(tmpHudGo);
+            ResourcesMgr.LoadBundleByType(EABType.Misc, "HUD");
+            GameObject tmpHudGo = ResourcesMgr.GetAssetByType<GameObject>(EABType.Misc, "HUD");
+            tmpHudGo = Hotfix.Instantiate(tmpHudGo);
+            GameObject.DontDestroyOnLoad(tmpHudGo);
+            CameraMgr.Instance.InitHudCamera(tmpHudGo);
 
             LoadTbl();
             InitActionSystem();

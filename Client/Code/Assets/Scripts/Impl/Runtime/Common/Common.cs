@@ -79,12 +79,6 @@ namespace AosHotfixRunTime
         Max,
     }
 
-
-    public static class GameDefine
-    {
-        public static Camera CurrentCamera { get; set; }
-    }
-
     public static class ExtraParams
     {
 

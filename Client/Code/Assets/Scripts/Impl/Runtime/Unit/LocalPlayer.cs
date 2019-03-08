@@ -20,7 +20,7 @@ namespace AosHotfixRunTime
             base.Init();
             
             mController = new ACT.Controller();
-            mController.Init(this, CameraHelper.CameraRootGo.transform);
+            mController.Init(this, CameraMgr.Instance.CameraRootGo.transform);
         }
 
         public override void LateUpdate(float deltaTime)

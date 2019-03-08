@@ -24,7 +24,7 @@ namespace ACT
         bool mOnStarightHit = false;
         int mActionTime = 0;
         int mActionKey = -1;
-        int mEventIndex = 0;
+        int mEventFlag = 0;
         int mHitDefIndex = 0;
         int mActionInterruptEnabled = 0;
         ActData.HeightStatusFlag mHeightState = ActData.HeightStatusFlag.None;
@@ -129,7 +129,7 @@ namespace ACT
 
         void Reset()
         {
-            mEventIndex = 0;
+            mEventFlag = 0;
             mHitDefIndex = 0;
             mActionTime = 0;
             mActionKey = -1;
@@ -178,6 +178,9 @@ namespace ACT
 
                 if (mActiveAction.Id[0] == 'N' && SkillItem != null)
                     SkillItem = null;
+
+                for (int i = 0, max = mActiveAction.Events.Count; i < max; ++i)
+                    mEventFlag |= (1 << i);
             }
 
             mActionEffectMgr.Clear();
@@ -496,24 +499,32 @@ namespace ACT
         //---------------------------------------------------------------------
         bool ProcessEventList(int nextKey, int deltaTime)
         {
-            if (mActiveAction.Events.Count == 0 || mEventIndex >= mActiveAction.Events.Count)
+            if (mActiveAction.Events.Count == 0 || 0 == mEventFlag)
                 return false;
 
             bool ret = false;
-            while (mEventIndex < mActiveAction.Events.Count)
-            {
-                ActData.Event actionEvent = mActiveAction.Events[mEventIndex];
-                if (actionEvent.TriggerTime > nextKey)
-                    break;
 
-                // trigger this event.
+            for (int i = 0, max = mActiveAction.Events.Count; i < max; ++i)
+            {
+                ActData.Event actionEvent = mActiveAction.Events[i];
+
+                if (actionEvent.TriggerTime > nextKey)
+                    continue;
+
+                int tmpCurrFlag = 1 << i;
+
+                if ((mEventFlag & tmpCurrFlag) == 0)
+                    continue;
+
+                mEventFlag &= (~tmpCurrFlag);
+                
                 if (OnTriggerEvent(actionEvent, deltaTime))
                 {
                     TriggerEvent(actionEvent, deltaTime);
                     ret = true;
                 }
-                mEventIndex++;
             }
+
             return ret;
         }
 

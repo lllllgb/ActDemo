@@ -7,16 +7,20 @@ using AosHotfixFramework;
 
 namespace AosHotfixRunTime
 {
-    public abstract class Unit : ACT.ActUnit
+
+    public abstract partial class Unit : ACT.ActUnit
     {
-        protected BuffManager mBuffManager;
-        
-        public BuffManager BuffManager { get { return mBuffManager; } }
 
         public override int CurHp { get { return GetAttrib(EPA.CurHP); } }
         public override int HpMax { get { return GetAttrib(EPA.HPMax); } }
         public override int Speed { get { return 300; } }
         public override bool CanHurt { get { return true; } }
+        
+        public EUnitType UnitType { get; private set; }
+        public string Name { get; private set; }
+        public Transform TopNode { get; private set; }
+        public Transform MidNode { get; private set; }
+        public Transform BottomNode { get; private set; }
 
         public Unit(int unitID)
         {
@@ -46,6 +50,16 @@ namespace AosHotfixRunTime
             tmpGo.transform.localEulerAngles = new Vector3(0, 90, 0);
             ActionID = tmpUnitBase.ActionID;
             InitActUnit(tmpGo, tmpGo.transform.Find("model"));
+
+            UnitType = EUnitType.EUT_LocalPlayer;
+            AddComponent<UnitHudInfoComponent>();
+        }
+
+        public override void Update(float deltaTime)
+        {
+            base.Update(deltaTime);
+
+            UpdateComponents(deltaTime);
         }
 
         public virtual void LateUpdate(float deltaTime)
@@ -72,10 +86,6 @@ namespace AosHotfixRunTime
 
             return result;
         }
-
-        public virtual void AddBuff(int id)
-        {
-            mBuffManager.AddBuff(id);
-        }
+        
     }
 }
