@@ -34811,6 +34811,12 @@
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_fly_attack" BindMode="1" Duration="500" />
                 </Event>
+                <Event>
+                  <TriggerTime>40</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="200" Duration="500" />
+                </Event>
               </Events>
               <ActionInterrupts />
               <AttackDefs>
@@ -35484,6 +35490,12 @@
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill1" OffsetZ="50" BindMode="1" Duration="1000" />
+                </Event>
+                <Event>
+                  <TriggerTime>55</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="200" Duration="500" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -36417,6 +36429,12 @@
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill4_002" BindMode="1" Duration="1000" />
                 </Event>
+                <Event>
+                  <TriggerTime>10</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="200" BindMode="1" Duration="500" />
+                </Event>
               </Events>
               <ActionInterrupts />
               <AttackDefs>
@@ -36537,6 +36555,12 @@
                   <EventTypeInt>8</EventTypeInt>
                   <EventDetailData xsi:type="EventSetVelocity" />
                 </Event>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_zhi01" OffsetY="200" Duration="500" />
+                </Event>
               </Events>
               <ActionInterrupts />
               <AttackDefs>
@@ -36656,6 +36680,12 @@
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill6_001" OffsetY="80" Duration="1500" />
                 </Event>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_po01" OffsetY="200" Duration="500" />
+                </Event>
               </Events>
               <ActionInterrupts />
               <AttackDefs>
@@ -36771,6 +36801,24 @@
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill7_002" Duration="2000" />
+                </Event>
+                <Event>
+                  <TriggerTime>45</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_zhi01" OffsetY="200" Duration="500" />
+                </Event>
+                <Event>
+                  <TriggerTime>55</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_zhi01" OffsetY="200" Duration="500" />
+                </Event>
+                <Event>
+                  <TriggerTime>70</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="200" Duration="500" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -36996,6 +37044,11 @@
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill8" OffsetX="-100" BindMode="1" Duration="1000" />
                 </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_po01" OffsetY="200" Duration="500" />
+                </Event>
               </Events>
               <ActionInterrupts />
               <AttackDefs>
@@ -37125,6 +37178,7 @@
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill9_001" Duration="5000" />
                 </Event>
                 <Event>
+                  <TriggerTime>10</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill9_002" Duration="5000" />
@@ -37202,7 +37256,13 @@
               <AnimTime>150</AnimTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>2</ActionStatus>
-              <Events />
+              <Events>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_zhi01" OffsetY="200" Duration="500" />
+                </Event>
+              </Events>
               <ActionInterrupts />
               <AttackDefs />
               <CanHurt>true</CanHurt>
