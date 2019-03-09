@@ -1,0 +1,13 @@
+﻿
+message MonsterAttrBase [key=ID+Level,excel="MonsterAttrBase.xlsx"]
+{
+	int32 		ID                           	 [option = "单位id"];
+	int32 		Level                            [option = "等级"];
+	int32 		MaxHp                            [option = "最大生命值"];
+	int32 		HpRestore                        [option = "生命恢复"];
+	int32 		MaxDp                            [option = "最大防御值"];
+	int32 		DpRestore                        [option = "防御点恢复"];
+	int32 		Attack                           [option = "攻击"];
+	int32 		Defense                          [option = "防御"];
+	int32 		Speed                            [option = "移动速度"];
+}

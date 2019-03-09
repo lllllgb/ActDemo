@@ -33,8 +33,8 @@ namespace AosHotfixRunTime
 
         void OnSceneLoaded()
         {
-            mLocalPlayer = new LocalPlayer(1003);
-            mLocalPlayer.Init();
+            mLocalPlayer = new LocalPlayer();
+            mLocalPlayer.Init(1003, 1);
             ACT.ActionSystem.Instance.ActUnitMgr.Add(mLocalPlayer);
             ACT.ActionSystem.Instance.ActUnitMgr.LocalPlayer = mLocalPlayer;
 

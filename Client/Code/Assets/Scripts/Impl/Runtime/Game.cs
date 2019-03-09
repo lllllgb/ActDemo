@@ -54,7 +54,6 @@ namespace AosHotfixRunTime
 
             //流程
             ProcedureMgr.Initialize(FsmMgr);
-            ProcedureMgr.AddProcedure<ProcedureTestAction>();
             ProcedureMgr.AddProcedure<ProcedureCheckVersion>();
             ProcedureMgr.AddProcedure<ProcedureLogin>();
             ProcedureMgr.AddProcedure<ProcedureChangeScene>();

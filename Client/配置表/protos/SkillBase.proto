@@ -1,0 +1,8 @@
+﻿
+message SkillBase [key=ID,excel="SkillBase.xlsx"]
+{
+	int32 		ID                           	  [option = "技能id"];
+	string 		Name                              [option = "技能名称"];
+	string 		Icon                              [option = "技能图标"];
+	string 		Desc                              [option = "技能描述"];
+}

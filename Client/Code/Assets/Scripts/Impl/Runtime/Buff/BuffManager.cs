@@ -78,13 +78,7 @@ namespace AosHotfixRunTime
             switch (attrib)
             {
                 case EPA.CurHP:
-                    mOwner.AddHp(mOwner.GetAttrib(EPA.HPMax) * multipy / 10000 + add);
-                    break;
-                case EPA.CurSoul:
-                    mOwner.AddSoul(mOwner.GetAttrib(EPA.SoulMax) * multipy / 10000 + add);
-                    break;
-                case EPA.CurAbility:
-                    mOwner.AddAbility(mOwner.GetAttrib(EPA.AbilityMax) * multipy / 10000 + add);
+                    mOwner.AddHp(mOwner.GetAttrib(EPA.MaxHP) * multipy / 10000 + add);
                     break;
                 default:
                     mBuffMultipy[(int)attrib] += multipy;

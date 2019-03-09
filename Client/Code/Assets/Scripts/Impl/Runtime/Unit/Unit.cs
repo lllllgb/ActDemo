@@ -12,7 +12,7 @@ namespace AosHotfixRunTime
     {
 
         public override int CurHp { get { return GetAttrib(EPA.CurHP); } }
-        public override int HpMax { get { return GetAttrib(EPA.HPMax); } }
+        public override int HpMax { get { return GetAttrib(EPA.MaxHP); } }
         public override int Speed { get { return 300; } }
         public override bool CanHurt { get { return true; } }
         
@@ -22,13 +22,17 @@ namespace AosHotfixRunTime
         public Transform MidNode { get; private set; }
         public Transform BottomNode { get; private set; }
 
-        public Unit(int unitID)
+        public Unit()
         {
-            UnitID = unitID;
         }
 
-        public virtual void Init()
+        protected void Init(int unitID, int level, EUnitType unitType, ACT.EUnitCamp unitCamp)
         {
+            UnitID = unitID;
+            Level = level;
+            UnitType = unitType;
+            Camp = unitCamp;
+
             UnitBase tmpUnitBase = UnitBaseManager.instance.Find(UnitID);
 
             if (null == tmpUnitBase)
@@ -37,6 +41,7 @@ namespace AosHotfixRunTime
                 return;
             }
 
+            ActionID = tmpUnitBase.ActionID;
             Game.ResourcesMgr.LoadBundleByType(EABType.Unit, tmpUnitBase.Prefab);
             GameObject tmpGo = Game.ResourcesMgr.GetAssetByType<GameObject>(EABType.Unit, tmpUnitBase.Prefab);
 
@@ -48,11 +53,8 @@ namespace AosHotfixRunTime
 
             tmpGo = Hotfix.Instantiate(tmpGo);
             tmpGo.transform.localEulerAngles = new Vector3(0, 90, 0);
-            ActionID = tmpUnitBase.ActionID;
             InitActUnit(tmpGo, tmpGo.transform.Find("model"));
-
-            UnitType = EUnitType.EUT_LocalPlayer;
-            AddComponent<UnitHudInfoComponent>();
+            UpdateAttributes();
         }
 
         public override void Update(float deltaTime)
@@ -66,8 +68,20 @@ namespace AosHotfixRunTime
         {
         }
 
-        public virtual void UpdateAttributes()
+        public override void Dispose()
         {
+            base.Dispose();
+            
+            GameObject.Destroy(UGameObject);
+        }
+
+        //更新属性
+        public abstract void UpdateAttributes();
+
+        //名字
+        public void SetName(string name)
+        {
+            Name = name;
         }
 
         public abstract bool Hurt(Unit attacker, int damage, ACT.ECombatResult result);

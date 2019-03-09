@@ -1,0 +1,9 @@
+﻿
+message SkillAttrBase [key=ID,excel="SkillAttrBase.xlsx"]
+{
+	int32 		ID                           	  [option = "技能id"];
+	int32 		Level                             [option = "技能等级"];
+	int32 		CD                                [option = "冷却时间"];
+	int32 		DamageBase                        [option = "伤害基础值"];
+	int32 		DamageCoff                        [option = "伤害影响系数"];
+}

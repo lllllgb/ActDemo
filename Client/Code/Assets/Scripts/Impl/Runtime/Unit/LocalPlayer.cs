@@ -11,13 +11,13 @@ namespace AosHotfixRunTime
         ACT.Controller mController;
         public ACT.Controller Controller { get { return mController; } }
 
-        public LocalPlayer(int unitID) : base(unitID)
+        public LocalPlayer() : base()
         {
         }
 
-        public override void Init()
+        public void Init(int unitID, int level)
         {
-            base.Init();
+            base.Init(unitID, level, EUnitType.EUT_LocalPlayer, ACT.EUnitCamp.EUC_FRIEND);
             
             mController = new ACT.Controller();
             mController.Init(this, CameraMgr.Instance.CameraRootGo.transform);
@@ -29,18 +29,6 @@ namespace AosHotfixRunTime
 
             mController.LateUpdate();
         }
-        //public void LinkSkill(SkillInput skillInput, int interruptIndex)
-        //{
-        //    ActionStatus.LinkAction(
-        //        ActionStatus.ActiveAction.ActionInterrupts[interruptIndex],
-        //        skillInput);
-        //}
-
-        //public void PlaySkill(SkillItem skillItem, string action)
-        //{
-        //    ActionStatus.SkillItem = skillItem;
-        //    PlayAction(action);
-        //}
     }
 }
 

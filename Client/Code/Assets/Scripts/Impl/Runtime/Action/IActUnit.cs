@@ -73,7 +73,7 @@ namespace ACT
 
         void PlayAnimation(ActData.Action action, float speed);
 
-        void Destory();
+        void Dispose();
 
         void BeginStaight();
 
