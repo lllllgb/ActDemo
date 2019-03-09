@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1639013157
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 555c368b0aa0bffe07e15c10a4bd2fb2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 460b4f5d62b6facbccf7c01637df8f00
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Icon/Role/1001.png
+Dependencies: []

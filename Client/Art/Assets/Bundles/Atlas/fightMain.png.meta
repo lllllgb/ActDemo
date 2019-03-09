@@ -343,7 +343,7 @@ TextureImporter:
       tessellationDetail: -1
     outline: []
     physicsShape: []
-  spritePackingTag: 
+  spritePackingTag: FightMainWnd
   userData: 
-  assetBundleName: 
+  assetBundleName: assets/bundles/atlas/fightmain.unity3d
   assetBundleVariant: 

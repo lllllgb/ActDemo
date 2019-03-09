@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2348427934
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 476958ec6cfe9685e524471f65c66410
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Icon/Skill/1004_wufengzhongjian.png
+Dependencies: []

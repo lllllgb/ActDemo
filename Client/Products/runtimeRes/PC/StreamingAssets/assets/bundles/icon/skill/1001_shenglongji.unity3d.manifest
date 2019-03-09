@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 4221673921
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6bf524fd66e7d1650a2570a0e7943823
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Icon/Skill/1001_shenglongji.png
+Dependencies: []

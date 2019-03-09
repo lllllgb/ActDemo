@@ -1,10 +1,8 @@
 fileFormatVersion: 2
 guid: 5f355baf46182894592b5284cbb089ce
-timeCreated: 1527155547
-licenseType: Pro
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 100100000
   userData: 
-  assetBundleName: assets/bundles/misc/hud.unity3d
+  assetBundleName: assets/bundles/misc/hudroot.unity3d
   assetBundleVariant: 

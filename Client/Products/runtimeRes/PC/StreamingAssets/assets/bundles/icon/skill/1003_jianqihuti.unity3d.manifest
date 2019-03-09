@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 385487660
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 292e0bac64c9abe76e20c6a5f3ff8628
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Icon/Skill/1003_jianqihuti.png
+Dependencies: []

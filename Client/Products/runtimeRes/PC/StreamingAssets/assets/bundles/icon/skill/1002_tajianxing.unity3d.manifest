@@ -1,18 +1,16 @@
 ManifestFileVersion: 0
-CRC: 3341845874
+CRC: 1583360458
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 93d888affc7852f2d53b406b9ce955f1
+    Hash: 8990a263b826b4e95d3c82207c65f659
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 0a9d000c67bb3b371a8c4e0fe8b14a8f
+    Hash: c73412a662fd4e4f36af34cbdf078b85
 HashAppended: 0
 ClassTypes:
-- Class: 1
-  Script: {instanceID: 0}
-- Class: 4
+- Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Bundles/Atlas/Temp.prefab
+- Assets/Bundles/Icon/Skill/1002_tajianxing.png
 Dependencies: []

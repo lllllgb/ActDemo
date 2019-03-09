@@ -37168,20 +37168,20 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>3600</AnimTime>
+              <AnimTime>3800</AnimTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill9_001" Duration="5000" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill9_001" StopMode="1" Duration="5000" />
                 </Event>
                 <Event>
                   <TriggerTime>10</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill9_002" Duration="5000" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill9_002" StopMode="1" Duration="5000" />
                 </Event>
               </Events>
               <ActionInterrupts />
@@ -38617,7 +38617,7 @@
       <ID>10003</ID>
       <UnitVaribleList />
       <ActionGroups>
-        <ActionGroup SpasticityCD="300">
+        <ActionGroup SpasticityCD="10000" HasCollision="true">
           <ActionList>
             <Action>
               <ID>get_up</ID>
