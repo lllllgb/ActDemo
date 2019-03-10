@@ -34197,6 +34197,17 @@
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_attack_002" BindMode="1" Duration="500" />
                 </Event>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="150" />
+                </Event>
+                <Event>
+                  <TriggerTime>30</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
@@ -34315,7 +34326,7 @@
                 <Event>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="150" />
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="300" />
                 </Event>
                 <Event>
                   <TriggerTime>30</TriggerTime>
@@ -36300,7 +36311,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>300</AnimTime>
+              <AnimTime>500</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -36762,7 +36773,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>600</AnimTime>
+              <AnimTime>800</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events />
               <ActionInterrupts>
@@ -37142,7 +37153,6 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>800</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events />
               <ActionInterrupts>
