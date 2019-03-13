@@ -34075,7 +34075,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>200</AnimTime>
+              <AnimTime>250</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -34120,7 +34120,6 @@
                   <Offset />
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>10</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -34246,7 +34245,7 @@
                   <AttackerStraightTime>100</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>10</AttackeeStraightTime>
+                  <AttackeeStraightTime>30</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -34315,7 +34314,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>330</AnimTime>
+              <AnimTime>450</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -34371,7 +34370,7 @@
                   <Offset />
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>50</AttackeeStraightTime>
+                  <AttackeeStraightTime>100</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -34442,7 +34441,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>700</AnimTime>
+              <AnimTime>800</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -34512,7 +34511,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Z>-200</Z>
+                    <Z>-400</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
@@ -34813,7 +34812,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>500</AnimTime>
+              <AnimTime>600</AnimTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>2</ActionStatus>
               <Events>
@@ -35286,7 +35285,7 @@
                 <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill8_g" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
@@ -35385,7 +35384,7 @@
                 <ActionInterrupt ActionID="skill5_g" CheckInput1="true" InputKey1="10" CheckInput2="true" InputKey2="10" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill6_g" CheckInput1="true" InputKey1="11" CheckInput2="true" InputKey2="11" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill7_g" CheckInput1="true" InputKey1="12" CheckInput2="true" InputKey2="12" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="skill8_g" CheckInput1="true" InputKey1="13" CheckInput2="true" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill8_q" CheckInput1="true" InputKey1="13" CheckInput2="true" InputKey2="13" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_q" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" CheckInput2="true" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" CheckInput2="true" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
@@ -35494,7 +35493,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>200</AnimTime>
+              <AnimTime>350</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -35521,8 +35520,7 @@
                   <Duration>400</Duration>
                   <MovingSpeed />
                   <Path>
-                    <PathNode Z="80" />
-                    <PathNode Ratio="100" Y="300" Z="80" />
+                    <PathNode Z="100" />
                   </Path>
                   <HitCount>10</HitCount>
                   <PassNum>1</PassNum>
@@ -35531,12 +35529,12 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="200" Length="150" />
+                  <AttackType xsi:type="FrameCuboid" Width="50" Height="200" Length="200" />
                   <Offset />
-                  <AttackerStraightTime>150</AttackerStraightTime>
+                  <AttackerStraightTime>100</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>150</AttackeeStraightTime>
+                  <AttackeeStraightTime>100</AttackeeStraightTime>
                   <HitResult>KnockOut</HitResult>
                   <GroundHit>
                     <AttackeeLash />
@@ -35548,10 +35546,10 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
-                    <Y>500</Y>
-                    <Z>-100</Z>
+                    <Y>600</Y>
+                    <Z>-200</Z>
                   </AttackeeLash>
-                  <AttackeeTime>200</AttackeeTime>
+                  <AttackeeTime>300</AttackeeTime>
                   <HoldOffset />
                   <HitedEffect>E_1001_fsw_fly_attack_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
@@ -35929,11 +35927,13 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="100" Length="150" />
+                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="150" />
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
+                  <AttackerStraightTime>50</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>50</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -36082,11 +36082,13 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="100" Length="150" />
+                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="150" />
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
+                  <AttackerStraightTime>50</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>50</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -36216,11 +36218,14 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="100" Length="150" />
+                  <AttackType xsi:type="FrameCuboid" Width="50" Height="50" Length="150" />
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
+                  <AttackerStraightTime>50</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>100</AttackeeStraightTime>
+                  <HitResult>KnockOut</HitResult>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -36231,6 +36236,7 @@
                     <AttackeeLash />
                   </HighAirHit>
                   <AttackeeLash>
+                    <Y>500</Y>
                     <Z>-100</Z>
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
@@ -36430,7 +36436,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>400</AnimTime>
+              <AnimTime>600</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -36444,7 +36450,7 @@
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill4_002" BindMode="1" Duration="1000" />
                 </Event>
                 <Event>
-                  <TriggerTime>10</TriggerTime>
+                  <TriggerTime>30</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="200" BindMode="1" Duration="500" />
@@ -36458,19 +36464,20 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>13</TriggerTime>
+                  <TriggerTime>30</TriggerTime>
                   <Duration>1000</Duration>
                   <MovingSpeed />
                   <Path>
                     <PathNode Y="50" Z="100" />
                   </Path>
+                  <HitCount>10</HitCount>
                   <PassNum>1</PassNum>
                   <FrameFinalFactor>
                     <X>1</X>
                     <Y>1</Y>
                     <Z>1</Z>
                   </FrameFinalFactor>
-                  <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="300" />
+                  <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="350" />
                   <Offset />
                   <AttackerStraightTime>200</AttackerStraightTime>
                   <AttackerLash />
@@ -36492,7 +36499,7 @@
                   </AttackeeLash>
                   <AttackeeTime>20</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_fsw_skill4_hit</HitedEffect>
+                  <HitedEffect>E_1001_fsw_skill8_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36600,9 +36607,10 @@
                   <AttackType xsi:type="FrameCuboid" Width="50" Height="150" Length="200" />
                   <Offset />
                   <FllowReleaser>1</FllowReleaser>
+                  <AttackerStraightTime>100</AttackerStraightTime>
                   <AttackerLash />
                   <AttackerTime>0</AttackerTime>
-                  <AttackeeStraightTime>800</AttackeeStraightTime>
+                  <AttackeeStraightTime>600</AttackeeStraightTime>
                   <GroundHit>
                     <AttackeeLash />
                   </GroundHit>
@@ -36686,7 +36694,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>150</AnimTime>
+              <AnimTime>300</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -36878,7 +36886,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_fsw_attack_hit</HitedEffect>
+                  <HitedEffect>E_1001_fsw_skill8_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36934,7 +36942,7 @@
                   </AttackeeLash>
                   <AttackeeTime>100</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_fsw_attack_hit</HitedEffect>
+                  <HitedEffect>E_1001_fsw_skill8_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -36990,7 +36998,7 @@
                   </AttackeeLash>
                   <AttackeeTime>200</AttackeeTime>
                   <HoldOffset />
-                  <HitedEffect>E_1001_fsw_attack_hit</HitedEffect>
+                  <HitedEffect>E_1001_fsw_skill8_hit</HitedEffect>
                   <HitedEffectDuration>200</HitedEffectDuration>
                   <HitedEffectOffset>
                     <Y>100</Y>
@@ -37135,7 +37143,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>150</AnimTime>
+              <AnimTime>300</AnimTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>2</ActionStatus>
               <Events />
@@ -37191,7 +37199,6 @@
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill9_001" StopMode="1" Duration="5000" />
                 </Event>
                 <Event>
-                  <TriggerTime>10</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill9_002" StopMode="1" Duration="5000" />
@@ -37266,7 +37273,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>150</AnimTime>
+              <AnimTime>300</AnimTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>2</ActionStatus>
               <Events>
