@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Scene
+  - HudInfo
+  - HudPopup
   - 
   - 
   - 

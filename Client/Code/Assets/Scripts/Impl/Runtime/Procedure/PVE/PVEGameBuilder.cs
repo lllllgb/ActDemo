@@ -11,7 +11,7 @@ namespace AosHotfixRunTime
 
         public void Init()
         {
-            SceneLoader.Instance.LoadScene("Instance0", OnSceneLoaded);
+            SceneLoader.Instance.LoadScene("Instance1", OnSceneLoaded);
         }
 
         public void Update(float deltaTime)
@@ -37,6 +37,10 @@ namespace AosHotfixRunTime
             mLocalPlayer.Init(1003, 1);
             ACT.ActionSystem.Instance.ActUnitMgr.Add(mLocalPlayer);
             ACT.ActionSystem.Instance.ActUnitMgr.LocalPlayer = mLocalPlayer;
+
+            var tmpMonster = new Monster();
+            tmpMonster.Init(1004, 1);
+            ACT.ActionSystem.Instance.ActUnitMgr.Add(tmpMonster);
 
             Game.WindowsMgr.ShowWindow<FightMainWnd>();
         }

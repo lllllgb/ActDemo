@@ -3,7 +3,7 @@ CRC: 377286029
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8fcb8116c5402ffa2087ee4a621b6206
+    Hash: 955e3516673b96a82ccdf1fce8b57bf7
   TypeTreeHash:
     serializedVersion: 2
     Hash: d74f6a97f2340464ebb374e24c1ad675
@@ -30,4 +30,4 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Unit/m0002.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

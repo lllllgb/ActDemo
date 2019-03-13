@@ -7,27 +7,33 @@ using AosBaseFramework;
 
 namespace AosHotfixRunTime
 {
-    interface IPopupStart
+    interface IPopupStart0
     {
         void StartPopup();
     }
 
-    interface IPopupStart0
+    interface IPopupStart1<A>
     {
-        void StartPopup(int value);
+        void StartPopup(A a);
     }
 
-    interface IPopupStart1
+    interface IPopupStart2<A, B>
     {
-        void StartPopup(string value);
+        void StartPopup(A a, B b);
+    }
+
+    interface IPopupStart3<A, B, C>
+    {
+        void StartPopup(A a, B b, C c);
     }
 
     public abstract class HudPopupBase : PoAttachGoBase
     {
-        public const EABType RES_TYPE = EABType.Misc;
-        //public virtual EPopupType PopupType { get; }
+        protected override EABType ResType => EABType.Misc;
 
-        protected override EABType ResType => RES_TYPE;
+        public virtual EHudPopupType PopupType { get; }
+
+        protected override bool IsLoadResAsync => false;
 
         public override void OnInit()
         {
@@ -57,6 +63,8 @@ namespace AosHotfixRunTime
         public override void OnUnspawn()
         {
             base.OnUnspawn();
+
+            mOwner = null;
         }
 
         public override void OnRelease()
@@ -75,30 +83,47 @@ namespace AosHotfixRunTime
         private Animation mPopupAnimation;
         protected Animation PopupAnimation { get { return mPopupAnimation; } }
         //
-        public float Duration { get; set; }
+        public float Duration { get; protected set; }
+        //
+        public bool IsInvalid { get; protected set; }
+        //
+        private Vector3 mPopupPos = Vector3.zero;
 
 
         public void Initialize(Unit owner)
         {
             mOwner = owner;
+            IsInvalid = false;
         }
 
         public virtual void Update(float deltaTime)
         {
             AdjustPos();
+
+            Duration -= deltaTime;
+
+            if (Duration <= 0f)
+            {
+                IsInvalid = true;
+            }
+        }
+
+        protected void SetPopupPos(Vector3 popupPos)
+        {
+            mPopupPos = popupPos;
         }
 
         void AdjustPos()
         {
-            //if (null == mGameObject || null == mOwner.HudTopNode)
-            //    return;
+            if (null == mGameObject)
+                return;
 
-            //Vector3 tmpVec3 = RectTransformUtility.WorldToScreenPoint(GameDefine.CurrentCamera, mOwner.HudTopNode.transform.position);
+            Vector3 tmpVec3 = RectTransformUtility.WorldToScreenPoint(CameraMgr.Instance.MainCamera, mPopupPos);
 
-            //if (RectTransformUtility.ScreenPointToWorldPointInRectangle(mRectTrans, tmpVec3, CameraHelper.HudCamera, out tmpVec3))
-            //{
-            //    mGameObject.transform.position = tmpVec3;
-            //}
+            if (RectTransformUtility.ScreenPointToWorldPointInRectangle(mRectTrans, tmpVec3, CameraMgr.Instance.HudCamera, out tmpVec3))
+            {
+                mGameObject.transform.position = tmpVec3;
+            }
         }
     }
 }

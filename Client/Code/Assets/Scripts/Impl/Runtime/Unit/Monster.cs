@@ -28,10 +28,17 @@ namespace AosHotfixRunTime
 
         public override void UpdateAttributes()
         {
+            MonsterAttrBase tmpMonsterAttrBase = MonsterAttrBaseManager.instance.Find(UnitID, Level);
+
+            if (null != tmpMonsterAttrBase)
+            {
+                mUnitAttr.Init(tmpMonsterAttrBase);
+            }
         }
 
         public override bool Hurt(Unit attacker, int damage, ACT.ECombatResult result)
         {
+            GetComponent<HudPopupComponent>().Popup(EHudPopupType.Damage, damage);
             return true;
         }
     }

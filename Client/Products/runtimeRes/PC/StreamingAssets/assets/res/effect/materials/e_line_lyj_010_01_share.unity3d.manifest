@@ -3,7 +3,7 @@ CRC: 2499500586
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3db4ff0861acf846e457e672c2aa5c88
+    Hash: 124bcbfbfd4ff061d5e66f8ac3eeb907
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,4 +18,4 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Materials/E_Line_lyj_010_01.mat
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_knife_fsw_005_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_knife_fsw_005_share.unity3d

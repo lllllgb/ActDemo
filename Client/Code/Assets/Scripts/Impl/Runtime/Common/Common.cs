@@ -53,12 +53,21 @@ namespace AosHotfixRunTime
         //------------------------------------------------
         Critical,
         Block,
+        Tough,
         Hit,
         //------------------------------------------------
         MoveSpeed,
         //------------------------------------------------
         MAX,
     };
+
+    //
+    public enum EHudPopupType
+    {
+        Damage = 0, //伤害
+
+        Max,
+    }
 
     //BUFF特殊效果
     public enum EBuffSpecialEffect

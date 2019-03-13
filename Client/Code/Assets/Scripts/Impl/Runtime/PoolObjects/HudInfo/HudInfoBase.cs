@@ -105,8 +105,8 @@ namespace AosHotfixRunTime
             }
 
             mUpdateDisplayDelta = 0f;
-            float tmpCurrHp = mOwner.GetAttrib(EPA.CurHP);
-            float tmpMaxHp = mOwner.GetAttrib(EPA.MaxHP);
+            float tmpCurrHp = mOwner.GetAttr(EPA.CurHP);
+            float tmpMaxHp = mOwner.GetAttr(EPA.MaxHP);
             float tmpHpRatio = tmpCurrHp / Mathf.Max(1, tmpMaxHp);
 
             if (null != mHpBar && !Utility.CompareFloatValue(tmpHpRatio, mHpBar.value))

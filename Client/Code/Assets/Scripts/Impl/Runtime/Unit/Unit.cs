@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using AosHotfixFramework;
+using AosBaseFramework;
 
 namespace AosHotfixRunTime
 {
@@ -11,8 +12,8 @@ namespace AosHotfixRunTime
     public abstract partial class Unit : ACT.ActUnit
     {
 
-        public override int CurHp { get { return GetAttrib(EPA.CurHP); } }
-        public override int HpMax { get { return GetAttrib(EPA.MaxHP); } }
+        public override int CurHp { get { return GetAttr(EPA.CurHP); } }
+        public override int HpMax { get { return GetAttr(EPA.MaxHP); } }
         public override int Speed { get { return 300; } }
         public override bool CanHurt { get { return true; } }
         
@@ -21,6 +22,8 @@ namespace AosHotfixRunTime
         public Transform TopNode { get; private set; }
         public Transform MidNode { get; private set; }
         public Transform BottomNode { get; private set; }
+        //属性
+        protected UnitAttr mUnitAttr = new UnitAttr();
 
         public Unit()
         {
@@ -54,7 +57,16 @@ namespace AosHotfixRunTime
             tmpGo = Hotfix.Instantiate(tmpGo);
             tmpGo.transform.localEulerAngles = new Vector3(0, 90, 0);
             InitActUnit(tmpGo, tmpGo.transform.Find("model"));
+            TopNode = Utility.GameObj.FindByName(tmpGo.transform, "topNode");
+            MidNode = Utility.GameObj.FindByName(tmpGo.transform, "midNode");
+            BottomNode = Utility.GameObj.FindByName(tmpGo.transform, "bottomNode");
             UpdateAttributes();
+            AddComponents();
+        }
+
+        protected virtual void AddComponents()
+        {
+            AddComponent<HudPopupComponent>();
         }
 
         public override void Update(float deltaTime)
@@ -89,16 +101,35 @@ namespace AosHotfixRunTime
         public virtual void AddSoul(int v) { }
         public virtual void AddAbility(int v) { }
         public virtual bool UpLevel() { return false; }
-        public virtual int GetAttrib(EPA idx) { return 0; }
+
+        public virtual int GetAttr(EPA idx)
+        {
+            return mUnitAttr.Get(idx);
+        }
+
         public virtual void Equip() { }
         public virtual void Revive() { }
 
         public override ACT.ECombatResult Combat(ACT.IActUnit target, ACT.ISkillItem skillItem)
         {
-            int damage = 0;
-            ACT.ECombatResult result = ACT.ECombatResult.ECR_Normal;
+            int tmpDamage = 0;
+            Unit tmpTarget = target as Unit;
+            ACT.ECombatResult tmpResult = MathUtility.Combat(this, tmpTarget, out tmpDamage);
 
-            return result;
+            if (ACT.ECombatResult.ECR_Block != tmpResult)
+            {
+                int tmpDamageCoff = 100;
+                int tmpDamageBase = 0;
+                // 技能的影响。
+                tmpDamage = tmpDamage * tmpDamageCoff / 100 + tmpDamageBase;
+
+                // damage should not be 0.
+                tmpDamage = Mathf.Max(tmpDamage, 1);
+
+                tmpTarget.Hurt(this, tmpDamage, tmpResult);
+            }
+
+            return tmpResult;
         }
         
     }

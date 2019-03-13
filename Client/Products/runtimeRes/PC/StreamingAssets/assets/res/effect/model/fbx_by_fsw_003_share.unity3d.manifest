@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1631453494
+CRC: 3148140338
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c1dc7b55bcae2c91cdcff3df896b7f19
+    Hash: e64934d6c058d4ff9a440cdb1d41c5ce
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 6fa9ce387392089bc59dd886979cd053
+    Hash: dd75b9401610cb5abcccea16a153f100
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -22,6 +22,8 @@ ClassTypes:
 - Class: 43
   Script: {instanceID: 0}
 - Class: 48
+  Script: {instanceID: 0}
+- Class: 111
   Script: {instanceID: 0}
 Assets:
 - Assets/Res/effect/Model/Fbx_By_fsw_003.FBX

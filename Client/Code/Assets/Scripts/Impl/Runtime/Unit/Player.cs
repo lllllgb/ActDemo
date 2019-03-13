@@ -26,19 +26,17 @@ namespace AosHotfixRunTime
 
         public override void UpdateAttributes()
         {
-            
+            PlayerAttrBase tmpPlayerAttrBase = PlayerAttrBaseManager.instance.Find(UnitID, Level);
+
+            if (null != tmpPlayerAttrBase)
+            {
+                mUnitAttr.Init(tmpPlayerAttrBase);
+            }
         }
 
         public override bool Hurt(Unit attacker, int damage, ACT.ECombatResult result)
         {
             return true;
-        }
-
-        public override int GetAttrib(EPA idx)
-        {
-            int ret = 0;
-
-            return ret;
         }
     }
 }
