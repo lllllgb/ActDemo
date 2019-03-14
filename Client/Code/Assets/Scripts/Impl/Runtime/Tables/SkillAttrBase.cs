@@ -46,7 +46,7 @@ public partial class SkillAttrBase : JW_Table.Binary, JW_Table.IKey
 
 	public long Key()
 	{
-		return m_ID;
+		return JW_Table.TableUtility.Combine(m_ID, m_Level, 4);
 	}
 
 	public override void Read(JW_Table.Reader reader)
@@ -90,8 +90,8 @@ public sealed class SkillAttrBaseManager : JW_Table.TableManager<SkillAttrBase>
 		return Load(buffer, VERSION, source);
 	}
 
-	public SkillAttrBase Find(int key)
+	public SkillAttrBase Find(int k1, int k2)
 	{
-		return FindInternal(key);
+		return FindInternal(JW_Table.TableUtility.Combine(k1, k2, 4));
 	}
 }

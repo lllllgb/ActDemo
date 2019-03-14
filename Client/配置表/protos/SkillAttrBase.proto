@@ -1,5 +1,5 @@
 ﻿
-message SkillAttrBase [key=ID,excel="SkillAttrBase.xlsx"]
+message SkillAttrBase [key=ID+Level,excel="SkillAttrBase.xlsx"]
 {
 	int32 		ID                           	  [option = "技能id"];
 	int32 		Level                             [option = "技能等级"];

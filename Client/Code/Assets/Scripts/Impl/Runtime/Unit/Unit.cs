@@ -44,6 +44,7 @@ namespace AosHotfixRunTime
                 return;
             }
 
+            Name = tmpUnitBase.Name;
             ActionID = tmpUnitBase.ActionID;
             Game.ResourcesMgr.LoadBundleByType(EABType.Unit, tmpUnitBase.Prefab);
             GameObject tmpGo = Game.ResourcesMgr.GetAssetByType<GameObject>(EABType.Unit, tmpUnitBase.Prefab);
@@ -96,8 +97,36 @@ namespace AosHotfixRunTime
             Name = name;
         }
 
-        public abstract bool Hurt(Unit attacker, int damage, ACT.ECombatResult result);
-        public virtual void AddHp(int v) { }
+        public virtual void Hurt(Unit attacker, int damage, ACT.ECombatResult result)
+        {
+            if (Dead)
+            {
+                return;
+            }
+
+            AddHp(-damage);
+        }
+
+        public virtual void AddHp(int v)
+        {
+            if (Dead)
+            {
+                return;
+            }
+
+            int tmpCurrHp = Mathf.Clamp(mUnitAttr.Get(EPA.CurHP) + v, 0, mUnitAttr.Get(EPA.MaxHP));
+            mUnitAttr.Set(EPA.CurHP, tmpCurrHp);
+
+            if (tmpCurrHp <= 0)
+            {
+                SetIsDead(true);
+            }
+
+            var tmpEvent = ReferencePool.Fetch<UnitEvent.HpModify>();
+            tmpEvent.Data = this;
+            Game.EventMgr.FireNow(this, tmpEvent);
+        }
+
         public virtual void AddSoul(int v) { }
         public virtual void AddAbility(int v) { }
         public virtual bool UpLevel() { return false; }

@@ -36,10 +36,17 @@ namespace AosHotfixRunTime
             }
         }
 
-        public override bool Hurt(Unit attacker, int damage, ACT.ECombatResult result)
+        public override void Hurt(Unit attacker, int damage, ACT.ECombatResult result)
         {
+            base.Hurt(attacker, damage, result);
+
+            if (Dead)
+            {
+                return;
+            }
+
             GetComponent<HudPopupComponent>().Popup(EHudPopupType.Damage, damage);
-            return true;
+            Game.ControllerMgr.Get<UnitController>().SetHitedMonster(this);
         }
     }
 }

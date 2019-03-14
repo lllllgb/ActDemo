@@ -151,6 +151,11 @@ namespace ACT
         {
             // disable the controller.
             mState = EUnitState.Die;
+
+            if (ActStatus != null && ActStatus.HeightState == ActData.HeightStatusFlag.Stand)
+                ActStatus.ChangeAction(ActStatus.ActionGroup.StandDeath, 0);
+            else if (ActStatus != null && ActStatus.HeightState == ActData.HeightStatusFlag.Ground)
+                ActStatus.ChangeAction(ActStatus.ActionGroup.DownDeath, 0);
         }
 
         void UpdateSyncPosition(float deltaTime)

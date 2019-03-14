@@ -1,15 +1,17 @@
 ManifestFileVersion: 0
-CRC: 2584406978
+CRC: 3017395736
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 498b9dc4aa957e5152d854fd0a3f6bb8
+    Hash: 2febdfa303df6930f83337b01d4de4ca
   TypeTreeHash:
     serializedVersion: 2
-    Hash: c73412a662fd4e4f36af34cbdf078b85
+    Hash: 460b4f5d62b6facbccf7c01637df8f00
 HashAppended: 0
 ClassTypes:
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 213
   Script: {instanceID: 0}
 Assets:
 - Assets/Bundles/Icon/Skill/1006_jianqijiaosha.png

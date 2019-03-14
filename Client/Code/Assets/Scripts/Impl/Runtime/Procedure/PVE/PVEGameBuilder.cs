@@ -33,10 +33,14 @@ namespace AosHotfixRunTime
 
         void OnSceneLoaded()
         {
+            Game.ControllerMgr.Get<PlayerController>().Init(1003, 1);
+            var tmpUnitCtrl = Game.ControllerMgr.Get<UnitController>();
+
             mLocalPlayer = new LocalPlayer();
             mLocalPlayer.Init(1003, 1);
             ACT.ActionSystem.Instance.ActUnitMgr.Add(mLocalPlayer);
             ACT.ActionSystem.Instance.ActUnitMgr.LocalPlayer = mLocalPlayer;
+            tmpUnitCtrl.SetLocalPlayer(mLocalPlayer);
 
             var tmpMonster = new Monster();
             tmpMonster.Init(1004, 1);

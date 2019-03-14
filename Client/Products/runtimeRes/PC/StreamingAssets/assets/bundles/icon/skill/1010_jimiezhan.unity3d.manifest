@@ -1,15 +1,17 @@
 ManifestFileVersion: 0
-CRC: 3115664218
+CRC: 3709875604
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 96cb1c2e34567e6c4b27b9554a435f51
+    Hash: b803eeca65ce6130e355f3de469a4fac
   TypeTreeHash:
     serializedVersion: 2
-    Hash: c73412a662fd4e4f36af34cbdf078b85
+    Hash: 460b4f5d62b6facbccf7c01637df8f00
 HashAppended: 0
 ClassTypes:
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 213
   Script: {instanceID: 0}
 Assets:
 - Assets/Bundles/Icon/Skill/1010_jimiezhan.png

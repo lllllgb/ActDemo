@@ -1,15 +1,17 @@
 ManifestFileVersion: 0
-CRC: 2750470823
+CRC: 244444321
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c84767a48913d4be961db8f1adfb1982
+    Hash: d416f8ea1b9fca1e67b399e1f965b818
   TypeTreeHash:
     serializedVersion: 2
-    Hash: c73412a662fd4e4f36af34cbdf078b85
+    Hash: 460b4f5d62b6facbccf7c01637df8f00
 HashAppended: 0
 ClassTypes:
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 213
   Script: {instanceID: 0}
 Assets:
 - Assets/Bundles/Icon/Skill/1007_zhongjiansanlian.png

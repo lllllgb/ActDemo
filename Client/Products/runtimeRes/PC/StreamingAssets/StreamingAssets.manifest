@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1101970051
+CRC: 2342210538
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -904,6 +904,7 @@ AssetBundleManifest:
       Dependencies:
         Dependency_0: assets/bundles/atlas/common.unity3d
         Dependency_1: assets/bundles/atlas/fightmain.unity3d
+        Dependency_2: assets/res/font/simkai_share.unity3d
     Info_169:
       Name: assets/res/models/scene/testaction/materials/wall_share.unity3d
       Dependencies:
@@ -1129,54 +1130,42 @@ AssetBundleManifest:
       Name: assets/res/effect/model/fbx_yuan_fsw_006_share.unity3d
       Dependencies: {}
     Info_206:
-      Name: assets/bundles/icon/role/1001.unity3d
-      Dependencies: {}
-    Info_207:
       Name: assets/bundles/icon/skill/1001_shenglongji.unity3d
       Dependencies: {}
-    Info_208:
+    Info_207:
       Name: assets/bundles/icon/skill/1007_zhongjiansanlian.unity3d
       Dependencies: {}
-    Info_209:
-      Name: assets/bundles/icon/role/1005.unity3d
-      Dependencies: {}
-    Info_210:
+    Info_208:
       Name: assets/bundles/icon/skill/1009_lingkongjianzhen.unity3d
       Dependencies: {}
-    Info_211:
+    Info_209:
       Name: assets/bundles/icon/skill/1005_longjiantuxi.unity3d
       Dependencies: {}
-    Info_212:
+    Info_210:
       Name: assets/bundles/icon/skill/1008_liekongzhan.unity3d
       Dependencies: {}
-    Info_213:
+    Info_211:
       Name: assets/bundles/icon/skill/1010_jimiezhan.unity3d
       Dependencies: {}
-    Info_214:
-      Name: assets/bundles/icon/role/1006.unity3d
-      Dependencies: {}
-    Info_215:
+    Info_212:
       Name: assets/bundles/atlas/common.unity3d
       Dependencies: {}
-    Info_216:
+    Info_213:
       Name: assets/bundles/icon/skill/1002_tajianxing.unity3d
       Dependencies: {}
-    Info_217:
+    Info_214:
       Name: assets/bundles/icon/skill/1006_jianqijiaosha.unity3d
       Dependencies: {}
-    Info_218:
+    Info_215:
       Name: assets/bundles/atlas/fightmain.unity3d
       Dependencies: {}
-    Info_219:
+    Info_216:
       Name: assets/bundles/icon/skill/1003_jianqihuti.unity3d
       Dependencies: {}
-    Info_220:
-      Name: assets/bundles/icon/role/1004.unity3d
-      Dependencies: {}
-    Info_221:
+    Info_217:
       Name: assets/bundles/icon/skill/1004_wufengzhongjian.unity3d
       Dependencies: {}
-    Info_222:
+    Info_218:
       Name: assets/bundles/effect/e_m0001_fsw_skill2.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
@@ -1186,20 +1175,20 @@ AssetBundleManifest:
         Dependency_4: assets/res/effect/materials/e_knife_fsw_011_04_share.unity3d
         Dependency_5: assets/res/effect/model/fbx_by_fsw_002_share.unity3d
         Dependency_6: assets/res/effect/materials/e_knife_fsw_003_02_share.unity3d
-    Info_223:
+    Info_219:
       Name: assets/bundles/misc/hudroot.unity3d
       Dependencies: {}
-    Info_224:
+    Info_220:
       Name: assets/res/effect/materials/e_knife_fsw_003_02_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_knife_fsw_003_share.unity3d
-    Info_225:
+    Info_221:
       Name: assets/res/effect/materials/e_knife_fsw_012_04_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_2: assets/res/effect/texture/e_knife_fsw_012_share.unity3d
-    Info_226:
+    Info_222:
       Name: assets/bundles/effect/e_m0001_fsw_skill1.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
@@ -1209,9 +1198,25 @@ AssetBundleManifest:
         Dependency_4: assets/res/effect/materials/e_knife_fsw_003_02_share.unity3d
         Dependency_5: assets/res/effect/materials/e_knife_fsw_012_04_share.unity3d
         Dependency_6: assets/res/effect/model/fbx_dg_fsw_013_share.unity3d
-    Info_227:
+    Info_223:
       Name: assets/res/effect/model/fbx_dg_fsw_013_share.unity3d
       Dependencies: {}
-    Info_228:
+    Info_224:
       Name: assets/bundles/misc/hud_popup_damage.unity3d
+      Dependencies:
+        Dependency_0: assets/res/font/simkai_share.unity3d
+    Info_225:
+      Name: assets/res/font/simkai_share.unity3d
+      Dependencies: {}
+    Info_226:
+      Name: assets/bundles/icon/unit/1003.unity3d
+      Dependencies: {}
+    Info_227:
+      Name: assets/bundles/icon/unit/1004.unity3d
+      Dependencies: {}
+    Info_228:
+      Name: assets/bundles/icon/unit/1005.unity3d
+      Dependencies: {}
+    Info_229:
+      Name: assets/bundles/icon/unit/1006.unity3d
       Dependencies: {}

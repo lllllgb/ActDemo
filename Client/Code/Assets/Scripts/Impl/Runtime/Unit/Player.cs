@@ -34,9 +34,9 @@ namespace AosHotfixRunTime
             }
         }
 
-        public override bool Hurt(Unit attacker, int damage, ACT.ECombatResult result)
+        public override void Hurt(Unit attacker, int damage, ACT.ECombatResult result)
         {
-            return true;
+            base.Hurt(attacker, damage, result);
         }
     }
 }

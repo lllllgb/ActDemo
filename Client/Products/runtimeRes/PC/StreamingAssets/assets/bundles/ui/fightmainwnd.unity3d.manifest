@@ -1,21 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1647172839
+CRC: 4032004286
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e76b192579b5b6773a4bbb32ab926403
+    Hash: 20994bfc61d0ee964dadbe8ca8e7958a
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 8a2dd3f48547b61b7908d30efd507be9
+    Hash: 8864785ac3dedaebd91962f8a99b2342
 HashAppended: 0
 ClassTypes:
 - Class: 1
-  Script: {instanceID: 0}
-- Class: 21
-  Script: {instanceID: 0}
-- Class: 28
-  Script: {instanceID: 0}
-- Class: 48
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -40,3 +34,4 @@ Assets:
 Dependencies:
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d

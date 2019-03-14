@@ -28,7 +28,6 @@ namespace AosHotfixRunTime
         bool mIsReleased = false;
         EABType mResType;
         string mResName;
-        string mAssetName;
         Image mImage;
         Action mLoadedHandle;
 
@@ -36,7 +35,7 @@ namespace AosHotfixRunTime
         {
         }
 
-        public void Load(EIconType type, string name, Image image, Action loadedHandle = null, bool async = true, string assetName = null)
+        public void Load(EIconType type, string name, Image image, Action loadedHandle = null, bool async = true)
         {
             EABType tmpAbType;
 
@@ -46,17 +45,16 @@ namespace AosHotfixRunTime
                 return;
             }
 
-            LoadByAbType(tmpAbType, name, image, loadedHandle, async, assetName);
+            LoadByAbType(tmpAbType, name, image, loadedHandle, async);
         }
 
-        public void LoadByAbType(EABType type, string name, Image image, Action loadedHandle = null, bool async = true, string assetName = null)
+        public void LoadByAbType(EABType type, string name, Image image, Action loadedHandle = null, bool async = true)
         {
             mIsReleased = false;
 
             mResType = type;
             mResName = name;
             mImage = image;
-            mAssetName = assetName;
             mLoadedHandle = loadedHandle;
             Utility.GameObj.SetActive(image, false);
 
@@ -107,25 +105,16 @@ namespace AosHotfixRunTime
 
         void OnResLoaded()
         {
-            if (mAssetName!=null)
+            var tmpAsset = Game.ResourcesMgr.GetAssetByType<Sprite>(mResType, mResName);
+
+            if (null == tmpAsset || null == mImage)
             {
-                var tmpAssets = Game.ResourcesMgr.GetAssetByType<Sprite>(mResType, mResName, mAssetName);
-                if (null == tmpAssets || null == mImage)
-                {
-                    return;
-                }
-                mImage.sprite = tmpAssets;
+                return;
             }
-            else
-            {
-                var tmpAsset = Game.ResourcesMgr.GetAssetByType<Sprite>(mResType, mResName);
-                if (null == tmpAsset || null == mImage)
-                {
-                    return;
-                }
-                mImage.sprite = tmpAsset;
-            }                                
+
+            mImage.sprite = tmpAsset;
             Utility.GameObj.SetActive(mImage, true);
+            mImage.SetNativeSize();
             mLoadedHandle?.Invoke();
         }
 

@@ -29,6 +29,19 @@ namespace AosHotfixRunTime
 
             mController.LateUpdate();
         }
+
+        public void LinkSkill(ACT.ISkillInput skillInput, int interruptIndex)
+        {
+            ActStatus.LinkAction(
+                ActStatus.ActiveAction.ActionInterrupts[interruptIndex],
+                skillInput);
+        }
+
+        public void PlaySkill(ACT.ISkillItem skillItem, string action)
+        {
+            ActStatus.SkillItem = skillItem;
+            PlayAction(action);
+        }
     }
 }
 

@@ -8,12 +8,24 @@ namespace AosHotfixRunTime
     {
         private Dictionary<EPA, int> mType2ValueDcit = new Dictionary<EPA, int>();
 
-        public int Get(EPA epa)
+        public int Get(EPA idx)
         {
             int tmpResult = 0;
-            mType2ValueDcit.TryGetValue(epa, out tmpResult);
+            mType2ValueDcit.TryGetValue(idx, out tmpResult);
 
             return tmpResult;
+        }
+
+        public void Set(EPA idx, int value)
+        {
+            if (mType2ValueDcit.ContainsKey(idx))
+            {
+                mType2ValueDcit[idx] = value;
+            }
+            else
+            {
+                mType2ValueDcit.Add(idx, value);
+            }
         }
 
         public void Init(PlayerAttrBase playerAttr)

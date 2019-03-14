@@ -80,6 +80,10 @@ namespace AosHotfixRunTime
         static void LoadTbl()
         {
             UnitBaseManager.instance.Load(string.Empty);
+            PlayerAttrBaseManager.instance.Load(string.Empty);
+            MonsterAttrBaseManager.instance.Load(string.Empty);
+            SkillBaseManager.instance.Load(string.Empty);
+            SkillAttrBaseManager.instance.Load(string.Empty);
         }
 
         public static void InitGameModule()
