@@ -35984,6 +35984,7 @@
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill2_2_g" ConnectImmediately="false" ConnectMode="1" CheckInput1="true" InputKey1="7" InputType1="4" CheckInput2="true" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs>
                 <AttackDef>
@@ -36144,6 +36145,7 @@
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="skill2_3_g" ConnectImmediately="false" ConnectMode="1" CheckInput1="true" InputKey1="7" InputType1="4" CheckInput2="true" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs>
                 <AttackDef>
