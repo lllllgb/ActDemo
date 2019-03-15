@@ -40,11 +40,6 @@ namespace AosHotfixRunTime
         {
             base.Hurt(attacker, damage, result);
 
-            if (Dead)
-            {
-                return;
-            }
-
             GetComponent<HudPopupComponent>().Popup(EHudPopupType.Damage, damage);
             Game.ControllerMgr.Get<UnitController>().SetHitedMonster(this);
         }

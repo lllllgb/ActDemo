@@ -37,6 +37,8 @@ namespace AosHotfixRunTime
         public override void Hurt(Unit attacker, int damage, ACT.ECombatResult result)
         {
             base.Hurt(attacker, damage, result);
+
+            GetComponent<HudPopupComponent>().Popup(EHudPopupType.Damage, damage);
         }
     }
 }

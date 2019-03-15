@@ -84,7 +84,8 @@ namespace AosHotfixRunTime
         public override void Dispose()
         {
             base.Dispose();
-            
+
+            ACT.ActionSystem.Instance.ActUnitMgr.Remove(this);
             GameObject.Destroy(UGameObject);
         }
 
@@ -147,10 +148,13 @@ namespace AosHotfixRunTime
 
             if (ACT.ECombatResult.ECR_Block != tmpResult)
             {
-                int tmpDamageCoff = 100;
-                int tmpDamageBase = 0;
-                // 技能的影响。
-                tmpDamage = tmpDamage * tmpDamageCoff / 100 + tmpDamageBase;
+                if (null != skillItem)
+                {
+                    int tmpDamageCoff = (skillItem as SkillItem).SkillAttrBase.DamageCoff;
+                    int tmpDamageBase = (skillItem as SkillItem).SkillAttrBase.DamageBase;
+                    // 技能的影响。
+                    tmpDamage = tmpDamage * tmpDamageCoff / 100 + tmpDamageBase;
+                }
 
                 // damage should not be 0.
                 tmpDamage = Mathf.Max(tmpDamage, 1);

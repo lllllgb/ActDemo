@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 1368521154
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b067305157488fd6447a60aeda5883a6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ae953d9f89675a0573169c18c7296528
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Misc/Instacen3.prefab
+Dependencies: []

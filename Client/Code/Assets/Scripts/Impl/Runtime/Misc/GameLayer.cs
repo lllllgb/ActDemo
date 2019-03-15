@@ -12,6 +12,7 @@ namespace AosHotfixRunTime
         public static string LayerName_Unit = "Unit";
         public static string LayerName_HudInfo = "HudInfo";
         public static string LayerName_HudPopup = "HudPopup";
+        public static string LayerName_Trigger = "Trigger";
 
         public static int Layer_Default = LayerMask.NameToLayer(LayerName_Default);
         public static int Layer_UI = LayerMask.NameToLayer(LayerName_UI);
@@ -19,6 +20,7 @@ namespace AosHotfixRunTime
         public static int Layer_Unit = LayerMask.NameToLayer(LayerName_Unit);
         public static int Layer_HudInfo = LayerMask.NameToLayer(LayerName_HudInfo);
         public static int Layer_HudPopup = LayerMask.NameToLayer(LayerName_HudPopup);
+        public static int Layer_Trigger = LayerMask.NameToLayer(LayerName_Trigger);
 
         public static int LayerMask_Nothing = 0;
         public static int LayerMask_Default = GetMask(Layer_Default);
@@ -27,6 +29,7 @@ namespace AosHotfixRunTime
         public static int LayerMask_Unit = GetMask(Layer_Unit);
         public static int LayerMask_HudInfo = GetMask(Layer_HudInfo);
         public static int LayerMask_HudPopup = GetMask(Layer_HudPopup);
+        public static int LayerMask_Trigger = GetMask(Layer_Trigger);
 
         public static int GetMask(int layer)
         {

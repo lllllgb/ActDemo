@@ -944,8 +944,7 @@ namespace ACT
                     }
                     break;
                 case ActData.EventType.RemoveMyself:
-                    //Debug.Log("Unit " + mOwner.UnitID + " RemoveMyself");
-                    //mOwner.Destory();
+                    mOwner.Dispose();
                     break;
                 case ActData.EventType.AdjustVarible:
                     {
@@ -1297,9 +1296,9 @@ namespace ACT
                     break;
             }
 
-            if (!string.IsNullOrEmpty(changeAction))
+            if (!string.IsNullOrEmpty(changeAction) && !mOwner.Dead)
             {
-                Logger.Log($"OnHit action -> {changeAction}");
+                //Logger.Log($"OnHit action -> {changeAction}");
                 ChangeAction(changeAction, 0);
             }
 

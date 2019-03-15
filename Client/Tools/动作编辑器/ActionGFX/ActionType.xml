@@ -37575,7 +37575,7 @@
       <ID>10001</ID>
       <UnitVaribleList />
       <ActionGroups>
-        <ActionGroup SpasticityCD="0">
+        <ActionGroup CheckDeath="true" SpasticityCD="0">
           <ActionList>
             <Action>
               <ID>die</ID>
@@ -38218,7 +38218,7 @@
       <ID>10002</ID>
       <UnitVaribleList />
       <ActionGroups>
-        <ActionGroup SpasticityCD="0">
+        <ActionGroup CheckDeath="true" SpasticityCD="0">
           <ActionList>
             <Action>
               <ID>die</ID>
@@ -38862,7 +38862,7 @@
       <ID>10003</ID>
       <UnitVaribleList />
       <ActionGroups>
-        <ActionGroup SpasticityCD="10000" HasCollision="true">
+        <ActionGroup CheckDeath="true" SpasticityCD="10000" HasCollision="true">
           <ActionList>
             <Action>
               <ID>die</ID>

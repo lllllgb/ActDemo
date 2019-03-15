@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2342210538
+CRC: 132813273
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -1219,4 +1219,16 @@ AssetBundleManifest:
       Dependencies: {}
     Info_229:
       Name: assets/bundles/icon/unit/1006.unity3d
+      Dependencies: {}
+    Info_230:
+      Name: assets/bundles/ui/fadewnd.unity3d
+      Dependencies: {}
+    Info_231:
+      Name: assets/bundles/misc/instacen1.unity3d
+      Dependencies: {}
+    Info_232:
+      Name: assets/bundles/misc/instacen2.unity3d
+      Dependencies: {}
+    Info_233:
+      Name: assets/bundles/misc/instacen3.unity3d
       Dependencies: {}

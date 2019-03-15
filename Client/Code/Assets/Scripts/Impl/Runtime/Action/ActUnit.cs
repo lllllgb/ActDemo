@@ -151,11 +151,6 @@ namespace ACT
         {
             // disable the controller.
             mState = EUnitState.Die;
-
-            if (ActStatus != null && ActStatus.HeightState == ActData.HeightStatusFlag.Stand)
-                ActStatus.ChangeAction(ActStatus.ActionGroup.StandDeath, 0);
-            else if (ActStatus != null && ActStatus.HeightState == ActData.HeightStatusFlag.Ground)
-                ActStatus.ChangeAction(ActStatus.ActionGroup.DownDeath, 0);
         }
 
         void UpdateSyncPosition(float deltaTime)
@@ -283,7 +278,7 @@ namespace ACT
                         RaycastHit hitInfo;
                         mOnTouchWall = false;
 
-                        if (Physics.Raycast(checkPos, direction, out hitInfo, checkLength, mCacheLayerMask))
+                        if (Physics.Raycast(checkPos, direction, out hitInfo, checkLength, mCacheLayerMask, QueryTriggerInteraction.Ignore))
                         {
                             mOnTouchWall = true;
                             float hitDistance = hitInfo.distance - addtiveCheckLength;
@@ -306,7 +301,7 @@ namespace ACT
                         RaycastHit hitInfo;
                         Vector3 checkPos = new Vector3(mPosition.x, mPosition.y + addtiveCheckLength, mPosition.z);
                         float checkLength = addtiveCheckLength - trans.y;
-                        if (Physics.Raycast(checkPos, Vector3.down, out hitInfo, checkLength, mCacheLayerMask))
+                        if (Physics.Raycast(checkPos, Vector3.down, out hitInfo, checkLength, mCacheLayerMask, QueryTriggerInteraction.Ignore))
                         {
                             float hitDistance = hitInfo.distance - addtiveCheckLength;
                             if (Mathf.Abs(hitDistance) > 0.001f)
