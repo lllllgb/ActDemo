@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1893244459
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: efec7b667d0ac6726a531bc611156bab
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/effect/Texture/E_Object_fsw_001.png
+Dependencies: []

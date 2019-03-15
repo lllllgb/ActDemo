@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 132813273
+CRC: 3725053821
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -1231,4 +1231,12 @@ AssetBundleManifest:
       Dependencies: {}
     Info_233:
       Name: assets/bundles/misc/instacen3.unity3d
+      Dependencies: {}
+    Info_234:
+      Name: assets/bundles/ui/instancewnd.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/atlas/common.unity3d
+        Dependency_1: assets/res/font/simkai_share.unity3d
+    Info_235:
+      Name: assets/bundles/scene/maincity.unity3d
       Dependencies: {}

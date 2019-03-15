@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 1951068379
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ec9bb5367dd00c0e89258f334d3da409
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c2bdabd68c118aabc18c59eaf5951821
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/Models/Scene/TestAction/Materials/wall.mat
+Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d

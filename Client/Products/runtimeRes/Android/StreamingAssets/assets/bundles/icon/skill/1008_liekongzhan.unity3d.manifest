@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1262806919
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1c8dc5d084dbd80130ccdc7fa55e3cf2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 460b4f5d62b6facbccf7c01637df8f00
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Icon/Skill/1008_liekongzhan.png
+Dependencies: []

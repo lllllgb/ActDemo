@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 2537601832
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0a5191c462d8f43d784445eefbe6ee83
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0bb4c37c915d5352389eeb93c1a3b27a
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/Font/SIMKAI.TTF
+Dependencies: []

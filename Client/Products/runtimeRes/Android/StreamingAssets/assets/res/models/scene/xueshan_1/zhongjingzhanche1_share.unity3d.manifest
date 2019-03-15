@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 2228818307
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c30a9264f30299dcdcd8acfa299f34f0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 460b4f5d62b6facbccf7c01637df8f00
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/Models/Scene/xueshan_1/zhongjingzhanche1.png
+Dependencies: []

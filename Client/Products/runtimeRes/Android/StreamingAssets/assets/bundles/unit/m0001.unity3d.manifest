@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 1478130366
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cadf5e498701019e3c69c2909171027f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9fa7a8e4aa78884d62e4fe9af9ed69a4
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Unit/m0001.prefab
+Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d

@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 1870743947
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2feb366bfe6ab316d8869457bfd32003
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6f165f44e4778b6c9d85e7a145a54cb1
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/effect/Materials/E_Trail_fsw_002_01.mat
+Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_line_lyj_008_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_noise_fsw_002_share.unity3d

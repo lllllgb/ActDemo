@@ -60,7 +60,7 @@ namespace AosHotfixRunTime
             ProcedureMgr.AddProcedure<ProcedureMain>();
             ProcedureMgr.AddProcedure<ProcedurePVE>();
 
-            ProcedureMgr.StartProcedure<ProcedurePVE>();
+            ProcedureMgr.StartProcedure<ProcedureMain>();
         }
 
         static void InitActionSystem()

@@ -8,6 +8,7 @@ namespace AosHotfixRunTime
 {
     public class PVEGameBuilder : Singleton<PVEGameBuilder>
     {
+        public int DifficultyLevel { get; set; }
         LocalPlayer mLocalPlayer;
         int mInstanceID;
         GameObject mInstanceRoot;
@@ -30,7 +31,8 @@ namespace AosHotfixRunTime
 
             Game.WindowsMgr.ShowWindow<FightMainWnd>();
 
-            SceneLoader.Instance.LoadScene("Instance1", OnSceneLoaded);
+            Game.WindowsMgr.ShowWindow<FadeWnd, bool, bool>(true, false);
+            SceneLoader.Instance.LoadSceneAsync("Instance1", OnSceneLoaded);
         }
 
         public void Update(float deltaTime)
@@ -73,10 +75,7 @@ namespace AosHotfixRunTime
 
         void OnSceneLoaded()
         {
-            if (mInstanceID != 1)
-            {
-                Game.WindowsMgr.ShowWindow<FadeWnd, bool, bool>(false, true);
-            }
+            Game.WindowsMgr.ShowWindow<FadeWnd, bool, bool>(false, true);
 
             Game.ResourcesMgr.LoadBundleByType(EABType.Misc, $"Instacen{mInstanceID}");
             mInstanceRoot = Hotfix.Instantiate(Game.ResourcesMgr.GetAssetByType<GameObject>(EABType.Misc, $"Instacen{mInstanceID}"));

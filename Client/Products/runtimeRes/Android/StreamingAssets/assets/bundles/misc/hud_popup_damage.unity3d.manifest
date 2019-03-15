@@ -1,0 +1,31 @@
+ManifestFileVersion: 0
+CRC: 297290134
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bb2a7e23e0c6cfa0f8a01e8f838036ae
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8931e75aefe594c9e0202d9f4a96d2d4
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Misc/HUD_Popup_Damage.prefab
+Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/font/simkai_share.unity3d

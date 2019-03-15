@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 2698232523
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4c9457429f944691c8c032f658746556
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0a9d000c67bb3b371a8c4e0fe8b14a8f
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Independent/Temp.prefab
+Dependencies: []

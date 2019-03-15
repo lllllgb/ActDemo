@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3829613367
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f0dc32acd834471a02dcf9377b25f981
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 460b4f5d62b6facbccf7c01637df8f00
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/Models/Scene/xueshan_1/yuanjingshu1.png
+Dependencies: []
