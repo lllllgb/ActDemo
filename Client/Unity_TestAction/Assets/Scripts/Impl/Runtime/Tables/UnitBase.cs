@@ -12,6 +12,7 @@ public partial class UnitBase : JW_Table.Binary, JW_Table.IKey
 	private string m_Name;
 	private string m_Prefab;
 	private int m_ActionID;
+	private string m_Icon;
 
 	public int ID
 	{
@@ -37,6 +38,12 @@ public partial class UnitBase : JW_Table.Binary, JW_Table.IKey
 		set { m_ActionID = value; }
 	}
 
+	public string Icon
+	{
+		get { return m_Icon; }
+		set { m_Icon = value; }
+	}
+
 	public long Key()
 	{
 		return m_ID;
@@ -48,13 +55,14 @@ public partial class UnitBase : JW_Table.Binary, JW_Table.IKey
 		m_Name = reader.ReadString();
 		m_Prefab = reader.ReadString();
 		m_ActionID = reader.ReadInt32();
+		m_Icon = reader.ReadString();
 	}
 }
 
 //UnitBase.xlsx
 public sealed class UnitBaseManager : JW_Table.TableManager<UnitBase>
 {
-	public const uint VERSION = 3151884165;
+	public const uint VERSION = 4105165380;
 
 	private UnitBaseManager()
 	{
