@@ -6,13 +6,13 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public partial class UnitBase : JW_Table.Binary, JW_Table.IKey
+public partial class SkillBase : JW_Table.Binary, JW_Table.IKey
 {
 	private int m_ID;
 	private string m_Name;
-	private string m_Prefab;
-	private int m_ActionID;
 	private string m_Icon;
+	private string m_Action;
+	private string m_Desc;
 
 	public int ID
 	{
@@ -26,22 +26,22 @@ public partial class UnitBase : JW_Table.Binary, JW_Table.IKey
 		set { m_Name = value; }
 	}
 
-	public string Prefab
-	{
-		get { return m_Prefab; }
-		set { m_Prefab = value; }
-	}
-
-	public int ActionID
-	{
-		get { return m_ActionID; }
-		set { m_ActionID = value; }
-	}
-
 	public string Icon
 	{
 		get { return m_Icon; }
 		set { m_Icon = value; }
+	}
+
+	public string Action
+	{
+		get { return m_Action; }
+		set { m_Action = value; }
+	}
+
+	public string Desc
+	{
+		get { return m_Desc; }
+		set { m_Desc = value; }
 	}
 
 	public long Key()
@@ -53,31 +53,31 @@ public partial class UnitBase : JW_Table.Binary, JW_Table.IKey
 	{
 		m_ID = reader.ReadInt32();
 		m_Name = reader.ReadString();
-		m_Prefab = reader.ReadString();
-		m_ActionID = reader.ReadInt32();
 		m_Icon = reader.ReadString();
+		m_Action = reader.ReadString();
+		m_Desc = reader.ReadString();
 	}
 }
 
-//UnitBase.xlsx
-public sealed class UnitBaseManager : JW_Table.TableManager<UnitBase>
+//SkillBase.xlsx
+public sealed class SkillBaseManager : JW_Table.TableManager<SkillBase>
 {
-	public const uint VERSION = 4105165380;
+	public const uint VERSION = 4087771800;
 
-	private UnitBaseManager()
+	private SkillBaseManager()
 	{
 	}
 
-	private static readonly UnitBaseManager ms_instance = new UnitBaseManager();
+	private static readonly SkillBaseManager ms_instance = new SkillBaseManager();
 
-	public static UnitBaseManager instance
+	public static SkillBaseManager instance
 	{
 		get { return ms_instance; }
 	}
 
 	public string source
 	{
-		get { return "UnitBase.tbl"; }
+		get { return "SkillBase.tbl"; }
 	}
 
 	public bool Load(string path)
@@ -90,7 +90,7 @@ public sealed class UnitBaseManager : JW_Table.TableManager<UnitBase>
 		return Load(buffer, VERSION, source);
 	}
 
-	public UnitBase Find(int key)
+	public SkillBase Find(int key)
 	{
 		return FindInternal(key);
 	}
