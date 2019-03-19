@@ -45,7 +45,7 @@ namespace ACT
         
         public long UUID { get { return mUUID; } }
         public int UnitID { get { return mUnitID; } protected set { mUnitID = value; } }
-        public int Level { get { return mLevel; } }
+        public int Level { get { return mLevel; } protected set { mLevel = value; } }
         public float Radius { get { return mRadius; } }
         public GameObject UGameObject { get { return mGameObject; } }
         public Transform Transform { get { return mTransform; } }
@@ -74,29 +74,6 @@ namespace ACT
 
         public ActUnit()
         {
-        }
-
-        public virtual void OnDestroy()
-        {
-        }
-
-        public virtual void Destory()
-        {
-            mActionStatus.Release();
-            GameObject.Destroy(UGameObject);
-        }
-
-        protected void SetIsDead(bool dead)
-        {
-            mDead = dead;
-            if (State != EUnitState.Die && mDead)
-                OnDead();
-        }
-
-        protected virtual void OnDead()
-        {
-            // disable the controller.
-            mState = EUnitState.Die;
         }
 
         protected void InitActUnit(GameObject go, Transform model)
@@ -146,12 +123,6 @@ namespace ACT
             mOrientation = mTransform.eulerAngles.y * Mathf.Deg2Rad;
             mActionStatus = new ActionStatus(this);
             mActionStatus.ChangeActionGroup(mActionGroupIdx);
-
-            //if (mUnitInfo.AIEnable)
-            //    mActionStatus.Bind(new AIListener(this));
-
-            //if (mUnitInfo.initialization)
-            //    UnitManager.Instance.Add(this);
         }
 
         public virtual void Update(float deltaTime)
@@ -162,6 +133,24 @@ namespace ACT
             {
                 UpdateSyncPosition(deltaTime);
             }
+        }
+
+        public virtual void Dispose()
+        {
+            mActionStatus.Release();
+        }
+
+        protected void SetIsDead(bool dead)
+        {
+            mDead = dead;
+            if (State != EUnitState.Die && mDead)
+                OnDead();
+        }
+
+        protected virtual void OnDead()
+        {
+            // disable the controller.
+            mState = EUnitState.Die;
         }
 
         void UpdateSyncPosition(float deltaTime)
@@ -289,7 +278,7 @@ namespace ACT
                         RaycastHit hitInfo;
                         mOnTouchWall = false;
 
-                        if (Physics.Raycast(checkPos, direction, out hitInfo, checkLength, mCacheLayerMask))
+                        if (Physics.Raycast(checkPos, direction, out hitInfo, checkLength, mCacheLayerMask, QueryTriggerInteraction.Ignore))
                         {
                             mOnTouchWall = true;
                             float hitDistance = hitInfo.distance - addtiveCheckLength;
@@ -312,7 +301,7 @@ namespace ACT
                         RaycastHit hitInfo;
                         Vector3 checkPos = new Vector3(mPosition.x, mPosition.y + addtiveCheckLength, mPosition.z);
                         float checkLength = addtiveCheckLength - trans.y;
-                        if (Physics.Raycast(checkPos, Vector3.down, out hitInfo, checkLength, mCacheLayerMask))
+                        if (Physics.Raycast(checkPos, Vector3.down, out hitInfo, checkLength, mCacheLayerMask, QueryTriggerInteraction.Ignore))
                         {
                             float hitDistance = hitInfo.distance - addtiveCheckLength;
                             if (Mathf.Abs(hitDistance) > 0.001f)
