@@ -13,6 +13,7 @@ public partial class SkillBase : JW_Table.Binary, JW_Table.IKey
 	private string m_Icon;
 	private string m_Action;
 	private string m_Desc;
+	private int m_TreeType;
 
 	public int ID
 	{
@@ -44,6 +45,12 @@ public partial class SkillBase : JW_Table.Binary, JW_Table.IKey
 		set { m_Desc = value; }
 	}
 
+	public int TreeType
+	{
+		get { return m_TreeType; }
+		set { m_TreeType = value; }
+	}
+
 	public long Key()
 	{
 		return m_ID;
@@ -56,13 +63,14 @@ public partial class SkillBase : JW_Table.Binary, JW_Table.IKey
 		m_Icon = reader.ReadString();
 		m_Action = reader.ReadString();
 		m_Desc = reader.ReadString();
+		m_TreeType = reader.ReadInt32();
 	}
 }
 
 //SkillBase.xlsx
 public sealed class SkillBaseManager : JW_Table.TableManager<SkillBase>
 {
-	public const uint VERSION = 4087771800;
+	public const uint VERSION = 2182141379;
 
 	private SkillBaseManager()
 	{

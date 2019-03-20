@@ -19,7 +19,6 @@ namespace AosHotfixRunTime
         public void Init()
         {
             mInstanceID = 1;
-            Game.ControllerMgr.Get<PlayerController>().Init(1003, 1);
             var tmpUnitCtrl = Game.ControllerMgr.Get<UnitController>();
 
             mLocalPlayer = new LocalPlayer();

@@ -22,6 +22,8 @@ namespace AosHotfixRunTime
             base.OnEnter(procedureOwner);
 
             Game.EventMgr.Subscribe(InstanceWndEvent.StartInstanceEvent.EventID, OnEventInstanceStart);
+
+            Game.ControllerMgr.Get<PlayerController>().Init(1003, 1);
             Game.WindowsMgr.ShowWindow<InstanceWnd>();
         }
 

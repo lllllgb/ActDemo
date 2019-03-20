@@ -84,6 +84,7 @@ namespace AosHotfixRunTime
             MonsterAttrBaseManager.instance.Load(string.Empty);
             SkillBaseManager.instance.Load(string.Empty);
             SkillAttrBaseManager.instance.Load(string.Empty);
+            UnitExtraBaseManager.instance.Load(string.Empty);
         }
 
         public static void InitGameModule()

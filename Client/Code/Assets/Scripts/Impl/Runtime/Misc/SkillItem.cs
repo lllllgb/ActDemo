@@ -35,4 +35,10 @@ namespace AosHotfixRunTime
             }
         }
     }
+
+    public class SkillItemLink
+    {
+        public int SkillSlot { get; set; }
+        public List<SkillItem> SkillItems { get; private set; } = new List<SkillItem>();
+    }
 }

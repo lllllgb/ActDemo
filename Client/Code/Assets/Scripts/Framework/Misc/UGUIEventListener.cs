@@ -4,7 +4,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 
-public class UGUIEventListener : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler
+public class UGUIEventListener : MonoBehaviour, IPointerClickHandler, 
+    IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler
 {
     public delegate void VoidDelegate(PointerEventData eventData);
     public VoidDelegate onClick;
@@ -12,8 +13,6 @@ public class UGUIEventListener : MonoBehaviour, IPointerClickHandler, IPointerDo
     public VoidDelegate onEnter;
     public VoidDelegate onExit;
     public VoidDelegate onUp;
-    public VoidDelegate onSelect;
-    public VoidDelegate onUpdateSelect;
 
     static public UGUIEventListener Get(GameObject go)
     {
@@ -46,26 +45,4 @@ public class UGUIEventListener : MonoBehaviour, IPointerClickHandler, IPointerDo
     {
         if (onUp != null) onUp(eventData);
     }
-
-    //public void OnSelect(BaseEventData eventData)
-    //{
-    //    if (onSelect != null) onSelect(eventData);
-    //}
-
-    //public void OnUpdateSelected(BaseEventData eventData)
-    //{
-    //    if (onUpdateSelect != null) onUpdateSelect(eventData);
-    //}
-
-    public void SetEventNil()
-    {
-        onClick = null;
-    }
-
-    public void Coroutine(IEnumerator routine)
-    {
-        StartCoroutine(routine);
-    }
-
-
 }

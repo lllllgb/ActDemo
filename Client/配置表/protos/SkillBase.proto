@@ -6,4 +6,5 @@ message SkillBase [key=ID,excel="SkillBase.xlsx"]
 	string 		Icon                              [option = "技能图标"];
 	string 		Action                            [option = "动作"];
 	string 		Desc                              [option = "技能描述"];
+	int32 		TreeType                          [option = "技能系"];
 }

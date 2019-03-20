@@ -3,7 +3,7 @@ CRC: 1342721329
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f3ca0e198e22c7a75e798ed9a582c6ba
+    Hash: ab7495aad92be9e2535ae1d933d284fb
   TypeTreeHash:
     serializedVersion: 2
     Hash: 8931e75aefe594c9e0202d9f4a96d2d4
@@ -28,4 +28,4 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Misc/HUD_Popup_Damage.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d
