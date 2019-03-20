@@ -945,7 +945,7 @@ namespace ACT
                     break;
                 case ActData.EventType.RemoveMyself:
                     //Debug.Log("Unit " + mOwner.UnitID + " RemoveMyself");
-                    mOwner.Destory();
+                    mOwner.Dispose();
                     break;
                 case ActData.EventType.AdjustVarible:
                     {

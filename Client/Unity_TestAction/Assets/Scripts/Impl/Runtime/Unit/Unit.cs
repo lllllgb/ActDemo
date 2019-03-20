@@ -56,6 +56,14 @@ namespace AosHotfixRunTime
         {
         }
 
+        public override void Dispose()
+        {
+            base.Dispose();
+
+            ACT.ActionSystem.Instance.ActUnitMgr.Remove(this);
+            GameObject.Destroy(UGameObject);
+        }
+
         public abstract bool Hurt(Unit attacker, int damage, ACT.ECombatResult result);
         public virtual void AddHp(int v) { }
         public virtual void AddSoul(int v) { }

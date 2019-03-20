@@ -20,10 +20,7 @@ namespace AosHotfixRunTime
 
         public void Update(float deltaTime)
         {
-            for (int i = 0, max = ACT.ActionSystem.Instance.ActUnitMgr.Units.Count; i < max; ++i)
-            {
-                ACT.ActionSystem.Instance.ActUnitMgr.Units[i].Update(deltaTime);
-            }
+            ACT.ActionSystem.Instance.ActUnitMgr.Update(deltaTime);
         }
 
         public void LateUpdate(float deltaTime)
@@ -54,7 +51,7 @@ namespace AosHotfixRunTime
         {
             for (int i = 0, max = ACT.ActionSystem.Instance.ActUnitMgr.Units.Count; i < max; ++i)
             {
-                ACT.ActionSystem.Instance.ActUnitMgr.Units[i].Destory();
+                ACT.ActionSystem.Instance.ActUnitMgr.Units[i].Dispose();
             }
 
             ACT.ActionSystem.Instance.ActUnitMgr.ClearAll();
