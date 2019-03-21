@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 962250992
+CRC: 2244162006
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5420e1c9a533482fc70425e906779145
+    Hash: b48491ff8b23a9783aef1c6ad3949384
   TypeTreeHash:
     serializedVersion: 2
     Hash: c73412a662fd4e4f36af34cbdf078b85
@@ -12,5 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/effect/Texture/E_Object_fsw_001.png
+- Assets/Res/effect/Texture/E_Debris_fsw_003.png
 Dependencies: []

@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 1591035944
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a9d8aab2627430f6bc686a8f7230342c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 49c318d97990f2f843929a8bd7947255
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Effect/E_1001_fsw_skill10_004.prefab
+Dependencies:
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_yuan_fsw_005_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_009_02_share.unity3d

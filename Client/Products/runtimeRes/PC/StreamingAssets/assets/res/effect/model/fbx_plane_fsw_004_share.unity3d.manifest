@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 4056439620
+CRC: 1323005271
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7e4d899d37f01c8bc5075b999955b7eb
+    Hash: 7527fe10f00d0cb01d424f1d9aa2b55e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: dd75b9401610cb5abcccea16a153f100
+    Hash: 6fa9ce387392089bc59dd886979cd053
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -22,8 +22,6 @@ ClassTypes:
 - Class: 43
   Script: {instanceID: 0}
 - Class: 48
-  Script: {instanceID: 0}
-- Class: 111
   Script: {instanceID: 0}
 Assets:
 - Assets/Res/effect/Model/Fbx_Plane_fsw_004.FBX
