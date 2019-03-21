@@ -39,6 +39,11 @@ namespace AosHotfixRunTime
         private GameObject mLB;
         private UGUIJoystick mJoystick;
 
+        public FightMainWnd()
+        {
+            WindowType = EWindowType.Main;
+        }
+
         protected override void AfterInit()
         {
             base.AfterInit();
