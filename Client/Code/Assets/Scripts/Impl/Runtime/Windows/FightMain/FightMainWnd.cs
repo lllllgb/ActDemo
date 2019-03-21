@@ -88,6 +88,7 @@ namespace AosHotfixRunTime
             RegisterEventClickUp(tmpAtkGo, OnAtkBtnUp);
             RegisterEventClick(Find(mSkillInfo, "Image_Jump"), OnJumpBtnClick);
             RegisterEventClick(Find(mSkillInfo, "Image_Defense"), OnDefenseBtnClick);
+            RegisterEventClick(Find(mRB, "Button_SkillSystem"), OnSkillModuleBtnClick);
         }
 
         protected override void AfterShow()
@@ -170,6 +171,11 @@ namespace AosHotfixRunTime
         private void OnDefenseBtnClick(PointerEventData arg)
         {
             
+        }
+
+        private void OnSkillModuleBtnClick(PointerEventData arg)
+        {
+            Game.WindowsMgr.ShowWindow<SkillWnd>();
         }
 
         private void OnJumpBtnClick(PointerEventData arg)

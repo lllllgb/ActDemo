@@ -362,9 +362,9 @@ namespace AosHotfixRunTime
             if (tmpCtrl.CurrSkillPage != mSkillPage)
             {
                 tmpCtrl.SetCurrSkillPage(mSkillPage);
-
-                Game.EventMgr.FireNow(this, ReferencePool.Fetch<SkillWndEvent.SkillSetChange>());
             }
+
+            Game.EventMgr.FireNow(this, ReferencePool.Fetch<SkillWndEvent.SkillSetChange>());
 
             Close();
         }

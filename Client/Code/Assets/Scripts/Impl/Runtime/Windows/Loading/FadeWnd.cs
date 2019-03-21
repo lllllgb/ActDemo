@@ -21,7 +21,7 @@ namespace AosHotfixRunTime
 
         public FadeWnd()
         {
-            WindowType = EWindowType.None;
+            WindowType = EWindowType.Loading;
         }
 
         protected override void AfterInit()
