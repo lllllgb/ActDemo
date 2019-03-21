@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 4038323997
+CRC: 4272745704
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -150,107 +150,95 @@ AssetBundleManifest:
       Name: assets/res/effect/texture/e_trail_fsw_011_share.unity3d
       Dependencies: {}
     Info_34:
-      Name: assets/res/effect/texture/e_debris_fsw_001_share.unity3d
-      Dependencies: {}
-    Info_35:
       Name: assets/res/effect/texture/e_glow_fsw_006_share.unity3d
       Dependencies: {}
-    Info_36:
+    Info_35:
       Name: assets/res/effect/texture/e_knife_fsw_008_share.unity3d
       Dependencies: {}
-    Info_37:
-      Name: assets/res/effect/texture/e_lighting_fsw_002_share.unity3d
-      Dependencies: {}
-    Info_38:
+    Info_36:
       Name: assets/res/effect/texture/e_line_lyj_006_share.unity3d
       Dependencies: {}
-    Info_39:
+    Info_37:
       Name: assets/res/effect/texture/e_knife_fsw_009_share.unity3d
       Dependencies: {}
-    Info_40:
+    Info_38:
       Name: assets/res/effect/texture/e_glow_fsw_011_share.unity3d
       Dependencies: {}
-    Info_41:
+    Info_39:
       Name: assets/res/effect/texture/e_trail_fsw_008_share.unity3d
       Dependencies: {}
-    Info_42:
+    Info_40:
       Name: assets/res/effect/texture/e_glow_fsw_002_share.unity3d
       Dependencies: {}
-    Info_43:
+    Info_41:
       Name: assets/res/effect/texture/e_object_fsw_006_share.unity3d
       Dependencies: {}
-    Info_44:
-      Name: assets/res/effect/texture/e_trail_fsw_010_share.unity3d
-      Dependencies: {}
-    Info_45:
+    Info_42:
       Name: assets/res/effect/texture/e_knife_fsw_004_share.unity3d
       Dependencies: {}
-    Info_46:
+    Info_43:
       Name: assets/res/effect/texture/e_knife_fsw_014_share.unity3d
       Dependencies: {}
-    Info_47:
+    Info_44:
       Name: assets/res/effect/texture/e_trail_fsw_009_share.unity3d
       Dependencies: {}
-    Info_48:
+    Info_45:
       Name: assets/res/effect/texture/e_smoke_fsw_003_share.unity3d
       Dependencies: {}
-    Info_49:
+    Info_46:
       Name: assets/res/effect/texture/e_object_fsw_002_share.unity3d
       Dependencies: {}
-    Info_50:
-      Name: assets/res/effect/texture/e_object_fsw_001_share.unity3d
-      Dependencies: {}
-    Info_51:
+    Info_47:
       Name: assets/res/effect/texture/e_trail_fsw_001_share.unity3d
       Dependencies: {}
-    Info_52:
+    Info_48:
       Name: assets/res/effect/texture/e_trail_fsw_006_share.unity3d
       Dependencies: {}
-    Info_53:
+    Info_49:
       Name: assets/res/effect/texture/e_line_lyj_004_share.unity3d
       Dependencies: {}
-    Info_54:
+    Info_50:
       Name: assets/res/effect/texture/e_glow_lyj_003_share.unity3d
       Dependencies: {}
-    Info_55:
+    Info_51:
       Name: assets/res/effect/texture/e_line_lyj_008_share.unity3d
       Dependencies: {}
-    Info_56:
+    Info_52:
       Name: assets/res/effect/texture/e_knife_fsw_006_share.unity3d
       Dependencies: {}
-    Info_57:
+    Info_53:
       Name: assets/res/effect/texture/e_line_lyj_007_share.unity3d
       Dependencies: {}
-    Info_58:
+    Info_54:
       Name: assets/res/effect/texture/e_noise_fsw_003_share.unity3d
       Dependencies: {}
-    Info_59:
+    Info_55:
       Name: assets/res/effect/texture/e_glow_fsw_008_share.unity3d
       Dependencies: {}
-    Info_60:
+    Info_56:
       Name: assets/res/effect/texture/e_line_lyj_001_share.unity3d
       Dependencies: {}
-    Info_61:
+    Info_57:
       Name: assets/res/effect/texture/e_glow_lyj_002_share.unity3d
       Dependencies: {}
-    Info_62:
+    Info_58:
       Name: assets/res/effect/texture/e_noise_fsw_002_share.unity3d
       Dependencies: {}
-    Info_63:
+    Info_59:
       Name: assets/res/effect/texture/e_glow_fsw_003_share.unity3d
       Dependencies: {}
-    Info_64:
+    Info_60:
       Name: assets/res/effect/texture/e_knife_fsw_005_share.unity3d
       Dependencies: {}
-    Info_65:
+    Info_61:
       Name: assets/res/effect/texture/e_grain_lyj_001_share.unity3d
       Dependencies: {}
-    Info_66:
+    Info_62:
       Name: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_1: assets/res/effect/texture/e_object_fsw_002_share.unity3d
-    Info_67:
+    Info_63:
       Name: assets/bundles/effect/e_1001_fsw_fly_attack_hit.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
@@ -259,7 +247,7 @@ AssetBundleManifest:
         Dependency_3: assets/res/effect/materials/e_line_lyj_001_share.unity3d
         Dependency_4: assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
         Dependency_5: assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
-    Info_68:
+    Info_64:
       Name: assets/bundles/effect/e_1001_fsw_skill6_002.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_knife_fsw_012_share.unity3d
@@ -276,7 +264,7 @@ AssetBundleManifest:
         Dependency_11: assets/res/effect/model/fbx_plane_fsw_009_share.unity3d
         Dependency_12: assets/res/effect/model/fbx_dg_fsw_007_share.unity3d
         Dependency_13: assets/res/effect/model/fbx_dg_fsw_008_share.unity3d
-    Info_69:
+    Info_65:
       Name: assets/bundles/effect/e_1001_fsw_skill9_001.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_trail_fsw_009_share.unity3d
@@ -286,28 +274,27 @@ AssetBundleManifest:
         Dependency_4: assets/res/effect/model/fbx_yuan_fsw_002_share.unity3d
         Dependency_5: assets/res/effect/model/fbx_xian_fsw_002_share.unity3d
         Dependency_6: assets/res/effect/model/fbx_yuan_fsw_005_share.unity3d
-    Info_70:
+    Info_66:
       Name: assets/bundles/effect/e_1001_fsw_skill10_001.unity3d
       Dependencies:
-        Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
-        Dependency_1: assets/res/effect/materials/e_object_fsw_002_01_share.unity3d
-        Dependency_2: assets/res/effect/materials/e_noise_fsw_003_04_share.unity3d
-        Dependency_3: assets/res/effect/materials/e_lighting_fsw_002_01_share.unity3d
-        Dependency_4: assets/res/effect/materials/e_lighting_fsw_001_01_share.unity3d
-        Dependency_5: assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
-        Dependency_6: assets/res/effect/model/fbx_plane_fsw_007_share.unity3d
-        Dependency_7: assets/res/effect/model/fbx_plane_fsw_004_share.unity3d
-    Info_71:
+        Dependency_0: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
+        Dependency_1: assets/res/effect/model/plane01_share.unity3d
+        Dependency_2: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
+        Dependency_3: assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
+        Dependency_4: assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
+        Dependency_5: assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
+        Dependency_6: assets/res/effect/materials/e_trail_fsw_014_001_share.unity3d
+    Info_67:
       Name: assets/res/effect/materials/e_object_fsw_002_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_object_fsw_002_share.unity3d
-    Info_72:
+    Info_68:
       Name: assets/bundles/effect/e_1001_fsw_skill3_001.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
         Dependency_1: assets/res/effect/materials/e_smoke_fsw_003_01_share.unity3d
         Dependency_2: assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
-    Info_73:
+    Info_69:
       Name: assets/bundles/effect/e_1001_fsw_skill10_002_hit.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
@@ -315,23 +302,23 @@ AssetBundleManifest:
         Dependency_2: assets/res/effect/materials/e_glow_lyj_003_share.unity3d
         Dependency_3: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
         Dependency_4: assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
-    Info_74:
+    Info_70:
       Name: assets/res/effect/materials/e_noise_fsw_003_04_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_003_share.unity3d
-    Info_75:
+    Info_71:
       Name: assets/res/effect/materials/e_grain_lyj_001a_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_grain_lyj_001_share.unity3d
-    Info_76:
+    Info_72:
       Name: assets/bundles/effect/e_1001_fsw_attack_002.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
         Dependency_1: assets/res/effect/model/plane01_share.unity3d
         Dependency_2: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
         Dependency_3: assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
-    Info_77:
+    Info_73:
       Name: assets/bundles/effect/e_1001_fsw_fly_attack.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
@@ -346,7 +333,7 @@ AssetBundleManifest:
         Dependency_9: assets/res/effect/texture/e_knife_fsw_011_share.unity3d
         Dependency_10: assets/res/effect/model/fbx_by_fsw_002_share.unity3d
         Dependency_11: assets/res/effect/materials/e_knife_fsw_003_02_share.unity3d
-    Info_78:
+    Info_74:
       Name: assets/bundles/effect/e_1001_fsw_front_attack.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
@@ -357,17 +344,17 @@ AssetBundleManifest:
         Dependency_5: assets/res/effect/materials/e_noise_fsw_003_02_share.unity3d
         Dependency_6: assets/res/effect/materials/e_trail_fsw_006_01_share.unity3d
         Dependency_7: assets/res/effect/model/fbx_plane_fsw_006_share.unity3d
-    Info_79:
+    Info_75:
       Name: assets/res/effect/materials/e_knife_fsw_003_01_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_2: assets/res/effect/texture/e_knife_fsw_003_share.unity3d
-    Info_80:
+    Info_76:
       Name: assets/res/effect/materials/e_line_lyj_002_02_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_002_share.unity3d
-    Info_81:
+    Info_77:
       Name: assets/bundles/effect/e_1001_fsw_skill2_001.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
@@ -376,7 +363,7 @@ AssetBundleManifest:
         Dependency_3: assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
         Dependency_4: assets/res/effect/model/fbx_plane_fsw_007_share.unity3d
         Dependency_5: assets/res/effect/model/fbx_plane_fsw_004_share.unity3d
-    Info_82:
+    Info_78:
       Name: assets/bundles/effect/e_1001_fsw_skill8_hit.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
@@ -385,23 +372,23 @@ AssetBundleManifest:
         Dependency_3: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
         Dependency_4: assets/res/effect/materials/e_trail_fsw_004_01_share.unity3d
         Dependency_5: assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
-    Info_83:
+    Info_79:
       Name: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_trail_fsw_001_share.unity3d
-    Info_84:
+    Info_80:
       Name: assets/res/effect/materials/e_glow_fsw_005_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_fsw_005_share.unity3d
-    Info_85:
+    Info_81:
       Name: assets/res/effect/materials/e_glow_fsw_010_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_fsw_010_share.unity3d
-    Info_86:
+    Info_82:
       Name: assets/res/effect/materials/e_glow_lyj_003_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_lyj_003_share.unity3d
-    Info_87:
+    Info_83:
       Name: assets/bundles/effect/e_1001_fsw_skill3_hit.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
@@ -410,18 +397,18 @@ AssetBundleManifest:
         Dependency_3: assets/res/effect/materials/e_glow_fsw_003_01_share.unity3d
         Dependency_4: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
         Dependency_5: assets/res/effect/materials/e_trail_fsw_004_01_share.unity3d
-    Info_88:
+    Info_84:
       Name: assets/res/effect/materials/e_glow_fsw_011_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_fsw_011_share.unity3d
-    Info_89:
+    Info_85:
       Name: assets/bundles/effect/e_1001_fsw_attack_003.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/model/plane01_share.unity3d
         Dependency_1: assets/res/effect/materials/e_line_lyj_004_share.unity3d
         Dependency_2: assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
         Dependency_3: assets/res/effect/materials/e_knife_fsw_004_01_share.unity3d
-    Info_90:
+    Info_86:
       Name: assets/bundles/effect/e_1001_fsw_skill4_hit.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
@@ -431,68 +418,64 @@ AssetBundleManifest:
         Dependency_4: assets/res/effect/materials/e_glow_fsw_006_01_share.unity3d
         Dependency_5: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
         Dependency_6: assets/res/effect/materials/e_trail_fsw_004_01_share.unity3d
-    Info_91:
+    Info_87:
       Name: assets/bundles/effect/e_1001_fsw_skill7_002.unity3d
       Dependencies:
-        Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
-        Dependency_1: assets/res/effect/materials/e_object_fsw_002_01_share.unity3d
-        Dependency_2: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
-        Dependency_3: assets/res/effect/materials/e_knife_fsw_012_03_share.unity3d
-        Dependency_4: assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
-        Dependency_5: assets/res/effect/materials/e_knife_fsw_009_01_share.unity3d
-        Dependency_6: assets/res/effect/materials/e_knife_fsw_008_01_share.unity3d
-        Dependency_7: assets/res/effect/materials/e_knife_fsw_012_01_share.unity3d
-        Dependency_8: assets/res/effect/materials/e_trail_fsw_011_02_share.unity3d
-        Dependency_9: assets/res/effect/model/fbx_by_fsw_001_share.unity3d
-        Dependency_10: assets/res/effect/model/fbx_yuan_fsw_002_share.unity3d
-        Dependency_11: assets/res/effect/model/fbx_dg_fsw_010_share.unity3d
-        Dependency_12: assets/res/effect/model/fbx_dg_fsw_009_share.unity3d
-        Dependency_13: assets/res/effect/model/fbx_plane_fsw_009_share.unity3d
-    Info_92:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+        Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
+        Dependency_2: assets/res/effect/texture/e_knife_fsw_012_share.unity3d
+        Dependency_3: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
+        Dependency_4: assets/res/effect/materials/e_object_fsw_002_01_share.unity3d
+        Dependency_5: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
+        Dependency_6: assets/res/effect/materials/e_knife_fsw_012_03_share.unity3d
+        Dependency_7: assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
+        Dependency_8: assets/res/effect/materials/e_knife_fsw_009_01_share.unity3d
+        Dependency_9: assets/res/effect/materials/e_knife_fsw_008_01_share.unity3d
+        Dependency_10: assets/res/effect/materials/e_trail_fsw_011_02_share.unity3d
+        Dependency_11: assets/res/effect/model/fbx_by_fsw_001_share.unity3d
+        Dependency_12: assets/res/effect/model/fbx_yuan_fsw_002_share.unity3d
+        Dependency_13: assets/res/effect/model/fbx_dg_fsw_009_share.unity3d
+        Dependency_14: assets/res/effect/model/fbx_plane_fsw_009_share.unity3d
+    Info_88:
       Name: assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_fsw_008_share.unity3d
-    Info_93:
+    Info_89:
       Name: assets/bundles/effect/e_1001_fsw_skill9_002.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
-        Dependency_2: assets/res/effect/texture/e_trail_fsw_010_share.unity3d
-        Dependency_3: assets/res/effect/texture/e_trail_fsw_009_share.unity3d
-        Dependency_4: assets/res/effect/texture/e_noise_fsw_003_share.unity3d
-        Dependency_5: assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
-        Dependency_6: assets/res/effect/materials/e_glow_fsw_002_02_share.unity3d
-        Dependency_7: assets/res/effect/model/fbx_yuan_fsw_002_share.unity3d
-        Dependency_8: assets/res/effect/model/fbx_xian_fsw_002_share.unity3d
-    Info_94:
+        Dependency_2: assets/res/effect/texture/e_noise_fsw_003_share.unity3d
+        Dependency_3: assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
+        Dependency_4: assets/res/effect/materials/e_glow_fsw_002_02_share.unity3d
+        Dependency_5: assets/res/effect/model/fbx_yuan_fsw_002_share.unity3d
+        Dependency_6: assets/res/effect/model/fbx_xian_fsw_002_share.unity3d
+        Dependency_7: assets/res/effect/materials/e_trail_fsw_009_02_share.unity3d
+    Info_90:
       Name: assets/res/effect/materials/e_knife_fsw_012_03_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_knife_fsw_012_share.unity3d
-    Info_95:
+    Info_91:
       Name: assets/bundles/effect/e_1001_fsw_skill7_001.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_glow_fsw_002_02_share.unity3d
         Dependency_1: assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
         Dependency_2: assets/res/effect/model/fbx_yuan_fsw_002_share.unity3d
-    Info_96:
-      Name: assets/res/effect/materials/e_lighting_fsw_002_01_share.unity3d
-      Dependencies:
-        Dependency_0: assets/res/effect/texture/e_lighting_fsw_002_share.unity3d
-    Info_97:
+    Info_92:
       Name: assets/res/effect/materials/e_glow_fsw_002_02_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_fsw_002_share.unity3d
-    Info_98:
+    Info_93:
       Name: assets/res/effect/materials/e_smoke_fsw_003_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_smoke_fsw_003_share.unity3d
-    Info_99:
+    Info_94:
       Name: assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_2: assets/res/effect/texture/e_knife_fsw_014_share.unity3d
-    Info_100:
+    Info_95:
       Name: assets/bundles/effect/e_1001_fsw_skill4_001.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_glow_fsw_002_02_share.unity3d
@@ -500,7 +483,8 @@ AssetBundleManifest:
         Dependency_2: assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
         Dependency_3: assets/res/effect/materials/e_knife_fsw_004_01_share.unity3d
         Dependency_4: assets/res/effect/model/fbx_plane_fsw_004_share.unity3d
-    Info_101:
+        Dependency_5: assets/res/effect/materials/e_smoke_fsw_004_01_share.unity3d
+    Info_96:
       Name: assets/bundles/effect/e_1001_fsw_skill6_001.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
@@ -510,53 +494,45 @@ AssetBundleManifest:
         Dependency_4: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
         Dependency_5: assets/res/effect/model/fbx_yuan_fsw_001_share.unity3d
         Dependency_6: assets/res/effect/model/fbx_dg_fsw_007_share.unity3d
-    Info_102:
+    Info_97:
       Name: assets/res/effect/materials/e_glow_lyj_002_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_lyj_002_share.unity3d
-    Info_103:
+    Info_98:
       Name: assets/res/effect/materials/e_glow_fsw_003_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_fsw_003_share.unity3d
-    Info_104:
+    Info_99:
       Name: assets/res/effect/materials/e_lighting_fsw_001_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_lighting_fsw_001_share.unity3d
-    Info_105:
+    Info_100:
       Name: assets/res/effect/materials/e_knife_fsw_009_01_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_2: assets/res/effect/texture/e_knife_fsw_009_share.unity3d
-    Info_106:
+    Info_101:
       Name: assets/bundles/effect/e_1001_fsw_skill10_002.unity3d
       Dependencies:
-        Dependency_0: assets/bundles/shadercollect.unity3d
-        Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
-        Dependency_2: assets/res/effect/texture/e_trail_fsw_010_share.unity3d
-        Dependency_3: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
-        Dependency_4: assets/res/effect/materials/e_object_fsw_002_01_share.unity3d
-        Dependency_5: assets/res/effect/materials/e_noise_fsw_003_04_share.unity3d
-        Dependency_6: assets/res/effect/materials/e_line_lyj_002_02_share.unity3d
-        Dependency_7: assets/res/effect/materials/e_lighting_fsw_002_01_share.unity3d
-        Dependency_8: assets/res/effect/materials/e_lighting_fsw_001_01_share.unity3d
-        Dependency_9: assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
-        Dependency_10: assets/res/effect/model/fbx_plane_fsw_007_share.unity3d
-        Dependency_11: assets/res/effect/model/fbx_plane_fsw_004_share.unity3d
-        Dependency_12: assets/res/effect/model/fbx_yuan_fsw_005_share.unity3d
-    Info_107:
+        Dependency_0: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
+        Dependency_1: assets/res/effect/model/plane01_share.unity3d
+        Dependency_2: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
+        Dependency_3: assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
+        Dependency_4: assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
+        Dependency_5: assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
+        Dependency_6: assets/res/effect/materials/e_trail_fsw_014_001_share.unity3d
+    Info_102:
       Name: assets/bundles/effect/e_1001_fsw_skill8.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_2: assets/res/effect/texture/e_noise_fsw_003_share.unity3d
         Dependency_3: assets/res/effect/texture/e_noise_fsw_002_share.unity3d
-        Dependency_4: assets/res/effect/materials/e_debris_fsw_001_01_share.unity3d
-        Dependency_5: assets/res/effect/materials/e_object_fsw_001_01_share.unity3d
-        Dependency_6: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
-        Dependency_7: assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
-        Dependency_8: assets/res/effect/materials/e_line_lyj_008_01_share.unity3d
-    Info_108:
+        Dependency_4: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
+        Dependency_5: assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
+        Dependency_6: assets/res/effect/materials/e_line_lyj_008_01_share.unity3d
+    Info_103:
       Name: assets/bundles/effect/e_1001_fsw_skill2_002.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
@@ -565,15 +541,15 @@ AssetBundleManifest:
         Dependency_3: assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
         Dependency_4: assets/res/effect/model/fbx_plane_fsw_007_share.unity3d
         Dependency_5: assets/res/effect/model/fbx_plane_fsw_004_share.unity3d
-    Info_109:
+    Info_104:
       Name: assets/res/effect/materials/e_line_lyj_004_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_004_share.unity3d
-    Info_110:
+    Info_105:
       Name: assets/res/effect/materials/e_line_lyj_010_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_knife_fsw_005_share.unity3d
-    Info_111:
+    Info_106:
       Name: assets/res/effect/materials/e_noise_fsw_003_02_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
@@ -581,32 +557,39 @@ AssetBundleManifest:
         Dependency_2: assets/res/effect/texture/e_knife_fsw_007_share.unity3d
         Dependency_3: assets/res/effect/texture/e_trail_fsw_008_share.unity3d
         Dependency_4: assets/res/effect/texture/e_noise_fsw_003_share.unity3d
-    Info_112:
+    Info_107:
       Name: assets/bundles/effect/e_1001_fsw_skill10_003.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
         Dependency_1: assets/res/effect/materials/e_object_fsw_002_01_share.unity3d
-        Dependency_2: assets/res/effect/materials/e_knife_fsw_012_03_share.unity3d
-        Dependency_3: assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
-        Dependency_4: assets/res/effect/materials/e_knife_fsw_009_01_share.unity3d
-        Dependency_5: assets/res/effect/materials/e_knife_fsw_008_01_share.unity3d
-        Dependency_6: assets/res/effect/materials/e_debris_fsw_001_01_share.unity3d
-        Dependency_7: assets/res/effect/materials/e_object_fsw_001_01_share.unity3d
-        Dependency_8: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
-        Dependency_9: assets/res/effect/materials/e_knife_fsw_012_01_share.unity3d
-        Dependency_10: assets/res/effect/model/fbx_by_fsw_001_share.unity3d
-        Dependency_11: assets/res/effect/model/fbx_dg_fsw_010_share.unity3d
-        Dependency_12: assets/res/effect/model/fbx_dg_fsw_009_share.unity3d
-        Dependency_13: assets/res/effect/model/fbx_plane_fsw_009_share.unity3d
-    Info_113:
+        Dependency_2: assets/res/effect/materials/e_noise_fsw_003_04_share.unity3d
+        Dependency_3: assets/res/effect/materials/e_line_lyj_002_02_share.unity3d
+        Dependency_4: assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
+        Dependency_5: assets/res/effect/materials/e_lighting_fsw_001_01_share.unity3d
+        Dependency_6: assets/res/effect/materials/e_smoke_fsw_002_01_share.unity3d
+        Dependency_7: assets/res/effect/materials/e_line_lyj_007a_share.unity3d
+        Dependency_8: assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
+        Dependency_9: assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
+        Dependency_10: assets/res/effect/model/fbx_plane_fsw_007_share.unity3d
+        Dependency_11: assets/res/effect/model/fbx_plane_fsw_005_share.unity3d
+        Dependency_12: assets/res/effect/model/fbx_plane_fsw_004_share.unity3d
+        Dependency_13: assets/res/effect/model/fbx_plane_fsw_006_share.unity3d
+        Dependency_14: assets/res/effect/model/fbx_yuan_fsw_002_share.unity3d
+        Dependency_15: assets/res/effect/model/fbx_yuan_fsw_001_share.unity3d
+        Dependency_16: assets/res/effect/materials/e_glow_fsw_013_01_share.unity3d
+        Dependency_17: assets/res/effect/materials/e_smoke_fsw_004_01_share.unity3d
+        Dependency_18: assets/res/effect/materials/e_smoke_fsw_005_01_share.unity3d
+        Dependency_19: assets/res/effect/materials/e_debris_fsw_003_01_share.unity3d
+        Dependency_20: assets/res/effect/materials/e_object_fsw_005_01_share.unity3d
+    Info_108:
       Name: assets/res/effect/materials/e_knife_fsw_008_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_knife_fsw_008_share.unity3d
-    Info_114:
+    Info_109:
       Name: assets/res/effect/materials/e_knife_fsw_006_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_knife_fsw_006_share.unity3d
-    Info_115:
+    Info_110:
       Name: assets/bundles/effect/e_1001_fsw_front_attack_hit.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
@@ -616,7 +599,7 @@ AssetBundleManifest:
         Dependency_4: assets/res/effect/materials/e_glow_fsw_002_02_share.unity3d
         Dependency_5: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
         Dependency_6: assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
-    Info_116:
+    Info_111:
       Name: assets/bundles/effect/e_1001_fsw_skill3_002.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
@@ -629,26 +612,17 @@ AssetBundleManifest:
         Dependency_7: assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
         Dependency_8: assets/res/effect/model/fbx_by_fsw_001_share.unity3d
         Dependency_9: assets/res/effect/model/fbx_by_fsw_003_share.unity3d
-    Info_117:
-      Name: assets/res/effect/materials/e_debris_fsw_001_01_share.unity3d
-      Dependencies:
-        Dependency_0: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
-        Dependency_1: assets/res/effect/texture/e_debris_fsw_001_share.unity3d
-    Info_118:
-      Name: assets/res/effect/materials/e_object_fsw_001_01_share.unity3d
-      Dependencies:
-        Dependency_0: assets/res/effect/texture/e_object_fsw_001_share.unity3d
-    Info_119:
+    Info_112:
       Name: assets/res/effect/materials/e_glow_fsw_006_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_fsw_006_share.unity3d
-    Info_120:
+    Info_113:
       Name: assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_2: assets/res/effect/texture/e_knife_fsw_002_share.unity3d
-    Info_121:
+    Info_114:
       Name: assets/bundles/effect/e_1001_fsw_skill10_003_hit.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
@@ -657,11 +631,11 @@ AssetBundleManifest:
         Dependency_3: assets/res/effect/materials/e_glow_fsw_002_02_share.unity3d
         Dependency_4: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
         Dependency_5: assets/res/effect/materials/e_trail_fsw_004_01_share.unity3d
-    Info_122:
+    Info_115:
       Name: assets/res/effect/materials/e_smoke_fsw_002_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_smoke_fsw_002_share.unity3d
-    Info_123:
+    Info_116:
       Name: assets/bundles/effect/e_1001_fsw_skill7_hit.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
@@ -670,7 +644,7 @@ AssetBundleManifest:
         Dependency_3: assets/res/effect/materials/e_line_lyj_001_share.unity3d
         Dependency_4: assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
         Dependency_5: assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
-    Info_124:
+    Info_117:
       Name: assets/bundles/effect/e_1001_fsw_skill2_003.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
@@ -680,20 +654,20 @@ AssetBundleManifest:
         Dependency_4: assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
         Dependency_5: assets/res/effect/model/fbx_plane_fsw_007_share.unity3d
         Dependency_6: assets/res/effect/model/fbx_plane_fsw_004_share.unity3d
-    Info_125:
+    Info_118:
       Name: assets/res/effect/materials/e_line_lyj_006_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_006_share.unity3d
-    Info_126:
+    Info_119:
       Name: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_008_share.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_002_share.unity3d
-    Info_127:
+    Info_120:
       Name: assets/res/effect/materials/e_line_lyj_007_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_007_share.unity3d
-    Info_128:
+    Info_121:
       Name: assets/bundles/effect/e_1001_fsw_skill5.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
@@ -706,7 +680,7 @@ AssetBundleManifest:
         Dependency_7: assets/res/effect/model/fbx_plane_fsw_007_share.unity3d
         Dependency_8: assets/res/effect/model/fbx_plane_fsw_004_share.unity3d
         Dependency_9: assets/res/effect/model/fbx_plane_fsw_006_share.unity3d
-    Info_129:
+    Info_122:
       Name: assets/bundles/effect/e_1001_fsw_skill10_001_hit.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
@@ -717,23 +691,26 @@ AssetBundleManifest:
         Dependency_5: assets/res/effect/model/fbx_plane_fsw_007_share.unity3d
         Dependency_6: assets/res/effect/model/fbx_plane_fsw_005_share.unity3d
         Dependency_7: assets/res/effect/model/fbx_yuan_fsw_002_share.unity3d
-    Info_130:
+        Dependency_8: assets/res/effect/materials/e_glow_fsw_013_01_share.unity3d
+        Dependency_9: assets/res/effect/materials/e_smoke_fsw_005_01_share.unity3d
+        Dependency_10: assets/res/effect/materials/e_debris_fsw_003_01_share.unity3d
+    Info_123:
       Name: assets/res/effect/materials/e_trail_fsw_006_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_trail_fsw_006_share.unity3d
-    Info_131:
+    Info_124:
       Name: assets/res/effect/materials/e_line_lyj_007a_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_007_share.unity3d
-    Info_132:
+    Info_125:
       Name: assets/res/effect/materials/e_line_lyj_001_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_001_share.unity3d
-    Info_133:
+    Info_126:
       Name: assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_003_share.unity3d
-    Info_134:
+    Info_127:
       Name: assets/bundles/effect/e_1001_fsw_skill4_002.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_noise_fsw_003_04_share.unity3d
@@ -744,11 +721,11 @@ AssetBundleManifest:
         Dependency_5: assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
         Dependency_6: assets/res/effect/model/fbx_plane_fsw_004_share.unity3d
         Dependency_7: assets/res/effect/model/fbx_plane_fsw_008_share.unity3d
-    Info_135:
+    Info_128:
       Name: assets/res/effect/materials/e_trail_fsw_004_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_trail_fsw_004_share.unity3d
-    Info_136:
+    Info_129:
       Name: assets/bundles/effect/e_1001_fsw_attack_hit.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
@@ -758,35 +735,35 @@ AssetBundleManifest:
         Dependency_4: assets/res/effect/materials/e_glow_fsw_002_02_share.unity3d
         Dependency_5: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
         Dependency_6: assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
-    Info_137:
+    Info_130:
       Name: assets/bundles/effect/e_1001_fsw_attack_001.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
         Dependency_1: assets/res/effect/model/plane01_share.unity3d
         Dependency_2: assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
         Dependency_3: assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
-    Info_138:
+    Info_131:
       Name: assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_fsw_002_share.unity3d
-    Info_139:
+    Info_132:
       Name: assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_object_fsw_006_share.unity3d
-    Info_140:
+    Info_133:
       Name: assets/res/effect/materials/e_knife_fsw_004_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_1: assets/res/effect/texture/e_knife_fsw_004_share.unity3d
-    Info_141:
+    Info_134:
       Name: assets/bundles/unit/m0001.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
-    Info_142:
+    Info_135:
       Name: assets/bundles/unit/b0001.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
-    Info_143:
+    Info_136:
       Name: assets/bundles/effect/e_1001_fsw_skill1.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
@@ -795,7 +772,7 @@ AssetBundleManifest:
         Dependency_3: assets/res/effect/materials/e_lighting_fsw_001_01_share.unity3d
         Dependency_4: assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
         Dependency_5: assets/res/effect/model/fbx_plane_fsw_004_share.unity3d
-    Info_144:
+    Info_137:
       Name: assets/bundles/effect/e_1001_fsw_attack_004.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_lyj_002_share.unity3d
@@ -807,7 +784,7 @@ AssetBundleManifest:
         Dependency_6: assets/res/effect/materials/e_line_lyj_007a_share.unity3d
         Dependency_7: assets/res/effect/model/fbx_plane_fsw_005_share.unity3d
         Dependency_8: assets/res/effect/model/jian01_share.unity3d
-    Info_145:
+    Info_138:
       Name: assets/bundles/effect/e_1001_fsw_fall_attack.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_trail_fsw_011_share.unity3d
@@ -819,143 +796,135 @@ AssetBundleManifest:
         Dependency_6: assets/res/effect/model/fbx_plane_fsw_005_share.unity3d
         Dependency_7: assets/res/effect/model/fbx_plane_fsw_006_share.unity3d
         Dependency_8: assets/res/effect/model/fbx_yuan_fsw_001_share.unity3d
-    Info_146:
+        Dependency_9: assets/res/effect/materials/e_object_fsw_005_01_share.unity3d
+    Info_139:
       Name: assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_2: assets/res/effect/texture/e_noise_fsw_003_share.unity3d
-    Info_147:
-      Name: assets/res/effect/materials/e_knife_fsw_012_01_share.unity3d
-      Dependencies:
-        Dependency_0: assets/bundles/shadercollect.unity3d
-        Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
-        Dependency_2: assets/res/effect/texture/e_knife_fsw_012_share.unity3d
-    Info_148:
+    Info_140:
       Name: assets/res/effect/materials/e_trail_fsw_011_02_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_2: assets/res/effect/texture/e_trail_fsw_011_share.unity3d
-    Info_149:
+    Info_141:
       Name: assets/res/effect/model/fbx_plane_fsw_007_share.unity3d
       Dependencies: {}
-    Info_150:
+    Info_142:
       Name: assets/res/effect/model/fbx_plane_fsw_005_share.unity3d
       Dependencies: {}
-    Info_151:
+    Info_143:
       Name: assets/res/effect/model/jian01_share.unity3d
       Dependencies: {}
-    Info_152:
+    Info_144:
       Name: assets/res/effect/model/fbx_plane_fsw_004_share.unity3d
       Dependencies: {}
-    Info_153:
+    Info_145:
       Name: assets/res/effect/model/fbx_plane_fsw_006_share.unity3d
       Dependencies: {}
-    Info_154:
+    Info_146:
       Name: assets/res/effect/model/fbx_by_fsw_001_share.unity3d
       Dependencies: {}
-    Info_155:
+    Info_147:
       Name: assets/res/effect/model/fbx_plane_fsw_008_share.unity3d
       Dependencies: {}
-    Info_156:
+    Info_148:
       Name: assets/res/effect/model/fbx_yuan_fsw_002_share.unity3d
       Dependencies: {}
-    Info_157:
+    Info_149:
       Name: assets/res/effect/model/fbx_xian_fsw_002_share.unity3d
       Dependencies: {}
-    Info_158:
-      Name: assets/res/effect/model/fbx_dg_fsw_010_share.unity3d
-      Dependencies: {}
-    Info_159:
+    Info_150:
       Name: assets/res/effect/model/fbx_by_fsw_003_share.unity3d
       Dependencies: {}
-    Info_160:
+    Info_151:
       Name: assets/res/effect/model/fbx_yuan_fsw_001_share.unity3d
       Dependencies: {}
-    Info_161:
+    Info_152:
       Name: assets/res/effect/model/fbx_yuan_fsw_005_share.unity3d
       Dependencies: {}
-    Info_162:
+    Info_153:
       Name: assets/res/effect/model/fbx_dg_fsw_009_share.unity3d
       Dependencies: {}
-    Info_163:
+    Info_154:
       Name: assets/res/effect/model/fbx_plane_fsw_009_share.unity3d
       Dependencies: {}
-    Info_164:
+    Info_155:
       Name: assets/res/effect/model/fbx_dg_fsw_007_share.unity3d
       Dependencies: {}
-    Info_165:
+    Info_156:
       Name: assets/bundles/effect/e_1001_fsw_skill2_004.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
         Dependency_1: assets/res/effect/model/fbx_plane_fsw_008_share.unity3d
-    Info_166:
+    Info_157:
       Name: assets/bundles/effect/e_1001_fsw_wp.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
-    Info_167:
+    Info_158:
       Name: assets/bundles/effect/e_1001_fsw_gedang.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_smoke_fsw_002_share.unity3d
         Dependency_1: assets/res/effect/materials/e_line_lyj_002_02_share.unity3d
-    Info_168:
+    Info_159:
       Name: assets/bundles/ui/fightmainwnd.unity3d
       Dependencies:
         Dependency_0: assets/bundles/atlas/common.unity3d
         Dependency_1: assets/bundles/atlas/fightmain.unity3d
         Dependency_2: assets/res/font/simkai_share.unity3d
-    Info_169:
+    Info_160:
       Name: assets/res/models/scene/testaction/materials/wall_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
-    Info_170:
+    Info_161:
       Name: assets/res/models/scene/xueshan_1/yuanjingzhanche1_share.unity3d
       Dependencies: {}
-    Info_171:
+    Info_162:
       Name: assets/res/models/scene/xueshan_1/zhongjingzawu_share.unity3d
       Dependencies: {}
-    Info_172:
+    Info_163:
       Name: assets/res/models/scene/xueshan_1/zhongjingzawu1_share.unity3d
       Dependencies: {}
-    Info_173:
+    Info_164:
       Name: assets/res/models/scene/xueshan_1/zhongjingzhanche1_share.unity3d
       Dependencies: {}
-    Info_174:
+    Info_165:
       Name: assets/res/models/scene/testaction/materials/floor_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
-    Info_175:
+    Info_166:
       Name: assets/res/models/scene/xueshan_1/qianjingzhanlan_share.unity3d
       Dependencies: {}
-    Info_176:
+    Info_167:
       Name: assets/res/models/scene/xueshan_1/zhongjingshu2_share.unity3d
       Dependencies: {}
-    Info_177:
+    Info_168:
       Name: assets/res/models/scene/xueshan_1/dimian_share.unity3d
       Dependencies: {}
-    Info_178:
+    Info_169:
       Name: assets/res/models/scene/xueshan_1/zhongjingzhanche_share.unity3d
       Dependencies: {}
-    Info_179:
+    Info_170:
       Name: assets/res/models/scene/xueshan_1/zhongjingshanshi_share.unity3d
       Dependencies: {}
-    Info_180:
+    Info_171:
       Name: assets/res/models/scene/xueshan_1/yuanjingshu3_share.unity3d
       Dependencies: {}
-    Info_181:
+    Info_172:
       Name: assets/res/models/scene/xueshan_1/yuanjingshu1_share.unity3d
       Dependencies: {}
-    Info_182:
+    Info_173:
       Name: assets/res/models/scene/xueshan_1/zhongjingshu_share.unity3d
       Dependencies: {}
-    Info_183:
+    Info_174:
       Name: assets/res/models/scene/xueshan_1/zhongjingshu1_share.unity3d
       Dependencies: {}
-    Info_184:
+    Info_175:
       Name: assets/res/models/scene/xueshan_1/zhongjingshu3_share.unity3d
       Dependencies: {}
-    Info_185:
+    Info_176:
       Name: assets/bundles/scene/instance3.unity3d
       Dependencies:
         Dependency_0: assets/res/models/scene/testaction/materials/wall_share.unity3d
@@ -974,7 +943,7 @@ AssetBundleManifest:
         Dependency_13: assets/res/models/scene/xueshan_1/zhongjingshu_share.unity3d
         Dependency_14: assets/res/models/scene/xueshan_1/zhongjingshu1_share.unity3d
         Dependency_15: assets/res/models/scene/xueshan_1/zhongjingshu3_share.unity3d
-    Info_186:
+    Info_177:
       Name: assets/bundles/scene/instance2.unity3d
       Dependencies:
         Dependency_0: assets/res/models/scene/testaction/materials/wall_share.unity3d
@@ -990,7 +959,7 @@ AssetBundleManifest:
         Dependency_10: assets/res/models/scene/xueshan_1/zhongjingshu_share.unity3d
         Dependency_11: assets/res/models/scene/xueshan_1/zhongjingshu1_share.unity3d
         Dependency_12: assets/res/models/scene/xueshan_1/zhongjingshu3_share.unity3d
-    Info_187:
+    Info_178:
       Name: assets/bundles/scene/instance1.unity3d
       Dependencies:
         Dependency_0: assets/res/models/scene/testaction/materials/wall_share.unity3d
@@ -1008,16 +977,16 @@ AssetBundleManifest:
         Dependency_12: assets/res/models/scene/xueshan_1/zhongjingshu_share.unity3d
         Dependency_13: assets/res/models/scene/xueshan_1/zhongjingshu1_share.unity3d
         Dependency_14: assets/res/models/scene/xueshan_1/zhongjingshu3_share.unity3d
-    Info_188:
+    Info_179:
       Name: assets/res/effect/texture/e_knife_fsw_011_share.unity3d
       Dependencies: {}
-    Info_189:
+    Info_180:
       Name: assets/res/effect/texture/e_noise_fsw_004_share.unity3d
       Dependencies: {}
-    Info_190:
+    Info_181:
       Name: assets/res/effect/texture/e_glow_fsw_020_share.unity3d
       Dependencies: {}
-    Info_191:
+    Info_182:
       Name: assets/bundles/effect/e_b0001_fsw_skill1_hit.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_line_lyj_002a_share.unity3d
@@ -1028,16 +997,16 @@ AssetBundleManifest:
         Dependency_5: assets/res/effect/materials/e_glow_fsw_006_01_share.unity3d
         Dependency_6: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
         Dependency_7: assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
-    Info_192:
+    Info_183:
       Name: assets/res/effect/materials/e_line_lyj_008_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_line_lyj_008_share.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_004_share.unity3d
-    Info_193:
+    Info_184:
       Name: assets/res/effect/texture/materials/e_glow_fsw_020_01_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_glow_fsw_020_share.unity3d
-    Info_194:
+    Info_185:
       Name: assets/bundles/effect/e_b0002_fsw_skill2.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
@@ -1046,7 +1015,7 @@ AssetBundleManifest:
         Dependency_3: assets/res/effect/model/fbx_by_fsw_002_share.unity3d
         Dependency_4: assets/res/effect/materials/e_knife_fsw_012_04_share.unity3d
         Dependency_5: assets/res/effect/model/fbx_dg_fsw_013_share.unity3d
-    Info_195:
+    Info_186:
       Name: assets/bundles/effect/e_fsw_fei01.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
@@ -1054,7 +1023,7 @@ AssetBundleManifest:
         Dependency_2: assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
         Dependency_3: assets/res/effect/texture/materials/e_glow_fsw_020_01_share.unity3d
         Dependency_4: assets/res/effect/model/fbx_yuan_fsw_006_share.unity3d
-    Info_196:
+    Info_187:
       Name: assets/bundles/effect/e_b0001_fsw_skill1.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
@@ -1063,7 +1032,7 @@ AssetBundleManifest:
         Dependency_3: assets/res/effect/model/fbx_by_fsw_003_share.unity3d
         Dependency_4: assets/res/effect/materials/e_knife_fsw_011_04_share.unity3d
         Dependency_5: assets/res/effect/model/fbx_by_fsw_002_share.unity3d
-    Info_197:
+    Info_188:
       Name: assets/bundles/effect/e_b0002_fsw_skill1.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
@@ -1072,20 +1041,20 @@ AssetBundleManifest:
         Dependency_3: assets/res/effect/model/fbx_by_fsw_003_share.unity3d
         Dependency_4: assets/res/effect/materials/e_knife_fsw_011_04_share.unity3d
         Dependency_5: assets/res/effect/model/fbx_by_fsw_002_share.unity3d
-    Info_198:
+    Info_189:
       Name: assets/res/effect/materials/e_knife_fsw_011_04_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_2: assets/res/effect/texture/e_knife_fsw_011_share.unity3d
-    Info_199:
+    Info_190:
       Name: assets/bundles/effect/e_fsw_zhi01.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
         Dependency_1: assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
         Dependency_2: assets/res/effect/texture/materials/e_glow_fsw_020_01_share.unity3d
         Dependency_3: assets/res/effect/model/fbx_yuan_fsw_006_share.unity3d
-    Info_200:
+    Info_191:
       Name: assets/bundles/effect/e_b0001_fsw_skill2.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
@@ -1093,7 +1062,7 @@ AssetBundleManifest:
         Dependency_2: assets/res/effect/model/fbx_by_fsw_001_share.unity3d
         Dependency_3: assets/res/effect/materials/e_knife_fsw_011_04_share.unity3d
         Dependency_4: assets/res/effect/model/fbx_by_fsw_002_share.unity3d
-    Info_201:
+    Info_192:
       Name: assets/bundles/effect/e_b0001_fsw_skill3.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
@@ -1113,59 +1082,59 @@ AssetBundleManifest:
         Dependency_14: assets/res/effect/materials/e_line_lyj_008_01_share.unity3d
         Dependency_15: assets/res/effect/materials/e_knife_fsw_011_04_share.unity3d
         Dependency_16: assets/res/effect/model/fbx_dg_fsw_008_share.unity3d
-    Info_202:
+    Info_193:
       Name: assets/bundles/effect/e_fsw_po01.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
         Dependency_1: assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
         Dependency_2: assets/res/effect/texture/materials/e_glow_fsw_020_01_share.unity3d
         Dependency_3: assets/res/effect/model/fbx_yuan_fsw_006_share.unity3d
-    Info_203:
+    Info_194:
       Name: assets/res/effect/model/fbx_by_fsw_002_share.unity3d
       Dependencies: {}
-    Info_204:
+    Info_195:
       Name: assets/res/effect/model/fbx_dg_fsw_008_share.unity3d
       Dependencies: {}
-    Info_205:
+    Info_196:
       Name: assets/res/effect/model/fbx_yuan_fsw_006_share.unity3d
       Dependencies: {}
-    Info_206:
+    Info_197:
       Name: assets/bundles/icon/skill/1001_shenglongji.unity3d
       Dependencies: {}
-    Info_207:
+    Info_198:
       Name: assets/bundles/icon/skill/1007_zhongjiansanlian.unity3d
       Dependencies: {}
-    Info_208:
+    Info_199:
       Name: assets/bundles/icon/skill/1009_lingkongjianzhen.unity3d
       Dependencies: {}
-    Info_209:
+    Info_200:
       Name: assets/bundles/icon/skill/1005_longjiantuxi.unity3d
       Dependencies: {}
-    Info_210:
+    Info_201:
       Name: assets/bundles/icon/skill/1008_liekongzhan.unity3d
       Dependencies: {}
-    Info_211:
+    Info_202:
       Name: assets/bundles/icon/skill/1010_jimiezhan.unity3d
       Dependencies: {}
-    Info_212:
+    Info_203:
       Name: assets/bundles/atlas/common.unity3d
       Dependencies: {}
-    Info_213:
+    Info_204:
       Name: assets/bundles/icon/skill/1002_tajianxing.unity3d
       Dependencies: {}
-    Info_214:
+    Info_205:
       Name: assets/bundles/icon/skill/1006_jianqijiaosha.unity3d
       Dependencies: {}
-    Info_215:
+    Info_206:
       Name: assets/bundles/atlas/fightmain.unity3d
       Dependencies: {}
-    Info_216:
+    Info_207:
       Name: assets/bundles/icon/skill/1003_jianqihuti.unity3d
       Dependencies: {}
-    Info_217:
+    Info_208:
       Name: assets/bundles/icon/skill/1004_wufengzhongjian.unity3d
       Dependencies: {}
-    Info_218:
+    Info_209:
       Name: assets/bundles/effect/e_m0001_fsw_skill2.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
@@ -1175,20 +1144,20 @@ AssetBundleManifest:
         Dependency_4: assets/res/effect/materials/e_knife_fsw_011_04_share.unity3d
         Dependency_5: assets/res/effect/model/fbx_by_fsw_002_share.unity3d
         Dependency_6: assets/res/effect/materials/e_knife_fsw_003_02_share.unity3d
-    Info_219:
+    Info_210:
       Name: assets/bundles/misc/hudroot.unity3d
       Dependencies: {}
-    Info_220:
+    Info_211:
       Name: assets/res/effect/materials/e_knife_fsw_003_02_share.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/texture/e_knife_fsw_003_share.unity3d
-    Info_221:
+    Info_212:
       Name: assets/res/effect/materials/e_knife_fsw_012_04_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
         Dependency_2: assets/res/effect/texture/e_knife_fsw_012_share.unity3d
-    Info_222:
+    Info_213:
       Name: assets/bundles/effect/e_m0001_fsw_skill1.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
@@ -1198,50 +1167,101 @@ AssetBundleManifest:
         Dependency_4: assets/res/effect/materials/e_knife_fsw_003_02_share.unity3d
         Dependency_5: assets/res/effect/materials/e_knife_fsw_012_04_share.unity3d
         Dependency_6: assets/res/effect/model/fbx_dg_fsw_013_share.unity3d
-    Info_223:
+    Info_214:
       Name: assets/res/effect/model/fbx_dg_fsw_013_share.unity3d
       Dependencies: {}
-    Info_224:
+    Info_215:
       Name: assets/bundles/misc/hud_popup_damage.unity3d
       Dependencies:
         Dependency_0: assets/res/font/simkai_share.unity3d
-    Info_225:
+    Info_216:
       Name: assets/res/font/simkai_share.unity3d
       Dependencies: {}
-    Info_226:
+    Info_217:
       Name: assets/bundles/icon/unit/1003.unity3d
       Dependencies: {}
-    Info_227:
+    Info_218:
       Name: assets/bundles/icon/unit/1004.unity3d
       Dependencies: {}
-    Info_228:
+    Info_219:
       Name: assets/bundles/icon/unit/1005.unity3d
       Dependencies: {}
-    Info_229:
+    Info_220:
       Name: assets/bundles/icon/unit/1006.unity3d
       Dependencies: {}
-    Info_230:
+    Info_221:
       Name: assets/bundles/ui/fadewnd.unity3d
       Dependencies: {}
-    Info_231:
+    Info_222:
       Name: assets/bundles/misc/instacen1.unity3d
       Dependencies: {}
-    Info_232:
+    Info_223:
       Name: assets/bundles/misc/instacen2.unity3d
       Dependencies: {}
-    Info_233:
+    Info_224:
       Name: assets/bundles/misc/instacen3.unity3d
       Dependencies: {}
-    Info_234:
+    Info_225:
       Name: assets/bundles/ui/instancewnd.unity3d
       Dependencies:
         Dependency_0: assets/bundles/atlas/common.unity3d
         Dependency_1: assets/res/font/simkai_share.unity3d
-    Info_235:
+    Info_226:
       Name: assets/bundles/scene/maincity.unity3d
       Dependencies: {}
-    Info_236:
+    Info_227:
       Name: assets/bundles/ui/skillwnd.unity3d
       Dependencies:
         Dependency_0: assets/bundles/atlas/common.unity3d
         Dependency_1: assets/bundles/atlas/fightmain.unity3d
+    Info_228:
+      Name: assets/res/effect/texture/e_glow_fsw_013_share.unity3d
+      Dependencies: {}
+    Info_229:
+      Name: assets/res/effect/texture/e_smoke_fsw_005_share.unity3d
+      Dependencies: {}
+    Info_230:
+      Name: assets/res/effect/texture/e_trail_fsw_014_share.unity3d
+      Dependencies: {}
+    Info_231:
+      Name: assets/res/effect/texture/e_smoke_fsw_004_share.unity3d
+      Dependencies: {}
+    Info_232:
+      Name: assets/res/effect/texture/e_debris_fsw_003_share.unity3d
+      Dependencies: {}
+    Info_233:
+      Name: assets/res/effect/texture/e_object_fsw_005_share.unity3d
+      Dependencies: {}
+    Info_234:
+      Name: assets/bundles/effect/e_1001_fsw_skill10_004.unity3d
+      Dependencies:
+        Dependency_0: assets/res/effect/model/fbx_yuan_fsw_005_share.unity3d
+        Dependency_1: assets/res/effect/materials/e_trail_fsw_009_02_share.unity3d
+    Info_235:
+      Name: assets/res/effect/materials/e_glow_fsw_013_01_share.unity3d
+      Dependencies:
+        Dependency_0: assets/res/effect/texture/e_glow_fsw_013_share.unity3d
+    Info_236:
+      Name: assets/res/effect/materials/e_smoke_fsw_004_01_share.unity3d
+      Dependencies:
+        Dependency_0: assets/res/effect/texture/e_smoke_fsw_004_share.unity3d
+    Info_237:
+      Name: assets/res/effect/materials/e_trail_fsw_009_02_share.unity3d
+      Dependencies:
+        Dependency_0: assets/res/effect/texture/e_trail_fsw_009_share.unity3d
+    Info_238:
+      Name: assets/res/effect/materials/e_trail_fsw_014_001_share.unity3d
+      Dependencies:
+        Dependency_0: assets/res/effect/texture/e_trail_fsw_014_share.unity3d
+    Info_239:
+      Name: assets/res/effect/materials/e_smoke_fsw_005_01_share.unity3d
+      Dependencies:
+        Dependency_0: assets/res/effect/texture/e_smoke_fsw_005_share.unity3d
+    Info_240:
+      Name: assets/res/effect/materials/e_debris_fsw_003_01_share.unity3d
+      Dependencies:
+        Dependency_0: assets/res/effect/texture/e_debris_fsw_003_share.unity3d
+    Info_241:
+      Name: assets/res/effect/materials/e_object_fsw_005_01_share.unity3d
+      Dependencies:
+        Dependency_0: assets/res/effect/texture/e_object_fsw_005_share.unity3d
