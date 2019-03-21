@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 562357007
+CRC: 1834895027
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 83cffd83c3ec1ddc528ef15c377ae1ae
+    Hash: 4df411080f32ff28a20f72d813f5c7fb
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/effect/Materials/E_Lighting_fsw_002_01.mat
+- Assets/Res/effect/Materials/E_Smoke_fsw_004_01.mat
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_lighting_fsw_002_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_smoke_fsw_004_share.unity3d

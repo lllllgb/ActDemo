@@ -3,7 +3,7 @@ CRC: 3673945096
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 846d610c5896e977b899b125296e33c9
+    Hash: 56fd672f9ee3d84bb79b2659e6c2ddd7
   TypeTreeHash:
     serializedVersion: 2
     Hash: ef23a9fe3f4a53e1f8e1fb2b1c87c47d
@@ -40,5 +40,5 @@ ClassTypes:
 Assets:
 - Assets/Bundles/UI/InstanceWnd.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d

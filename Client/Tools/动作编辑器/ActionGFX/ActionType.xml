@@ -35703,11 +35703,201 @@
               </AnimSlotList>
               <AnimTime>1800</AnimTime>
               <ActionStatus>2</ActionStatus>
-              <Events />
+              <Events>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill10_001" BindMode="1" Duration="1000" />
+                </Event>
+                <Event>
+                  <TriggerTime>65</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="200" Duration="500" />
+                </Event>
+                <Event>
+                  <TriggerTime>14</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill10_002" BindMode="1" Duration="1000" />
+                </Event>
+                <Event>
+                  <TriggerTime>40</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill10_004" OffsetY="100" Duration="1000" />
+                </Event>
+                <Event>
+                  <TriggerTime>60</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill10_003" BindMode="1" Duration="1000" />
+                </Event>
+                <Event>
+                  <TriggerTime>65</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="400" Duration="500" />
+                </Event>
+              </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
-              <AttackDefs />
+              <AttackDefs>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <TriggerTime>3</TriggerTime>
+                  <Duration>500</Duration>
+                  <MovingSpeed />
+                  <Path />
+                  <HitCount>10</HitCount>
+                  <PassNum>1</PassNum>
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <AttackType xsi:type="FrameCuboid" Width="300" Height="500" Length="600" />
+                  <Offset />
+                  <AttackerLash />
+                  <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>200</AttackeeStraightTime>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash />
+                  <AttackeeTime>0</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffect>E_1001_fsw_skill10_002_hit</HitedEffect>
+                  <HitedEffectDuration>400</HitedEffectDuration>
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                  <BaseGround>1</BaseGround>
+                </AttackDef>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <TriggerTime>15</TriggerTime>
+                  <Duration>500</Duration>
+                  <MovingSpeed />
+                  <Path />
+                  <HitCount>10</HitCount>
+                  <PassNum>1</PassNum>
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <AttackType xsi:type="FrameCuboid" Width="300" Height="500" Length="600" />
+                  <Offset />
+                  <AttackerLash />
+                  <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>900</AttackeeStraightTime>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash />
+                  <AttackeeTime>400</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffect>E_1001_fsw_skill10_002_hit</HitedEffect>
+                  <HitedEffectDuration>400</HitedEffectDuration>
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                  <BaseGround>1</BaseGround>
+                </AttackDef>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <TriggerTime>65</TriggerTime>
+                  <Duration>600</Duration>
+                  <MovingSpeed />
+                  <Path />
+                  <HitCount>10</HitCount>
+                  <PassNum>1</PassNum>
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <FrameType_Int>1</FrameType_Int>
+                  <FramType>CylinderType</FramType>
+                  <AttackType xsi:type="FrameCylinder" Radius="400" Height="400" />
+                  <Offset />
+                  <AttackerStraightTime>200</AttackerStraightTime>
+                  <AttackerLash />
+                  <AttackerTime>0</AttackerTime>
+                  <AttackeeStraightTime>250</AttackeeStraightTime>
+                  <HitResult>KnockOut</HitResult>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash>
+                    <Y>800</Y>
+                  </AttackeeLash>
+                  <AttackeeTime>300</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffect>E_1001_fsw_skill10_003_hit</HitedEffect>
+                  <HitedEffectDuration>1000</HitedEffectDuration>
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                  <BaseGround>1</BaseGround>
+                </AttackDef>
+              </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
             <Action ResetVelocity="false">
