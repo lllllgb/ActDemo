@@ -13,7 +13,15 @@ namespace AosHotfixRunTime
         public List<SkillItem> SkillItems { get; set; } = new List<SkillItem>();
 
         List<List<SkillItemLink>> mSkillCollect;
-        int mCurrSkillPage;
+        public int CurrSkillPage { get; private set; }
+
+        class SkillCDData
+        {
+            public int SkillID;
+            public float CD;
+        }
+
+        List<SkillCDData> mSkillCDs = new List<SkillCDData>();
 
         public override void Reset()
         {
@@ -35,9 +43,19 @@ namespace AosHotfixRunTime
             InitSkill();
         }
 
+        public override void Update(float deltaTime)
+        {
+            base.Update(deltaTime);
+
+            for (int i = 0, max = mSkillCDs.Count; i < max; ++i)
+            {
+                mSkillCDs[i].CD -= deltaTime;
+            }
+        }
+
         void InitSkill()
         {
-            mCurrSkillPage = 0;
+            CurrSkillPage = 0;
             mSkillCollect = new List<List<SkillItemLink>>();
 
             for (int i = 0, max = 2; i < max; ++i)
@@ -73,7 +91,7 @@ namespace AosHotfixRunTime
 
         public void SetCurrSkillPage(int pageIndex)
         {
-            mCurrSkillPage = pageIndex;
+            CurrSkillPage = pageIndex;
         }
 
         public List<SkillItemLink> GetSkillLinkList(int index)
@@ -83,7 +101,7 @@ namespace AosHotfixRunTime
 
         public SkillItemLink GetSkillLink(int index)
         {
-            return mSkillCollect[mCurrSkillPage][index];
+            return mSkillCollect[CurrSkillPage][index];
         }
 
         public void SaveSkill()
@@ -105,11 +123,56 @@ namespace AosHotfixRunTime
                             tmpSkillItemLinkStr += $"-{mSkillCollect[i][j].SkillItems[k].ID}";
                         }
                     }
-                    
+
                     PlayerPrefs.SetString($"Skill{i}_{j}", tmpSkillItemLinkStr);
                 }
 
             }
         }
+
+        public void SetSkillCD(int skillID, float cd)
+        {
+            SkillCDData tmpData = null;
+
+            for (int i = 0, max = mSkillCDs.Count; i < max; ++i)
+            {
+                if (mSkillCDs[i].SkillID == skillID)
+                {
+                    tmpData = mSkillCDs[i];
+                    break;
+                }
+            }
+
+            if (null == tmpData)
+            {
+                tmpData = new SkillCDData();
+                tmpData.SkillID = skillID;
+                mSkillCDs.Add(tmpData);
+            }
+
+            tmpData.CD = cd;
+
+            var tmpEvent = ReferencePool.Fetch<PlayerCtrlEvent.UpdateSkillCD>();
+            tmpEvent.SkillID = skillID;
+            tmpEvent.CD = cd;
+            Game.EventMgr.FireNow(this, tmpEvent);
+        }
+
+        public float GetSkillCD(int skillID)
+        {
+            float tmpCD = 0;
+
+            for (int i = 0, max = mSkillCDs.Count; i < max; ++i)
+            {
+                if (mSkillCDs[i].SkillID == skillID)
+                {
+                    tmpCD = mSkillCDs[i].CD;
+                    break;
+                }
+            }
+
+            return tmpCD;
+        }
+
     }
 }

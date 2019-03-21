@@ -62,7 +62,7 @@ namespace ACT
             KeyStates[(int)EKeyList.KL_Jump].AxisName = "Jump";
             KeyStates[(int)EKeyList.KL_Attack].AxisName = "Attack";
             KeyStates[(int)EKeyList.KL_SubAttack].AxisName = "SubAttack";
-            KeyStates[(int)EKeyList.KL_SkillAttack].AxisName = "SkillAttack";
+            KeyStates[(int)EKeyList.KL_Block].AxisName = "SkillAttack";
             KeyStates[(int)EKeyList.KL_Skill0].AxisName = "skill0";
             KeyStates[(int)EKeyList.KL_Skill1].AxisName = "skill1";
             KeyStates[(int)EKeyList.KL_Skill2].AxisName = "skill2";
@@ -240,8 +240,8 @@ namespace ACT
                 case EOperation.EO_SpAttack:
                     ret = checkInputType(EKeyList.KL_SubAttack, inputType, deltaTime);
                     break;
-                case EOperation.EO_Skill:
-                    ret = checkInputType(EKeyList.KL_SkillAttack, inputType, deltaTime);
+                case EOperation.EO_Block:
+                    ret = checkInputType(EKeyList.KL_Block, inputType, deltaTime);
                     break;
                 case EOperation.EO_Move:
                     ret = checkInputType(EKeyList.KL_Move, inputType, deltaTime);

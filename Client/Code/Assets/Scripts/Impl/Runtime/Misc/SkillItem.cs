@@ -38,7 +38,8 @@ namespace AosHotfixRunTime
 
     public class SkillItemLink
     {
-        public int SkillSlot { get; set; }
+        public const int MAX_LINK_COUNT = 5;
+
         public List<SkillItem> SkillItems { get; private set; } = new List<SkillItem>();
     }
 }

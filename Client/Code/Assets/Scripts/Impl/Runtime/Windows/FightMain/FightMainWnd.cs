@@ -39,6 +39,9 @@ namespace AosHotfixRunTime
         private GameObject mLB;
         private UGUIJoystick mJoystick;
 
+        private bool mIsAtkBtnDown;
+        private float mTryReleaseAtkTime;
+
         public FightMainWnd()
         {
             WindowType = EWindowType.Main;
@@ -80,7 +83,9 @@ namespace AosHotfixRunTime
                 mSkillInputs[i] = tmpSkillInput;
             }
 
-            RegisterEventClick(Find(mSkillInfo, "Image_Atk"), OnAttackBtnClick);
+            GameObject tmpAtkGo = Find(mSkillInfo, "Image_Atk");
+            RegisterEventClickDown(tmpAtkGo, OnAtkBtnDown);
+            RegisterEventClickUp(tmpAtkGo, OnAtkBtnUp);
             RegisterEventClick(Find(mSkillInfo, "Image_Jump"), OnJumpBtnClick);
             RegisterEventClick(Find(mSkillInfo, "Image_Defense"), OnDefenseBtnClick);
         }
@@ -97,6 +102,7 @@ namespace AosHotfixRunTime
             Game.EventMgr.Subscribe(UnitEvent.HpModify.EventID, OnEventUnitHpModify);
             Game.EventMgr.Subscribe(UnitEvent.MpModify.EventID, OnEventUnitMpModify);
             Game.EventMgr.Subscribe(UnitEvent.DpModify.EventID, OnEventUnitDpModify);
+            Game.EventMgr.Subscribe(SkillWndEvent.SkillSetChange.EventID, OnEventChangeSkillSet);
         }
 
         protected override void Update(float deltaTime)
@@ -106,6 +112,16 @@ namespace AosHotfixRunTime
             if (null != mJoystick)
             {
                 mJoystick.Update(deltaTime);
+            }
+
+            if (mIsAtkBtnDown)
+            {
+                mTryReleaseAtkTime += deltaTime;
+
+                if (mTryReleaseAtkTime > 0.1f)
+                {
+                    TryReleaseAction(ACT.EOperation.EO_Attack);
+                }
             }
 
             for (int i = 0, max = mSkillInputs.Length; i < max; ++i)
@@ -127,6 +143,7 @@ namespace AosHotfixRunTime
             Game.EventMgr.Unsubscribe(UnitEvent.HpModify.EventID, OnEventUnitHpModify);
             Game.EventMgr.Unsubscribe(UnitEvent.MpModify.EventID, OnEventUnitMpModify);
             Game.EventMgr.Unsubscribe(UnitEvent.DpModify.EventID, OnEventUnitDpModify);
+            Game.EventMgr.Unsubscribe(SkillWndEvent.SkillSetChange.EventID, OnEventChangeSkillSet);
         }
 
         protected override void BeforeDestory()
@@ -139,15 +156,15 @@ namespace AosHotfixRunTime
             }
         }
 
-        private void OnAttackBtnClick(PointerEventData arg)
+        private void OnAtkBtnDown(PointerEventData arg)
         {
-            LocalPlayer tmpLocalPlayer = Game.ControllerMgr.Get<UnitController>().LocalPlayer;
-            var tmpInterruptIdx = tmpLocalPlayer.ActStatus.ActiveAction.GetActionInterruptIdx(ACT.EOperation.EO_Attack);
+            mIsAtkBtnDown = true;
+            mTryReleaseAtkTime = 1f;
+        }
 
-            if (-1 != tmpInterruptIdx)
-            {
-                tmpLocalPlayer.LinkSkill(null, tmpInterruptIdx);
-            }
+        private void OnAtkBtnUp(PointerEventData arg)
+        {
+            mIsAtkBtnDown = false;
         }
 
         private void OnDefenseBtnClick(PointerEventData arg)
@@ -157,8 +174,13 @@ namespace AosHotfixRunTime
 
         private void OnJumpBtnClick(PointerEventData arg)
         {
+            TryReleaseAction(ACT.EOperation.EO_Jump);
+        }
+
+        private void TryReleaseAction(ACT.EOperation operation)
+        {
             LocalPlayer tmpLocalPlayer = Game.ControllerMgr.Get<UnitController>().LocalPlayer;
-            var tmpInterruptIdx = tmpLocalPlayer.ActStatus.ActiveAction.GetActionInterruptIdx(ACT.EOperation.EO_Jump);
+            var tmpInterruptIdx = tmpLocalPlayer.ActStatus.ActiveAction.GetActionInterruptIdx(ACT.EOperation.EO_Attack);
 
             if (-1 != tmpInterruptIdx)
             {
@@ -236,12 +258,9 @@ namespace AosHotfixRunTime
         {
             var tmpPlayerCtrl = Game.ControllerMgr.Get<PlayerController>();
 
-            for (int i = 0, max = tmpPlayerCtrl.SkillItems.Count; i < max; ++i)
+            for (int i = 0, max = mSkillInputs.Length; i < max; ++i)
             {
-                if (i < mSkillInputs.Length)
-                {
-                    mSkillInputs[i].Init(tmpPlayerCtrl.SkillItems[i]);
-                }
+                mSkillInputs[i].Init(tmpPlayerCtrl.GetSkillLink(i));
             }
         }
 
@@ -294,6 +313,11 @@ namespace AosHotfixRunTime
             {
                 RefreshEnemyDP(tmpCurrEnemy);
             }
+        }
+
+        private void OnEventChangeSkillSet(object sender, GameEventArgs arg)
+        {
+            InitSkill();
         }
     }
 }

@@ -139,7 +139,7 @@ namespace AosHotfixRunTime
             base.AfterShow();
 
             InitSkillTree();
-            mSkillPage = 0;
+            mSkillPage = Game.ControllerMgr.Get<PlayerController>().CurrSkillPage;
             RefreshByPage();
         }
 
@@ -332,7 +332,7 @@ namespace AosHotfixRunTime
                 if (mSelectedEquipingSoltIdx != -1)
                 {
                     List<SkillItem> tmpSkillItemList = mSkillLinkList[mSelectedEuqipedSoltIdx].SkillItems;
-
+                    
                     if (mSelectedEquipingSoltIdx >= tmpSkillItemList.Count)
                     {
                         SkillItem tmpSkillItem = new SkillItem();
@@ -356,7 +356,16 @@ namespace AosHotfixRunTime
 
         private void OnBackBtnClick(PointerEventData arg)
         {
-            Game.ControllerMgr.Get<PlayerController>().SaveSkill();
+            var tmpCtrl = Game.ControllerMgr.Get<PlayerController>();
+            tmpCtrl.SaveSkill();
+
+            if (tmpCtrl.CurrSkillPage != mSkillPage)
+            {
+                tmpCtrl.SetCurrSkillPage(mSkillPage);
+
+                Game.EventMgr.FireNow(this, ReferencePool.Fetch<SkillWndEvent.SkillSetChange>());
+            }
+
             Close();
         }
       

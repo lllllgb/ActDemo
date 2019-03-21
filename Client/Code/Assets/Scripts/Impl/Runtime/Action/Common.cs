@@ -7,15 +7,9 @@ namespace ACT
     {
         KL_Attack = 0,
         KL_SubAttack,
-        KL_SkillAttack,
-        //KL_AuxKey,
-
-        //KL_Grab,
+        KL_Block,
         KL_Jump,
         KL_Move,
-        //KL_CameraUp,
-        //KL_CameraDown,
-        //KL_LastKey,
 
         KL_Skill0,
         KL_Skill1,
@@ -36,14 +30,9 @@ namespace ACT
         EO_None = 0,
         EO_Attack,
         EO_SpAttack,
-        EO_Skill,
+        EO_Block,
         EO_Move,
         EO_Jump,
-        //EO_Grab,
-        //EO_Front,
-        //EO_Back,
-        //EO_Last,
-        //EO_Auxiliary,
 
         EO_Skill0,
         EO_Skill1,

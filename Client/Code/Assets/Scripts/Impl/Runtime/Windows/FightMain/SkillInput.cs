@@ -11,41 +11,88 @@ namespace AosHotfixRunTime
 {
     public class SkillInput : ACT.ISkillInput
     {
+        const float MAX_IGNORE_TIME = 2f; //最大忽略时间
+
         Image mIconImg;
         ImageLoader mIconLoader;
         Image mCDImg;
 
         bool mIsInit;
-        SkillItem mSkillItem;
+        SkillItemLink mSkillItemLink;
+        int mLinkIndex;
+        SkillItem mCurrSkillItem;
         bool mIsSkillReady;
         float mCD = 0;
         int mActiveAcionCache = -1;
         int mInterruptIndex = -1;
         int mSkillActionCache = -1;
         LocalPlayer mLocalPlayerCache;
+        float mIgnoreTime = 0f;
+        bool mIsSkillBtnDown = false;
+        float mTryReleaseSkillTime = 0f;
 
         public void InitUI(GameObject skillGo)
         {
             mIconImg = Utility.GameObj.Find<Image>(skillGo, "Image_Icon");
             mCDImg = Utility.GameObj.Find<Image>(skillGo, "Image_CD");
-            UGUIEventListener.Get(skillGo).onClick = OnClickSkill;
+            UGUIEventListener.Get(skillGo).onDown = OnSkillDown;
+            UGUIEventListener.Get(skillGo).onUp = OnSkillUp;
 
             mIconLoader = ReferencePool.Fetch<ImageLoader>();
         }
 
-        public void Init(SkillItem skillItem)
+        public void Init(SkillItemLink skillItemLink)
         {
-            mSkillItem = skillItem;
+            mSkillItemLink = skillItemLink;
+            mLinkIndex = 0;
+            InitSkillByIdx(mLinkIndex);
+            mIsSkillBtnDown = false;
 
-            if (null != mSkillItem)
+            Game.EventMgr.Subscribe(PlayerCtrlEvent.UpdateSkillCD.EventID, OnEventUpdateSkillCD);
+        }
+
+        private void SwitchNextSkill()
+        {
+            if (mSkillItemLink.SkillItems.Count == 0)
+            {
+                return;
+            }
+
+            mLinkIndex += 1;
+            mLinkIndex %= mSkillItemLink.SkillItems.Count;
+            float tmpShortestCD = float.MaxValue;
+            int tmpShortestCDIdx = mLinkIndex;
+            var tmpCtrl = Game.ControllerMgr.Get<PlayerController>();
+
+            for (int i = 0, max = mSkillItemLink.SkillItems.Count; i < max; ++i)
+            {
+                int tmpIndex = (mLinkIndex + i) % mSkillItemLink.SkillItems.Count;
+                float tmpCD = tmpCtrl.GetSkillCD(mSkillItemLink.SkillItems[tmpIndex].ID);
+
+                if (tmpCD < tmpShortestCD)
+                {
+                    tmpShortestCD = tmpCD;
+                    tmpShortestCDIdx = tmpIndex;
+                }
+            }
+
+            mLinkIndex = tmpShortestCDIdx;
+            InitSkillByIdx(mLinkIndex);
+        }
+
+        private void InitSkillByIdx(int index)
+        {
+            mCurrSkillItem = index >= mSkillItemLink.SkillItems.Count ? null : mSkillItemLink.SkillItems[index];
+
+            if (null != mCurrSkillItem)
             {
                 mIsInit = true;
-                mSkillItem.SkillInput = this;
-                mCD = 0f;
-                mCDImg.fillAmount = 0f;
-                mIconLoader.Load(ImageLoader.EIconType.Skill, mSkillItem.SkillBase.Icon, mIconImg, null, false);
+                mCurrSkillItem.SkillInput = this;
+                mCD = Game.ControllerMgr.Get<PlayerController>().GetSkillCD(mCurrSkillItem.ID);
+                mCDImg.fillAmount = Mathf.Max(mCD * 1000f / mCurrSkillItem.SkillAttrBase.CD, 0f);
+                mIconLoader.Load(ImageLoader.EIconType.Skill, mCurrSkillItem.SkillBase.Icon, mIconImg, null, false);
                 mLocalPlayerCache = Game.ControllerMgr.Get<UnitController>().LocalPlayer;
-                mSkillActionCache = mLocalPlayerCache.ActStatus.ActionGroup.GetActionIdx(mSkillItem.SkillBase.Action);
+                mSkillActionCache = mLocalPlayerCache.ActStatus.ActionGroup.GetActionIdx(mCurrSkillItem.SkillBase.Action);
                 mIsSkillReady = false;
                 
             }
@@ -58,21 +105,46 @@ namespace AosHotfixRunTime
                 return;
             }
 
+            if (mIgnoreTime < MAX_IGNORE_TIME)
+            {
+                mIgnoreTime += deltaTime;
+            }
+            else if (mIgnoreTime >= MAX_IGNORE_TIME)
+            {
+                if (mLinkIndex != 0 && Game.ControllerMgr.Get<PlayerController>().GetSkillCD(mSkillItemLink.SkillItems[0].ID) <= 0f)
+                {
+                    mLinkIndex = 0;
+                    InitSkillByIdx(mLinkIndex);
+                }
+            }
+
             bool tmpCDDone = UpdateCD(deltaTime);
             bool tmpSkillLinked = UpdateSkillLink(deltaTime);
 
             mIsSkillReady = tmpCDDone && tmpSkillLinked;
+
+            if (mIsSkillBtnDown)
+            {
+                mTryReleaseSkillTime += deltaTime;
+
+                if (mTryReleaseSkillTime > 0.1f)
+                {
+                    TryReleaseSkill();
+                }
+            }
         }
 
         public void Reset()
         {
-            if (null != mSkillItem)
+            if (null != mCurrSkillItem)
             {
-                mSkillItem.SkillInput = null;
+                mCurrSkillItem.SkillInput = null;
             }
 
-            mSkillItem = null;
+            mCurrSkillItem = null;
             mIsInit = false;
+
+            Game.EventMgr.Unsubscribe(PlayerCtrlEvent.UpdateSkillCD.EventID, OnEventUpdateSkillCD);
         }
 
         public void Release()
@@ -97,7 +169,7 @@ namespace AosHotfixRunTime
             else
             {
                 mCD -= deltaTime;
-                mCDImg.fillAmount = Mathf.Max(mCD * 1000f / mSkillItem.SkillAttrBase.CD, 0f);
+                mCDImg.fillAmount = Mathf.Max(mCD * 1000f / mCurrSkillItem.SkillAttrBase.CD, 0f);
 
                 if (mCD <= 0f)
                 {
@@ -138,21 +210,49 @@ namespace AosHotfixRunTime
             return tmpFlag;
         }
 
-        private void OnClickSkill(PointerEventData arg)
+        private void OnSkillDown(PointerEventData arg)
         {
-            if (!mIsInit || !mIsSkillReady)
+            mIsSkillBtnDown = true;
+            mTryReleaseSkillTime = 1f;
+        }
+
+        private void OnSkillUp(PointerEventData arg)
+        {
+            mIsSkillBtnDown = false;
+        }
+
+        private void TryReleaseSkill()
+        {
+            mIgnoreTime = 0f;
+
+            if (!mIsInit)
             {
                 return;
             }
 
-            var tmpLocalPlayer = Game.ControllerMgr.Get<UnitController>().LocalPlayer;
+            LocalPlayer tmpLocalPlayer = Game.ControllerMgr.Get<UnitController>().LocalPlayer;
+
+            if (!mIsSkillReady)
+            {
+                var tmpInterruptIdx = tmpLocalPlayer.ActStatus.ActiveAction.GetActionInterruptIdx(ACT.EOperation.EO_Attack);
+
+                if (-1 != tmpInterruptIdx)
+                {
+                    tmpLocalPlayer.LinkSkill(null, tmpInterruptIdx);
+                }
+
+                return;
+            }
+
             tmpLocalPlayer.LinkSkill(this, mInterruptIndex);
         }
 
         public void PlaySkill()
         {
-            mCD = mSkillItem.SkillAttrBase.CD * 0.001f;
-            mLocalPlayerCache.PlaySkill(mSkillItem, mSkillItem.SkillBase.Action);
+            mCD = mCurrSkillItem.SkillAttrBase.CD * 0.001f;
+            Game.ControllerMgr.Get<PlayerController>().SetSkillCD(mCurrSkillItem.ID, mCD);
+            mLocalPlayerCache.PlaySkill(mCurrSkillItem, mCurrSkillItem.SkillBase.Action);
+            SwitchNextSkill();
         }
 
         public void OnHitTarget(ACT.IActUnit target)
@@ -165,6 +265,21 @@ namespace AosHotfixRunTime
 
         public void OnHurt(ACT.IActUnit target)
         {
+        }
+
+        private void OnEventUpdateSkillCD(object sender, GameEventArgs arg)
+        {
+            var tmpEventArg = arg as PlayerCtrlEvent.UpdateSkillCD;
+
+            if (null == tmpEventArg || null == mCurrSkillItem)
+            {
+                return;
+            }
+
+            if (tmpEventArg.SkillID == mCurrSkillItem.ID)
+            {
+                mCD = tmpEventArg.CD;
+            }
         }
     }
 }
