@@ -72,8 +72,8 @@ namespace AosHotfixRunTime
         List<SkillElem> mEquipedSkills = new List<SkillElem>();
         GameObject mEquipingRootGo;
         List<SkillElem> mEquipingSkills = new List<SkillElem>();
-        List<UIGridTool> mSkillTrees = new List<UIGridTool>();
-        Dictionary<int, List<SkillElem>> mSkillTreeItems = new Dictionary<int, List<SkillElem>>();
+        UIGridTool mSkillTreeGT;
+        List<SkillElem[]> mSkillTreeItems = new List<SkillElem[]>();
 
         int mSkillPage;
         int mSelectedEuqipedSoltIdx;
@@ -90,15 +90,11 @@ namespace AosHotfixRunTime
             tmpPage2.onValueChanged.AddListener(OnValueChangePage2);
 
             GameObject tmpSkillTemplate = Find("SkillItemTemplate");
-            for (int i = 0, max = 3; i < max; ++i)
-            {
-                GameObject tmpGo = Find($"ScrollView_SkillTree{i}");
+            GameObject tmpSkillTreeGo = Find($"ScrollView_SkillTree");
 
-                if (null != tmpGo)
-                {
-                    UIGridTool tmpGT = new UIGridTool(Find(tmpGo, "Content"), tmpSkillTemplate);
-                    mSkillTrees.Add(tmpGT);
-                }
+            if (null != tmpSkillTreeGo)
+            {
+                mSkillTreeGT = new UIGridTool(Find(tmpSkillTreeGo, "Content"), tmpSkillTemplate);
             }
 
             GameObject tmpEquipedSkillGo = Find("EquipedSkill");
@@ -177,6 +173,17 @@ namespace AosHotfixRunTime
                 }
             }
 
+            int tmpMaxRow = 0;
+            foreach (var elem in tmpTreeType2Skills)
+            {
+                if (elem.Value.Count > tmpMaxRow)
+                {
+                    tmpMaxRow = elem.Value.Count;
+                }
+            }
+
+            mSkillTreeGT.GenerateElem(tmpMaxRow);
+
             for (int i = 0, max = 3; i < max; ++i)
             {
                 List<SkillBase> tmpSkills = null;
@@ -186,33 +193,42 @@ namespace AosHotfixRunTime
                     continue;
                 }
 
-                UIGridTool tmpGT = mSkillTrees[i];
-                tmpGT.GenerateElem(tmpSkills.Count);
-                List<SkillElem> tmpSkillElems = null;
-
-                if (!mSkillTreeItems.TryGetValue(i, out tmpSkillElems))
+                for (int j = 0, jmax = tmpMaxRow; j < jmax; ++j)
                 {
-                    tmpSkillElems = new List<SkillElem>();
-                    mSkillTreeItems.Add(i, tmpSkillElems);
-                }
+                    GameObject tmpRowGo = mSkillTreeGT.Get(j);
+                    SkillElem[] tmpRowElems = null;
 
-                for (int j = 0, jmax = tmpSkills.Count; j < jmax; ++j)
-                {
-                    SkillElem tmpSkillElem = null;
-
-                    if (j < tmpSkillElems.Count)
+                    if (j < mSkillTreeItems.Count)
                     {
-                        tmpSkillElem = tmpSkillElems[j];
+                        tmpRowElems = mSkillTreeItems[j];
                     }
                     else
                     {
-                        tmpSkillElem = new SkillElem();
-                        tmpSkillElems.Add(tmpSkillElem);
-                        tmpSkillElem.Init(tmpGT.Get(j));
+                        tmpRowElems = new SkillElem[3];
+                        mSkillTreeItems.Add(tmpRowElems);
                     }
 
-                    tmpSkillElem.Refresh(tmpSkills[j]);
-                    RegistSkillTreeClick(tmpSkillElem);
+                    SkillElem tmpSkillElem = tmpRowElems[i];
+
+                    if (null == tmpSkillElem)
+                    {
+                        tmpSkillElem = new SkillElem();
+                        tmpSkillElem.Init(Find(tmpRowGo, $"SkillItem{i}"));
+                        tmpRowElems[i] = tmpSkillElem;
+                    }
+
+                    if (j < tmpSkills.Count)
+                    {
+                        SetActive(tmpSkillElem.RootGo, true);
+                        tmpSkillElem.Refresh(tmpSkills[j]);
+                        RegistSkillTreeClick(tmpSkillElem);
+                        RegistSkillTreeDrag(tmpSkillElem);
+                        RegistSkillTreeDrop(tmpSkillElem);
+                    }
+                    else
+                    {
+                        SetActive(tmpSkillElem.RootGo, false);
+                    }
                 }
             }
         }
@@ -354,6 +370,29 @@ namespace AosHotfixRunTime
             };
         }
 
+        private void RegistSkillTreeDrag(SkillElem skillElem)
+        {
+            UGUIDrogListener.Get(skillElem.RootGo).onDrag =  arg => {
+                Logger.Log($"Drag lastPress -> {arg.lastPress} pointerEnter -> {arg.pointerEnter} pointerDrag -> {arg.pointerDrag} " +
+                    $"selectedObject -> {arg.selectedObject} Raycast -> {arg.pointerCurrentRaycast.gameObject}");
+            };
+        }
+
+        private void RegistSkillTreeDragEnd(SkillElem skillElem)
+        {
+            UGUIDrogListener.Get(skillElem.RootGo).onEndDrag = arg => {
+                Logger.Log($"DragEnd -> {arg}");
+            };
+        }
+
+        private void RegistSkillTreeDrop(SkillElem skillElem)
+        {
+            UGUIDrogListener.Get(skillElem.RootGo).onDrop = arg => {
+                Logger.Log($"Drop lastPress -> {arg.lastPress} pointerEnter -> {arg.pointerEnter} pointerDrag -> {arg.pointerDrag} " +
+                    $"selectedObject -> {arg.selectedObject} Raycast -> {arg.pointerCurrentRaycast.gameObject}");
+            };
+        }
+
         private void OnBackBtnClick(PointerEventData arg)
         {
             var tmpCtrl = Game.ControllerMgr.Get<PlayerController>();
@@ -365,7 +404,6 @@ namespace AosHotfixRunTime
             }
 
             Game.EventMgr.FireNow(this, ReferencePool.Fetch<SkillWndEvent.SkillSetChange>());
-
             Close();
         }
       

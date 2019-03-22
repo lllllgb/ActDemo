@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UGUIDrogListener : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDragHandler
+public class UGUIDrogListener : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDragHandler, IDropHandler
 {
     public delegate void VoidDelegate(PointerEventData eventData);
     
     public VoidDelegate onBeginDrag;
     public VoidDelegate onDrag;
     public VoidDelegate onEndDrag;
+    public VoidDelegate onDrop;
 
     static public UGUIDrogListener Get(GameObject go)
     {
@@ -31,7 +32,10 @@ public class UGUIDrogListener : MonoBehaviour,IDragHandler,IBeginDragHandler,IEn
     {
         if (onEndDrag != null) onEndDrag(eventData);
     }
-  
 
+    public void OnDrop(PointerEventData eventData)
+    {
+        onDrop?.Invoke(eventData);
+    }
 
 }
