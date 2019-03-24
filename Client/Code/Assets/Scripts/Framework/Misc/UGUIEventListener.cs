@@ -9,6 +9,7 @@ public class UGUIEventListener : MonoBehaviour, IPointerClickHandler,
 {
     public delegate void VoidDelegate(PointerEventData eventData);
     public VoidDelegate onClick;
+    public VoidDelegate onDoubleClick;
     public VoidDelegate onDown;
     public VoidDelegate onEnter;
     public VoidDelegate onExit;
@@ -23,7 +24,14 @@ public class UGUIEventListener : MonoBehaviour, IPointerClickHandler,
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (onClick != null) onClick(eventData);
+        if (eventData.clickCount == 2)
+        {
+            onDoubleClick?.Invoke(eventData);
+        }
+        else
+        {
+            onClick?.Invoke(eventData);
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)

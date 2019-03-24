@@ -87,9 +87,10 @@ namespace AosHotfixRunTime
             GameObject tmpAtkGo = Find(mSkillInfo, "Button_Atk");
             RegisterEventClickDown(tmpAtkGo, OnAtkBtnDown);
             RegisterEventClickUp(tmpAtkGo, OnAtkBtnUp);
+            RegisterEventDoubleClick(tmpAtkGo, OnAtkBtDoubleClick);
             GameObject tmpJumpGo = Find(mSkillInfo, "Button_Jump");
             RegisterEventClickDown(tmpJumpGo, OnJumpBtnDown);
-
+            RegisterEventDoubleClick(tmpJumpGo, OnJumpBtnDoubleClick);
             GameObject tmpSkillExGo = Find(mSkillInfo, "Button_SkilEx");
             mExSkillInput = new SkillInput();
             mExSkillInput.InitUI(tmpSkillExGo);
@@ -182,9 +183,19 @@ namespace AosHotfixRunTime
             mIsAtkBtnDown = false;
         }
 
+        private void OnAtkBtDoubleClick(PointerEventData arg)
+        {
+            TryReleaseAction(ACT.EOperation.EO_Attack, ACT.EInputType.EIT_DoubleClick);
+        }
+
         private void OnJumpBtnDown(PointerEventData arg)
         {
             TryReleaseAction(ACT.EOperation.EO_Jump, ACT.EInputType.EIT_Click);
+        }
+
+        private void OnJumpBtnDoubleClick(PointerEventData arg)
+        {
+            TryReleaseAction(ACT.EOperation.EO_Jump, ACT.EInputType.EIT_DoubleClick);
         }
 
         private void OnDefenseBtnDown(PointerEventData arg)
