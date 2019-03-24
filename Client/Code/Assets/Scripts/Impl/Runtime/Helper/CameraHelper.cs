@@ -16,6 +16,7 @@ namespace AosHotfixRunTime
         //UI相机
         public GameObject UIRootGo { get; private set; }
         public GameObject UICanvasRootGo { get; private set; }
+        public Camera UICamera { get; private set; }
 
         //HUD相机
         public GameObject HudRootGo { get; private set; }
@@ -37,6 +38,7 @@ namespace AosHotfixRunTime
         {
             UIRootGo = go;
             UICanvasRootGo = Utility.GameObj.Find(go, "CanvasRoot");
+            UICamera = Utility.GameObj.Find<Camera>(go, "UICamera");
         }
 
 

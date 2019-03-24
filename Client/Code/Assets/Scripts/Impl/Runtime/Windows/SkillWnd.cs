@@ -59,8 +59,10 @@ namespace AosHotfixRunTime
 
             public void SetSelected(bool flag)
             {
-                //SetActive(Checkmark, flag);
-                SkillTge.isOn = flag;
+                if (SkillTge)
+                {
+                    SkillTge.isOn = flag;
+                }
             }
         }
 
@@ -77,7 +79,6 @@ namespace AosHotfixRunTime
 
         int mSkillPage;
         int mSelectedEuqipedSoltIdx;
-        int mSelectedEquipingSoltIdx;
         List<SkillItemLink> mSkillLinkList;
 
         protected override void AfterInit()
@@ -123,7 +124,10 @@ namespace AosHotfixRunTime
                     tmpSkillElem.Init(tmpGo);
                     mEquipingSkills.Add(tmpSkillElem);
 
-                    RegistEquingSlotClick(tmpSkillElem, i);
+                    RegistEquipingSkillDragBegin(tmpSkillElem, i);
+                    RegistEquipingSkillDrag(tmpSkillElem);
+                    RegistEquipingSkillDragEnd(tmpSkillElem, i);
+                    RegistEquipingSkillDrop(tmpSkillElem, i);
                 }
             }
 
@@ -221,9 +225,12 @@ namespace AosHotfixRunTime
                     {
                         SetActive(tmpSkillElem.RootGo, true);
                         tmpSkillElem.Refresh(tmpSkills[j]);
-                        RegistSkillTreeClick(tmpSkillElem);
+                        //RegistSkillTreeClick(tmpSkillElem);
+
+                        RegistSkillTreeDragBegin(tmpSkillElem);
                         RegistSkillTreeDrag(tmpSkillElem);
-                        RegistSkillTreeDrop(tmpSkillElem);
+                        RegistSkillTreeDragEnd(tmpSkillElem);
+                        //RegistSkillTreeDrop(tmpSkillElem);
                     }
                     else
                     {
@@ -237,7 +244,13 @@ namespace AosHotfixRunTime
         {
             mSkillLinkList = Game.ControllerMgr.Get<PlayerController>().GetSkillLinkList(mSkillPage);
             RefreshEquipedSkill();
+            mSelectedEuqipedSoltIdx = -1;
             SetActive(mEquipingRootGo, false);
+
+            for (int i = 0, max = mEquipedSkills.Count; i < max; ++i)
+            {
+                mEquipedSkills[i].SetSelected(false);
+            }
         }
 
         private void RefreshEquipedSkill()
@@ -283,11 +296,6 @@ namespace AosHotfixRunTime
             {
                 mSkillPage = 0;
                 RefreshByPage();
-
-                mEquipedSkills[0].SetSelected(true);
-                mSelectedEuqipedSoltIdx = 0;
-                mEquipingSkills[0].SetSelected(true);
-                mSelectedEquipingSoltIdx = 0;
             }
         }
 
@@ -297,11 +305,6 @@ namespace AosHotfixRunTime
             {
                 mSkillPage = 1;
                 RefreshByPage();
-
-                mEquipedSkills[0].SetSelected(true);
-                mSelectedEuqipedSoltIdx = 0;
-                mEquipingSkills[0].SetSelected(true);
-                mSelectedEquipingSoltIdx = 0;
             }
         }
 
@@ -319,53 +322,18 @@ namespace AosHotfixRunTime
                     SetActive(mEquipingRootGo, true);
                     mSelectedEuqipedSoltIdx = slotIdx;
                     RefreshEquipingSkill();
-
-                    mEquipingSkills[0].SetSelected(true);
-                    mSelectedEquipingSoltIdx = 0;
                 }
             };
         }
 
-        private void RegistEquingSlotClick(SkillElem skillElem, int slotIdx)
+        SkillElem mDragingSkill;
+        private void RegistSkillTreeDragBegin(SkillElem skillElem)
         {
-            UGUIEventListener.Get(skillElem.RootGo).onClick = arg =>
-            {
-                if (mSelectedEquipingSoltIdx == slotIdx)
-                {
-                    mSelectedEquipingSoltIdx = -1;
-                }
-                else
-                {
-                    mSelectedEquipingSoltIdx = slotIdx;
-                }
-            };
-        }
+            UGUIDrogListener.Get(skillElem.RootGo).onBeginDrag = arg => {
 
-        private void RegistSkillTreeClick(SkillElem skillElem)
-        {
-            UGUIEventListener.Get(skillElem.RootGo).onClick = arg =>
-            {
-                if (mSelectedEquipingSoltIdx != -1)
+                if (UIDragHelper.Instance.BeginDrag(arg, skillElem.IconImg.gameObject, mGameObejct.transform))
                 {
-                    List<SkillItem> tmpSkillItemList = mSkillLinkList[mSelectedEuqipedSoltIdx].SkillItems;
-                    
-                    if (mSelectedEquipingSoltIdx >= tmpSkillItemList.Count)
-                    {
-                        SkillItem tmpSkillItem = new SkillItem();
-                        tmpSkillItem.Init(skillElem.SkillBase.ID, 1);
-                        tmpSkillItemList.Add(tmpSkillItem);
-                    }
-                    else
-                    {
-                        tmpSkillItemList[mSelectedEquipingSoltIdx].Init(skillElem.SkillBase.ID, 1);
-                    }
-
-                    RefreshEquipingSkill();
-
-                    if (tmpSkillItemList.Count == 1 || mSelectedEquipingSoltIdx == 0)
-                    {
-                        RefreshEquipedSkill();
-                    }
+                    mDragingSkill = skillElem;
                 }
             };
         }
@@ -373,23 +341,101 @@ namespace AosHotfixRunTime
         private void RegistSkillTreeDrag(SkillElem skillElem)
         {
             UGUIDrogListener.Get(skillElem.RootGo).onDrag =  arg => {
-                Logger.Log($"Drag lastPress -> {arg.lastPress} pointerEnter -> {arg.pointerEnter} pointerDrag -> {arg.pointerDrag} " +
-                    $"selectedObject -> {arg.selectedObject} Raycast -> {arg.pointerCurrentRaycast.gameObject}");
+                UIDragHelper.Instance.Draging(arg);
             };
         }
 
         private void RegistSkillTreeDragEnd(SkillElem skillElem)
         {
             UGUIDrogListener.Get(skillElem.RootGo).onEndDrag = arg => {
-                Logger.Log($"DragEnd -> {arg}");
+
+                if (UIDragHelper.Instance.EndDrag(arg))
+                {
+                    mDragingSkill = null;
+                }
+            };
+        }
+        
+        private void RegistEquipingSkillDragBegin(SkillElem skillElem, int slotIdx)
+        {
+            UGUIDrogListener.Get(skillElem.RootGo).onBeginDrag = arg => {
+
+                if (null == skillElem.SkillBase)
+                {
+                    return;
+                }
+
+                if (UIDragHelper.Instance.BeginDrag(arg, skillElem.IconImg.gameObject, mGameObejct.transform))
+                {
+                }
             };
         }
 
-        private void RegistSkillTreeDrop(SkillElem skillElem)
+        private void RegistEquipingSkillDrag(SkillElem skillElem)
+        {
+            UGUIDrogListener.Get(skillElem.RootGo).onDrag = arg => {
+                UIDragHelper.Instance.Draging(arg);
+            };
+        }
+
+        private void RegistEquipingSkillDragEnd(SkillElem skillElem, int slotIdx)
+        {
+            UGUIDrogListener.Get(skillElem.RootGo).onEndDrag = arg => {
+
+                if (UIDragHelper.Instance.EndDrag(arg))
+                {
+                    if (arg.pointerCurrentRaycast.gameObject != skillElem.RootGo)
+                    {
+                        List<SkillItem> tmpSkillItemList = mSkillLinkList[mSelectedEuqipedSoltIdx].SkillItems;
+
+                        if (slotIdx < tmpSkillItemList.Count)
+                        {
+                            tmpSkillItemList.RemoveAt(slotIdx);
+                        }
+
+                        RefreshEquipingSkill();
+
+                        if (tmpSkillItemList.Count == 0 || slotIdx == 0)
+                        {
+                            RefreshEquipedSkill();
+                        }
+                    }
+                }
+            };
+        }
+
+        private void RegistEquipingSkillDrop(SkillElem skillElem, int slotIdx)
         {
             UGUIDrogListener.Get(skillElem.RootGo).onDrop = arg => {
-                Logger.Log($"Drop lastPress -> {arg.lastPress} pointerEnter -> {arg.pointerEnter} pointerDrag -> {arg.pointerDrag} " +
-                    $"selectedObject -> {arg.selectedObject} Raycast -> {arg.pointerCurrentRaycast.gameObject}");
+
+                if (UIDragHelper.Instance.OnDrop(arg))
+                {
+                    if (null == mDragingSkill)
+                    {
+                        return;
+                    }
+
+                    List<SkillItem> tmpSkillItemList = mSkillLinkList[mSelectedEuqipedSoltIdx].SkillItems;
+                    SkillItem tmpSkillItem = null;
+
+                    if (slotIdx >= tmpSkillItemList.Count)
+                    {
+                        tmpSkillItem = new SkillItem();
+                        tmpSkillItemList.Add(tmpSkillItem);
+                    }
+                    else
+                    {
+                        tmpSkillItem = tmpSkillItemList[slotIdx];
+                    }
+
+                    tmpSkillItem.Init(mDragingSkill.SkillBase.ID, 1);
+                    RefreshEquipingSkill();
+
+                    if (tmpSkillItemList.Count == 1 || slotIdx == 0)
+                    {
+                        RefreshEquipedSkill();
+                    }
+                }
             };
         }
 

@@ -3,7 +3,7 @@ CRC: 1864038617
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3ea56b1ff15089c983829f7c4c6e479c
+    Hash: 4bfff637edcf44217ac49adcd2339e9f
   TypeTreeHash:
     serializedVersion: 2
     Hash: c73412a662fd4e4f36af34cbdf078b85
@@ -12,5 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/effect/Texture/E_Object_fsw_005.png
+- Assets/Res/Effect/Texture/E_Object_fsw_005.png
 Dependencies: []

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4062709135
+CRC: 1500451559
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fef4b4c86b12f1e1b5ef567e375a5b53
+    Hash: ea3efe68ffceb969dd59523599d86a43
   TypeTreeHash:
     serializedVersion: 2
     Hash: bd0937b82ef9e644feeb905e41af2c8b
@@ -54,5 +54,5 @@ ClassTypes:
 Assets:
 - Assets/Bundles/UI/SkillWnd.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d

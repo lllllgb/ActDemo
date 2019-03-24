@@ -3,7 +3,7 @@ CRC: 1940320090
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f8563ede15e3c51366ea2ed12aef12f6
+    Hash: e93e0147c822d20176cc801506e00035
   TypeTreeHash:
     serializedVersion: 2
     Hash: c73412a662fd4e4f36af34cbdf078b85
@@ -12,5 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/effect/Texture/E_Glow_lyj_002.png
+- Assets/Res/Effect/Texture/E_Glow_lyj_002.png
 Dependencies: []

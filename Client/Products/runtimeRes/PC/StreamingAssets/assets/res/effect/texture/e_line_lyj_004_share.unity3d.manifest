@@ -3,7 +3,7 @@ CRC: 895650950
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cccdff3a450b27dfd6b1e970f97e7dfa
+    Hash: 34fae8a6fccd4f3f81bb1c1e18b6c587
   TypeTreeHash:
     serializedVersion: 2
     Hash: c73412a662fd4e4f36af34cbdf078b85
@@ -12,5 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/effect/Texture/E_Line_lyj_004.png
+- Assets/Res/Effect/Texture/E_Line_lyj_004.png
 Dependencies: []

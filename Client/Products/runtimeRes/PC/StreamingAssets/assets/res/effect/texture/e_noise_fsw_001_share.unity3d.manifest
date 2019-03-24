@@ -3,7 +3,7 @@ CRC: 3495453484
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d643f7e59e9719c68ee165fb80f7e8f6
+    Hash: 1882d09d9f00fa90cac39ae16fe5d5ad
   TypeTreeHash:
     serializedVersion: 2
     Hash: c73412a662fd4e4f36af34cbdf078b85
@@ -12,5 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/effect/Texture/E_Noise_fsw_001.png
+- Assets/Res/Effect/Texture/E_Noise_fsw_001.png
 Dependencies: []

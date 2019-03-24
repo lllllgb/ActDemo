@@ -94,7 +94,11 @@ namespace AosHotfixRunTime
                 mLocalPlayerCache = Game.ControllerMgr.Get<UnitController>().LocalPlayer;
                 mSkillActionCache = mLocalPlayerCache.ActStatus.ActionGroup.GetActionIdx(mCurrSkillItem.SkillBase.Action);
                 mIsSkillReady = false;
-                
+
+            }
+            else
+            {
+                Reset();
             }
         }
 
@@ -136,6 +140,10 @@ namespace AosHotfixRunTime
 
         public void Reset()
         {
+            mCDImg.fillAmount = 0f;
+            Utility.GameObj.SetActive(mIconImg, false);
+            mIconImg.sprite = null;
+
             if (null != mCurrSkillItem)
             {
                 mCurrSkillItem.SkillInput = null;

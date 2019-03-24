@@ -3,7 +3,7 @@ CRC: 3585815778
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 83538e359597e4e581e12bdce9fc616a
+    Hash: debd4cc563c0170fd08457c30b982d2b
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/effect/Texture/Materials/E_Glow_fsw_020_01.mat
+- Assets/Res/Effect/Texture/Materials/E_Glow_fsw_020_01.mat
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_glow_fsw_020_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_glow_fsw_020_share.unity3d
