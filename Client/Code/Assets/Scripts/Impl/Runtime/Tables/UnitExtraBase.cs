@@ -25,6 +25,7 @@ public partial class UnitExtraBase : JW_Table.Binary, JW_Table.IKey
 
 	private int m_ID;
 	private SkillIDList m_Skills;
+	private int m_SkillEx;
 
 	public int ID
 	{
@@ -38,6 +39,12 @@ public partial class UnitExtraBase : JW_Table.Binary, JW_Table.IKey
 		set { m_Skills = value; }
 	}
 
+	public int SkillEx
+	{
+		get { return m_SkillEx; }
+		set { m_SkillEx = value; }
+	}
+
 	public long Key()
 	{
 		return m_ID;
@@ -47,13 +54,14 @@ public partial class UnitExtraBase : JW_Table.Binary, JW_Table.IKey
 	{
 		m_ID = reader.ReadInt32();
 		m_Skills = reader.ReadItem<SkillIDList>();
+		m_SkillEx = reader.ReadInt32();
 	}
 }
 
 //UnitExtraBase.xlsx
 public sealed class UnitExtraBaseManager : JW_Table.TableManager<UnitExtraBase>
 {
-	public const uint VERSION = 515011117;
+	public const uint VERSION = 463626794;
 
 	private UnitExtraBaseManager()
 	{

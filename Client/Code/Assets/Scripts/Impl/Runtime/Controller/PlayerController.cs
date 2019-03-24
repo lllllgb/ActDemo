@@ -10,10 +10,11 @@ namespace AosHotfixRunTime
 
         public int UnitID { get; private set; }
         public int Level { get; private set; }
-        public List<SkillItem> SkillItems { get; set; } = new List<SkillItem>();
 
         List<List<SkillItemLink>> mSkillCollect;
         public int CurrSkillPage { get; private set; }
+        SkillItemLink mExSkillLink;
+
 
         class SkillCDData
         {
@@ -32,13 +33,6 @@ namespace AosHotfixRunTime
         {
             this.UnitID = unitID;
             this.Level = level;
-
-            for (int i = 0, max = SkillBaseManager.instance.Size; i < max; ++i)
-            {
-                var tmpSkillItem = new SkillItem();
-                tmpSkillItem.Init(SkillBaseManager.instance.Get(i).ID, 1);
-                SkillItems.Add(tmpSkillItem);
-            }
 
             InitSkill();
         }
@@ -87,6 +81,16 @@ namespace AosHotfixRunTime
                     }
                 }
             }
+
+            mExSkillLink = new SkillItemLink();
+            UnitExtraBase tmpUnitExtraBase = UnitExtraBaseManager.instance.Find(UnitID);
+
+            if(null != tmpUnitExtraBase)
+            {
+                SkillItem tmpSkillItem = new SkillItem();
+                tmpSkillItem.Init(tmpUnitExtraBase.SkillEx, 1);
+                mExSkillLink.SkillItems.Add(tmpSkillItem);
+            }
         }
 
         public void SetCurrSkillPage(int pageIndex)
@@ -102,6 +106,11 @@ namespace AosHotfixRunTime
         public SkillItemLink GetSkillLink(int index)
         {
             return mSkillCollect[CurrSkillPage][index];
+        }
+
+        public SkillItemLink GetExSkillLink()
+        {
+            return mExSkillLink;
         }
 
         public void SaveSkill()

@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 11834942
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f270e5df1a648da3f4c7ce3344a1876c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 460b4f5d62b6facbccf7c01637df8f00
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Icon/Skill/block.png
+Dependencies: []

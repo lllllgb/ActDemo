@@ -3,7 +3,7 @@ CRC: 3023093740
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9561f5324756c9cc3175d20b99021833
+    Hash: 50c3bd76df2e818c692ca1ca43dfd777
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/effect/Materials/E_Trail_fsw_001_01.mat
+- Assets/Res/Effect/Materials/E_Trail_fsw_001_01.mat
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_trail_fsw_001_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_trail_fsw_001_share.unity3d

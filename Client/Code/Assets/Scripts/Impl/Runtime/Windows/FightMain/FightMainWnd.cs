@@ -35,6 +35,7 @@ namespace AosHotfixRunTime
         private GameObject mRB;
         private GameObject mSkillInfo;
         private SkillInput[] mSkillInputs = new SkillInput[SKILL_NUM];
+        private SkillInput mExSkillInput;
 
         private GameObject mLB;
         private UGUIJoystick mJoystick;
@@ -77,20 +78,24 @@ namespace AosHotfixRunTime
 
             for (int i = 0, max = SKILL_NUM; i < max; ++i)
             {
-                GameObject tmpSkillGo = Find(mSkillInfo, $"Image_Skill{i}");
+                GameObject tmpSkillGo = Find(mSkillInfo, $"Button_Skill{i}");
                 SkillInput tmpSkillInput = new SkillInput();
                 tmpSkillInput.InitUI(tmpSkillGo);
                 mSkillInputs[i] = tmpSkillInput;
             }
 
-            GameObject tmpAtkGo = Find(mSkillInfo, "Image_Atk");
+            GameObject tmpAtkGo = Find(mSkillInfo, "Button_Atk");
             RegisterEventClickDown(tmpAtkGo, OnAtkBtnDown);
             RegisterEventClickUp(tmpAtkGo, OnAtkBtnUp);
-            GameObject tmpJumpGo = Find(mSkillInfo, "Image_Jump");
+            GameObject tmpJumpGo = Find(mSkillInfo, "Button_Jump");
             RegisterEventClickDown(tmpJumpGo, OnJumpBtnDown);
-            GameObject tmpDefense = Find(mSkillInfo, "Image_Defense");
-            RegisterEventClickDown(tmpDefense, OnDefenseBtnDown);
-            RegisterEventClickUp(tmpDefense, OnDefenseBtnUp);
+
+            GameObject tmpSkillExGo = Find(mSkillInfo, "Button_SkilEx");
+            mExSkillInput = new SkillInput();
+            mExSkillInput.InitUI(tmpSkillExGo);
+            //RegisterEventClickDown(tmpSkillExGo, OnDefenseBtnDown);
+            //RegisterEventClickUp(tmpSkillExGo, OnDefenseBtnUp);
+
             RegisterEventClick(Find(mRB, "Button_SkillSystem"), OnSkillModuleBtnClick);
         }
 
@@ -132,6 +137,8 @@ namespace AosHotfixRunTime
             {
                 mSkillInputs[i].Update(deltaTime);
             }
+
+            mExSkillInput.Update(deltaTime);
         }
 
         protected override void BeforeClose()
@@ -142,6 +149,8 @@ namespace AosHotfixRunTime
             {
                 mSkillInputs[i].Reset();
             }
+
+            mExSkillInput.Reset();
 
             Game.EventMgr.Unsubscribe(UnitCtrlEvent.CurrHitedMonsterChange.EventID, OnEventCurrHitedMonsterChange);
             Game.EventMgr.Unsubscribe(UnitEvent.HpModify.EventID, OnEventUnitHpModify);
@@ -158,6 +167,8 @@ namespace AosHotfixRunTime
             {
                 mSkillInputs[i].Release();
             }
+
+            mExSkillInput.Release();
         }
 
         private void OnAtkBtnDown(PointerEventData arg)
@@ -274,8 +285,10 @@ namespace AosHotfixRunTime
 
             for (int i = 0, max = mSkillInputs.Length; i < max; ++i)
             {
-                mSkillInputs[i].Init(tmpPlayerCtrl.GetSkillLink(i));
+                mSkillInputs[i].Init(tmpPlayerCtrl.GetSkillLink(i), SkillInput.ESkillType.Normal);
             }
+
+            mExSkillInput.Init(tmpPlayerCtrl.GetExSkillLink(), SkillInput.ESkillType.Extra);
         }
 
         private void OnEventCurrHitedMonsterChange(object sender, GameEventArgs arg)

@@ -13,6 +13,12 @@ namespace AosHotfixRunTime
     {
         const float MAX_IGNORE_TIME = 2f; //最大忽略时间
 
+        public enum ESkillType
+        {
+            Normal,
+            Extra,
+        }
+
         Image mIconImg;
         ImageLoader mIconLoader;
         Image mCDImg;
@@ -25,11 +31,14 @@ namespace AosHotfixRunTime
         float mCD = 0;
         int mActiveAcionCache = -1;
         int mInterruptIndex = -1;
-        int mSkillActionCache = -1;
         LocalPlayer mLocalPlayerCache;
         float mIgnoreTime = 0f;
         bool mIsSkillBtnDown = false;
         float mTryReleaseSkillTime = 0f;
+        string[] mSkillActions;
+        List<int> mSkillActionCaches = new List<int>();
+        int mMatchSkillActionIdx = -1;
+        ESkillType mSkillType;
 
         public void InitUI(GameObject skillGo)
         {
@@ -41,8 +50,9 @@ namespace AosHotfixRunTime
             mIconLoader = ReferencePool.Fetch<ImageLoader>();
         }
 
-        public void Init(SkillItemLink skillItemLink)
+        public void Init(SkillItemLink skillItemLink, ESkillType skillType)
         {
+            mSkillType = skillType;
             mSkillItemLink = skillItemLink;
             mLinkIndex = 0;
             InitSkillByIdx(mLinkIndex);
@@ -92,7 +102,15 @@ namespace AosHotfixRunTime
                 mCDImg.fillAmount = Mathf.Max(1f - mCD * 1000f / mCurrSkillItem.SkillAttrBase.CD, 0f);
                 mIconLoader.Load(ImageLoader.EIconType.Skill, mCurrSkillItem.SkillBase.Icon, mIconImg, null, false);
                 mLocalPlayerCache = Game.ControllerMgr.Get<UnitController>().LocalPlayer;
-                mSkillActionCache = mLocalPlayerCache.ActStatus.ActionGroup.GetActionIdx(mCurrSkillItem.SkillBase.Action);
+
+                mSkillActions = mCurrSkillItem.SkillBase.Action.Split(',');
+                mSkillActionCaches.Clear();
+
+                for (int i = 0, max = mSkillActions.Length; i < max; ++i)
+                {
+                    mSkillActionCaches.Add(mLocalPlayerCache.ActStatus.ActionGroup.GetActionIdx(mSkillActions[i]));
+                }
+
                 mIsSkillReady = false;
 
             }
@@ -133,6 +151,7 @@ namespace AosHotfixRunTime
 
                 if (mTryReleaseSkillTime > 0.1f)
                 {
+                    mTryReleaseSkillTime = 0f;
                     TryReleaseSkill();
                 }
             }
@@ -202,9 +221,18 @@ namespace AosHotfixRunTime
                 {
                     var tmpInterrupt = tmpActiveAction.ActionInterrupts[i];
 
-                    if (tmpInterrupt.ActionCache == mSkillActionCache)
+                    for (int j = 0, jmax = mSkillActionCaches.Count; j < jmax; ++j)
                     {
-                        mInterruptIndex = i;
+                        if (tmpInterrupt.ActionCache == mSkillActionCaches[j])
+                        {
+                            mInterruptIndex = i;
+                            mMatchSkillActionIdx = j;
+                            break;
+                        }
+                    }
+
+                    if (mInterruptIndex != -1)
+                    {
                         break;
                     }
                 }
@@ -220,13 +248,32 @@ namespace AosHotfixRunTime
 
         private void OnSkillDown(PointerEventData arg)
         {
-            mIsSkillBtnDown = true;
-            mTryReleaseSkillTime = 1f;
+            if (ESkillType.Normal == mSkillType)
+            {
+                mIsSkillBtnDown = true;
+                mTryReleaseSkillTime = 1f;
+            }
+            else if (ESkillType.Extra == mSkillType)
+            {
+                if (mIsSkillReady)
+                {
+                    mCD = mCurrSkillItem.SkillAttrBase.CD * 0.001f;
+                    Game.ControllerMgr.Get<PlayerController>().SetSkillCD(mCurrSkillItem.ID, mCD);
+                    TryReleaseAction(ACT.EOperation.EO_Block, ACT.EInputType.EIT_Click);
+                }
+            }
         }
 
         private void OnSkillUp(PointerEventData arg)
         {
-            mIsSkillBtnDown = false;
+            if (ESkillType.Normal == mSkillType)
+            {
+                mIsSkillBtnDown = false;
+            }
+            else if (ESkillType.Extra == mSkillType)
+            {
+                TryReleaseAction(ACT.EOperation.EO_Block, ACT.EInputType.EIT_Release);
+            }
         }
 
         private void TryReleaseSkill()
@@ -255,11 +302,22 @@ namespace AosHotfixRunTime
             tmpLocalPlayer.LinkSkill(this, mInterruptIndex);
         }
 
+        private void TryReleaseAction(ACT.EOperation operation, ACT.EInputType inputType)
+        {
+            LocalPlayer tmpLocalPlayer = Game.ControllerMgr.Get<UnitController>().LocalPlayer;
+            var tmpInterruptIdx = tmpLocalPlayer.ActStatus.ActiveAction.GetActionInterruptIdx(operation, inputType);
+
+            if (-1 != tmpInterruptIdx)
+            {
+                tmpLocalPlayer.LinkSkill(null, tmpInterruptIdx);
+            }
+        }
+
         public void PlaySkill()
         {
             mCD = mCurrSkillItem.SkillAttrBase.CD * 0.001f;
             Game.ControllerMgr.Get<PlayerController>().SetSkillCD(mCurrSkillItem.ID, mCD);
-            mLocalPlayerCache.PlaySkill(mCurrSkillItem, mCurrSkillItem.SkillBase.Action);
+            mLocalPlayerCache.PlaySkill(mCurrSkillItem, mSkillActions[mMatchSkillActionIdx]);
             SwitchNextSkill();
         }
 

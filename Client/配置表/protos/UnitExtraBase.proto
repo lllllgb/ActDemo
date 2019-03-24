@@ -8,4 +8,5 @@ message UnitExtraBase [key=ID,excel="UnitExtraBase.xlsx"]
 	
 	int32 				ID                        [option = "id"];
 	SkillIDList 		Skills                    [option = "技能"];
+	int32 		        SkillEx                   [option = "额外技能"];
 }

@@ -34582,7 +34582,7 @@
               <ActionStatus>4</ActionStatus>
               <Events />
               <ActionInterrupts>
-                <ActionInterrupt ActionID="block_y" CheckInput1="true" InputKey1="3" InputType1="3" CheckInput2="true" InputKey2="3" InputType2="5" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="block_y" CheckInput1="true" InputKey1="3" InputType1="3" InputType2="5" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs>
