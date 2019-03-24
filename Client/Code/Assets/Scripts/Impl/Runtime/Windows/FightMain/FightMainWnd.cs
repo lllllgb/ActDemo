@@ -86,8 +86,11 @@ namespace AosHotfixRunTime
             GameObject tmpAtkGo = Find(mSkillInfo, "Image_Atk");
             RegisterEventClickDown(tmpAtkGo, OnAtkBtnDown);
             RegisterEventClickUp(tmpAtkGo, OnAtkBtnUp);
-            RegisterEventClick(Find(mSkillInfo, "Image_Jump"), OnJumpBtnClick);
-            RegisterEventClick(Find(mSkillInfo, "Image_Defense"), OnDefenseBtnClick);
+            GameObject tmpJumpGo = Find(mSkillInfo, "Image_Jump");
+            RegisterEventClickDown(tmpJumpGo, OnJumpBtnDown);
+            GameObject tmpDefense = Find(mSkillInfo, "Image_Defense");
+            RegisterEventClickDown(tmpDefense, OnDefenseBtnDown);
+            RegisterEventClickUp(tmpDefense, OnDefenseBtnUp);
             RegisterEventClick(Find(mRB, "Button_SkillSystem"), OnSkillModuleBtnClick);
         }
 
@@ -121,7 +124,7 @@ namespace AosHotfixRunTime
 
                 if (mTryReleaseAtkTime > 0.1f)
                 {
-                    TryReleaseAction(ACT.EOperation.EO_Attack);
+                    TryReleaseAction(ACT.EOperation.EO_Attack, ACT.EInputType.EIT_Click);
                 }
             }
 
@@ -168,9 +171,19 @@ namespace AosHotfixRunTime
             mIsAtkBtnDown = false;
         }
 
-        private void OnDefenseBtnClick(PointerEventData arg)
+        private void OnJumpBtnDown(PointerEventData arg)
         {
-            
+            TryReleaseAction(ACT.EOperation.EO_Jump, ACT.EInputType.EIT_Click);
+        }
+
+        private void OnDefenseBtnDown(PointerEventData arg)
+        {
+            TryReleaseAction(ACT.EOperation.EO_Block, ACT.EInputType.EIT_Click);
+        }
+
+        private void OnDefenseBtnUp(PointerEventData arg)
+        {
+            TryReleaseAction(ACT.EOperation.EO_Block, ACT.EInputType.EIT_Release);
         }
 
         private void OnSkillModuleBtnClick(PointerEventData arg)
@@ -178,15 +191,10 @@ namespace AosHotfixRunTime
             Game.WindowsMgr.ShowWindow<SkillWnd>();
         }
 
-        private void OnJumpBtnClick(PointerEventData arg)
-        {
-            TryReleaseAction(ACT.EOperation.EO_Jump);
-        }
-
-        private void TryReleaseAction(ACT.EOperation operation)
+        private void TryReleaseAction(ACT.EOperation operation, ACT.EInputType inputType)
         {
             LocalPlayer tmpLocalPlayer = Game.ControllerMgr.Get<UnitController>().LocalPlayer;
-            var tmpInterruptIdx = tmpLocalPlayer.ActStatus.ActiveAction.GetActionInterruptIdx(ACT.EOperation.EO_Attack);
+            var tmpInterruptIdx = tmpLocalPlayer.ActStatus.ActiveAction.GetActionInterruptIdx(operation, inputType);
 
             if (-1 != tmpInterruptIdx)
             {

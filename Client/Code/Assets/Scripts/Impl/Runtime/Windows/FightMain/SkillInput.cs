@@ -89,7 +89,7 @@ namespace AosHotfixRunTime
                 mIsInit = true;
                 mCurrSkillItem.SkillInput = this;
                 mCD = Game.ControllerMgr.Get<PlayerController>().GetSkillCD(mCurrSkillItem.ID);
-                mCDImg.fillAmount = Mathf.Max(mCD * 1000f / mCurrSkillItem.SkillAttrBase.CD, 0f);
+                mCDImg.fillAmount = Mathf.Max(1f - mCD * 1000f / mCurrSkillItem.SkillAttrBase.CD, 0f);
                 mIconLoader.Load(ImageLoader.EIconType.Skill, mCurrSkillItem.SkillBase.Icon, mIconImg, null, false);
                 mLocalPlayerCache = Game.ControllerMgr.Get<UnitController>().LocalPlayer;
                 mSkillActionCache = mLocalPlayerCache.ActStatus.ActionGroup.GetActionIdx(mCurrSkillItem.SkillBase.Action);
@@ -177,7 +177,7 @@ namespace AosHotfixRunTime
             else
             {
                 mCD -= deltaTime;
-                mCDImg.fillAmount = Mathf.Max(mCD * 1000f / mCurrSkillItem.SkillAttrBase.CD, 0f);
+                mCDImg.fillAmount = Mathf.Max(1 - mCD * 1000f / mCurrSkillItem.SkillAttrBase.CD, 0f);
 
                 if (mCD <= 0f)
                 {
