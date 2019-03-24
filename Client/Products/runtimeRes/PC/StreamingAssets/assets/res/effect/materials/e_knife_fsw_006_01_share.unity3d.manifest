@@ -3,7 +3,7 @@ CRC: 3190825279
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 81653de546aede02d76b808ed0a7d0e0
+    Hash: 8f2e3c05014df8b7f081cb0f12522f5b
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Materials/E_Knife_fsw_006_01.mat
+- Assets/Res/effect/Materials/E_Knife_fsw_006_01.mat
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_knife_fsw_006_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_knife_fsw_006_share.unity3d

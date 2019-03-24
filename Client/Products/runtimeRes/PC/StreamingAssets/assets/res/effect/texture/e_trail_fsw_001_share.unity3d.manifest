@@ -3,7 +3,7 @@ CRC: 2751009491
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6524d1de6cb62e792cf387dfff243a0b
+    Hash: ea79108de9bb229645d0dab0d3ac4f72
   TypeTreeHash:
     serializedVersion: 2
     Hash: c73412a662fd4e4f36af34cbdf078b85
@@ -12,5 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Texture/E_Trail_fsw_001.png
+- Assets/Res/effect/Texture/E_Trail_fsw_001.png
 Dependencies: []

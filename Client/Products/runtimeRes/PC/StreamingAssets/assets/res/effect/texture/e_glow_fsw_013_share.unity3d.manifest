@@ -3,7 +3,7 @@ CRC: 2716766722
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 32b0903079842106dd19c2c49a96a873
+    Hash: eb010f17f0bbfbf4dd9edf8d1702163e
   TypeTreeHash:
     serializedVersion: 2
     Hash: c73412a662fd4e4f36af34cbdf078b85
@@ -12,5 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Texture/E_Glow_fsw_013.png
+- Assets/Res/effect/Texture/E_Glow_fsw_013.png
 Dependencies: []

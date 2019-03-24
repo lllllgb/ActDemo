@@ -3,7 +3,7 @@ CRC: 3366567701
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f32e3d0fd81b0cf5a384d68007c314cf
+    Hash: 68da5c576e40bc73a5126f7589633e6e
   TypeTreeHash:
     serializedVersion: 2
     Hash: c73412a662fd4e4f36af34cbdf078b85
@@ -12,5 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Texture/E_Knife_fsw_009.png
+- Assets/Res/effect/Texture/E_Knife_fsw_009.png
 Dependencies: []

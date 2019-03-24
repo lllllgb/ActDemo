@@ -3,7 +3,7 @@ CRC: 1847936089
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 178ab74c2b20630e05d834ac6ef04c53
+    Hash: 78a7d764258bfd6b082a8ed718ca9686
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Materials/E_Glow_lyj_003.mat
+- Assets/Res/effect/Materials/E_Glow_lyj_003.mat
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_glow_lyj_003_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_glow_lyj_003_share.unity3d

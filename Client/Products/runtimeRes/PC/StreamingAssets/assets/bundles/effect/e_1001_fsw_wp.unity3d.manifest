@@ -3,7 +3,7 @@ CRC: 1064386561
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ea3acd1e5f2c8c33b2852d0c01a0d2bf
+    Hash: 9ce5dc470bddc1bcb44226b465c13f73
   TypeTreeHash:
     serializedVersion: 2
     Hash: ab0283cdc76d68aa778fae1a8f59f763
@@ -22,4 +22,4 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_wp.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
