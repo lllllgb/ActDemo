@@ -16,7 +16,9 @@ namespace AosHotfixRunTime
             public Image IconImg;
             public ImageLoader IconLoader;
             public Image Checkmark;
+            public GameObject LinkLineGo;
             public SkillBase SkillBase { get; private set; }
+
 
             public void Init(GameObject go)
             {
@@ -24,6 +26,7 @@ namespace AosHotfixRunTime
                 SkillTge = go.GetComponent<Toggle>();
                 IconImg = Find<Image>(go, "Image_Icon");
                 Checkmark = Find<Image>(go, "Checkmark");
+                LinkLineGo = Find(go, "Image_LinkLine");
             }
 
             public void Refresh(SkillBase data)
@@ -225,12 +228,11 @@ namespace AosHotfixRunTime
                     {
                         SetActive(tmpSkillElem.RootGo, true);
                         tmpSkillElem.Refresh(tmpSkills[j]);
-                        //RegistSkillTreeClick(tmpSkillElem);
+                        SetActive(tmpSkillElem.LinkLineGo, j != tmpSkills.Count - 1);
 
                         RegistSkillTreeDragBegin(tmpSkillElem);
                         RegistSkillTreeDrag(tmpSkillElem);
                         RegistSkillTreeDragEnd(tmpSkillElem);
-                        //RegistSkillTreeDrop(tmpSkillElem);
                     }
                     else
                     {
