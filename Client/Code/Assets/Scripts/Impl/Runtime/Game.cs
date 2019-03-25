@@ -85,6 +85,7 @@ namespace AosHotfixRunTime
             SkillBaseManager.instance.Load(string.Empty);
             SkillAttrBaseManager.instance.Load(string.Empty);
             UnitExtraBaseManager.instance.Load(string.Empty);
+            CameraActionBaseManager.instance.Load(string.Empty);
         }
 
         public static void InitGameModule()

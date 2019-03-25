@@ -14,6 +14,7 @@ namespace AosHotfixRunTime
         public Camera MainCamera { get; private set; }
         public GameObject CloseupGo { get; private set; }
         public GameObject ShakeGo { get; private set; }
+        public SpriteRenderer MainCameraMaskSpr { get; private set; }
 
         //UI相机
         public GameObject UIRootGo { get; private set; }
@@ -35,6 +36,7 @@ namespace AosHotfixRunTime
             MainCamera = tmpGo.GetComponent<Camera>();
             CloseupGo = Utility.GameObj.Find(go, "Closeup");
             ShakeGo = Utility.GameObj.Find(go, "Shake");
+            MainCameraMaskSpr = Utility.GameObj.Find<SpriteRenderer>(go, "Mask");
         }
 
 

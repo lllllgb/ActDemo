@@ -6,21 +6,15 @@ using System;
 
 namespace AosHotfixRunTime
 {
-    public interface ICameraAction
-    {
-        void StartAction(int actionID);
-    }
-
     public class CameraActionManager
     {
         [Flags]
         public enum EActionType
         {
             Invalid = 0,
-            MotionBlur = 1,
-            CloseUp = 2,
-            Shake = 4,
-            Animation = 8,
+            CloseUp = 1,
+            Shake = 2,
+            Lighteness = 4,
         }
 
         Camera mCamera;
@@ -30,17 +24,17 @@ namespace AosHotfixRunTime
         float mRunningTime = 0;
 
         GameObject mCloseupGo;
-        Vector3 mCloseupInitPos;
+        float mOrthographicSize;
         GameObject mShakeGo;
         Vector3 mShakeInitPos;
+        SpriteRenderer mMaskSprRender;
 
         #region closeup
-
         float mCloseUpPreTime;
         float mCloseUpKeepTime;
-        float mCloseUpRearTime;
-        Vector3 mCloseUpDis;
-
+        float mCloseUpOutTime;
+        float mCloseUpFactor;
+        float mCloseOffset;
         #endregion
 
         #region shake
@@ -51,16 +45,28 @@ namespace AosHotfixRunTime
         float mShakeLastTime;
         #endregion
 
+        #region lighteness
+        float mLightenessPreTime;
+        float mLightenessKeepTime;
+        float mLightenessOutTime;
+        float mLightenessFactor;
+        Color mLightenessOffset;
+        #endregion
+
 
         public CameraActionManager()
         {
         }
 
-        public void Init(Camera camera, GameObject closeupGo, GameObject shakeGo)
+        public void Init(Camera camera, GameObject closeupGo, GameObject shakeGo, SpriteRenderer maskSpr)
         {
             mCamera = camera;
             mCloseupGo = closeupGo;
             mShakeGo = shakeGo;
+            mMaskSprRender = maskSpr;
+
+            mOrthographicSize = mCamera.orthographicSize;
+            mShakeInitPos = mShakeGo.transform.localPosition;
         }
 
         public void StartAction(int actionID)
@@ -87,6 +93,11 @@ namespace AosHotfixRunTime
             {
                 SetData_Shake(tmpCameraAction.shake);
             }
+
+            if ((mActionType & EActionType.Lighteness) == EActionType.Lighteness)
+            {
+                SetData_Lighteness(tmpCameraAction.Lighteness);
+            }
         }
 
         public void Update(float deltaTime)
@@ -105,6 +116,11 @@ namespace AosHotfixRunTime
                     Update_Shake(deltaTime);
                 }
 
+                if ((mActionType & EActionType.Lighteness) == EActionType.Lighteness)
+                {
+                    Update_Lighteness(deltaTime);
+                }
+
                 if (mRunningTime >= mTotalTime)
                 {
                     Reset();
@@ -116,7 +132,8 @@ namespace AosHotfixRunTime
         public void Reset()
         {
             mIsRunning = false;
-
+            mMaskSprRender.color = Color.clear;
+            mCamera.orthographicSize = mOrthographicSize;
         }
 
         public void Release()
@@ -131,39 +148,38 @@ namespace AosHotfixRunTime
 
         private void SetData_Closeup(CameraActionBase.Param closeupData)
         {
-            if (null == closeupData || closeupData.values.Count < 6)
+            if (null == closeupData || closeupData.values.Count < 4)
             {
                 Logger.LogError("特写参数错误");
                 return;
             }
 
-            mCloseUpDis = new Vector3(closeupData.values[0], closeupData.values[1], closeupData.values[2]);
-            mCloseUpPreTime = closeupData.values[3] * 0.001f;
-            mCloseUpKeepTime = closeupData.values[4] * 0.001f;
-            mCloseUpRearTime = closeupData.values[5] * 0.001f;
+            mCloseUpFactor = closeupData.values[0] * 0.01f;
+            mCloseUpPreTime = closeupData.values[1] * 0.001f;
+            mCloseUpKeepTime = closeupData.values[2] * 0.001f;
+            mCloseUpOutTime = closeupData.values[3] * 0.001f;
+
+            mCloseOffset = mOrthographicSize * (1 - mCloseUpFactor);
+            Update_Closeup(0f);
         }
 
         private void Update_Closeup(float deltaTime)
         {
             float tmpRatio = 0f;
 
-            if (mRunningTime > mCloseUpPreTime + mCloseUpKeepTime + mCloseUpRearTime)
+            if (mRunningTime > mCloseUpPreTime + mCloseUpKeepTime + mCloseUpOutTime)
             {
                 return;
             }
-            else if (mRunningTime > mCloseUpPreTime + mCloseUpKeepTime)
+            else if (mRunningTime >= mCloseUpPreTime + mCloseUpKeepTime)
             {
-                tmpRatio = mCloseUpRearTime > 0f ? deltaTime / mCloseUpRearTime : 1f;
-                tmpRatio *= -1;
+                tmpRatio = mCloseUpOutTime > 0f ? (mRunningTime - mCloseUpPreTime - mCloseUpKeepTime) / mCloseUpOutTime : 1f;
+                mCamera.orthographicSize = mOrthographicSize - mCloseOffset + mCloseOffset * tmpRatio;
             }
             else if (mRunningTime <= mCloseUpPreTime)
             {
-                tmpRatio = mCloseUpPreTime > 0f ? deltaTime / mCloseUpPreTime : 1f;
-            }
-
-            if (0f != tmpRatio)
-            {
-                mCloseupGo.transform.localPosition = mCloseupInitPos + mCloseUpDis * tmpRatio;
+                tmpRatio = mCloseUpPreTime > 0f ? mRunningTime / mCloseUpPreTime : 1f;
+                mCamera.orthographicSize = mOrthographicSize - mCloseOffset * tmpRatio;
             }
         }
 
@@ -180,7 +196,7 @@ namespace AosHotfixRunTime
                 return;
             }
 
-            mShakeAmplitude = shakeData.values[0] * 0.1f;
+            mShakeAmplitude = shakeData.values[0] * 0.01f;
             mShakeFrequence = shakeData.values[1] * 0.001f;
             mShakeDelayTime = shakeData.values[2] * 0.001f;
             mShakeKeepTime = shakeData.values[3] * 0.001f;
@@ -204,6 +220,50 @@ namespace AosHotfixRunTime
                     mShakeGo.transform.localPosition = tmpPos;
                 }
             }
+        }
+
+        #endregion
+
+        #region mask
+
+        private void SetData_Lighteness(CameraActionBase.Param lightenessData)
+        {
+            if (null == lightenessData || lightenessData.values.Count < 4)
+            {
+                Logger.LogError("亮度参数错误");
+                return;
+            }
+
+            mLightenessFactor = lightenessData.values[0] * 0.01f;
+            mLightenessPreTime = lightenessData.values[1] * 0.001f;
+            mLightenessKeepTime = lightenessData.values[2] * 0.001f;
+            mLightenessOutTime = lightenessData.values[3] * 0.001f;
+
+            mLightenessOffset = Color.black * (1 - mLightenessFactor);
+            Update_Lighteness(0f);
+        }
+
+        private void Update_Lighteness(float deltaTime)
+        {
+            float tmpRatio = 0f;
+
+            if (mRunningTime > mLightenessPreTime + mLightenessKeepTime + mLightenessOutTime)
+            {
+                return;
+            }
+            else if (mRunningTime > mLightenessPreTime + mLightenessKeepTime)
+            {
+                tmpRatio = mLightenessOutTime > 0f ? (mRunningTime - mLightenessPreTime - mLightenessKeepTime) / mLightenessOutTime : 1f;
+                mMaskSprRender.color = mLightenessOffset * (1 - tmpRatio);
+            }
+            else if (mRunningTime <= mLightenessPreTime)
+            {
+                tmpRatio = mLightenessPreTime > 0f ? mRunningTime / mLightenessPreTime : 1f;
+                mMaskSprRender.color = mLightenessOffset * tmpRatio;
+            }
+
+            //tmpRatio = Mathf.Clamp(tmpRatio, -1, 1);
+            //mMaskSprRender.color = Color.clear + Color.black * (1 - mLightenessFactor) * tmpRatio;
         }
 
         #endregion

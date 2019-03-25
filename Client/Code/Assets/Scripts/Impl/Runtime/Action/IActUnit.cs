@@ -84,5 +84,7 @@ namespace ACT
         void OnHitTarget(IActUnit target);
 
         void OnHit(HitData hitData, bool pvp);
+
+        void PlayCameraAction(int cameraActionID);
     }
 }

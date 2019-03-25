@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace AosHotfixRunTime
 {
-    public class LocalPlayer : Player, ICameraAction
+    public class LocalPlayer : Player
     {
         ACT.Controller mController;
         public ACT.Controller Controller { get { return mController; } }
@@ -16,7 +16,7 @@ namespace AosHotfixRunTime
         public LocalPlayer() : base()
         {
             CameraMgr tmpCameraMgr = CameraMgr.Instance;
-            mCameraActionMgr.Init(tmpCameraMgr.MainCamera, tmpCameraMgr.CloseupGo, tmpCameraMgr.ShakeGo);
+            mCameraActionMgr.Init(tmpCameraMgr.MainCamera, tmpCameraMgr.CloseupGo, tmpCameraMgr.ShakeGo, tmpCameraMgr.MainCameraMaskSpr);
         }
 
         public void Init(int unitID, int level)
@@ -54,9 +54,11 @@ namespace AosHotfixRunTime
             PlayAction(action);
         }
 
-        public void StartAction(int actionID)
+        public override void PlayCameraAction(int cameraActionID)
         {
+            base.PlayCameraAction(cameraActionID);
 
+            mCameraActionMgr.StartAction(cameraActionID);
         }
     }
 }

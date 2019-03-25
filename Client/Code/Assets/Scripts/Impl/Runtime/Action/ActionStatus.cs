@@ -995,7 +995,7 @@ namespace ACT
                     AddUnit(actionEvent.EventDetailData.EventAddUnit);
                     break;
                 case ActData.EventType.CameraEffect:
-
+                    mOwner.PlayCameraAction(actionEvent.EventDetailData.EventCameraEffect.CamerId);
                     break;
             }
 

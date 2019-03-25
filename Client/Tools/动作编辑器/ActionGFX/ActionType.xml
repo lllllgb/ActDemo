@@ -34750,6 +34750,11 @@
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_fall_attack" Duration="500" />
                 </Event>
+                <Event>
+                  <EventType>CameraEffect</EventType>
+                  <EventTypeInt>23</EventTypeInt>
+                  <EventDetailData xsi:type="EventCameraEffect" CamerId="1" />
+                </Event>
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
