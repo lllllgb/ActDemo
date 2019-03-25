@@ -12,6 +12,8 @@ namespace AosHotfixRunTime
         public GameObject CameraRootGo { get; private set; }
         public GameObject MainCameraGo { get; private set; }
         public Camera MainCamera { get; private set; }
+        public GameObject CloseupGo { get; private set; }
+        public GameObject ShakeGo { get; private set; }
 
         //UI相机
         public GameObject UIRootGo { get; private set; }
@@ -24,13 +26,15 @@ namespace AosHotfixRunTime
         public GameObject HudPopupCanvasRootGo { get; private set; }
         public Camera HudCamera { get; private set; }
 
-        public void Init(GameObject go)
+        public void InitMainCamera(GameObject go)
         {
             CameraRootGo = go;
 
             GameObject tmpGo = Utility.GameObj.Find(go, "MainCamera");
             MainCameraGo = tmpGo;
             MainCamera = tmpGo.GetComponent<Camera>();
+            CloseupGo = Utility.GameObj.Find(go, "Closeup");
+            ShakeGo = Utility.GameObj.Find(go, "Shake");
         }
 
 

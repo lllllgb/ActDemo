@@ -40,7 +40,7 @@ namespace AosHotfixRunTime
             ResourcesMgr.LoadBundleByType(EABType.Misc, "CameraControl");
             GameObject tmpMainCameraGo = Hotfix.Instantiate(ResourcesMgr.GetAssetByType<GameObject>(EABType.Misc, "CameraControl"));
             GameObject.DontDestroyOnLoad(tmpMainCameraGo);
-            CameraMgr.Instance.Init(tmpMainCameraGo);
+            CameraMgr.Instance.InitMainCamera(tmpMainCameraGo);
 
             ////HUD相机
             ResourcesMgr.LoadBundleByType(EABType.Misc, "HUDRoot");

@@ -983,12 +983,6 @@ namespace ACT
                     break;
                 case ActData.EventType.ExeScript:
                     {
-                        ActData.EventExeScript data = actionEvent.EventDetailData.EventExeScript;
-                        string[] strs = data.ScriptCmd.Split('(');
-                        string scriptname = strs[0];
-                        string parameter = strs[1];
-                        mOwner.UGameObject.SendMessage(scriptname, parameter.Remove(parameter.Length - 1));
-                        //Debug.Log(scriptname);
                     }
                     break;
                 case ActData.EventType.ActionLevel:
@@ -999,6 +993,9 @@ namespace ACT
                     break;
                 case ActData.EventType.AddUnit:
                     AddUnit(actionEvent.EventDetailData.EventAddUnit);
+                    break;
+                case ActData.EventType.CameraEffect:
+
                     break;
             }
 

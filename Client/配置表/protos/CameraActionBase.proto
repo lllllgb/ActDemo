@@ -1,0 +1,15 @@
+﻿message CameraActionBase [key=id,excel="CameraAction.xlsx"]
+{
+	message Param [separator = ',']
+	{
+		int32 values;
+	}
+	
+	int32 		id                                [option = "特写ID"];
+	int32 		type                              [option = "特写类型"];
+	int32 		time                              [option = "总时间"];
+	Param 		cullingMask                       [option = "相机遮罩"];
+	int32 		motionBlur                        [option = "动态模糊"];
+	Param 		closeupParam                      [option = "特写参数"];
+	Param 		shakeParam                        [option = "晃动参数"];
+}

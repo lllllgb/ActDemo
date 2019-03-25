@@ -6,13 +6,17 @@ using UnityEngine;
 
 namespace AosHotfixRunTime
 {
-    public class LocalPlayer : Player
+    public class LocalPlayer : Player, ICameraAction
     {
         ACT.Controller mController;
         public ACT.Controller Controller { get { return mController; } }
 
+        CameraActionManager mCameraActionMgr = new CameraActionManager();
+
         public LocalPlayer() : base()
         {
+            CameraMgr tmpCameraMgr = CameraMgr.Instance;
+            mCameraActionMgr.Init(tmpCameraMgr.MainCamera, tmpCameraMgr.CloseupGo, tmpCameraMgr.ShakeGo);
         }
 
         public void Init(int unitID, int level)
@@ -21,6 +25,13 @@ namespace AosHotfixRunTime
             
             mController = new ACT.Controller();
             mController.Init(this, CameraMgr.Instance.CameraRootGo.transform);
+        }
+
+        public override void Update(float deltaTime)
+        {
+            base.Update(deltaTime);
+
+            mCameraActionMgr.Update(deltaTime);
         }
 
         public override void LateUpdate(float deltaTime)
@@ -41,6 +52,11 @@ namespace AosHotfixRunTime
         {
             ActStatus.SkillItem = skillItem;
             PlayAction(action);
+        }
+
+        public void StartAction(int actionID)
+        {
+
         }
     }
 }
