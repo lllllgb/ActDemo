@@ -11,16 +11,27 @@ namespace AosHotfixRunTime
         ACT.Controller mController;
         public ACT.Controller Controller { get { return mController; } }
 
-        public LocalPlayer(int unitID) : base(unitID)
+        CameraActionManager mCameraActionMgr = new CameraActionManager();
+
+        public LocalPlayer() : base()
         {
+            CameraMgr tmpCameraMgr = CameraMgr.Instance;
+            mCameraActionMgr.Init(tmpCameraMgr.MainCamera, tmpCameraMgr.CloseupGo, tmpCameraMgr.ShakeGo, tmpCameraMgr.MainCameraMaskSpr);
         }
 
-        public override void Init()
+        public void Init(int unitID, int level)
         {
-            base.Init();
+            base.Init(unitID, level, EUnitType.EUT_LocalPlayer, ACT.EUnitCamp.EUC_FRIEND);
             
             mController = new ACT.Controller();
-            mController.Init(this, CameraHelper.CameraRootGo.transform);
+            mController.Init(this, CameraMgr.Instance.CameraRootGo.transform);
+        }
+
+        public override void Update(float deltaTime)
+        {
+            base.Update(deltaTime);
+
+            mCameraActionMgr.Update(deltaTime);
         }
 
         public override void LateUpdate(float deltaTime)
@@ -29,18 +40,26 @@ namespace AosHotfixRunTime
 
             mController.LateUpdate();
         }
-        //public void LinkSkill(SkillInput skillInput, int interruptIndex)
-        //{
-        //    ActionStatus.LinkAction(
-        //        ActionStatus.ActiveAction.ActionInterrupts[interruptIndex],
-        //        skillInput);
-        //}
 
-        //public void PlaySkill(SkillItem skillItem, string action)
-        //{
-        //    ActionStatus.SkillItem = skillItem;
-        //    PlayAction(action);
-        //}
+        public void LinkSkill(ACT.ISkillInput skillInput, int interruptIndex)
+        {
+            ActStatus.LinkAction(
+                ActStatus.ActiveAction.ActionInterrupts[interruptIndex],
+                skillInput);
+        }
+
+        public void PlaySkill(ACT.ISkillItem skillItem, string action)
+        {
+            ActStatus.SkillItem = skillItem;
+            PlayAction(action);
+        }
+
+        public override void PlayCameraAction(int cameraActionID)
+        {
+            base.PlayCameraAction(cameraActionID);
+
+            mCameraActionMgr.StartAction(cameraActionID);
+        }
     }
 }
 

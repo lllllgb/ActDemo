@@ -4,27 +4,38 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using AosHotfixFramework;
+using AosBaseFramework;
 
 namespace AosHotfixRunTime
 {
-    public abstract class Unit : ACT.ActUnit
-    {
-        protected BuffManager mBuffManager;
-        
-        public BuffManager BuffManager { get { return mBuffManager; } }
 
-        public override int CurHp { get { return GetAttrib(EPA.CurHP); } }
-        public override int HpMax { get { return GetAttrib(EPA.HPMax); } }
+    public abstract partial class Unit : ACT.ActUnit
+    {
+
+        public override int CurHp { get { return GetAttr(EPA.CurHP); } }
+        public override int HpMax { get { return GetAttr(EPA.MaxHP); } }
         public override int Speed { get { return 300; } }
         public override bool CanHurt { get { return true; } }
+        
+        public EUnitType UnitType { get; private set; }
+        public string Name { get; private set; }
+        public Transform TopNode { get; private set; }
+        public Transform MidNode { get; private set; }
+        public Transform BottomNode { get; private set; }
+        //属性
+        protected UnitAttr mUnitAttr = new UnitAttr();
 
-        public Unit(int unitID)
+        public Unit()
         {
-            UnitID = unitID;
         }
 
-        public virtual void Init()
+        protected void Init(int unitID, int level, EUnitType unitType, ACT.EUnitCamp unitCamp)
         {
+            UnitID = unitID;
+            Level = level;
+            UnitType = unitType;
+            Camp = unitCamp;
+
             UnitBase tmpUnitBase = UnitBaseManager.instance.Find(UnitID);
 
             if (null == tmpUnitBase)
@@ -33,6 +44,8 @@ namespace AosHotfixRunTime
                 return;
             }
 
+            Name = tmpUnitBase.Name;
+            ActionID = tmpUnitBase.ActionID;
             Game.ResourcesMgr.LoadBundleByType(EABType.Unit, tmpUnitBase.Prefab);
             GameObject tmpGo = Game.ResourcesMgr.GetAssetByType<GameObject>(EABType.Unit, tmpUnitBase.Prefab);
 
@@ -44,15 +57,27 @@ namespace AosHotfixRunTime
 
             tmpGo = Hotfix.Instantiate(tmpGo);
             tmpGo.transform.localEulerAngles = new Vector3(0, 90, 0);
-            ActionID = tmpUnitBase.ActionID;
             InitActUnit(tmpGo, tmpGo.transform.Find("model"));
+            TopNode = Utility.GameObj.FindByName(tmpGo.transform, "topNode");
+            MidNode = Utility.GameObj.FindByName(tmpGo.transform, "midNode");
+            BottomNode = Utility.GameObj.FindByName(tmpGo.transform, "bottomNode");
+            UpdateAttributes();
+            AddComponents();
+        }
+
+        protected virtual void AddComponents()
+        {
+            AddComponent<HudPopupComponent>();
+        }
+
+        public override void Update(float deltaTime)
+        {
+            base.Update(deltaTime);
+
+            UpdateComponents(deltaTime);
         }
 
         public virtual void LateUpdate(float deltaTime)
-        {
-        }
-
-        public virtual void UpdateAttributes()
         {
         }
 
@@ -64,26 +89,81 @@ namespace AosHotfixRunTime
             GameObject.Destroy(UGameObject);
         }
 
-        public abstract bool Hurt(Unit attacker, int damage, ACT.ECombatResult result);
-        public virtual void AddHp(int v) { }
+        //更新属性
+        public abstract void UpdateAttributes();
+
+        //名字
+        public void SetName(string name)
+        {
+            Name = name;
+        }
+
+        public virtual void Hurt(Unit attacker, int damage, ACT.ECombatResult result)
+        {
+            if (Dead)
+            {
+                return;
+            }
+
+            AddHp(-damage);
+        }
+
+        public virtual void AddHp(int v)
+        {
+            if (Dead)
+            {
+                return;
+            }
+
+            int tmpCurrHp = Mathf.Clamp(mUnitAttr.Get(EPA.CurHP) + v, 0, mUnitAttr.Get(EPA.MaxHP));
+            mUnitAttr.Set(EPA.CurHP, tmpCurrHp);
+
+            if (tmpCurrHp <= 0)
+            {
+                SetIsDead(true);
+            }
+
+            var tmpEvent = ReferencePool.Fetch<UnitEvent.HpModify>();
+            tmpEvent.Data = this;
+            Game.EventMgr.FireNow(this, tmpEvent);
+        }
+
         public virtual void AddSoul(int v) { }
         public virtual void AddAbility(int v) { }
         public virtual bool UpLevel() { return false; }
-        public virtual int GetAttrib(EPA idx) { return 0; }
+
+        public virtual int GetAttr(EPA idx)
+        {
+            return mUnitAttr.Get(idx);
+        }
+
         public virtual void Equip() { }
         public virtual void Revive() { }
 
         public override ACT.ECombatResult Combat(ACT.IActUnit target, ACT.ISkillItem skillItem)
         {
-            int damage = 0;
-            ACT.ECombatResult result = ACT.ECombatResult.ECR_Normal;
+            int tmpDamage = 0;
+            Unit tmpTarget = target as Unit;
+            ACT.ECombatResult tmpResult = MathUtility.Combat(this, tmpTarget, out tmpDamage);
 
-            return result;
-        }
+            if (ACT.ECombatResult.ECR_Block != tmpResult)
+            {
+                if (null != skillItem)
+                {
+                    int tmpDamageCoff = (skillItem as SkillItem).SkillAttrBase.DamageCoff;
+                    int tmpDamageBase = (skillItem as SkillItem).SkillAttrBase.DamageBase;
+                    // 技能的影响。
+                    tmpDamage = tmpDamage * tmpDamageCoff / 100 + tmpDamageBase;
+                }
 
-        public virtual void AddBuff(int id)
-        {
-            mBuffManager.AddBuff(id);
+                // damage should not be 0.
+                tmpDamage = Mathf.Max(tmpDamage, 1);
+
+                tmpTarget.Hurt(this, tmpDamage, tmpResult);
+            }
+
+            return tmpResult;
         }
+        
     }
 }

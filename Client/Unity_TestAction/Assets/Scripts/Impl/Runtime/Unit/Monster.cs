@@ -5,24 +5,20 @@ namespace AosHotfixRunTime
 {
     public class Monster : Unit
     {
-        int mHP = 0;
-        int mHPMax = 0;
-        MainAttrib mMonsterAttrib;
-        bool mIsBoss = false;
-        string mName;
         bool mAIEnable = false;
 
-        public Monster(int unitID, bool aiEnable, int aiDiff) : base(unitID)
+        public Monster() : base()
         {
-            mAIEnable = aiEnable;
-            AIDiff = aiDiff;
         }
 
-        public override void Init()
+        public void Init(int unitID, int level, 
+            EUnitType unitType = EUnitType.EUT_Monster, ACT.EUnitCamp unitCamp = ACT.EUnitCamp.EUC_ENEMY,
+            bool aiEnable = false, int aiDiff = 0)
         {
-            base.Init();
+            base.Init(unitID, level, unitType, unitCamp);
 
-            Camp = ACT.EUnitCamp.EUC_ENEMY;
+            mAIEnable = aiEnable;
+            AIDiff = aiDiff;
 
             if (mAIEnable)
             {
@@ -30,9 +26,22 @@ namespace AosHotfixRunTime
             }
         }
 
-        public override bool Hurt(Unit attacker, int damage, ACT.ECombatResult result)
+        public override void UpdateAttributes()
         {
-            return true;
+            MonsterAttrBase tmpMonsterAttrBase = MonsterAttrBaseManager.instance.Find(UnitID, Level);
+
+            if (null != tmpMonsterAttrBase)
+            {
+                mUnitAttr.Init(tmpMonsterAttrBase);
+            }
+        }
+
+        public override void Hurt(Unit attacker, int damage, ACT.ECombatResult result)
+        {
+            base.Hurt(attacker, damage, result);
+
+            GetComponent<HudPopupComponent>().Popup(EHudPopupType.Damage, damage);
+            Game.ControllerMgr.Get<UnitController>().SetHitedMonster(this);
         }
     }
 }

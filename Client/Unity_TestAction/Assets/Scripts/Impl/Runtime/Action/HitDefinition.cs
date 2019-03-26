@@ -320,7 +320,7 @@ namespace ACT
             {
                 var tmpTarget = ActionSystem.Instance.ActUnitMgr.Units[i];
 
-                if (!tmpTarget.UGameObject || !CanHit(self, tmpTarget))
+                if (!tmpTarget.UGameObject || tmpTarget.Dead || !CanHit(self, tmpTarget))
                     continue;
 
                 if (CheckHit(self, tmpTarget))
@@ -501,20 +501,6 @@ namespace ACT
                 ActionSystem.Instance.EffectMgr.PlayEffect(mAttackDef.HitedEffect, mAttackDef.HitedEffectDuration * 0.001f, 
                     null, effectPos,
                     0 == mAttackDef.BaseGround ? Quaternion.identity : Quaternion.Euler(0f, 0f, UnityEngine.Random.Range(0f, 360f)));
-            }
-
-            // execute script
-            if (!string.IsNullOrEmpty(mAttackDef.Script))
-            {
-                // "CameraShake(0.5, 10, 20);"
-                string[] scripts = mAttackDef.Script.Split(';');
-                foreach (string script in scripts)
-                {
-                    string[] arr = script.Split('(');
-                    string message = arr[0];
-                    string param = arr[1].Substring(0, arr[1].IndexOf(')'));
-                    self.UGameObject.SendMessage(message, param);
-                }
             }
 
             // do not process my hit result in pvp mode.

@@ -436,5 +436,9 @@ namespace ACT
                     hitData.LashTime);
             }
         }
+
+        public virtual void PlayCameraAction(int cameraActionID)
+        {
+        }
     }
 }

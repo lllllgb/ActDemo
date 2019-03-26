@@ -944,7 +944,6 @@ namespace ACT
                     }
                     break;
                 case ActData.EventType.RemoveMyself:
-                    //Debug.Log("Unit " + mOwner.UnitID + " RemoveMyself");
                     mOwner.Dispose();
                     break;
                 case ActData.EventType.AdjustVarible:
@@ -984,12 +983,6 @@ namespace ACT
                     break;
                 case ActData.EventType.ExeScript:
                     {
-                        ActData.EventExeScript data = actionEvent.EventDetailData.EventExeScript;
-                        string[] strs = data.ScriptCmd.Split('(');
-                        string scriptname = strs[0];
-                        string parameter = strs[1];
-                        mOwner.UGameObject.SendMessage(scriptname, parameter.Remove(parameter.Length - 1));
-                        //Debug.Log(scriptname);
                     }
                     break;
                 case ActData.EventType.ActionLevel:
@@ -1000,6 +993,9 @@ namespace ACT
                     break;
                 case ActData.EventType.AddUnit:
                     AddUnit(actionEvent.EventDetailData.EventAddUnit);
+                    break;
+                case ActData.EventType.CameraEffect:
+                    mOwner.PlayCameraAction(actionEvent.EventDetailData.EventCameraEffect.CamerId);
                     break;
             }
 
@@ -1297,9 +1293,9 @@ namespace ACT
                     break;
             }
 
-            if (!string.IsNullOrEmpty(changeAction))
+            if (!string.IsNullOrEmpty(changeAction) && !mOwner.Dead)
             {
-                Logger.Log($"OnHit action -> {changeAction}");
+                //Logger.Log($"OnHit action -> {changeAction}");
                 ChangeAction(changeAction, 0);
             }
 

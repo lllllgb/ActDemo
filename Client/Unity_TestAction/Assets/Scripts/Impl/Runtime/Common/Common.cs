@@ -31,43 +31,43 @@ namespace AosHotfixRunTime
     //属性
     public enum EPA // player attribute
     {
-        CurHP = 0,
-        HPMax,
-        HPRestore,
+        CurHP = 0, //当前血量
+        MaxHP, //最大血量
+        HPRestore, //血量恢复
         //------------------------------------------------
-        CurSoul,
-        SoulMax,
-        SoulRestore,
+        CurMP, 
+        MaxMP,
+        MPRestore,
         //------------------------------------------------
-        CurAbility,
-        AbilityMax,
-        AbRestore,
-        AbHitAdd,
+        CurDP,
+        MaxDP,
+        DPRestore,
         //------------------------------------------------
         CurExp,
         EXPMax,
         //------------------------------------------------
         Level,
         //------------------------------------------------
-        Damage,
+        Attack,
         Defense,
-        //------------------------------------------------
-        SpecialDamage,
-        SpecialDefense,
         //------------------------------------------------
         Critical,
         Block,
-        Hit,
         Tough,
+        Hit,
         //------------------------------------------------
         MoveSpeed,
         //------------------------------------------------
-        FastRate,
-        StiffAdd,
-        StiffSub,
-        //------------------------------------------------
         MAX,
     };
+
+    //
+    public enum EHudPopupType
+    {
+        Damage = 0, //伤害
+
+        Max,
+    }
 
     //BUFF特殊效果
     public enum EBuffSpecialEffect
@@ -77,12 +77,6 @@ namespace AosHotfixRunTime
         CanMove = 2,
         CanRotate = 3,
         Max,
-    }
-
-
-    public static class GameDefine
-    {
-        public static Camera CurrentCamera { get; set; }
     }
 
     public static class ExtraParams

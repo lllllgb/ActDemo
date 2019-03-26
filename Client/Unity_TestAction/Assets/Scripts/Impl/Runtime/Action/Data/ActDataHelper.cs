@@ -37,5 +37,24 @@ namespace ActData.Helper
             }
             return actionID;
         }
+
+        public static int GetActionInterruptIdx(this Action action, ACT.EOperation operation, ACT.EInputType inputType = ACT.EInputType.EIT_Click)
+        {
+            int tmpInterruptIdx = -1;
+
+            for (int i = 0, max = action.ActionInterrupts.Count; i < max; ++i)
+            {
+                var tmpActionInterrupt = action.ActionInterrupts[i];
+                
+                if ((tmpActionInterrupt.InputKey1 == (int)operation && tmpActionInterrupt.InputType1 == (int)inputType) ||
+                    (tmpActionInterrupt.InputKey2 == (int)operation && tmpActionInterrupt.InputType2 == (int)inputType))
+                {
+                    tmpInterruptIdx = i;
+                    break;
+                }
+            }
+
+            return tmpInterruptIdx;
+        }
     }
 }

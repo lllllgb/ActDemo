@@ -419,6 +419,15 @@ namespace AosHotfixFramework
 
             UGUIEventListener.Get(go).onClick = handle;
         }
+
+        protected static void RegisterEventDoubleClick(GameObject go, UGUIEventListener.VoidDelegate handle)
+        {
+            if (null == go || null == handle)
+                return;
+
+            UGUIEventListener.Get(go).onDoubleClick = handle;
+        }
+
         protected static void RegisterEventClickDown(GameObject go, UGUIEventListener.VoidDelegate handle)
         {
             if (null == go || null == handle)
@@ -426,6 +435,7 @@ namespace AosHotfixFramework
 
             UGUIEventListener.Get(go).onDown = handle;
         }
+
         protected static void RegisterEventClickUp(GameObject go, UGUIEventListener.VoidDelegate handle)
         {
             if (null == go || null == handle)

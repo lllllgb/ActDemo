@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 
 public class UGUIJoystick
 {
+    static Vector2 sJoystickDelta = Vector2.zero;
+    static bool sJoystickPressed = false;
+
     GameObject mRoot;
     Image mBackgroundImg;
     Image mCenterImg;
@@ -17,7 +20,15 @@ public class UGUIJoystick
 
     Color mInactiveColor = new Color(1, 1, 1, 0.3f);
 
-    public static System.Action<float, float> JoystickMoveHandle;
+    public static Vector2 JoystickDelta()
+    {
+        return sJoystickDelta;
+    }
+
+    public static bool JoystickPressed()
+    {
+        return sJoystickPressed;
+    }
     
     // Use this for initialization
     public void Init(GameObject root, Image background, Image center)
@@ -28,7 +39,7 @@ public class UGUIJoystick
         mBgInitPos = mBackgroundImg.rectTransform.anchoredPosition;
 
         ChangeAlpha(false);
-        mWorld2ScreenModify = 1280f / Screen.width;
+        mWorld2ScreenModify = 2688f / Screen.width;
         mRadius = mBackgroundImg.rectTransform.sizeDelta.x * 0.5f - mCenterImg.rectTransform.sizeDelta.x * 0.5f;
 
         UGUIEventListener.Get(root).onDown = OnPointerDown;
@@ -60,7 +71,7 @@ public class UGUIJoystick
                 mCenterImg.rectTransform.anchoredPosition = endPosition;
             }
 
-            JoystickMoveHandle?.Invoke(mCenterImg.rectTransform.anchoredPosition.x, mCenterImg.rectTransform.anchoredPosition.y);
+            sJoystickDelta = mCenterImg.rectTransform.anchoredPosition;
         }
     }
 
@@ -71,6 +82,7 @@ public class UGUIJoystick
             return;
         }
 
+        sJoystickPressed = true;
         mTouchedID = eventData.pointerId;
         Vector2 tmpTouchPos = GetClickPosition();
         mBackgroundImg.rectTransform.anchoredPosition = tmpTouchPos * mWorld2ScreenModify;
@@ -85,6 +97,8 @@ public class UGUIJoystick
             return;
         }
 
+        sJoystickPressed = false;
+        sJoystickDelta = Vector2.zero;
         ChangeAlpha(false);
         mBackgroundImg.rectTransform.anchoredPosition = mBgInitPos;
         mCenterImg.rectTransform.anchoredPosition = Vector2.zero;

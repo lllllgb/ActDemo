@@ -34,16 +34,16 @@ namespace AosHotfixRunTime
 
         public void AddLocalPlayer(int unitID)
         {
-            mTestPlayer = new LocalPlayer(unitID);
-            mTestPlayer.Init();
+            mTestPlayer = new LocalPlayer();
+            mTestPlayer.Init(unitID, 1);
             ACT.ActionSystem.Instance.ActUnitMgr.Add(mTestPlayer);
             ACT.ActionSystem.Instance.ActUnitMgr.LocalPlayer = mTestPlayer;
         }
 
         public void AddOtherUnit(int unitID, bool aiEnable, int aiDiff)
         {
-            Monster tmpMonster = new Monster(unitID, aiEnable, aiDiff);
-            tmpMonster.Init();
+            Monster tmpMonster = new Monster();
+            tmpMonster.Init(unitID, 1, EUnitType.EUT_Monster, ACT.EUnitCamp.EUC_ENEMY, aiEnable, aiDiff);
             ACT.ActionSystem.Instance.ActUnitMgr.Add(tmpMonster);
         }
 

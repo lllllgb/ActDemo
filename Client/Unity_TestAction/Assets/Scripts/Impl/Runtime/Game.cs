@@ -33,21 +33,21 @@ namespace AosHotfixRunTime
             ResourcesMgr.LoadBundleByType(EABType.UI, "UIRoot");
             GameObject tmpUIRoot = Hotfix.Instantiate(ResourcesMgr.GetAssetByType<GameObject>(EABType.UI, "UIRoot"));
             GameObject.DontDestroyOnLoad(tmpUIRoot);
-            CameraHelper.InitUICamera(tmpUIRoot);
-            WindowsMgr.SetWindowsRoot(CameraHelper.UICanvasRootGo.transform);
+            CameraMgr.Instance.InitUICamera(tmpUIRoot);
+            WindowsMgr.SetWindowsRoot(CameraMgr.Instance.UICanvasRootGo.transform);
 
             ////主相机
             ResourcesMgr.LoadBundleByType(EABType.Misc, "CameraControl");
             GameObject tmpMainCameraGo = Hotfix.Instantiate(ResourcesMgr.GetAssetByType<GameObject>(EABType.Misc, "CameraControl"));
             GameObject.DontDestroyOnLoad(tmpMainCameraGo);
-            CameraHelper.Init(tmpMainCameraGo);
+            CameraMgr.Instance.InitMainCamera(tmpMainCameraGo);
 
             ////HUD相机
-            //ResourcesMgr.LoadBundleByType(EABType.Misc, "HUD");
-            //GameObject tmpHudGo = ResourcesMgr.GetAssetByType<GameObject>(EABType.Misc, "HUD");
-            //tmpHudGo = Hotfix.Instantiate(tmpHudGo);
-            //GameObject.DontDestroyOnLoad(tmpHudGo);
-            //CameraHelper.InitHudCamera(tmpHudGo);
+            ResourcesMgr.LoadBundleByType(EABType.Misc, "HUDRoot");
+            GameObject tmpHudGo = ResourcesMgr.GetAssetByType<GameObject>(EABType.Misc, "HUDRoot");
+            tmpHudGo = Hotfix.Instantiate(tmpHudGo);
+            GameObject.DontDestroyOnLoad(tmpHudGo);
+            CameraMgr.Instance.InitHudCamera(tmpHudGo);
 
             LoadTbl();
             InitActionSystem();
@@ -55,10 +55,6 @@ namespace AosHotfixRunTime
             //流程
             ProcedureMgr.Initialize(FsmMgr);
             ProcedureMgr.AddProcedure<ProcedureTestAction>();
-            ProcedureMgr.AddProcedure<ProcedureCheckVersion>();
-            ProcedureMgr.AddProcedure<ProcedureLogin>();
-            ProcedureMgr.AddProcedure<ProcedureChangeScene>();
-            ProcedureMgr.AddProcedure<ProcedureMain>();
 
             ProcedureMgr.StartProcedure<ProcedureTestAction>();
         }
@@ -72,11 +68,20 @@ namespace AosHotfixRunTime
 
             //特效
             ACT.ActionSystem.Instance.SpawnEffectDelegate = () => { return PoolMgr.GetObjectPool<EffectObject>().Spawn(); };
+
+            //
+            ACT.InputBoxExtra.Instance.SetJoystickDelegate(UGUIJoystick.JoystickPressed, UGUIJoystick.JoystickDelta);
         }
 
         static void LoadTbl()
         {
             UnitBaseManager.instance.Load(string.Empty);
+            PlayerAttrBaseManager.instance.Load(string.Empty);
+            MonsterAttrBaseManager.instance.Load(string.Empty);
+            SkillBaseManager.instance.Load(string.Empty);
+            SkillAttrBaseManager.instance.Load(string.Empty);
+            UnitExtraBaseManager.instance.Load(string.Empty);
+            CameraActionBaseManager.instance.Load(string.Empty);
         }
 
         public static void InitGameModule()
