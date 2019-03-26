@@ -34339,6 +34339,12 @@
                   <EventTypeInt>8</EventTypeInt>
                   <EventDetailData xsi:type="EventSetVelocity" />
                 </Event>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>CameraEffect</EventType>
+                  <EventTypeInt>23</EventTypeInt>
+                  <EventDetailData xsi:type="EventCameraEffect" CamerId="6" />
+                </Event>
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
@@ -34472,6 +34478,12 @@
                   <EventTypeInt>8</EventTypeInt>
                   <EventDetailData xsi:type="EventSetVelocity" />
                 </Event>
+                <Event>
+                  <TriggerTime>45</TriggerTime>
+                  <EventType>CameraEffect</EventType>
+                  <EventTypeInt>23</EventTypeInt>
+                  <EventDetailData xsi:type="EventCameraEffect" CamerId="3" />
+                </Event>
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
@@ -34495,7 +34507,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>40</TriggerTime>
+                  <TriggerTime>45</TriggerTime>
                   <Duration>500</Duration>
                   <MovingSpeed />
                   <Path>
@@ -34751,9 +34763,10 @@
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_fall_attack" Duration="500" />
                 </Event>
                 <Event>
+                  <TriggerTime>10</TriggerTime>
                   <EventType>CameraEffect</EventType>
                   <EventTypeInt>23</EventTypeInt>
-                  <EventDetailData xsi:type="EventCameraEffect" CamerId="1" />
+                  <EventDetailData xsi:type="EventCameraEffect" CamerId="4" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -34877,6 +34890,12 @@
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="200" Duration="500" />
+                </Event>
+                <Event>
+                  <TriggerTime>40</TriggerTime>
+                  <EventType>CameraEffect</EventType>
+                  <EventTypeInt>23</EventTypeInt>
+                  <EventDetailData xsi:type="EventCameraEffect" CamerId="6" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -35200,6 +35219,7 @@
               </AnimSlotList>
               <AnimTime>300</AnimTime>
               <BlendTime>0</BlendTime>
+              <HeightStatus>1</HeightStatus>
               <ActionStatus>3</ActionStatus>
               <Events />
               <ActionInterrupts>
@@ -35638,6 +35658,12 @@
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="200" Duration="500" />
                 </Event>
+                <Event>
+                  <TriggerTime>60</TriggerTime>
+                  <EventType>CameraEffect</EventType>
+                  <EventTypeInt>23</EventTypeInt>
+                  <EventDetailData xsi:type="EventCameraEffect" CamerId="6" />
+                </Event>
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
@@ -35782,6 +35808,11 @@
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="400" Duration="500" />
+                </Event>
+                <Event>
+                  <EventType>CameraEffect</EventType>
+                  <EventTypeInt>23</EventTypeInt>
+                  <EventDetailData xsi:type="EventCameraEffect" CamerId="8" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -36545,6 +36576,12 @@
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="200" BindMode="1" Duration="500" />
                 </Event>
+                <Event>
+                  <TriggerTime>25</TriggerTime>
+                  <EventType>CameraEffect</EventType>
+                  <EventTypeInt>23</EventTypeInt>
+                  <EventDetailData xsi:type="EventCameraEffect" CamerId="4" />
+                </Event>
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
@@ -36949,6 +36986,12 @@
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_fei01" OffsetY="200" Duration="500" />
                 </Event>
+                <Event>
+                  <TriggerTime>56</TriggerTime>
+                  <EventType>CameraEffect</EventType>
+                  <EventTypeInt>23</EventTypeInt>
+                  <EventDetailData xsi:type="EventCameraEffect" CamerId="7" />
+                </Event>
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
@@ -37179,9 +37222,16 @@
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill8" OffsetX="-100" BindMode="1" Duration="1000" />
                 </Event>
                 <Event>
+                  <TriggerTime>15</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_po01" OffsetY="200" Duration="500" />
+                </Event>
+                <Event>
+                  <TriggerTime>15</TriggerTime>
+                  <EventType>CameraEffect</EventType>
+                  <EventTypeInt>23</EventTypeInt>
+                  <EventDetailData xsi:type="EventCameraEffect" CamerId="2" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -37194,7 +37244,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>5</TriggerTime>
+                  <TriggerTime>20</TriggerTime>
                   <Duration>600</Duration>
                   <MovingSpeed />
                   <Path>
@@ -37623,8 +37673,9 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>300</AnimTime>
+              <AnimTime>800</AnimTime>
               <BlendTime>0</BlendTime>
+              <HeightStatus>1</HeightStatus>
               <ActionStatus>3</ActionStatus>
               <Events />
               <ActionInterrupts>
@@ -37656,7 +37707,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action ResetVelocity="false">
               <ID>hit_down</ID>
               <Name>击飞</Name>
               <Desc>落地</Desc>
@@ -38267,8 +38318,9 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>300</AnimTime>
+              <AnimTime>800</AnimTime>
               <BlendTime>0</BlendTime>
+              <HeightStatus>1</HeightStatus>
               <ActionStatus>3</ActionStatus>
               <Events />
               <ActionInterrupts>
@@ -38908,8 +38960,9 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>500</AnimTime>
+              <AnimTime>800</AnimTime>
               <BlendTime>0</BlendTime>
+              <HeightStatus>1</HeightStatus>
               <ActionStatus>3</ActionStatus>
               <Events />
               <ActionInterrupts>
@@ -39305,6 +39358,7 @@
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
+              <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
             </Action>
             <Action>
@@ -39340,7 +39394,7 @@
                   <TriggerTime>46</TriggerTime>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="2500" />
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="3000" />
                 </Event>
                 <Event>
                   <TriggerTime>49</TriggerTime>
@@ -39409,13 +39463,14 @@
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
+              <FaceTarget>true</FaceTarget>
               <CanMove>true</CanMove>
               <CanHurt>true</CanHurt>
             </Action>
             <Action SuperArmor="true">
               <ID>skill3</ID>
               <Name>技能2</Name>
-              <Desc>跳砍</Desc>
+              <Desc>三连击</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
                 <AnimSlot Animation="skill3">
@@ -39624,6 +39679,218 @@
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
+              <FaceTarget>true</FaceTarget>
+              <CanMove>true</CanMove>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>skill4</ID>
+              <Name>技能2</Name>
+              <Desc>跳砍</Desc>
+              <DefaultLinkActionID>skill4_1</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="skill2" End="56">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>2000</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events>
+                <Event>
+                  <TriggerTime>90</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" Duration="500" />
+                </Event>
+                <Event>
+                  <EventType>ListTargets</EventType>
+                  <EventTypeInt>24</EventTypeInt>
+                  <EventDetailData xsi:type="EventListTargets" Left="-1500" Right="1500" Back="-1500" Front="1500" FanRadius="1500" FanAngle="60" />
+                </Event>
+                <Event>
+                  <EventType>FaceTargets</EventType>
+                  <EventTypeInt>26</EventTypeInt>
+                  <EventDetailData xsi:type="EventFaceTargets" FaceType="1" />
+                </Event>
+                <Event>
+                  <TriggerTime>85</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="2500" />
+                </Event>
+                <Event>
+                  <TriggerTime>90</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
+              </Events>
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <TriggerTime>85</TriggerTime>
+                  <Duration>600</Duration>
+                  <MovingSpeed />
+                  <Path>
+                    <PathNode Z="150" />
+                  </Path>
+                  <HitCount>10</HitCount>
+                  <PassNum>1</PassNum>
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <AttackType xsi:type="FrameCuboid" Width="200" Height="200" Length="300" />
+                  <Offset />
+                  <FllowReleaser>1</FllowReleaser>
+                  <AttackerLash />
+                  <AttackerTime>0</AttackerTime>
+                  <HitResult>KnockOut</HitResult>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash>
+                    <Y>200</Y>
+                    <Z>-100</Z>
+                  </AttackeeLash>
+                  <AttackeeTime>100</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffect>E_b0001_fsw_skill1_hit</HitedEffect>
+                  <HitedEffectDuration>200</HitedEffectDuration>
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                  <BaseGround>1</BaseGround>
+                </AttackDef>
+              </AttackDefs>
+              <FaceTarget>true</FaceTarget>
+              <CanMove>true</CanMove>
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>skill4_1</ID>
+              <Name>技能2</Name>
+              <Desc>跳砍</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="skill2" Start="44">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>1800</AnimTime>
+              <ActionStatus>2</ActionStatus>
+              <Events>
+                <Event>
+                  <TriggerTime>5</TriggerTime>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" Duration="500" />
+                </Event>
+                <Event>
+                  <EventType>ListTargets</EventType>
+                  <EventTypeInt>24</EventTypeInt>
+                  <EventDetailData xsi:type="EventListTargets" Left="-1500" Right="1500" Back="-1500" Front="1500" FanRadius="1500" FanAngle="60" />
+                </Event>
+                <Event>
+                  <EventType>FaceTargets</EventType>
+                  <EventTypeInt>26</EventTypeInt>
+                  <EventDetailData xsi:type="EventFaceTargets" FaceType="1" />
+                </Event>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="2500" />
+                </Event>
+                <Event>
+                  <TriggerTime>5</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
+              </Events>
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <TriggerTime>2</TriggerTime>
+                  <Duration>600</Duration>
+                  <MovingSpeed />
+                  <Path>
+                    <PathNode Z="150" />
+                  </Path>
+                  <HitCount>10</HitCount>
+                  <PassNum>1</PassNum>
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <AttackType xsi:type="FrameCuboid" Width="200" Height="200" Length="300" />
+                  <Offset />
+                  <FllowReleaser>1</FllowReleaser>
+                  <AttackerLash />
+                  <AttackerTime>0</AttackerTime>
+                  <HitResult>KnockOut</HitResult>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash>
+                    <Y>200</Y>
+                    <Z>-100</Z>
+                  </AttackeeLash>
+                  <AttackeeTime>100</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffect>E_b0001_fsw_skill1_hit</HitedEffect>
+                  <HitedEffectDuration>200</HitedEffectDuration>
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                  <BaseGround>1</BaseGround>
+                </AttackDef>
+              </AttackDefs>
+              <FaceTarget>true</FaceTarget>
               <CanMove>true</CanMove>
               <CanHurt>true</CanHurt>
             </Action>
@@ -39640,10 +39907,16 @@
                         <AISlot SkillID="1" SwitchActionID="run" />
                       </AISlots>
                     </AIList>
+                    <AIList Distance="600">
+                      <AISlots>
+                        <AISlot SwitchActionID="skill2" />
+                        <AISlot SwitchActionID="skill4" />
+                      </AISlots>
+                    </AIList>
                     <AIList Distance="400">
                       <AISlots>
                         <AISlot SkillID="1" SwitchActionID="skill1" />
-                        <AISlot SkillID="1" SwitchActionID="skill2" />
+                        <AISlot SwitchActionID="skill3" />
                       </AISlots>
                     </AIList>
                   </AILists>
@@ -39651,27 +39924,8 @@
                     <AIStatusSwitch SwitchStatusID="1" Condition="1" TargetExist="true" TargetActionID="skill_1_y" TargetSkill="1" SelfActionID="skill_1_y(技能1)" SelfTime="10000" SelfSkill="1" />
                   </AIStatusSwitchList>
                   <AIActionCDList>
-                    <AIActionCD Action="skill2" CD="15000" />
-                  </AIActionCDList>
-                  <Location>
-                    <X>0</X>
-                    <Y>0</Y>
-                  </Location>
-                </AIStatus>
-                <AIStatus Name="休息转态">
-                  <AILists>
-                    <AIList Distance="10000">
-                      <AISlots>
-                        <AISlot SkillID="1" SwitchActionID="run_l" />
-                        <AISlot SkillID="1" SwitchActionID="skill3" />
-                      </AISlots>
-                    </AIList>
-                  </AILists>
-                  <AIStatusSwitchList>
-                    <AIStatusSwitch Condition="1" TargetExist="true" TargetActionID="skill_1_y" TargetSkill="1" SelfActionID="skill_1_y(技能1)" SelfTime="3000" SelfSkill="1" />
-                  </AIStatusSwitchList>
-                  <AIActionCDList>
-                    <AIActionCD Action="skill3" CD="15000" />
+                    <AIActionCD Action="skill2" CD="5000" />
+                    <AIActionCD Action="skill3" CD="8000" />
                   </AIActionCDList>
                   <Location>
                     <X>0</X>
