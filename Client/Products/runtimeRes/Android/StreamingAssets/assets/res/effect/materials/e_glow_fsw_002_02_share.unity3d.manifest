@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1014533054
+CRC: 3563004299
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f796e0e9c45fa807942aaf658e42dddb
+    Hash: 76e902d0542943296c5d686557c5ccfe
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,4 +18,5 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Materials/E_Glow_fsw_002_02.mat
 Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_glow_fsw_002_share.unity3d

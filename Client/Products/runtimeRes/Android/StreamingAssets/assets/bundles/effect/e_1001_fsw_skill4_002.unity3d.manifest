@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 288469667
+CRC: 155061048
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 836719f12459a81486e0132ef1051a02
+    Hash: 9756cc78a8b5f27aebd4013cddec6dc4
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6441f4c48b8293a736413520ea1a9530
@@ -28,6 +28,7 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_skill4_002.prefab
 Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_noise_fsw_003_04_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_fsw_002_02_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_010_01_share.unity3d

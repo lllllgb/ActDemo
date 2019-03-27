@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 96783796
+CRC: 2174210574
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b80b88e849b0fe8a708aa4062fce87c5
+    Hash: c814e2795e9176da1de42f9a26201e6e
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,4 +18,5 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Materials/E_Lighting_fsw_001_01.mat
 Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_lighting_fsw_001_share.unity3d

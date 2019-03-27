@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 725155073
+CRC: 3873458002
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c85b31e0c026d1d4afbc2091cd3da49b
+    Hash: f88d5caa5020d295c48758c2bff0868a
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,4 +18,5 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Materials/E_Knife_fsw_012_03.mat
 Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_knife_fsw_012_share.unity3d

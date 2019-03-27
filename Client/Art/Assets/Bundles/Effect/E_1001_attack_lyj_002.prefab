@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4106377692187262}
+  - component: {fileID: 114378288575512326}
   m_Layer: 0
   m_Name: E_1001_attack_lyj_002
   m_TagString: Untagged
@@ -101,6 +102,23 @@ Transform:
   m_Father: {fileID: 4106377692187262}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114378288575512326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621517627935584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198645193894785422}
+  - {fileID: 198486759302418910}
+  Animations: []
+  Animators: []
+  mIsInit: 1
 --- !u!198 &198486759302418910
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -161,7 +179,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1259072860
+  randomSeed: 388087227
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3579,7 +3597,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -84081160
+  randomSeed: -609479847
   InitialModule:
     serializedVersion: 3
     enabled: 1

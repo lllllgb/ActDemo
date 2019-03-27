@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4631236364716256}
+  - component: {fileID: 114746074780361984}
   m_Layer: 0
   m_Name: E_1001_fsw_skill3_002
   m_TagString: Untagged
@@ -287,6 +288,29 @@ Transform:
   m_Father: {fileID: 4054250694641538}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -58.224003}
+--- !u!114 &114746074780361984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1008929634773148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198908524112639512}
+  - {fileID: 198569893251336564}
+  - {fileID: 198431994399957260}
+  - {fileID: 198266334480973302}
+  - {fileID: 198942207661660756}
+  - {fileID: 198580639743311212}
+  - {fileID: 198141352397702892}
+  - {fileID: 198683968178809252}
+  Animations: []
+  Animators: []
+  mIsInit: 1
 --- !u!198 &198141352397702892
 ParticleSystem:
   m_ObjectHideFlags: 1

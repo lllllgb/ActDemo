@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4542938423458314}
   - component: {fileID: 95520125822411812}
+  - component: {fileID: 114679453825056232}
   m_Layer: 0
   m_Name: E_1001_fsw_front_attack
   m_TagString: Untagged
@@ -407,6 +408,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114679453825056232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1345030030645964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198937530256385986}
+  - {fileID: 198348859142012726}
+  Animations: []
+  Animators:
+  - {fileID: 95520125822411812}
+  mIsInit: 1
 --- !u!198 &198348859142012726
 ParticleSystem:
   m_ObjectHideFlags: 1

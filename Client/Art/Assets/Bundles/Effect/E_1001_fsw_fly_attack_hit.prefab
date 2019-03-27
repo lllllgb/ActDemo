@@ -121,6 +121,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4618743165194154}
+  - component: {fileID: 114387041368331490}
   m_Layer: 0
   m_Name: E_1001_fsw_fly_attack_hit
   m_TagString: Untagged
@@ -225,6 +226,27 @@ Transform:
   m_Father: {fileID: 4483025013148484}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114387041368331490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945510020159768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198398446488137364}
+  - {fileID: 198019929855520652}
+  - {fileID: 198747416297461704}
+  - {fileID: 198331610208285610}
+  - {fileID: 198497601072336164}
+  - {fileID: 198664388124791806}
+  Animations: []
+  Animators: []
+  mIsInit: 1
 --- !u!198 &198019929855520652
 ParticleSystem:
   m_ObjectHideFlags: 1

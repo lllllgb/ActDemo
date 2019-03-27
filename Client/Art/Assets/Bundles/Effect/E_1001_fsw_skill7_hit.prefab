@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4613527677501646}
+  - component: {fileID: 114034666099929524}
   m_Layer: 0
   m_Name: E_1001_fsw_skill7_hit
   m_TagString: Untagged
@@ -225,6 +226,27 @@ Transform:
   m_Father: {fileID: 4047757660018236}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114034666099929524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201684938502086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198226617743775568}
+  - {fileID: 198121049466955418}
+  - {fileID: 198273819601633378}
+  - {fileID: 198734780674081376}
+  - {fileID: 198234170858343874}
+  - {fileID: 198555100089819556}
+  Animations: []
+  Animators: []
+  mIsInit: 1
 --- !u!198 &198121049466955418
 ParticleSystem:
   m_ObjectHideFlags: 1

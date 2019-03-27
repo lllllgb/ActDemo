@@ -139,6 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4352497441258044}
   - component: {fileID: 95712883051297160}
+  - component: {fileID: 114109996067161200}
   m_Layer: 0
   m_Name: E_1001_fsw_fly_attack
   m_TagString: Untagged
@@ -706,3 +707,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114109996067161200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1577468454334248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles: []
+  Animations: []
+  Animators:
+  - {fileID: 95712883051297160}
+  mIsInit: 1

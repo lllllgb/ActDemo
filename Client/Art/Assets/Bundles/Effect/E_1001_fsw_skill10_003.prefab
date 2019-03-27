@@ -356,6 +356,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4214875300791780}
+  - component: {fileID: 114847274684072530}
   m_Layer: 0
   m_Name: E_1001_fsw_skill10_003
   m_TagString: Untagged
@@ -704,6 +705,41 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114847274684072530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1994961311454076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198101164649697508}
+  - {fileID: 198809204196030048}
+  - {fileID: 198556910525586154}
+  - {fileID: 198438540467668548}
+  - {fileID: 198748159940207296}
+  - {fileID: 198875404816551570}
+  - {fileID: 198337233071316108}
+  - {fileID: 198683567332125446}
+  - {fileID: 198712220480749250}
+  - {fileID: 198379409364876120}
+  - {fileID: 198480601792669198}
+  - {fileID: 198822350994814194}
+  - {fileID: 198818004417025030}
+  - {fileID: 198109140118364154}
+  - {fileID: 198054744950735000}
+  - {fileID: 198905572359351528}
+  - {fileID: 198029018308965660}
+  - {fileID: 198520372623516912}
+  - {fileID: 198996669256131092}
+  Animations: []
+  Animators:
+  - {fileID: 95537012461178006}
+  mIsInit: 1
 --- !u!198 &198029018308965660
 ParticleSystem:
   m_ObjectHideFlags: 1

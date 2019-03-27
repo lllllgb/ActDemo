@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4347489600120004}
   - component: {fileID: 198967314864163552}
   - component: {fileID: 199122384500689202}
+  - component: {fileID: 114494752918035564}
   m_Layer: 0
   m_Name: E_1001_fsw_front_attack_hit
   m_TagString: Untagged
@@ -227,6 +228,28 @@ Transform:
   m_Father: {fileID: 4347489600120004}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -82.76401, z: 0}
+--- !u!114 &114494752918035564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1258589452757054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198967314864163552}
+  - {fileID: 198732670734368558}
+  - {fileID: 198341603979773104}
+  - {fileID: 198997446908888858}
+  - {fileID: 198224984433397042}
+  - {fileID: 198681781909960058}
+  - {fileID: 198303800524336358}
+  Animations: []
+  Animators: []
+  mIsInit: 1
 --- !u!198 &198224984433397042
 ParticleSystem:
   m_ObjectHideFlags: 1

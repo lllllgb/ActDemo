@@ -292,9 +292,11 @@ namespace AosBaseFramework
 
 			string[] dependencies = ResourcesHelper.GetSortedDependencies(assetBundleName);
 
-            //Logger.Log($"-----------dep load {assetBundleName} dep: {dependencies.ToList().ListToString()}");
-            foreach (string dependency in dependencies)
+            //foreach (string dependency in dependencies)
+            for(int i = dependencies.Length - 1; i >= 0; --i)
             {
+                string dependency = dependencies[i];
+                //Logger.Log($"-----------dep load {assetBundleName} dep: {dependency}");
                 if (string.IsNullOrEmpty(dependency))
                 {
                     continue;

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 69988200
+CRC: 4167470392
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: bc1ad13b9b1e7d27050118678c134ec8
+    Hash: 9d5b1122889ee2bafc4a930c29d6565b
   TypeTreeHash:
     serializedVersion: 2
     Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
@@ -28,3 +28,5 @@ Dependencies:
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/models/scene/xueshan_1/zhongjingshu_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/models/scene/xueshan_1/zhongjingshu1_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/models/scene/xueshan_1/zhongjingshu3_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/models/scene/xueshan_1/qianjingzhanlan3_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/models/scene/xueshan_1/qianjingzhanlan2_share.unity3d

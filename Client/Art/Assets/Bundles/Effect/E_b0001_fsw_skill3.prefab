@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4491257773742008}
   - component: {fileID: 95411411540630424}
+  - component: {fileID: 114547009260851244}
   m_Layer: 0
   m_Name: E_b0001_fsw_skill3
   m_TagString: Untagged
@@ -613,6 +614,39 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114547009260851244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079270251764354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198606852540735296}
+  - {fileID: 198835163294577686}
+  - {fileID: 198197028895972238}
+  - {fileID: 198492651278548032}
+  - {fileID: 198465882557383944}
+  - {fileID: 198775016911638104}
+  - {fileID: 198081017347538718}
+  - {fileID: 198325703280513058}
+  - {fileID: 198620422953785614}
+  - {fileID: 198833288823153596}
+  - {fileID: 198424640853269146}
+  - {fileID: 198505420030425322}
+  - {fileID: 198651306955378852}
+  - {fileID: 198248306160727180}
+  - {fileID: 198468009144094158}
+  - {fileID: 198081747544153124}
+  - {fileID: 198253716538003290}
+  Animations: []
+  Animators:
+  - {fileID: 95411411540630424}
+  mIsInit: 1
 --- !u!198 &198081017347538718
 ParticleSystem:
   m_ObjectHideFlags: 1

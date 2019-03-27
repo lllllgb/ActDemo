@@ -124,7 +124,7 @@ namespace AosHotfixFramework
                 return;
             }
             
-            GameObject tmpGo = Hotfix.Instantiate<GameObject>(tmpResMgr.GetAssetByType<GameObject>(EABType.UI, BundleName));
+            GameObject tmpGo = Hotfix.Instantiate(tmpResMgr.GetAssetByType<GameObject>(EABType.UI, BundleName));
             InitWindow(tmpGo);
 
             if (mIsShowAfterLoaded)
@@ -136,7 +136,7 @@ namespace AosHotfixFramework
             IResourcesManager tmpResMgr = GameModuleManager.GetModule<IResourcesManager>();
             tmpResMgr.LoadBundleByType(EABType.UI, BundleName);
 
-            GameObject tmpGo = Hotfix.Instantiate<GameObject>(tmpResMgr.GetAssetByType<GameObject>(EABType.UI, BundleName));
+            GameObject tmpGo = Hotfix.Instantiate(tmpResMgr.GetAssetByType<GameObject>(EABType.UI, BundleName));
             InitWindow(tmpGo);
             loadedHandle?.Invoke();
         }

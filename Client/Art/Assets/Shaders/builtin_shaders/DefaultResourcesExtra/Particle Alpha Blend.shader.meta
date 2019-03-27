@@ -1,10 +1,8 @@
 fileFormatVersion: 2
 guid: 85f5ed954c4618546b010462edba1c2b
-timeCreated: 1537347018
-licenseType: Pro
 ShaderImporter:
   externalObjects: {}
   defaultTextures: []
   userData: 
-  assetBundleName: 
+  assetBundleName: assets/bundles/shadercollect.unity3d
   assetBundleVariant: 

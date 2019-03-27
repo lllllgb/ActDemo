@@ -281,7 +281,7 @@ namespace MyEditor
                 bundleName = $"{Path.GetDirectoryName(path)}/{name}.unity3d";
             }
 
-			importer.assetBundleName = bundleName;
+            importer.assetBundleName = bundleName;
 
 			TextureImporter textureImporter = importer as TextureImporter;
 			if (textureImporter == null)

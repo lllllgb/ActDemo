@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4247859163833202}
   - component: {fileID: 95378584349099744}
+  - component: {fileID: 114448334208023678}
   m_Layer: 0
   m_Name: E_1001_fsw_gedang
   m_TagString: Untagged
@@ -181,6 +182,26 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114448334208023678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736420893961086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198418019886003354}
+  - {fileID: 198919829163310652}
+  - {fileID: 198180854664336868}
+  - {fileID: 198590072188825780}
+  Animations: []
+  Animators:
+  - {fileID: 95378584349099744}
+  mIsInit: 1
 --- !u!198 &198180854664336868
 ParticleSystem:
   m_ObjectHideFlags: 1

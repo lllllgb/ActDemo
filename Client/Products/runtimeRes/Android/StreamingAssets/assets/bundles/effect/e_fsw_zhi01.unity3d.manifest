@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3934420585
+CRC: 2172851
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9fdff2929c118cff1bfda886bc331cb3
+    Hash: a14449a9accaa961289a6ffc19ce91d6
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6441f4c48b8293a736413520ea1a9530
@@ -28,6 +28,7 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_fsw_zhi01.prefab
 Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/materials/e_glow_fsw_020_01_share.unity3d

@@ -60,18 +60,13 @@ namespace AosBaseFramework
 
             if (!GameSetup.instance.IsPublish)
             {
-                switch (Application.platform)
-                {
-                    case RuntimePlatform.Android:
-                        smNoPublicAssetBundlePath = $"{RUN_TIME_RES_PATH}/Android/StreamingAssets";
-                        break;
-                    case RuntimePlatform.IPhonePlayer:
-                        smNoPublicAssetBundlePath = $"{RUN_TIME_RES_PATH}/IOS/StreamingAssets";
-                        break;
-                    default:
-                        smNoPublicAssetBundlePath = $"{RUN_TIME_RES_PATH}/PC/StreamingAssets";
-                        break;
-                }
+#if UNITY_ANDROID
+                smNoPublicAssetBundlePath = $"{RUN_TIME_RES_PATH}/Android/StreamingAssets";
+#elif UNITY_IOS
+                smNoPublicAssetBundlePath = $"{RUN_TIME_RES_PATH}/IOS/StreamingAssets";
+#else
+                smNoPublicAssetBundlePath = $"{RUN_TIME_RES_PATH}/PC/StreamingAssets";
+#endif
             }
         }
 

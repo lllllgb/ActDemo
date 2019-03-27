@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4830732390388024}
   - component: {fileID: 198846973486720810}
   - component: {fileID: 199934662578496008}
+  - component: {fileID: 114962296967927248}
   m_Layer: 0
   m_Name: E_fsw_fei01
   m_TagString: Untagged
@@ -134,6 +135,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114962296967927248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356105719635938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198846973486720810}
+  - {fileID: 198669354277756334}
+  - {fileID: 198462461647613246}
+  - {fileID: 198861200309759710}
+  Animations: []
+  Animators: []
+  mIsInit: 1
 --- !u!198 &198462461647613246
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -27,7 +27,6 @@ namespace AosHotfixRunTime
             if (CurrHitedMonster != monster || monster.Dead)
             {
                 this.CurrHitedMonster = monster.Dead ? null : monster;
-                Logger.Log($"monster.dead ? {monster.Dead} CurrHitedMonster -> {CurrHitedMonster}");
 
                 var tmpEvent = ReferencePool.Fetch<UnitCtrlEvent.CurrHitedMonsterChange>();
                 tmpEvent.Data = CurrHitedMonster;

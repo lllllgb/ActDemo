@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 471637281
+CRC: 2057768480
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6756f872cb5037e4b278eff1e67e15f3
+    Hash: ad1da1e335a53495d1c0558fa8fb6065
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,4 +18,5 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Materials/E_Trail_fsw_006_01.mat
 Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_trail_fsw_006_share.unity3d

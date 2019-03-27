@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3597714099
+CRC: 3636176743
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 082dd86024eea3a9efa007bce71c5a3b
+    Hash: a2da38a3baf257fff3dccbe99c5269be
   TypeTreeHash:
     serializedVersion: 2
     Hash: f38824681169df2b8fb05a288a4abe56
@@ -34,5 +34,6 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_gedang.prefab
 Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_smoke_fsw_002_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_002_02_share.unity3d

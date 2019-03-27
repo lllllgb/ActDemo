@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 4318893124774528}
   - component: {fileID: 198708646175533462}
   - component: {fileID: 199496437858433158}
+  - component: {fileID: 114596638763234296}
   m_Layer: 0
   m_Name: E_1001_fsw_skill10_003_hit
   m_TagString: Untagged
@@ -289,6 +290,30 @@ Transform:
   m_Father: {fileID: 4318893124774528}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 35.188004, y: 176.947, z: -4.5690002}
+--- !u!114 &114596638763234296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1629839370047738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198708646175533462}
+  - {fileID: 198214142147378044}
+  - {fileID: 198338186687747936}
+  - {fileID: 198959980051730180}
+  - {fileID: 198770732929840828}
+  - {fileID: 198446341169324900}
+  - {fileID: 198621456214806222}
+  - {fileID: 198728282472265252}
+  - {fileID: 198430728652253682}
+  Animations: []
+  Animators: []
+  mIsInit: 1
 --- !u!198 &198214142147378044
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -71,6 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4421046667738486}
   - component: {fileID: 95716730334873936}
+  - component: {fileID: 114524461078817016}
   m_Layer: 0
   m_Name: E_1001_fsw_skill8
   m_TagString: Untagged
@@ -677,6 +678,27 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114524461078817016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1234688609387802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles:
+  - {fileID: 198448512880434726}
+  - {fileID: 198504488096337200}
+  Animations: []
+  Animators:
+  - {fileID: 95716730334873936}
+  - {fileID: 95163912264246116}
+  - {fileID: 95422871086677948}
+  - {fileID: 95754192242510638}
+  mIsInit: 1
 --- !u!198 &198448512880434726
 ParticleSystem:
   m_ObjectHideFlags: 1
