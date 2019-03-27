@@ -45,6 +45,7 @@ namespace ACT
         ISkillInput mQueuedSkillInput = null;
         bool mIsGotoTarget;
         Vector3 mGotoTargetPos;
+        bool mIsReachTargetPos;
 
         GameObject mListTargetFrame;
         public static bool ShowListTarFrame = false;
@@ -229,7 +230,6 @@ namespace ACT
                 return;
 
             //mActionChanged = false;
-            // Œì²âŽŠÓÚÓ²Ö±×ŽÌ¬¡£
             if (ProcessStraighting(ref deltaTime))
                 return;
 
@@ -321,24 +321,20 @@ namespace ACT
 
         bool ProcessExtraChangeAction(int deltaTime)
         {
-            if (mActiveAction.AirStatus == (int)ActData.EAirStatus.Normal)
+            if (mIsGotoTarget && mIsReachTargetPos)
             {
-                return false;
+                ChangeAction(ActData.CommonAction.Idle, 0);
+                return true;
             }
 
-            if (!mOwner.OnGround)
+            if (mActiveAction.AirStatus == (int)ActData.EAirStatus.Diaup &&
+                mOwner.OnGround && !string.IsNullOrEmpty(mActionGroup.Diaup2FloorAction))
             {
-                return false;
+                ChangeAction(mActionGroup.Diaup2FloorAction, 0);
+                return true;
             }
 
-            if (string.IsNullOrEmpty(mActionGroup.Diaup2FloorAction))
-            {
-                Logger.LogError($"未配置击飞落地动作 {mOwner.ActionID}");
-                return false;
-            }
-
-            ChangeAction(mActionGroup.Diaup2FloorAction, 0);
-            return true;
+            return false;
         }
 
         bool CheckTime(int deltaTime, int checkRatio, ref int checkTime)
@@ -397,6 +393,11 @@ namespace ACT
                 {
                     z = tmpOffset.z;
                     mVelocity.x = 0f;
+                }
+
+                if (Mathf.Abs(mVelocity.x) < 0.01f && Mathf.Abs(mVelocity.z) < 0.01f)
+                {
+                    mIsReachTargetPos = true;
                 }
             }
 
@@ -867,6 +868,7 @@ namespace ACT
             Vector3 tmpDirection = mGotoTargetPos - mOwner.Position;
             float tmpMoveSpeed = mOwner.Speed * 0.01f;
             mIsGotoTarget = true;
+            mIsReachTargetPos = false;
 
             mVelocity.x = -Mathf.Sign(tmpDirection.x) * Mathf.Sign(tmpDirection.z) * tmpMoveSpeed;
             mVelocity.z = tmpMoveSpeed;

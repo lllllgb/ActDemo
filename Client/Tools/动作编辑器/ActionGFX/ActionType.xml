@@ -37873,7 +37873,7 @@
                 <Event>
                   <EventType>GoToTargets</EventType>
                   <EventTypeInt>35</EventTypeInt>
-                  <EventDetailData xsi:type="EventGoToTargets" Local="true" />
+                  <EventDetailData xsi:type="EventGoToTargets" OffsetX="200" Random="true" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -38070,6 +38070,7 @@
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
+              <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
             </Action>
             <Action>
@@ -38212,12 +38213,12 @@
                   <AILists>
                     <AIList Distance="10000">
                       <AISlots>
-                        <AISlot SkillID="1" SwitchActionID="run" />
+                        <AISlot SkillID="1" SwitchActionID="idle" />
                       </AISlots>
                     </AIList>
                   </AILists>
                   <AIStatusSwitchList>
-                    <AIStatusSwitch Condition="1" TargetExist="true" TargetActionID="skill_1_y" TargetSkill="1" SelfActionID="skill_1_y(¼¼ÄÜ1)" SelfTime="3000" SelfSkill="1" />
+                    <AIStatusSwitch Condition="1" TargetExist="true" TargetActionID="skill_1_y" TargetSkill="1" SelfActionID="die" SelfTime="3000" SelfSkill="1" />
                   </AIStatusSwitchList>
                   <AIActionCDList />
                   <Location>
