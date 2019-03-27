@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3301114999
+CRC: 4171174936
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3cb2e00d2e83d0928c9a652712aa97f4
+    Hash: 0761c52cd89882896eb9d46abdd7209a
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,7 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Materials/E_Debris_fsw_003_01.mat
+- Assets/Res/effect/Materials/E_Debris_fsw_003_01.mat
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_debris_fsw_003_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_debris_fsw_003_share.unity3d

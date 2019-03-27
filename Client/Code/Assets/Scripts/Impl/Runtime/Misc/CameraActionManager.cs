@@ -27,7 +27,6 @@ namespace AosHotfixRunTime
         float mOrthographicSize;
         GameObject mShakeGo;
         Vector3 mShakeInitPos;
-        SpriteRenderer mMaskSprRender;
 
         #region closeup
         float mCloseUpPreTime;
@@ -58,12 +57,11 @@ namespace AosHotfixRunTime
         {
         }
 
-        public void Init(Camera camera, GameObject closeupGo, GameObject shakeGo, SpriteRenderer maskSpr)
+        public void Init(Camera camera, GameObject closeupGo, GameObject shakeGo)
         {
             mCamera = camera;
             mCloseupGo = closeupGo;
             mShakeGo = shakeGo;
-            mMaskSprRender = maskSpr;
 
             mOrthographicSize = mCamera.orthographicSize;
             mShakeInitPos = mShakeGo.transform.localPosition;
@@ -132,8 +130,11 @@ namespace AosHotfixRunTime
         public void Reset()
         {
             mIsRunning = false;
-            mMaskSprRender.color = Color.clear;
             mCamera.orthographicSize = mOrthographicSize;
+
+            var tmpEventArg = ReferencePool.Fetch<CameraActionEvent.ModifySceneMaskColor>();
+            tmpEventArg.Data = Color.clear;
+            Game.EventMgr.FireNow(this, tmpEventArg);
         }
 
         public void Release()
@@ -254,16 +255,19 @@ namespace AosHotfixRunTime
             else if (mRunningTime > mLightenessPreTime + mLightenessKeepTime)
             {
                 tmpRatio = mLightenessOutTime > 0f ? (mRunningTime - mLightenessPreTime - mLightenessKeepTime) / mLightenessOutTime : 1f;
-                mMaskSprRender.color = mLightenessOffset * (1 - tmpRatio);
+
+                var tmpEventArg = ReferencePool.Fetch<CameraActionEvent.ModifySceneMaskColor>();
+                tmpEventArg.Data = mLightenessOffset * (1 - tmpRatio);
+                Game.EventMgr.FireNow(this, tmpEventArg);
             }
             else if (mRunningTime <= mLightenessPreTime)
             {
                 tmpRatio = mLightenessPreTime > 0f ? mRunningTime / mLightenessPreTime : 1f;
-                mMaskSprRender.color = mLightenessOffset * tmpRatio;
+                var tmpEventArg = ReferencePool.Fetch<CameraActionEvent.ModifySceneMaskColor>();
+                tmpEventArg.Data = mLightenessOffset * tmpRatio;
+                Game.EventMgr.FireNow(this, tmpEventArg);
             }
 
-            //tmpRatio = Mathf.Clamp(tmpRatio, -1, 1);
-            //mMaskSprRender.color = Color.clear + Color.black * (1 - mLightenessFactor) * tmpRatio;
         }
 
         #endregion

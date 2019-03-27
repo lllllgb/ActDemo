@@ -3,7 +3,7 @@ CRC: 2500669548
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 26f9ac6352be59605d45ad4d4c198169
+    Hash: 65a98513eb44a671e19324a5efddced1
   TypeTreeHash:
     serializedVersion: 2
     Hash: c2bdabd68c118aabc18c59eaf5951821
@@ -16,4 +16,4 @@ ClassTypes:
 Assets:
 - Assets/Res/Models/Scene/TestAction/Materials/floor.mat
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

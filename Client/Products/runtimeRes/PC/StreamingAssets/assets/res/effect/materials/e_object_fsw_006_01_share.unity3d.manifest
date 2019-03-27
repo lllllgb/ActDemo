@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3748801732
+CRC: 4002469188
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6a9aefce0205f1284e909a00b7bace37
+    Hash: 6ae3dd68569bcebe08d58c45acb67de7
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,7 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Materials/E_Object_fsw_006_01.mat
+- Assets/Res/effect/Materials/E_Object_fsw_006_01.mat
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_object_fsw_006_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_object_fsw_006_share.unity3d

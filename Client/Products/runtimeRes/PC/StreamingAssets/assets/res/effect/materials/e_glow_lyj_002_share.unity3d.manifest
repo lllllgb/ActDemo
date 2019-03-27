@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2725947704
+CRC: 2158762260
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fb915e849b0940a3d695fd55f20768d0
+    Hash: 3666a153d95fe88601e3021257a3e1d3
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,7 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Materials/E_Glow_lyj_002.mat
+- Assets/Res/effect/Materials/E_Glow_lyj_002.mat
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_glow_lyj_002_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_glow_lyj_002_share.unity3d

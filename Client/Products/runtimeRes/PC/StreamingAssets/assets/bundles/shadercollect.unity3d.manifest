@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1283769783
+CRC: 4118430744
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cf4d3514f2f39b052b1af701cb4e1c5b
+    Hash: d18d03af0147cb367e56bba02f72c34f
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6370d3f9de9eca57f523bce048404a46
@@ -16,11 +16,15 @@ Assets:
 - Assets/Shaders/shader/Particles-Additive-UV.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Standard.shader
 - Assets/Shaders/shader/Particles-Alpha-Blend-UV.shader
+- Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Mobile/Mobile-Particle-Add.shader
+- Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Mobile/Mobile-Particle-Alpha.shader
 - Assets/Shaders/shader/Obj-Texture.shader
 - Assets/Shaders/shader/Obj-Soft-Light.shader
-- Assets/shader/AnyPlay-Particle-Dissolve-Add-VertexAlpha.shader
+- Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Particle Alpha Blend.shader
+- Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Particle Add.shader
+- Assets/Shaders/custom_shaders/AnyPlay-Particle-Dissolve-Add-VertexAlpha.shader
 - Assets/Shaders/shader/Particles-Alpha-Blended-Mask.shader
 - Assets/Shaders/custom_shaders/DoubleSidedAlpha.shader
-- Assets/shader/AnyPlay-Particle-Dissolve-Alpha Blend-VertexAlpha.shader
+- Assets/Shaders/custom_shaders/AnyPlay-Particle-Dissolve-Alpha Blend-VertexAlpha.shader
 - Assets/Shaders/shader/Particles-Dissolve-Alpha.shader
 Dependencies: []

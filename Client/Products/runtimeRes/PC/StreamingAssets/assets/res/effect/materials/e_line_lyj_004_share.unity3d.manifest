@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1647123650
+CRC: 2865699651
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a3e6d62dbaa8171b0468f588895ac912
+    Hash: 2d9fbadb87d993c12ebc4fd358c9d600
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,7 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Materials/E_Line_lyj_004.mat
+- Assets/Res/effect/Materials/E_Line_lyj_004.mat
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_line_lyj_004_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_line_lyj_004_share.unity3d

@@ -16,6 +16,8 @@ namespace AosHotfixRunTime
         List<Unit> mMonsterList = new List<Unit>();
         bool mIsTriggerMonster = true;
 
+        List<SpriteRenderer> mSceneMaskSprs = new List<SpriteRenderer>();
+
         public void Init()
         {
             mInstanceID = 1;
@@ -32,6 +34,8 @@ namespace AosHotfixRunTime
 
             Game.WindowsMgr.ShowWindow<FadeWnd, bool, bool>(true, false);
             SceneLoader.Instance.LoadSceneAsync("Instance1", OnSceneLoaded);
+
+            Game.EventMgr.Subscribe(CameraActionEvent.ModifySceneMaskColor.EventID, OnEventModifySceneMask);
         }
 
         public void Update(float deltaTime)
@@ -49,6 +53,7 @@ namespace AosHotfixRunTime
 
         public void Release()
         {
+            Game.EventMgr.Unsubscribe(CameraActionEvent.ModifySceneMaskColor.EventID, OnEventModifySceneMask);
         }
 
         private void TransferNextScene()
@@ -69,12 +74,28 @@ namespace AosHotfixRunTime
             mMonsterList.Clear();
             mInstanceID++;
             Game.WindowsMgr.ShowWindow<FadeWnd, bool, bool>(true, false);
+            mSceneMaskSprs.Clear();
             SceneLoader.Instance.LoadSceneAsync($"Instance{mInstanceID}", OnSceneLoaded);
         }
 
         void OnSceneLoaded()
         {
             Game.WindowsMgr.ShowWindow<FadeWnd, bool, bool>(false, true);
+
+            GameObject tmpSceneMaskGo = GameObject.Find("SceneMask");
+
+            if (null != tmpSceneMaskGo)
+            {
+                for (int i = 0, max = tmpSceneMaskGo.transform.childCount; i < max; ++i)
+                {
+                    SpriteRenderer tmpSprRender = tmpSceneMaskGo.transform.GetChild(i).GetComponent<SpriteRenderer>();
+
+                    if (null != tmpSprRender)
+                    {
+                        mSceneMaskSprs.Add(tmpSprRender);
+                    }
+                }
+            }
 
             Game.ResourcesMgr.LoadBundleByType(EABType.Misc, $"Instacen{mInstanceID}");
             mInstanceRoot = Hotfix.Instantiate(Game.ResourcesMgr.GetAssetByType<GameObject>(EABType.Misc, $"Instacen{mInstanceID}"));
@@ -147,6 +168,21 @@ namespace AosHotfixRunTime
             tmpMonster.SetPosition(new Vector3(Random.Range(0, 5), 0f, Random.Range(0, 5)));
             ACT.ActionSystem.Instance.ActUnitMgr.Add(tmpMonster);
             mMonsterList.Add(tmpMonster);
+        }
+
+        private void OnEventModifySceneMask(object sender, GameEventArgs arg)
+        {
+            var tmpEventArg = arg as CameraActionEvent.ModifySceneMaskColor;
+
+            if (null == tmpEventArg)
+            {
+                return;
+            }
+
+            for (int i = 0, max = mSceneMaskSprs.Count; i < max; ++i)
+            {
+                mSceneMaskSprs[i].color = tmpEventArg.Data;
+            }
         }
     }
 }
