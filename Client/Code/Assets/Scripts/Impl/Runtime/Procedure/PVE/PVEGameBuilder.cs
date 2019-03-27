@@ -141,8 +141,8 @@ namespace AosHotfixRunTime
             if (mInstanceID == 1)
             {
                 SpawnMonster(1004, 1, 0);
-                SpawnMonster(1004, 1, 0);
-                SpawnMonster(1004, 1, 0);
+                //SpawnMonster(1004, 1, 0);
+                //SpawnMonster(1004, 1, 0);
             }
             else if (mInstanceID == 2)
             {
@@ -166,6 +166,10 @@ namespace AosHotfixRunTime
             var tmpMonster = new Monster();
             tmpMonster.Init(unitID, level, EUnitType.EUT_Monster, ACT.EUnitCamp.EUC_ENEMY, true, aiDiff);
             tmpMonster.SetPosition(new Vector3(Random.Range(0, 5), 0f, Random.Range(0, 5)));
+            float x = mLocalPlayer.Position.x - tmpMonster.Position.x;
+            float dir = Mathf.Atan2(x, 0);
+            tmpMonster.SetOrientation(dir);
+
             ACT.ActionSystem.Instance.ActUnitMgr.Add(tmpMonster);
             mMonsterList.Add(tmpMonster);
         }

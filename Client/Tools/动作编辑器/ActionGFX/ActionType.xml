@@ -37871,9 +37871,9 @@
               <ActionStatus>1</ActionStatus>
               <Events>
                 <Event>
-                  <EventType>SetVelocity</EventType>
-                  <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="380" />
+                  <EventType>GoToTargets</EventType>
+                  <EventTypeInt>35</EventTypeInt>
+                  <EventDetailData xsi:type="EventGoToTargets" Local="true" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -37971,9 +37971,9 @@
                   <EventDetailData xsi:type="EventSetVelocity" VelocityZ="380" />
                 </Event>
                 <Event>
-                  <EventType>SetDirection</EventType>
-                  <EventTypeInt>12</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetDirection" Angle="-90" Local="true" />
+                  <EventType>GoToTargets</EventType>
+                  <EventTypeInt>35</EventTypeInt>
+                  <EventDetailData xsi:type="EventGoToTargets" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -38212,7 +38212,7 @@
                   <AILists>
                     <AIList Distance="10000">
                       <AISlots>
-                        <AISlot SkillID="1" SwitchActionID="run_l" />
+                        <AISlot SkillID="1" SwitchActionID="run" />
                       </AISlots>
                     </AIList>
                   </AILists>
