@@ -43,8 +43,8 @@ namespace AosHotfixRunTime
 
         public void LinkSkill(ACT.ISkillInput skillInput, int interruptIndex)
         {
-            ActStatus.LinkAction(
-                ActStatus.ActiveAction.ActionInterrupts[interruptIndex],
+            ActStatus.SkillItem = null;
+            ActStatus.LinkAction(ActStatus.ActiveAction.ActionInterrupts[interruptIndex],
                 skillInput);
         }
 

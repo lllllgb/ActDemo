@@ -85,6 +85,7 @@ namespace AosHotfixRunTime
 
             UpdateComponents(deltaTime);
             UpdateRestore(deltaTime);
+            UpdatePabodyState(deltaTime);
             mUnitShadow.Update(deltaTime);
         }
 
@@ -101,13 +102,7 @@ namespace AosHotfixRunTime
         }
 
         //更新属性
-        public virtual void UpdateAttributes()
-        {
-            if (mUnitAttr.Get(EPA.CurDP) >= mUnitAttr.Get(EPA.MaxDP))
-            {
-                SetIsPabodyState(true);
-            }
-        }
+        public abstract void UpdateAttributes();
 
         //名字
         public void SetName(string name)
@@ -148,13 +143,27 @@ namespace AosHotfixRunTime
             }
         }
 
+        //更新霸体状态
+        private void UpdatePabodyState(float deltaTime)
+        {
+            if (ActStatus.ActionState != ActData.EActionState.Hit)
+            {
+                SetIsPabodyState(true);
+            }
+        }
+
         //是否霸体
         protected virtual void SetIsPabodyState(bool flag)
         {
-            mIsPabodyState = flag;
+            if (mIsPabodyState != flag)
+            {
+                mIsPabodyState = flag;
+            }
         }
 
-        public virtual void Hurt(Unit attacker, int damage, ACT.ECombatResult result)
+        
+
+        public virtual void Hurt(Unit attacker, int damage, int dpDamage, ACT.ECombatResult result)
         {
             if (Dead)
             {
@@ -162,7 +171,11 @@ namespace AosHotfixRunTime
             }
             
             AddHp(-damage);
-            AddDp(-damage);
+
+            if (0 != dpDamage)
+            {
+                AddDp(-dpDamage);
+            }
         }
 
         public virtual void AddHp(int v)
@@ -224,6 +237,7 @@ namespace AosHotfixRunTime
         public override ACT.ECombatResult Combat(ACT.IActUnit target, ACT.ISkillItem skillItem)
         {
             int tmpDamage = 0;
+            int tmpDpDamage = 0;
             Unit tmpTarget = target as Unit;
             ACT.ECombatResult tmpResult = MathUtility.Combat(this, tmpTarget, out tmpDamage);
 
@@ -234,13 +248,16 @@ namespace AosHotfixRunTime
                     int tmpDamageCoff = (skillItem as SkillItem).SkillAttrBase.DamageCoff;
                     int tmpDamageBase = (skillItem as SkillItem).SkillAttrBase.DamageBase;
                     // 技能的影响。
-                    tmpDamage = tmpDamage * tmpDamageCoff / 100 + tmpDamageBase;
+                    tmpDamage = (int)(tmpDamage * tmpDamageCoff * 0.01f + tmpDamageBase);
+
+                    int tmpDpDamageCoff = (skillItem as SkillItem).SkillAttrBase.DpDamageCoff;
+                    tmpDpDamage = (int)(tmpTarget.GetAttr(EPA.DpAttack) * tmpDpDamageCoff * 0.01f);
                 }
 
                 // damage should not be 0.
                 tmpDamage = Mathf.Max(tmpDamage, 1);
 
-                tmpTarget.Hurt(this, tmpDamage, tmpResult);
+                tmpTarget.Hurt(this, tmpDamage, tmpDpDamage, tmpResult);
             }
 
             return tmpResult;

@@ -35,12 +35,11 @@ namespace AosHotfixRunTime
                 mUnitAttr.Init(tmpMonsterAttrBase);
             }
 
-            base.UpdateAttributes();
         }
 
-        public override void Hurt(Unit attacker, int damage, ACT.ECombatResult result)
+        public override void Hurt(Unit attacker, int damage, int dpDamage, ACT.ECombatResult result)
         {
-            base.Hurt(attacker, damage, result);
+            base.Hurt(attacker, damage, dpDamage, result);
 
             GetComponent<HudPopupComponent>().Popup(EHudPopupType.Damage, damage);
             Game.ControllerMgr.Get<UnitController>().SetHitedMonster(this);
