@@ -519,7 +519,7 @@ namespace ACT
                 {
                     float x = target.Position.x - mPos.x;
                     float z = target.Position.z - mPos.z;
-                    float modify = Mathf.Atan2(x, z);
+                    float modify = Mathf.Atan2(x, 0);
                     targetRotate = modify + Mathf.PI;
                 }
                 else

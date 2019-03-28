@@ -24,6 +24,9 @@ namespace AosHotfixRunTime
         public Transform BottomNode { get; private set; }
         //属性
         protected UnitAttr mUnitAttr = new UnitAttr();
+        //阴影
+        protected UnitShadow mUnitShadow = new UnitShadow();
+
 
         public Unit()
         {
@@ -61,6 +64,7 @@ namespace AosHotfixRunTime
             TopNode = Utility.GameObj.FindByName(tmpGo.transform, "topNode");
             MidNode = Utility.GameObj.FindByName(tmpGo.transform, "midNode");
             BottomNode = Utility.GameObj.FindByName(tmpGo.transform, "bottomNode");
+            mUnitShadow.Init(this, Utility.GameObj.Find(tmpGo, "shadow"));
             UpdateAttributes();
             AddComponents();
         }
@@ -75,6 +79,7 @@ namespace AosHotfixRunTime
             base.Update(deltaTime);
 
             UpdateComponents(deltaTime);
+            mUnitShadow.Update(deltaTime);
         }
 
         public virtual void LateUpdate(float deltaTime)
