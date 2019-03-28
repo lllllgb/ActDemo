@@ -16,7 +16,8 @@ namespace AosHotfixRunTime
         public override int HpMax { get { return GetAttr(EPA.MaxHP); } }
         public override int Speed { get { return GetAttr(EPA.MoveSpeed); } }
         public override bool CanHurt { get { return true; } }
-        
+        public override bool IsPabodyState { get { return mIsPabodyState; } }
+
         public EUnitType UnitType { get; private set; }
         public string Name { get; private set; }
         public Transform TopNode { get; private set; }
@@ -26,7 +27,11 @@ namespace AosHotfixRunTime
         protected UnitAttr mUnitAttr = new UnitAttr();
         //阴影
         protected UnitShadow mUnitShadow = new UnitShadow();
-
+        //恢复时间
+        const float RestoreTime = 1f;
+        float mRestoreLeft = 0.0f;
+        //霸体状态
+        bool mIsPabodyState;
 
         public Unit()
         {
@@ -79,6 +84,8 @@ namespace AosHotfixRunTime
             base.Update(deltaTime);
 
             UpdateComponents(deltaTime);
+            UpdateRestore(deltaTime);
+            UpdatePabodyState(deltaTime);
             mUnitShadow.Update(deltaTime);
         }
 
@@ -103,14 +110,72 @@ namespace AosHotfixRunTime
             Name = name;
         }
 
-        public virtual void Hurt(Unit attacker, int damage, ACT.ECombatResult result)
+        //更新恢复
+        private void UpdateRestore(float deltaTime)
         {
+            if (!Dead && 0 != mUnitAttr.Get(EPA.HPRestore))
+            {
+                
+            }
+
             if (Dead)
             {
                 return;
             }
 
+            mRestoreLeft += deltaTime;
+
+            if (mRestoreLeft < RestoreTime)
+            {
+                return;
+            }
+
+            mRestoreLeft = 0;
+
+            if (0 != mUnitAttr.Get(EPA.HPRestore) && mUnitAttr.Get(EPA.CurHP) < mUnitAttr.Get(EPA.MaxHP))
+            {
+                AddHp(mUnitAttr.Get(EPA.HPRestore));
+            }
+
+            if (0 != mUnitAttr.Get(EPA.DPRestore) && mUnitAttr.Get(EPA.CurDP) < mUnitAttr.Get(EPA.MaxDP))
+            {
+                AddDp(mUnitAttr.Get(EPA.DPRestore));
+            }
+        }
+
+        //更新霸体状态
+        private void UpdatePabodyState(float deltaTime)
+        {
+            if (ActStatus.ActionState != ActData.EActionState.Hit)
+            {
+                SetIsPabodyState(true);
+            }
+        }
+
+        //是否霸体
+        protected virtual void SetIsPabodyState(bool flag)
+        {
+            if (mIsPabodyState != flag)
+            {
+                mIsPabodyState = flag;
+            }
+        }
+
+        
+
+        public virtual void Hurt(Unit attacker, int damage, int dpDamage, ACT.ECombatResult result)
+        {
+            if (Dead)
+            {
+                return;
+            }
+            
             AddHp(-damage);
+
+            if (0 != dpDamage)
+            {
+                AddDp(-dpDamage);
+            }
         }
 
         public virtual void AddHp(int v)
@@ -133,7 +198,31 @@ namespace AosHotfixRunTime
             Game.EventMgr.FireNow(this, tmpEvent);
         }
 
-        public virtual void AddSoul(int v) { }
+        public virtual void AddDp(int v)
+        {
+            if (Dead)
+            {
+                return;
+            }
+
+            int tmpMaxDp = mUnitAttr.Get(EPA.MaxDP);
+            int tmpCurrDp = Mathf.Clamp(mUnitAttr.Get(EPA.CurDP) + v, 0, tmpMaxDp);
+            mUnitAttr.Set(EPA.CurDP, tmpCurrDp);
+
+            if (tmpCurrDp <= 0)
+            {
+                SetIsPabodyState(false);
+            }
+            else if (tmpCurrDp >= tmpMaxDp)
+            {
+                SetIsPabodyState(true);
+            }
+
+            var tmpEvent = ReferencePool.Fetch<UnitEvent.DpModify>();
+            tmpEvent.Data = this;
+            Game.EventMgr.FireNow(this, tmpEvent);
+        }
+
         public virtual void AddAbility(int v) { }
         public virtual bool UpLevel() { return false; }
 
@@ -148,6 +237,7 @@ namespace AosHotfixRunTime
         public override ACT.ECombatResult Combat(ACT.IActUnit target, ACT.ISkillItem skillItem)
         {
             int tmpDamage = 0;
+            int tmpDpDamage = 0;
             Unit tmpTarget = target as Unit;
             ACT.ECombatResult tmpResult = MathUtility.Combat(this, tmpTarget, out tmpDamage);
 
@@ -158,13 +248,16 @@ namespace AosHotfixRunTime
                     int tmpDamageCoff = (skillItem as SkillItem).SkillAttrBase.DamageCoff;
                     int tmpDamageBase = (skillItem as SkillItem).SkillAttrBase.DamageBase;
                     // 技能的影响。
-                    tmpDamage = tmpDamage * tmpDamageCoff / 100 + tmpDamageBase;
+                    tmpDamage = (int)(tmpDamage * tmpDamageCoff * 0.01f + tmpDamageBase);
+
+                    int tmpDpDamageCoff = (skillItem as SkillItem).SkillAttrBase.DpDamageCoff;
+                    tmpDpDamage = (int)(tmpTarget.GetAttr(EPA.DpAttack) * tmpDpDamageCoff * 0.01f);
                 }
 
                 // damage should not be 0.
                 tmpDamage = Mathf.Max(tmpDamage, 1);
 
-                tmpTarget.Hurt(this, tmpDamage, tmpResult);
+                tmpTarget.Hurt(this, tmpDamage, tmpDpDamage, tmpResult);
             }
 
             return tmpResult;

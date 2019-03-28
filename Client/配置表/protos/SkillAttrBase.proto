@@ -6,4 +6,5 @@ message SkillAttrBase [key=ID+Level,excel="SkillAttrBase.xlsx"]
 	int32 		CD                                [option = "冷却时间"];
 	int32 		DamageBase                        [option = "伤害基础值"];
 	int32 		DamageCoff                        [option = "伤害影响系数"];
+	int32 		DpDamageCoff                      [option = "护甲伤害影响系数"];
 }

@@ -10,6 +10,7 @@ message PlayerAttrBase [key=ID+Level,excel="PlayerAttrBase.xlsx"]
 	int32 		MaxDp                            [option = "最大防御值"];
 	int32 		DpRestore                        [option = "防御点恢复"];
 	int32 		Attack                           [option = "攻击"];
+	int32 		DpAttack                         [option = "护甲攻击"];
 	int32 		Defense                          [option = "防御"];
 	int32 		Speed                            [option = "移动速度"];
 }

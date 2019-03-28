@@ -141,8 +141,8 @@ namespace AosHotfixRunTime
             if (mInstanceID == 1)
             {
                 SpawnMonster(1004, 1, 0);
-                //SpawnMonster(1004, 1, 0);
-                //SpawnMonster(1004, 1, 0);
+                SpawnMonster(1004, 1, 0);
+                SpawnMonster(1004, 1, 0);
             }
             else if (mInstanceID == 2)
             {

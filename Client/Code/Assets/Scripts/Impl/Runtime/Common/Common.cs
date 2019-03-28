@@ -49,6 +49,7 @@ namespace AosHotfixRunTime
         Level,
         //------------------------------------------------
         Attack,
+        DpAttack,
         Defense,
         //------------------------------------------------
         Critical,

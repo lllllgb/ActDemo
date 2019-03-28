@@ -40,6 +40,7 @@ namespace AosHotfixRunTime
             mType2ValueDcit[EPA.MaxDP] = playerAttr.MaxDp;
             mType2ValueDcit[EPA.DPRestore] = playerAttr.DpRestore;
             mType2ValueDcit[EPA.Attack] = playerAttr.Attack;
+            mType2ValueDcit[EPA.DpAttack] = playerAttr.DpAttack;
             mType2ValueDcit[EPA.Defense] = playerAttr.Defense;
             mType2ValueDcit[EPA.MoveSpeed] = playerAttr.Speed;
         }
@@ -53,6 +54,7 @@ namespace AosHotfixRunTime
             mType2ValueDcit[EPA.MaxDP] = monsterAttr.MaxDp;
             mType2ValueDcit[EPA.DPRestore] = monsterAttr.DpRestore;
             mType2ValueDcit[EPA.Attack] = monsterAttr.Attack;
+            mType2ValueDcit[EPA.DpAttack] = monsterAttr.DpAttack;
             mType2ValueDcit[EPA.Defense] = monsterAttr.Defense;
             mType2ValueDcit[EPA.MoveSpeed] = monsterAttr.Speed;
         }

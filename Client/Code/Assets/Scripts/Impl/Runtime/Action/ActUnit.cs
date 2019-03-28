@@ -69,6 +69,7 @@ namespace ACT
         public EUnitState State { get { return mState; } }
         public CustomVariable GetVariable(int idx) { return mVariables[idx]; }
         public IActUnit Owner { get; set; }
+        public abstract bool IsPabodyState { get; }
 
         public float MoveZMultiple { get; set; } = 2;
 

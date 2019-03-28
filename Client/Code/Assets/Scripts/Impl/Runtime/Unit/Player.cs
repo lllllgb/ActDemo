@@ -32,11 +32,12 @@ namespace AosHotfixRunTime
             {
                 mUnitAttr.Init(tmpPlayerAttrBase);
             }
+
         }
 
-        public override void Hurt(Unit attacker, int damage, ACT.ECombatResult result)
+        public override void Hurt(Unit attacker, int damage,int dpDamage, ACT.ECombatResult result)
         {
-            base.Hurt(attacker, damage, result);
+            base.Hurt(attacker, damage, dpDamage, result);
 
             GetComponent<HudPopupComponent>().Popup(EHudPopupType.Damage, damage);
         }
