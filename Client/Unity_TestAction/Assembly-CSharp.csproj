@@ -236,6 +236,7 @@
      <Compile Include="Assets\Scripts\Impl\Runtime\Controller\UnitController.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Event\Controller\PlayerCtrlEvent.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Event\Controller\UnitCtrlEvent.cs" />
+     <Compile Include="Assets\Scripts\Impl\Runtime\Event\Misc\CameraActionEvent.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Event\Unit\UnitEvent.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Event\Window\InstanceWndEvent.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Event\Window\SkillWndEvent.cs" />
@@ -258,6 +259,7 @@
      <Compile Include="Assets\Scripts\Impl\Runtime\Misc\UIGridTool.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Misc\UISimpleToggle.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Misc\UITypewriter.cs" />
+     <Compile Include="Assets\Scripts\Impl\Runtime\Misc\UnitShadow.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Module\ActionManager.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\PoolObjects\EffectObject.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\PoolObjects\HudInfo\HudInfoBase.cs" />

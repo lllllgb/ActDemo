@@ -37843,11 +37843,11 @@
               <Desc>¶¯×÷</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="idle">
+                <AnimSlot Animation="idle" End="21">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>5000</AnimTime>
+              <AnimTime>2000</AnimTime>
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="skill2" CheckInput1="true" InputKey1="1" CheckInput2="true" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
@@ -38072,6 +38072,8 @@
               </AttackDefs>
               <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
+              <NomalDiffTimeProp>90</NomalDiffTimeProp>
+              <HardDiffTimeProp>70</HardDiffTimeProp>
             </Action>
             <Action>
               <ID>skill2</ID>
@@ -38177,6 +38179,8 @@
               </AttackDefs>
               <CanMove>true</CanMove>
               <CanHurt>true</CanHurt>
+              <NomalDiffTimeProp>90</NomalDiffTimeProp>
+              <HardDiffTimeProp>70</HardDiffTimeProp>
             </Action>
           </ActionList>
           <Race>10001</Race>
@@ -38716,6 +38720,8 @@
                 </AttackDef>
               </AttackDefs>
               <CanHurt>true</CanHurt>
+              <NomalDiffTimeProp>90</NomalDiffTimeProp>
+              <HardDiffTimeProp>70</HardDiffTimeProp>
             </Action>
             <Action>
               <ID>skill2</ID>
@@ -38821,6 +38827,8 @@
               </AttackDefs>
               <CanMove>true</CanMove>
               <CanHurt>true</CanHurt>
+              <NomalDiffTimeProp>90</NomalDiffTimeProp>
+              <HardDiffTimeProp>70</HardDiffTimeProp>
             </Action>
           </ActionList>
           <Race>10001</Race>
@@ -39164,7 +39172,12 @@
                 <Event>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="380" />
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="300" />
+                </Event>
+                <Event>
+                  <EventType>GoToTargets</EventType>
+                  <EventTypeInt>35</EventTypeInt>
+                  <EventDetailData xsi:type="EventGoToTargets" OffsetX="200" Random="true" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -40350,8 +40363,8 @@
                     <AIList Distance="400">
                       <AISlots>
                         <AISlot SkillID="1" SwitchActionID="skill1" />
-                        <AISlot SwitchActionID="skill3" />
                         <AISlot SwitchActionID="skill2" />
+                        <AISlot SwitchActionID="skill3" />
                       </AISlots>
                     </AIList>
                   </AILists>
