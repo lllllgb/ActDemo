@@ -14,7 +14,7 @@ namespace AosHotfixRunTime
 
         public override int CurHp { get { return GetAttr(EPA.CurHP); } }
         public override int HpMax { get { return GetAttr(EPA.MaxHP); } }
-        public override int Speed { get { return 300; } }
+        public override int Speed { get { return GetAttr(EPA.MoveSpeed); } }
         public override bool CanHurt { get { return true; } }
         
         public EUnitType UnitType { get; private set; }
