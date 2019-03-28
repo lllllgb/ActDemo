@@ -15,6 +15,22 @@ namespace AosHotfixRunTime
             Game.ResourcesMgr.LoadBundleByType(EABType.Scene, "TestAction");
             SceneManager.LoadScene("TestAction");
 
+            GameObject tmpSceneMaskGo = GameObject.Find("SceneMask");
+
+            if (null != tmpSceneMaskGo)
+            {
+                for (int i = 0, max = tmpSceneMaskGo.transform.childCount; i < max; ++i)
+                {
+                    SpriteRenderer tmpSprRender = tmpSceneMaskGo.transform.GetChild(i).GetComponent<SpriteRenderer>();
+
+                    if (null != tmpSprRender)
+                    {
+                        mSceneMaskSprs.Add(tmpSprRender);
+                    }
+                }
+            }
+
+            Game.EventMgr.Subscribe(CameraActionEvent.ModifySceneMaskColor.EventID, OnEventModifySceneMask);
             Game.WindowsMgr.ShowWindow<TestActionWnd>();
         }
 
@@ -88,6 +104,22 @@ namespace AosHotfixRunTime
             if (null != mTestPlayer)
             {
                 mTestPlayer.MoveZMultiple = speed;
+            }
+        }
+
+        List<SpriteRenderer> mSceneMaskSprs = new List<SpriteRenderer>();
+        private void OnEventModifySceneMask(object sender, GameEventArgs arg)
+        {
+            var tmpEventArg = arg as CameraActionEvent.ModifySceneMaskColor;
+
+            if (null == tmpEventArg)
+            {
+                return;
+            }
+
+            for (int i = 0, max = mSceneMaskSprs.Count; i < max; ++i)
+            {
+                mSceneMaskSprs[i].color = tmpEventArg.Data;
             }
         }
     }

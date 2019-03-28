@@ -16,7 +16,7 @@ namespace AosHotfixRunTime
         public LocalPlayer() : base()
         {
             CameraMgr tmpCameraMgr = CameraMgr.Instance;
-            mCameraActionMgr.Init(tmpCameraMgr.MainCamera, tmpCameraMgr.CloseupGo, tmpCameraMgr.ShakeGo, tmpCameraMgr.MainCameraMaskSpr);
+            mCameraActionMgr.Init(tmpCameraMgr.MainCamera, tmpCameraMgr.CloseupGo, tmpCameraMgr.ShakeGo);
         }
 
         public void Init(int unitID, int level)

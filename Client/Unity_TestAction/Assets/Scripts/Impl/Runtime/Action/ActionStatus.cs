@@ -43,6 +43,9 @@ namespace ACT
         IActionListener mListener = null;
         ActEffectMgr mActionEffectMgr = new ActEffectMgr();
         ISkillInput mQueuedSkillInput = null;
+        bool mIsGotoTarget;
+        Vector3 mGotoTargetPos;
+        bool mIsReachTargetPos;
 
         GameObject mListTargetFrame;
         public static bool ShowListTarFrame = false;
@@ -129,6 +132,7 @@ namespace ACT
 
         void Reset()
         {
+            mIsGotoTarget = false;
             mEventFlag = 0;
             mHitDefIndex = 0;
             mActionTime = 0;
@@ -226,7 +230,6 @@ namespace ACT
                 return;
 
             //mActionChanged = false;
-            // Œì²âŽŠÓÚÓ²Ö±×ŽÌ¬¡£
             if (ProcessStraighting(ref deltaTime))
                 return;
 
@@ -318,24 +321,20 @@ namespace ACT
 
         bool ProcessExtraChangeAction(int deltaTime)
         {
-            if (mActiveAction.AirStatus == (int)ActData.EAirStatus.Normal)
+            if (mIsGotoTarget && mIsReachTargetPos)
             {
-                return false;
+                ChangeAction(ActData.CommonAction.Idle, 0);
+                return true;
             }
 
-            if (!mOwner.OnGround)
+            if (mActiveAction.AirStatus == (int)ActData.EAirStatus.Diaup &&
+                mOwner.OnGround && !string.IsNullOrEmpty(mActionGroup.Diaup2FloorAction))
             {
-                return false;
+                ChangeAction(mActionGroup.Diaup2FloorAction, 0);
+                return true;
             }
 
-            if (string.IsNullOrEmpty(mActionGroup.Diaup2FloorAction))
-            {
-                Logger.LogError($"未配置击飞落地动作 {mOwner.ActionID}");
-                return false;
-            }
-
-            ChangeAction(mActionGroup.Diaup2FloorAction, 0);
-            return true;
+            return false;
         }
 
         bool CheckTime(int deltaTime, int checkRatio, ref int checkTime)
@@ -378,6 +377,29 @@ namespace ACT
             float x = mMoveRelDistance.x, z = mMoveRelDistance.z;
             if (x != 0 || z != 0)
                 MathUtility.Rotate(ref x, ref z, mOwner.Orientation);
+
+
+            if (mIsGotoTarget)
+            {
+                Vector3 tmpOffset = mGotoTargetPos - mOwner.Position;
+
+                if (Mathf.Abs(x) > Mathf.Abs(tmpOffset.x))
+                {
+                    x = tmpOffset.x;
+                    mVelocity.z = 0f;
+                }
+
+                if (Mathf.Abs(z) > Mathf.Abs(tmpOffset.z))
+                {
+                    z = tmpOffset.z;
+                    mVelocity.x = 0f;
+                }
+
+                if (Mathf.Abs(mVelocity.x) < 0.01f && Mathf.Abs(mVelocity.z) < 0.01f)
+                {
+                    mIsReachTargetPos = true;
+                }
+            }
 
             mOwner.Move(new Vector3(x, mMoveRelDistance.y, z));
 
@@ -573,6 +595,15 @@ namespace ACT
 
         void SetDirection(ActData.Event actionEvent, int angle, bool local)
         {
+            if (local)
+            {
+                angle = angle > 0 ? 180 : -180;
+            }
+            else
+            {
+                angle = angle > 0 ? 90 : -90;
+            }
+
             float rad = Mathf.Deg2Rad * angle;
             mOwner.SetOrientation(local ? mOwner.Orientation + rad : rad);
         }
@@ -805,7 +836,7 @@ namespace ACT
 
             float x = ActionTarget.Position.x - mOwner.Position.x;
             float z = ActionTarget.Position.z - mOwner.Position.z;
-            float dir = Mathf.Atan2(x, z);
+            float dir = Mathf.Atan2(x, 0);
             mOwner.SetOrientation(dir);
 
             if (mListener != null)
@@ -817,23 +848,34 @@ namespace ACT
             if (ActionTarget == null || !ActionTarget.UGameObject || ActionTarget.Dead)
                 return;
 
-            int offsetX = data.Random ? Random.Range(0, data.OffsetX) : data.OffsetX;
-            int offsetY = data.Random ? Random.Range(0, data.OffsetY) : data.OffsetY;
-            int offsetZ = data.Random ? Random.Range(0, data.OffsetZ) : data.OffsetZ;
-            Vector3 offset = new Vector3(offsetX * 0.01f, offsetY * 0.01f, offsetZ * 0.01f);
-            if (offset != Vector3.zero)
+            int tmpOffsetX = data.Random ? Random.Range(0, data.OffsetX) : data.OffsetX;
+            int tmpOffsetZ = data.Random ? Random.Range(0, data.OffsetZ) : data.OffsetZ;
+            Vector3 tmpOffset = new Vector3(tmpOffsetX * 0.01f, 0, tmpOffsetZ * 0.01f);
+
+            if (tmpOffset != Vector3.zero)
             {
                 if (data.Local)
-                    offset = ActionTarget.UGameObject.transform.rotation * offset;
-                offset += ActionTarget.Radius * offset.normalized;
+                    tmpOffset = ActionTarget.UGameObject.transform.rotation * tmpOffset;
+
+                tmpOffset += ActionTarget.Radius * tmpOffset.normalized;
             }
             else
             {
-                offset = ActionTarget.Radius * (mOwner.Position - ActionTarget.Position).normalized;
+                tmpOffset = ActionTarget.Radius * (mOwner.Position - ActionTarget.Position).normalized;
             }
 
-            Vector3 targetPos = ActionTarget.Position + offset;
-            mOwner.Move(targetPos - mOwner.Position);
+            mGotoTargetPos = ActionTarget.Position + tmpOffset;
+            Vector3 tmpDirection = mGotoTargetPos - mOwner.Position;
+            float tmpMoveSpeed = mOwner.Speed * 0.01f;
+            mIsGotoTarget = true;
+            mIsReachTargetPos = false;
+
+            mVelocity.x = -Mathf.Sign(tmpDirection.x) * Mathf.Sign(tmpDirection.z) * tmpMoveSpeed;
+            mVelocity.z = tmpMoveSpeed;
+        }
+
+        void UpdateGoToTarget()
+        {
         }
 
         bool SenseTarget(ActData.ActionInterrupt interrupt)
