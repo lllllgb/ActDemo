@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2747129007
+CRC: 4066950734
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -1241,8 +1241,7 @@ AssetBundleManifest:
       Dependencies: {}
     Info_215:
       Name: assets/bundles/misc/hud_popup_damage.unity3d
-      Dependencies:
-        Dependency_0: assets/res/font/simkai_share.unity3d
+      Dependencies: {}
     Info_216:
       Name: assets/res/font/simkai_share.unity3d
       Dependencies: {}
