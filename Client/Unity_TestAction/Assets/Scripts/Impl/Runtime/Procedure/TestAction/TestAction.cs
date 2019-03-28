@@ -15,21 +15,8 @@ namespace AosHotfixRunTime
             Game.ResourcesMgr.LoadBundleByType(EABType.Scene, "TestAction");
             SceneManager.LoadScene("TestAction");
 
-            GameObject tmpSceneMaskGo = GameObject.Find("SceneMask");
-
-            if (null != tmpSceneMaskGo)
-            {
-                for (int i = 0, max = tmpSceneMaskGo.transform.childCount; i < max; ++i)
-                {
-                    SpriteRenderer tmpSprRender = tmpSceneMaskGo.transform.GetChild(i).GetComponent<SpriteRenderer>();
-
-                    if (null != tmpSprRender)
-                    {
-                        mSceneMaskSprs.Add(tmpSprRender);
-                    }
-                }
-            }
-
+            Game.TimerMgr.AddTimer(0.1f, OnLoadSceneDelay, null);
+            
             Game.EventMgr.Subscribe(CameraActionEvent.ModifySceneMaskColor.EventID, OnEventModifySceneMask);
             Game.WindowsMgr.ShowWindow<TestActionWnd>();
         }
@@ -47,6 +34,23 @@ namespace AosHotfixRunTime
             }
         }
 
+        private void OnLoadSceneDelay(object arg)
+        {
+            GameObject tmpSceneMaskGo = GameObject.Find("SceneMask");
+
+            if (null != tmpSceneMaskGo)
+            {
+                for (int i = 0, max = tmpSceneMaskGo.transform.childCount; i < max; ++i)
+                {
+                    SpriteRenderer tmpSprRender = tmpSceneMaskGo.transform.GetChild(i).GetComponent<SpriteRenderer>();
+
+                    if (null != tmpSprRender)
+                    {
+                        mSceneMaskSprs.Add(tmpSprRender);
+                    }
+                }
+            }
+        }
 
         public void AddLocalPlayer(int unitID)
         {
