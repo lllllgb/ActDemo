@@ -52,6 +52,9 @@ namespace ACT
 
         int AIDiff { get; }
 
+        //是否霸体状态
+        bool IsPabodyState { get; }
+
 
         void Update(float deltaTime);
 

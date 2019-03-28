@@ -34,6 +34,8 @@ namespace AosHotfixRunTime
             {
                 mUnitAttr.Init(tmpMonsterAttrBase);
             }
+
+            base.UpdateAttributes();
         }
 
         public override void Hurt(Unit attacker, int damage, ACT.ECombatResult result)

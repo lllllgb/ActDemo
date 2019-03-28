@@ -16,7 +16,8 @@ namespace AosHotfixRunTime
         public override int HpMax { get { return GetAttr(EPA.MaxHP); } }
         public override int Speed { get { return GetAttr(EPA.MoveSpeed); } }
         public override bool CanHurt { get { return true; } }
-        
+        public override bool IsPabodyState { get { return mIsPabodyState; } }
+
         public EUnitType UnitType { get; private set; }
         public string Name { get; private set; }
         public Transform TopNode { get; private set; }
@@ -26,7 +27,11 @@ namespace AosHotfixRunTime
         protected UnitAttr mUnitAttr = new UnitAttr();
         //阴影
         protected UnitShadow mUnitShadow = new UnitShadow();
-
+        //恢复时间
+        const float RestoreTime = 1f;
+        float mRestoreLeft = 0.0f;
+        //霸体状态
+        bool mIsPabodyState;
 
         public Unit()
         {
@@ -79,6 +84,7 @@ namespace AosHotfixRunTime
             base.Update(deltaTime);
 
             UpdateComponents(deltaTime);
+            UpdateRestore(deltaTime);
             mUnitShadow.Update(deltaTime);
         }
 
@@ -95,12 +101,57 @@ namespace AosHotfixRunTime
         }
 
         //更新属性
-        public abstract void UpdateAttributes();
+        public virtual void UpdateAttributes()
+        {
+            if (mUnitAttr.Get(EPA.CurDP) >= mUnitAttr.Get(EPA.MaxDP))
+            {
+                SetIsPabodyState(true);
+            }
+        }
 
         //名字
         public void SetName(string name)
         {
             Name = name;
+        }
+
+        //更新恢复
+        private void UpdateRestore(float deltaTime)
+        {
+            if (!Dead && 0 != mUnitAttr.Get(EPA.HPRestore))
+            {
+                
+            }
+
+            if (Dead)
+            {
+                return;
+            }
+
+            mRestoreLeft += deltaTime;
+
+            if (mRestoreLeft < RestoreTime)
+            {
+                return;
+            }
+
+            mRestoreLeft = 0;
+
+            if (0 != mUnitAttr.Get(EPA.HPRestore) && mUnitAttr.Get(EPA.CurHP) < mUnitAttr.Get(EPA.MaxHP))
+            {
+                AddHp(mUnitAttr.Get(EPA.HPRestore));
+            }
+
+            if (0 != mUnitAttr.Get(EPA.DPRestore) && mUnitAttr.Get(EPA.CurDP) < mUnitAttr.Get(EPA.MaxDP))
+            {
+                AddDp(mUnitAttr.Get(EPA.DPRestore));
+            }
+        }
+
+        //是否霸体
+        protected virtual void SetIsPabodyState(bool flag)
+        {
+            mIsPabodyState = flag;
         }
 
         public virtual void Hurt(Unit attacker, int damage, ACT.ECombatResult result)
@@ -109,8 +160,9 @@ namespace AosHotfixRunTime
             {
                 return;
             }
-
+            
             AddHp(-damage);
+            AddDp(-damage);
         }
 
         public virtual void AddHp(int v)
@@ -133,7 +185,31 @@ namespace AosHotfixRunTime
             Game.EventMgr.FireNow(this, tmpEvent);
         }
 
-        public virtual void AddSoul(int v) { }
+        public virtual void AddDp(int v)
+        {
+            if (Dead)
+            {
+                return;
+            }
+
+            int tmpMaxDp = mUnitAttr.Get(EPA.MaxDP);
+            int tmpCurrDp = Mathf.Clamp(mUnitAttr.Get(EPA.CurDP) + v, 0, tmpMaxDp);
+            mUnitAttr.Set(EPA.CurDP, tmpCurrDp);
+
+            if (tmpCurrDp <= 0)
+            {
+                SetIsPabodyState(false);
+            }
+            else if (tmpCurrDp >= tmpMaxDp)
+            {
+                SetIsPabodyState(true);
+            }
+
+            var tmpEvent = ReferencePool.Fetch<UnitEvent.DpModify>();
+            tmpEvent.Data = this;
+            Game.EventMgr.FireNow(this, tmpEvent);
+        }
+
         public virtual void AddAbility(int v) { }
         public virtual bool UpLevel() { return false; }
 

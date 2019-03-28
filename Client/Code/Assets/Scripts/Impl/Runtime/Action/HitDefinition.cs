@@ -542,7 +542,8 @@ namespace ACT
 
             //受击动作
             ActData.HeightStatusFlag targetHeightStatus = targetActionStatus.HeightState;
-            if (targetActionStatus.ActiveAction.SuperArmor)
+
+            if (targetActionStatus.ActiveAction.SuperArmor || target.IsPabodyState)
             {
                 // 设置受击者的霸体硬直时间?
                 tmpHitData.HitAction = byte.MaxValue;
