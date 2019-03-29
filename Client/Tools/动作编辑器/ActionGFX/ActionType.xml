@@ -38548,8 +38548,8 @@
                     </AIList>
                     <AIList Distance="300">
                       <AISlots>
-                        <AISlot SkillID="1" SwitchActionID="skill1" />
-                        <AISlot SkillID="1" SwitchActionID="skill2" />
+                        <AISlot SkillID="2001" SwitchActionID="skill1" />
+                        <AISlot SkillID="2001" SwitchActionID="skill2" />
                       </AISlots>
                     </AIList>
                   </AILists>
@@ -38594,14 +38594,14 @@
                     </AIList>
                     <AIList Distance="800">
                       <AISlots>
-                        <AISlot SwitchActionID="skill3" />
+                        <AISlot SkillID="2001" SwitchActionID="skill3" />
                       </AISlots>
                     </AIList>
                     <AIList Distance="400">
                       <AISlots>
-                        <AISlot SwitchActionID="skill1" />
-                        <AISlot Ratio="20" SwitchActionID="skill2" />
-                        <AISlot Ratio="20" SwitchActionID="skill3" />
+                        <AISlot RefreshTargetList="2001" SwitchActionID="skill1" />
+                        <AISlot Ratio="20" SkillID="2001" SwitchActionID="skill2" />
+                        <AISlot Ratio="20" SkillID="2001" SwitchActionID="skill3" />
                       </AISlots>
                     </AIList>
                   </AILists>
@@ -38627,21 +38627,21 @@
                     </AIList>
                     <AIList Distance="900">
                       <AISlots>
-                        <AISlot Ratio="20" SwitchActionID="skill4" />
+                        <AISlot Ratio="20" SkillID="2001" SwitchActionID="skill4" />
                       </AISlots>
                     </AIList>
                     <AIList Distance="700">
                       <AISlots>
-                        <AISlot SwitchActionID="skill2" />
-                        <AISlot Ratio="20" SwitchActionID="skill3" />
+                        <AISlot SkillID="2001" SwitchActionID="skill2" />
+                        <AISlot Ratio="20" SkillID="2001" SwitchActionID="skill3" />
                       </AISlots>
                     </AIList>
                     <AIList Distance="400">
                       <AISlots>
-                        <AISlot SwitchActionID="skill1" />
-                        <AISlot SwitchActionID="skill2" />
-                        <AISlot Ratio="20" SwitchActionID="skill3" />
-                        <AISlot Ratio="20" SwitchActionID="skill4" />
+                        <AISlot SkillID="2001" SwitchActionID="skill1" />
+                        <AISlot SkillID="2001" SwitchActionID="skill2" />
+                        <AISlot Ratio="20" SkillID="2001" SwitchActionID="skill3" />
+                        <AISlot Ratio="20" SkillID="2001" SwitchActionID="skill4" />
                       </AISlots>
                     </AIList>
                   </AILists>
@@ -40085,8 +40085,8 @@
                     </AIList>
                     <AIList Distance="300">
                       <AISlots>
-                        <AISlot SkillID="1" SwitchActionID="skill1" />
-                        <AISlot SkillID="1" SwitchActionID="skill2" />
+                        <AISlot SkillID="2001" SwitchActionID="skill1" />
+                        <AISlot SkillID="2001" SwitchActionID="skill2" />
                       </AISlots>
                     </AIList>
                   </AILists>
@@ -40132,14 +40132,14 @@
                     <AIList Distance="800">
                       <AISlots>
                         <AISlot SwitchActionID="run" />
-                        <AISlot SwitchActionID="skill3" />
+                        <AISlot SkillID="2001" SwitchActionID="skill3" />
                       </AISlots>
                     </AIList>
                     <AIList Distance="400">
                       <AISlots>
-                        <AISlot SwitchActionID="skill1" />
-                        <AISlot SwitchActionID="skill2" />
-                        <AISlot Ratio="20" SwitchActionID="skill3" />
+                        <AISlot SkillID="2001" SwitchActionID="skill1" />
+                        <AISlot SkillID="2001" SwitchActionID="skill2" />
+                        <AISlot Ratio="20" SkillID="2001" SwitchActionID="skill3" />
                       </AISlots>
                     </AIList>
                   </AILists>
@@ -40166,16 +40166,16 @@
                     <AIList Distance="800">
                       <AISlots>
                         <AISlot SwitchActionID="run" />
-                        <AISlot Ratio="20" SwitchActionID="skill4" />
-                        <AISlot SwitchActionID="slill3" />
+                        <AISlot Ratio="20" SkillID="2001" SwitchActionID="skill4" />
+                        <AISlot SkillID="2001" SwitchActionID="slill3" />
                       </AISlots>
                     </AIList>
                     <AIList Distance="400">
                       <AISlots>
-                        <AISlot SwitchActionID="skill1" />
-                        <AISlot SwitchActionID="skill2" />
-                        <AISlot Ratio="20" SwitchActionID="skill3" />
-                        <AISlot Ratio="30" SwitchActionID="skill4" />
+                        <AISlot SkillID="2001" SwitchActionID="skill1" />
+                        <AISlot SkillID="2001" SwitchActionID="skill2" />
+                        <AISlot Ratio="20" SkillID="2001" SwitchActionID="skill3" />
+                        <AISlot Ratio="30" SkillID="2001" SwitchActionID="skill4" />
                       </AISlots>
                     </AIList>
                   </AILists>
@@ -41684,14 +41684,14 @@
                     </AIList>
                     <AIList Distance="600">
                       <AISlots>
-                        <AISlot SwitchActionID="skill2" />
+                        <AISlot SkillID="2001" SwitchActionID="skill2" />
                       </AISlots>
                     </AIList>
                     <AIList Distance="400">
                       <AISlots>
-                        <AISlot SkillID="1" SwitchActionID="skill1" />
-                        <AISlot SwitchActionID="skill2" />
-                        <AISlot SwitchActionID="skill3" />
+                        <AISlot SkillID="2001" SwitchActionID="skill1" />
+                        <AISlot SkillID="2001" SwitchActionID="skill2" />
+                        <AISlot SkillID="2001" SwitchActionID="skill3" />
                       </AISlots>
                     </AIList>
                   </AILists>
@@ -41720,18 +41720,18 @@
                     </AIList>
                     <AIList Distance="800">
                       <AISlots>
-                        <AISlot SwitchActionID="skill2" />
-                        <AISlot SwitchActionID="skill3" />
-                        <AISlot SwitchActionID="skill4" />
+                        <AISlot SkillID="2001" SwitchActionID="skill2" />
+                        <AISlot SkillID="2001" SwitchActionID="skill3" />
+                        <AISlot SkillID="2001" SwitchActionID="skill4" />
                       </AISlots>
                     </AIList>
                     <AIList Distance="400">
                       <AISlots>
                         <AISlot SwitchActionID="run" />
-                        <AISlot SwitchActionID="skill1" />
-                        <AISlot SwitchActionID="skill2" />
-                        <AISlot SwitchActionID="skill3" />
-                        <AISlot SwitchActionID="skill4" />
+                        <AISlot SkillID="2001" SwitchActionID="skill1" />
+                        <AISlot SkillID="2001" SwitchActionID="skill2" />
+                        <AISlot SkillID="2001" SwitchActionID="skill3" />
+                        <AISlot SkillID="2001" SwitchActionID="skill4" />
                       </AISlots>
                     </AIList>
                   </AILists>
@@ -41758,19 +41758,19 @@
                     </AIList>
                     <AIList Distance="800">
                       <AISlots>
-                        <AISlot SwitchActionID="skill3" />
-                        <AISlot SwitchActionID="skill4" />
-                        <AISlot Ratio="90" SwitchActionID="skill5" />
+                        <AISlot SkillID="2001" SwitchActionID="skill3" />
+                        <AISlot SkillID="2001" SwitchActionID="skill4" />
+                        <AISlot Ratio="90" SkillID="2001" SwitchActionID="skill5" />
                       </AISlots>
                     </AIList>
                     <AIList Distance="400">
                       <AISlots>
                         <AISlot SwitchActionID="run" />
-                        <AISlot SwitchActionID="skill1" />
-                        <AISlot SwitchActionID="skill2" />
-                        <AISlot SwitchActionID="skill3" />
-                        <AISlot SwitchActionID="skill4" />
-                        <AISlot Ratio="90" SwitchActionID="skill5" />
+                        <AISlot SkillID="2001" SwitchActionID="skill1" />
+                        <AISlot SkillID="2001" SwitchActionID="skill2" />
+                        <AISlot SkillID="2001" SwitchActionID="skill3" />
+                        <AISlot SkillID="2001" SwitchActionID="skill4" />
+                        <AISlot Ratio="90" SkillID="2001" SwitchActionID="skill5" />
                       </AISlots>
                     </AIList>
                   </AILists>
