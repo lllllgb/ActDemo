@@ -560,7 +560,7 @@ namespace ACT
             }
 
             // 处理buff的东东
-            if (targetActionStatus.SkillItem != null && targetActionStatus.SkillItem.SkillInput != null)
+            if (targetActionStatus.SkillItem != null)
                 targetActionStatus.SkillItem.SkillInput.OnHit(self);
 
             // 设置攻击者的冲击速度及冲击时间。
