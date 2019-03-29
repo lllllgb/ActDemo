@@ -1,0 +1,16 @@
+﻿
+message InstanceTriggerBase [key=ID,excel="InstanceTriggerBase.xlsx"]
+{
+	message MonsterInfoDef [separator = '-']
+	{
+		int32 data;
+	}
+	
+	message MultiMonsterDef [separator = ',']
+	{
+		MonsterInfoDef data;
+	}
+	
+	int32 				ID                        [option = "id"];
+	MultiMonsterDef 	MonsterInfo               [option = "怪物信息"];
+}
