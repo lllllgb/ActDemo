@@ -17,6 +17,11 @@ namespace ACT
             EATT_Max,
         };
 
+        public interface IPlaySkillListener
+        {
+            void PlayAISkill(int skillID);
+        }
+
         ActionStatus mActionStatus;
         ActData.AIGroup mAIGroup;
         ActData.AIStatus mActiveStatus;
@@ -45,9 +50,13 @@ namespace ACT
         }
         List<ActionInfo> mActionCDMap = new List<ActionInfo>();
 
-        public AIListener(IActUnit owner)
+        IPlaySkillListener mPlaySkillListener;
+        int mSkillIDByCurrAction;
+
+        public AIListener(IActUnit owner, IPlaySkillListener playSkillListener)
         {
             mOwner = owner;
+            mPlaySkillListener = playSkillListener;
             mActionStatus = mOwner.ActStatus;
 
             changeAIDiff(owner.AIDiff);
@@ -370,6 +379,12 @@ namespace ACT
                     }
                 }
             }
+
+            if (null != mPlaySkillListener)
+            {
+                mPlaySkillListener.PlayAISkill(mSkillIDByCurrAction);
+            }
+
             mActionStatus.ChangeAction(id, 0);
         }
 
@@ -463,6 +478,8 @@ namespace ACT
                     // 刷新目标列表。
                     if (targetSlot.RefreshTargetList != 0)
                         refreshTargetList();
+
+                    mSkillIDByCurrAction = targetSlot.SkillID;
 
                     mActionChanging = true;
                     play(mTarget, targetSlot.ActionCache);

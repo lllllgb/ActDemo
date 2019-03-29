@@ -13,11 +13,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Scene
+  - HudInfo
+  - HudPopup
+  - Unit
+  - Trigger
   - 
   - 
   - 

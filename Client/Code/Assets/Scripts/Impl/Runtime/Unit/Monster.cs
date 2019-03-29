@@ -3,15 +3,16 @@ using UnityEngine;
 
 namespace AosHotfixRunTime
 {
-    public class Monster : Unit
+    public class Monster : Unit, ACT.AIListener.IPlaySkillListener
     {
         bool mAIEnable = false;
+        List<SkillItem> mSkillItems = new List<SkillItem>();
 
         public Monster() : base()
         {
         }
 
-        public void Init(int unitID, int level, 
+        public void Init(int unitID, int level,
             EUnitType unitType = EUnitType.EUT_Monster, ACT.EUnitCamp unitCamp = ACT.EUnitCamp.EUC_ENEMY,
             bool aiEnable = false, int aiDiff = 0)
         {
@@ -22,7 +23,7 @@ namespace AosHotfixRunTime
 
             if (mAIEnable)
             {
-                ActStatus.Bind(new ACT.AIListener(this));
+                ActStatus.Bind(new ACT.AIListener(this, this));
             }
         }
 
@@ -34,7 +35,6 @@ namespace AosHotfixRunTime
             {
                 mUnitAttr.Init(tmpMonsterAttrBase);
             }
-
         }
 
         public override void Hurt(Unit attacker, int damage, int dpDamage, ACT.ECombatResult result)
@@ -43,6 +43,32 @@ namespace AosHotfixRunTime
 
             GetComponent<HudPopupComponent>().Popup(EHudPopupType.Damage, damage);
             Game.ControllerMgr.Get<UnitController>().SetHitedMonster(this);
+        }
+
+        public void PlayAISkill(int skillID)
+        {
+            SkillItem tmpSkillItem = null;
+
+            for (int i = 0, max = mSkillItems.Count; i < max; ++i)
+            {
+                if (mSkillItems[i].ID == skillID)
+                {
+                    tmpSkillItem = mSkillItems[i];
+                    break;
+                }
+            }
+
+            if (null == tmpSkillItem && 0 != skillID)
+            {
+                if (SkillBaseManager.instance.Find(skillID) != null)
+                {
+                    tmpSkillItem = new SkillItem();
+                    tmpSkillItem.Init(skillID, 1);
+                    mSkillItems.Add(tmpSkillItem);
+                }
+            }
+
+            ActStatus.SkillItem = tmpSkillItem;
         }
     }
 }
