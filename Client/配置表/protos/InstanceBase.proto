@@ -1,0 +1,31 @@
+﻿
+message InstanceBase [key=ID,excel="InstanceBase.xlsx"]
+{
+	message TriggerName2IDDef [separator = '-']
+	{
+		string TriggerName;
+		int32 TriggerID;
+	}
+	
+	message MultiMonsterTriggerDef [separator = ',']
+	{
+		TriggerName2IDDef data;
+	}
+	
+	message Trigger2InstanceDef [separator = '-']
+	{
+		string TriggerName;
+		string InstanceName;
+	}
+	
+	message MultiTransferTriggerDef [separator = ',']
+	{
+		Trigger2InstanceDef data;
+	}
+	
+	int32 				ID                        [option = "id"];
+	string 				Name                      [option = "名称"];
+	string 				Desc                      [option = "描述"];
+	MultiMonsterTriggerDef 		MonsterTriggerInfo               [option = "怪物触发器"];
+	MultiTransferTriggerDef 	TransferTriggerInfo              [option = "传送触发器"];
+}
