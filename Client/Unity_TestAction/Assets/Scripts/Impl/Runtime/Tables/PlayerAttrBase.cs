@@ -17,6 +17,7 @@ public partial class PlayerAttrBase : JW_Table.Binary, JW_Table.IKey
 	private int m_MaxDp;
 	private int m_DpRestore;
 	private int m_Attack;
+	private int m_DpAttack;
 	private int m_Defense;
 	private int m_Speed;
 
@@ -74,6 +75,12 @@ public partial class PlayerAttrBase : JW_Table.Binary, JW_Table.IKey
 		set { m_Attack = value; }
 	}
 
+	public int DpAttack
+	{
+		get { return m_DpAttack; }
+		set { m_DpAttack = value; }
+	}
+
 	public int Defense
 	{
 		get { return m_Defense; }
@@ -102,6 +109,7 @@ public partial class PlayerAttrBase : JW_Table.Binary, JW_Table.IKey
 		m_MaxDp = reader.ReadInt32();
 		m_DpRestore = reader.ReadInt32();
 		m_Attack = reader.ReadInt32();
+		m_DpAttack = reader.ReadInt32();
 		m_Defense = reader.ReadInt32();
 		m_Speed = reader.ReadInt32();
 	}
@@ -110,7 +118,7 @@ public partial class PlayerAttrBase : JW_Table.Binary, JW_Table.IKey
 //PlayerAttrBase.xlsx
 public sealed class PlayerAttrBaseManager : JW_Table.TableManager<PlayerAttrBase>
 {
-	public const uint VERSION = 3327966586;
+	public const uint VERSION = 3850612342;
 
 	private PlayerAttrBaseManager()
 	{

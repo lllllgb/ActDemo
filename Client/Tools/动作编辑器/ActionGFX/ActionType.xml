@@ -34106,6 +34106,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>30</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
@@ -34233,6 +34234,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>30</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
@@ -34368,6 +34370,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>20</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
@@ -34507,6 +34510,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>45</TriggerTime>
                   <Duration>500</Duration>
                   <MovingSpeed />
@@ -34920,6 +34924,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>10</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
@@ -34973,6 +34978,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>40</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
@@ -35634,7 +35640,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action SuperArmor="true">
               <ID>skill_1_g</ID>
               <Name>技能1</Name>
               <Desc>升龙击</Desc>
@@ -36018,6 +36024,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <Duration>500</Duration>
                   <MovingSpeed />
                   <Path>
@@ -36183,6 +36190,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <Duration>500</Duration>
                   <MovingSpeed />
                   <Path>
@@ -36513,7 +36521,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>skill3_y</ID>
               <Name>技能3</Name>
               <Desc>剑气护体</Desc>
@@ -36552,7 +36560,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action SuperArmor="true">
               <ID>skill4_g</ID>
               <Name>技能4</Name>
               <Desc>无锋重剑</Desc>
@@ -36647,7 +36655,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action SuperArmor="true">
               <ID>skill4_y</ID>
               <Name>技能4</Name>
               <Desc>无锋重剑</Desc>
@@ -37173,7 +37181,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action SuperArmor="true">
               <ID>skill7_y</ID>
               <Name>技能7</Name>
               <Desc>无锋重剑三连</Desc>
@@ -37206,7 +37214,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action SuperArmor="true">
               <ID>skill8_g</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -37249,6 +37257,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>20</TriggerTime>
                   <Duration>600</Duration>
                   <MovingSpeed />
@@ -37302,7 +37311,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action SuperArmor="true">
               <ID>skill8_q</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -37322,7 +37331,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action SuperArmor="true">
               <ID>skill8_y</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -37387,6 +37396,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>7</TriggerTime>
                   <Duration>3900</Duration>
                   <MovingSpeed />
@@ -37438,7 +37448,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action ResetVelocity="false">
+            <Action>
               <ID>skill9_q</ID>
               <Name>技能8</Name>
               <Desc>凌空剑阵</Desc>
@@ -38004,12 +38014,12 @@
                   <TriggerTime>40</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill1" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill1" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
                   <EventTypeInt>24</EventTypeInt>
-                  <EventDetailData xsi:type="EventListTargets" Left="-15000" Right="15000" Back="-10000" Front="1500" FanRadius="1500" FanAngle="60" />
+                  <EventDetailData xsi:type="EventListTargets" Left="-15000" Right="15000" Back="-10000" Front="0" />
                 </Event>
                 <Event>
                   <EventType>FaceTargets</EventType>
@@ -38027,6 +38037,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>41</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
@@ -38095,7 +38106,7 @@
                   <TriggerTime>55</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill2" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill2" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -38130,6 +38141,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>56</TriggerTime>
                   <Duration>500</Duration>
                   <MovingSpeed />
@@ -38203,7 +38215,7 @@
                   <TriggerTime>85</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill2" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill2" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -38238,6 +38250,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>85</TriggerTime>
                   <Duration>500</Duration>
                   <MovingSpeed />
@@ -38311,7 +38324,7 @@
                   <TriggerTime>5</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill1" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill1" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -38345,6 +38358,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>5</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
@@ -38413,7 +38427,7 @@
                   <TriggerTime>40</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill1" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0002_fsw_skill1" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -38448,6 +38462,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>41</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
@@ -39036,7 +39051,7 @@
                   <TriggerTime>40</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_m0001_fsw_skill1" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_m0001_fsw_skill1" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -39059,6 +39074,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>41</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
@@ -39126,7 +39142,7 @@
                   <TriggerTime>55</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_m0001_fsw_skill2" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_m0001_fsw_skill2" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -39161,6 +39177,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>56</TriggerTime>
                   <Duration>500</Duration>
                   <MovingSpeed />
@@ -39694,7 +39711,7 @@
                   <TriggerTime>38</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill1" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill1" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -39717,6 +39734,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>38</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
@@ -39785,7 +39803,7 @@
                   <TriggerTime>50</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -39869,6 +39887,47 @@
                   <SelfEffectOffset />
                   <BaseGround>1</BaseGround>
                 </AttackDef>
+                <AttackDef>
+                  <ID />
+                  <Name />
+                  <EnableSkillBuffer>0</EnableSkillBuffer>
+                  <AlignmentTarget>0</AlignmentTarget>
+                  <OwnerActionChange>1</OwnerActionChange>
+                  <MovingSpeed />
+                  <Path />
+                  <FrameFinalFactor>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>1</Z>
+                  </FrameFinalFactor>
+                  <AttackType xsi:type="FrameCuboid" />
+                  <Offset />
+                  <AttackerLash />
+                  <AttackerTime>100</AttackerTime>
+                  <GroundHit>
+                    <AttackeeLash />
+                  </GroundHit>
+                  <LowAirHit>
+                    <AttackeeLash />
+                  </LowAirHit>
+                  <HighAirHit>
+                    <AttackeeLash />
+                  </HighAirHit>
+                  <AttackeeLash />
+                  <AttackeeTime>100</AttackeeTime>
+                  <HoldOffset />
+                  <HitedEffectOffset>
+                    <Y>100</Y>
+                  </HitedEffectOffset>
+                  <GroundHitedEffectOffset>
+                    <Y>30</Y>
+                  </GroundHitedEffectOffset>
+                  <LowAirHitedEffectOffset>
+                    <Y>100</Y>
+                  </LowAirHitedEffectOffset>
+                  <HighAirHitedEffectOffset />
+                  <SelfEffectOffset />
+                </AttackDef>
               </AttackDefs>
               <FaceTarget>true</FaceTarget>
               <CanMove>true</CanMove>
@@ -39893,7 +39952,7 @@
                   <TriggerTime>22</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill3" Duration="1800" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill3" StopMode="1" Duration="1800" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -39928,6 +39987,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>22</TriggerTime>
                   <Duration>500</Duration>
                   <MovingSpeed />
@@ -39981,6 +40041,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>25</TriggerTime>
                   <Duration>500</Duration>
                   <MovingSpeed />
@@ -40035,6 +40096,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>40</TriggerTime>
                   <Duration>1100</Duration>
                   <MovingSpeed />
@@ -40111,7 +40173,7 @@
                   <TriggerTime>90</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -40146,6 +40208,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>85</TriggerTime>
                   <Duration>600</Duration>
                   <MovingSpeed />
@@ -40219,7 +40282,7 @@
                   <TriggerTime>5</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -40253,6 +40316,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>2</TriggerTime>
                   <Duration>600</Duration>
                   <MovingSpeed />
@@ -40326,7 +40390,7 @@
                   <TriggerTime>32</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill3" Duration="1800" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill3" StopMode="1" Duration="1800" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -40361,6 +40425,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>32</TriggerTime>
                   <Duration>500</Duration>
                   <MovingSpeed />
@@ -40414,6 +40479,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>45</TriggerTime>
                   <Duration>500</Duration>
                   <MovingSpeed />
@@ -40543,7 +40609,7 @@
                   <TriggerTime>90</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" StopMode="1" Duration="500" />
                 </Event>
                 <Event>
                   <EventType>ListTargets</EventType>
@@ -40578,6 +40644,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>50</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />
@@ -40660,7 +40727,7 @@
                   <TriggerTime>10</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" Duration="500" />
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_b0001_fsw_skill2" StopMode="1" Duration="500" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -40673,6 +40740,7 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
+                  <OwnerActionChange>1</OwnerActionChange>
                   <TriggerTime>10</TriggerTime>
                   <Duration>400</Duration>
                   <MovingSpeed />

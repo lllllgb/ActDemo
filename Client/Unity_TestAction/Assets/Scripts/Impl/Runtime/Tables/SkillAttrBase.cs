@@ -13,6 +13,7 @@ public partial class SkillAttrBase : JW_Table.Binary, JW_Table.IKey
 	private int m_CD;
 	private int m_DamageBase;
 	private int m_DamageCoff;
+	private int m_DpDamageCoff;
 
 	public int ID
 	{
@@ -44,6 +45,12 @@ public partial class SkillAttrBase : JW_Table.Binary, JW_Table.IKey
 		set { m_DamageCoff = value; }
 	}
 
+	public int DpDamageCoff
+	{
+		get { return m_DpDamageCoff; }
+		set { m_DpDamageCoff = value; }
+	}
+
 	public long Key()
 	{
 		return JW_Table.TableUtility.Combine(m_ID, m_Level, 4);
@@ -56,13 +63,14 @@ public partial class SkillAttrBase : JW_Table.Binary, JW_Table.IKey
 		m_CD = reader.ReadInt32();
 		m_DamageBase = reader.ReadInt32();
 		m_DamageCoff = reader.ReadInt32();
+		m_DpDamageCoff = reader.ReadInt32();
 	}
 }
 
 //SkillAttrBase.xlsx
 public sealed class SkillAttrBaseManager : JW_Table.TableManager<SkillAttrBase>
 {
-	public const uint VERSION = 4060978318;
+	public const uint VERSION = 3644501696;
 
 	private SkillAttrBaseManager()
 	{
