@@ -13,12 +13,14 @@ namespace AosHotfixRunTime
         InstanceBase mInstanceBase;
         LocalPlayer mLocalPlayer;
         List<Unit> mMonsterList = new List<Unit>();
+        int mTriggerCount = 0;
 
         List<SpriteRenderer> mSceneMaskSprs = new List<SpriteRenderer>();
 
         public void Init()
         {
             Game.EventMgr.Subscribe(CameraActionEvent.ModifySceneMaskColor.EventID, OnEventModifySceneMask);
+            Game.EventMgr.Subscribe(UnitEvent.Dead.EventID, OnEventUnitDead);
         }
 
         public void Start()
@@ -69,14 +71,14 @@ namespace AosHotfixRunTime
             
             for (int i = 0, max = mMonsterList.Count; i < max; ++i)
             {
-                if (!mMonsterList[i].Dead)
-                    mMonsterList[i].Dispose();
+                mMonsterList[i].Dispose();
             }
         }
 
         public void Release()
         {
             Game.EventMgr.Unsubscribe(CameraActionEvent.ModifySceneMaskColor.EventID, OnEventModifySceneMask);
+            Game.EventMgr.Unsubscribe(UnitEvent.Dead.EventID, OnEventUnitDead);
 
             Reset();
         }
@@ -129,11 +131,12 @@ namespace AosHotfixRunTime
             }
 
             GameObject tmpInstanceRoot = GameObject.Find("InstanceRoot");
-
+            mTriggerCount = 0;
             GameObject tmpTransferGo = Utility.GameObj.Find(tmpInstanceRoot, "Transfer");
 
             if (tmpTransferGo)
             {
+                mTriggerCount += tmpTransferGo.transform.childCount;
                 for (int i = 0, max = tmpTransferGo.transform.childCount; i < max; ++i)
                 {
                     TriggerListener.Get(tmpTransferGo.transform.GetChild(i).gameObject).OnEnter = OnTriggerEnterTransfer;
@@ -144,6 +147,7 @@ namespace AosHotfixRunTime
 
             if (tmpTriggerGo)
             {
+                mTriggerCount += tmpTriggerGo.transform.childCount;
                 for (int i = 0, max = tmpTriggerGo.transform.childCount; i < max; ++i)
                 {
                     TriggerListener.Get(tmpTriggerGo.transform.GetChild(i).gameObject).OnEnter = OnTriggerEnterTrigger;
@@ -163,6 +167,7 @@ namespace AosHotfixRunTime
         {
             if (other.gameObject == mLocalPlayer.UGameObject)
             {
+                --mTriggerCount;
                 for (int i = 0, max = mInstanceBase.TransferTriggerInfo.data.Count; i < max; ++i)
                 {
                     var tmpTransferTrigger = mInstanceBase.TransferTriggerInfo.data[i];
@@ -180,6 +185,7 @@ namespace AosHotfixRunTime
         {
             if (other.gameObject == mLocalPlayer.UGameObject)
             {
+                --mTriggerCount;
                 self.SetActive(false);
 
                 for (int i = 0, max = mInstanceBase.MonsterTriggerInfo.data.Count; i < max; ++i)
@@ -245,6 +251,49 @@ namespace AosHotfixRunTime
             {
                 mSceneMaskSprs[i].color = tmpEventArg.Data;
             }
+        }
+
+        private void OnEventUnitDead(object sender, GameEventArgs arg)
+        {
+            var tmpEventArg = arg as UnitEvent.Dead;
+
+            if (null == tmpEventArg)
+            {
+                return;
+            }
+
+            if (tmpEventArg.Data.UnitType == EUnitType.EUT_LocalPlayer)
+            {
+                DelaySettle(false);
+            }
+            else
+            {
+                if (mTriggerCount <= 0)
+                {
+                    bool tmpFlag = true;
+
+                    for (int i = 0, max = mMonsterList.Count; i < max; ++i)
+                    {
+                        if (!mMonsterList[i].Dead)
+                        {
+                            tmpFlag = false;
+                            break;
+                        }
+                    }
+
+                    if (tmpFlag)
+                    {
+                        DelaySettle(true);
+                    }
+                }
+            }
+        }
+
+        private void DelaySettle(bool flag)
+        {
+            Game.TimerMgr.AddTimer(2f, arg => {
+                Game.WindowsMgr.ShowWindow<PVESettleWnd, bool>(flag);
+            }, null);
         }
     }
 }

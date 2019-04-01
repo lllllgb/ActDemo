@@ -198,6 +198,15 @@ namespace AosHotfixRunTime
             Game.EventMgr.FireNow(this, tmpEvent);
         }
 
+        protected override void OnDead()
+        {
+            base.OnDead();
+
+            var tmpEvent = ReferencePool.Fetch<UnitEvent.Dead>();
+            tmpEvent.Data = this;
+            Game.EventMgr.FireNow(this, tmpEvent);
+        }
+
         public virtual void AddDp(int v)
         {
             if (Dead)

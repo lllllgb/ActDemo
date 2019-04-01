@@ -33,5 +33,14 @@ namespace AosHotfixRunTime
 
             public Unit Data { get; set; }
         }
+
+        public class Dead : GameEventArgs
+        {
+            public static readonly int EventID = typeof(Dead).GetHashCode();
+
+            public override int Id { get { return EventID; } }
+
+            public Unit Data { get; set; }
+        }
     }
 }
