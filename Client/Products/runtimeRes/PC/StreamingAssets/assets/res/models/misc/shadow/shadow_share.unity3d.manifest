@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1377400209
+CRC: 3467912010
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cf86aead4e30277df0af8fbb69adf7fc
+    Hash: 9690f1cac42fe3bcd741e191bfafdf47
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,7 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
+- Assets/Res/Models/Misc/Shadow/shadow.png
 - Assets/Res/Models/Misc/Shadow/shadow.mat
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/shadow_2f91d39605672e649abb8f6ad3219997
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

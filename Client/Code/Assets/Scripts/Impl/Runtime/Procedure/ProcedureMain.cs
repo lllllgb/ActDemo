@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using AosHotfixFramework;
+using UnityEngine.SceneManagement;
 using ProcedureOwner = AosHotfixFramework.IFsm<AosHotfixFramework.IProcedureManager>;
 
 namespace AosHotfixRunTime
@@ -15,6 +16,7 @@ namespace AosHotfixRunTime
             base.OnInit(procedureOwner);
 
             mProcedureOwner = procedureOwner;
+            Game.ControllerMgr.Get<PlayerController>().Init(1003, 1);
         }
 
         protected internal override void OnEnter(ProcedureOwner procedureOwner)
@@ -23,7 +25,8 @@ namespace AosHotfixRunTime
 
             Game.EventMgr.Subscribe(InstanceWndEvent.StartInstanceEvent.EventID, OnEventInstanceStart);
 
-            Game.ControllerMgr.Get<PlayerController>().Init(1003, 1);
+            Game.ResourcesMgr.LoadBundleByType(EABType.Scene, "MainCity");
+            SceneManager.LoadScene("MainCity");
             Game.WindowsMgr.ShowWindow<InstanceWnd>();
         }
 
@@ -36,7 +39,7 @@ namespace AosHotfixRunTime
         {
             base.OnLeave(procedureOwner, isShutdown);
 
-            Game.WindowsMgr.CloseWindow<InstanceWnd>();
+            Game.WindowsMgr.CloseWindow(WindowBase.EWindowType.ALL);
             Game.EventMgr.Unsubscribe(InstanceWndEvent.StartInstanceEvent.EventID, OnEventInstanceStart);
         }
 

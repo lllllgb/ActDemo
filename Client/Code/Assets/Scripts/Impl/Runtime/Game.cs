@@ -87,7 +87,7 @@ namespace AosHotfixRunTime
             UnitExtraBaseManager.instance.Load(string.Empty);
             CameraActionBaseManager.instance.Load(string.Empty);
             InstanceBaseManager.instance.Load(string.Empty);
-            InstanceTriggerBaseManager.instance.Load(string.Empty);
+            MonsterTriggerBaseManager.instance.Load(string.Empty);
         }
 
         public static void InitGameModule()

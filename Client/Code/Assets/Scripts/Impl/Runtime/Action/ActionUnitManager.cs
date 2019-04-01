@@ -29,6 +29,7 @@ namespace ACT
             {
                 mUnits.Remove(mRemoveUnits[i]);
             }
+            mRemoveUnits.Clear();
 
             for (int i = mUnits.Count - 1; i >= 0; --i)
             {

@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3038973006
+CRC: 2303414975
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c727238941731dc016bbf7274d26750a
+    Hash: 79235b43a072842cea44b89b4c5f6341
   TypeTreeHash:
     serializedVersion: 2
-    Hash: d7d9b13b2d6b3e645ec257ee1616390c
+    Hash: 4bb96948b47ad6ca1df035de75994dde
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,14 +21,7 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
-- Class: 48
-  Script: {instanceID: 0}
-- Class: 54
-  Script: {instanceID: 0}
-- Class: 65
-  Script: {instanceID: 0}
-- Class: 135
-  Script: {instanceID: 0}
 Assets:
-- Assets/Bundles/Misc/Instacen1.prefab
-Dependencies: []
+- Assets/Res/Models/Misc/Shadow/shadow_001.FBX
+Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_share.unity3d

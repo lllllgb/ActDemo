@@ -15,18 +15,37 @@ namespace AosHotfixRunTime
 
 
         GameObject mDescPanel;
-        int mDifficultyLevel = 1;
+        Text mDescLab;
+
+        static Dictionary<int, int> sFlag2IDDict = new Dictionary<int, int>()
+        {
+            {1 << 16 | 0, 101},
+            {1 << 16 | 1, 102},
+            {1 << 16 | 2, 103},
+            {2 << 16 | 0, 104},
+            {2 << 16 | 1, 104},
+            {2 << 16 | 2, 104},
+        };
+
+        int mLevelFlag = 1;
+        int mDiffFlag = 0;
+        int mInstanceID = 0;
 
         protected override void AfterInit()
         {
             base.AfterInit();
 
-            RegisterEventClick(Find("Button_Level"), OnLevelBtnClick);
+            RegistLevelClick(Find("Button_Level"), 1);
+            RegistLevelClick(Find("Button_Level2"), 2);
             mDescPanel = Find("DescPanelRoot");
+            mDescLab = Find<Text>(mDescPanel, "Text_Desc");
             RegisterEventClick(Find(mDescPanel, "Button_Normal"), OnNormalBtnClick);
             RegisterEventClick(Find(mDescPanel, "Button_Hard"), OnDifficultyBtnClick);
             RegisterEventClick(Find(mDescPanel, "Button_Hell"), OnHellBtnClick);
             RegisterEventClick(Find(mDescPanel, "Button_Enter"), OnStartBtnClick);
+
+            RegisterEventClick(Find("Button_Back"), OnBackBtnClick);
+
         }
 
         protected override void AfterShow()
@@ -46,31 +65,75 @@ namespace AosHotfixRunTime
             base.BeforeDestory();
         }
 
-        private void OnLevelBtnClick(PointerEventData arg)
+        private void RegistLevelClick(GameObject go, int flag)
         {
-            SetActive(mDescPanel, true);
+            UGUIEventListener.Get(go).onClick = arg => 
+            {
+                mLevelFlag = flag;
+                mDiffFlag = 0;
+                RefreshInstanceID();
+                ShowDescPanel(true);
+            };
+        }
+
+        private void ShowDescPanel(bool visible)
+        {
+            SetActive(mDescPanel, visible);
+
+            if (!visible)
+            {
+                return;
+            }
+
+            RefreshDesc();
+        }
+
+        private void RefreshInstanceID()
+        {
+            sFlag2IDDict.TryGetValue(mLevelFlag << 16 | mDiffFlag, out mInstanceID);
+        }
+
+        private void RefreshDesc()
+        {
+            InstanceBase tmpInstanceBase = InstanceBaseManager.instance.Find(mInstanceID);
+
+            if (null != tmpInstanceBase)
+            {
+                mDescLab.text = tmpInstanceBase.Desc;
+            }
         }
 
         private void OnNormalBtnClick(PointerEventData arg)
         {
-            mDifficultyLevel = 1;
+            mDiffFlag = 0;
+            RefreshInstanceID();
+            RefreshDesc();
         }
 
         private void OnDifficultyBtnClick(PointerEventData arg)
         {
-            mDifficultyLevel = 5;
+            mDiffFlag = 1;
+            RefreshInstanceID();
+            RefreshDesc();
         }
 
         private void OnHellBtnClick(PointerEventData arg)
         {
-            mDifficultyLevel = 10;
+            mDiffFlag = 2;
+            RefreshInstanceID();
+            RefreshDesc();
+        }
+
+        private void OnBackBtnClick(PointerEventData arg)
+        {
+            ShowDescPanel(false);
         }
 
         private void OnStartBtnClick(PointerEventData arg)
         {
-            PVEGameBuilder.Instance.DifficultyLevel = mDifficultyLevel;
+            PVEGameBuilder.Instance.InstanceID = mInstanceID;
+
             var tmpEvent = ReferencePool.Fetch<InstanceWndEvent.StartInstanceEvent>();
-            tmpEvent.DifficultyLevel = mDifficultyLevel;
             Game.EventMgr.FireNow(this, tmpEvent);
         }
     }

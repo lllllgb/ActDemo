@@ -12,7 +12,7 @@ namespace AosHotfixRunTime
     {
         public override string BundleName { get { return "FightMainWnd"; } }
 
-        protected override bool IsLoadAsync => false;
+        //protected override bool IsLoadAsync => false;
 
         const int SKILL_NUM = 6;
 

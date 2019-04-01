@@ -6,20 +6,45 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public partial class InstanceTriggerBase : JW_Table.Binary, JW_Table.IKey
+public partial class MonsterTriggerBase : JW_Table.Binary, JW_Table.IKey
 {
 	public partial class MonsterInfoDef : JW_Table.Binary
 	{
-		private System.Collections.Generic.List<int> m_data = new System.Collections.Generic.List<int>();
+		private int m_MonsterID;
+		private int m_Level;
+		private int m_AIDiff;
+		private int m_Count;
 
-		public System.Collections.Generic.List<int> data
+		public int MonsterID
 		{
-			get { return m_data; }
+			get { return m_MonsterID; }
+			set { m_MonsterID = value; }
+		}
+
+		public int Level
+		{
+			get { return m_Level; }
+			set { m_Level = value; }
+		}
+
+		public int AIDiff
+		{
+			get { return m_AIDiff; }
+			set { m_AIDiff = value; }
+		}
+
+		public int Count
+		{
+			get { return m_Count; }
+			set { m_Count = value; }
 		}
 
 		public override void Read(JW_Table.Reader reader)
 		{
-			m_data = reader.ReadRepeatedInt32(m_data);
+			m_MonsterID = reader.ReadInt32();
+			m_Level = reader.ReadInt32();
+			m_AIDiff = reader.ReadInt32();
+			m_Count = reader.ReadInt32();
 		}
 	}
 
@@ -65,25 +90,25 @@ public partial class InstanceTriggerBase : JW_Table.Binary, JW_Table.IKey
 	}
 }
 
-//InstanceTriggerBase.xlsx
-public sealed class InstanceTriggerBaseManager : JW_Table.TableManager<InstanceTriggerBase>
+//MonsterTriggerBase.xlsx
+public sealed class MonsterTriggerBaseManager : JW_Table.TableManager<MonsterTriggerBase>
 {
-	public const uint VERSION = 515011117;
+	public const uint VERSION = 156707264;
 
-	private InstanceTriggerBaseManager()
+	private MonsterTriggerBaseManager()
 	{
 	}
 
-	private static readonly InstanceTriggerBaseManager ms_instance = new InstanceTriggerBaseManager();
+	private static readonly MonsterTriggerBaseManager ms_instance = new MonsterTriggerBaseManager();
 
-	public static InstanceTriggerBaseManager instance
+	public static MonsterTriggerBaseManager instance
 	{
 		get { return ms_instance; }
 	}
 
 	public string source
 	{
-		get { return "InstanceTriggerBase.tbl"; }
+		get { return "MonsterTriggerBase.tbl"; }
 	}
 
 	public bool Load(string path)
@@ -96,7 +121,7 @@ public sealed class InstanceTriggerBaseManager : JW_Table.TableManager<InstanceT
 		return Load(buffer, VERSION, source);
 	}
 
-	public InstanceTriggerBase Find(int key)
+	public MonsterTriggerBase Find(int key)
 	{
 		return FindInternal(key);
 	}

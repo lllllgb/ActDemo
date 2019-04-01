@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3673945096
+CRC: 736066830
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 846d610c5896e977b899b125296e33c9
+    Hash: c8769ac07b1b8adc54b130d8aaca9f7f
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ef23a9fe3f4a53e1f8e1fb2b1c87c47d
+    Hash: ac60d86ad55d7e56d6d419d73d5bf191
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -16,6 +16,10 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 - Class: 48
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -42,3 +46,4 @@ Assets:
 Dependencies:
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/ui/buttonscale_share.unity3d

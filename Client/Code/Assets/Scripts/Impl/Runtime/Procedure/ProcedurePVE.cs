@@ -22,7 +22,10 @@ namespace AosHotfixRunTime
         {
             base.OnEnter(procedureOwner);
 
+            Game.EventMgr.Subscribe(PVESettleWndEvent.BackMainEvent.EventID, OnEventBackMain);
+
             PVEGameBuilder.Instance.Init();
+            PVEGameBuilder.Instance.Start();
         }
 
         protected internal override void OnUpdate(ProcedureOwner procedureOwner, float deltaTime)
@@ -44,11 +47,18 @@ namespace AosHotfixRunTime
             base.OnLeave(procedureOwner, isShutdown);
 
             PVEGameBuilder.Instance.Release();
+            Game.WindowsMgr.CloseWindow(WindowBase.EWindowType.ALL);
+            Game.EventMgr.Unsubscribe(PVESettleWndEvent.BackMainEvent.EventID, OnEventBackMain);
         }
 
         protected internal override void OnDestroy(ProcedureOwner procedureOwner)
         {
             base.OnDestroy(procedureOwner);
+        }
+
+        private void OnEventBackMain(object sender, GameEventArgs arg)
+        {
+            ChangeState<ProcedureMain>(mProcedureOwner);
         }
     }
 }

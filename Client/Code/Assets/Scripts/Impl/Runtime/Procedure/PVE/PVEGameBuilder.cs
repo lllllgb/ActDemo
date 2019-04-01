@@ -8,34 +8,42 @@ namespace AosHotfixRunTime
 {
     public class PVEGameBuilder : Singleton<PVEGameBuilder>
     {
-        public int DifficultyLevel { get; set; }
-        LocalPlayer mLocalPlayer;
-        int mInstanceID;
-        GameObject mInstanceRoot;
+        public int InstanceID { get; set; }
 
+        InstanceBase mInstanceBase;
+        LocalPlayer mLocalPlayer;
         List<Unit> mMonsterList = new List<Unit>();
-        bool mIsTriggerMonster = true;
 
         List<SpriteRenderer> mSceneMaskSprs = new List<SpriteRenderer>();
 
         public void Init()
         {
-            mInstanceID = 1;
+            Game.EventMgr.Subscribe(CameraActionEvent.ModifySceneMaskColor.EventID, OnEventModifySceneMask);
+        }
+
+        public void Start()
+        {
+            mInstanceBase = InstanceBaseManager.instance.Find(InstanceID);
+
+            if (null == mInstanceBase)
+            {
+                Logger.LogError($"找不到副本配置 id -> {InstanceID}");
+                return;
+            }
+
             var tmpUnitCtrl = Game.ControllerMgr.Get<UnitController>();
 
             mLocalPlayer = new LocalPlayer();
             mLocalPlayer.Init(1003, 1);
+            mLocalPlayer.SetPosition(new Vector3(1000, 0, 0));
             GameObject.DontDestroyOnLoad(mLocalPlayer.UGameObject);
             ACT.ActionSystem.Instance.ActUnitMgr.Add(mLocalPlayer);
             ACT.ActionSystem.Instance.ActUnitMgr.LocalPlayer = mLocalPlayer;
             tmpUnitCtrl.SetLocalPlayer(mLocalPlayer);
 
-            Game.WindowsMgr.ShowWindow<FightMainWnd>();
-
             Game.WindowsMgr.ShowWindow<FadeWnd, bool, bool>(true, false);
-            SceneLoader.Instance.LoadSceneAsync("Instance1", OnSceneLoaded);
-
-            Game.EventMgr.Subscribe(CameraActionEvent.ModifySceneMaskColor.EventID, OnEventModifySceneMask);
+            Game.WindowsMgr.ShowWindow<FightMainWnd>();
+            SceneLoader.Instance.LoadSceneAsync(mInstanceBase.SceneName, OnSceneLoaded);
         }
 
         public void Update(float deltaTime)
@@ -51,12 +59,35 @@ namespace AosHotfixRunTime
             }
         }
 
+        private void Reset()
+        {
+            if (null != mLocalPlayer)
+            {
+                mLocalPlayer.Dispose();
+                mLocalPlayer = null;
+            }
+            
+            for (int i = 0, max = mMonsterList.Count; i < max; ++i)
+            {
+                if (!mMonsterList[i].Dead)
+                    mMonsterList[i].Dispose();
+            }
+        }
+
         public void Release()
         {
             Game.EventMgr.Unsubscribe(CameraActionEvent.ModifySceneMaskColor.EventID, OnEventModifySceneMask);
+
+            Reset();
         }
 
-        private void TransferNextScene()
+        public void ReStart()
+        {
+            Reset();
+            Start();
+        }
+
+        private void TransferNextScene(string sceneName)
         {
             for (int i = 0, max = mMonsterList.Count; i < max; ++i)
             {
@@ -72,10 +103,8 @@ namespace AosHotfixRunTime
             }
 
             mMonsterList.Clear();
-            mInstanceID++;
             Game.WindowsMgr.ShowWindow<FadeWnd, bool, bool>(true, false);
-            mSceneMaskSprs.Clear();
-            SceneLoader.Instance.LoadSceneAsync($"Instance{mInstanceID}", OnSceneLoaded);
+            SceneLoader.Instance.LoadSceneAsync(sceneName, OnSceneLoaded);
         }
 
         void OnSceneLoaded()
@@ -84,6 +113,7 @@ namespace AosHotfixRunTime
 
             GameObject tmpSceneMaskGo = GameObject.Find("SceneMask");
 
+            mSceneMaskSprs.Clear();
             if (null != tmpSceneMaskGo)
             {
                 for (int i = 0, max = tmpSceneMaskGo.transform.childCount; i < max; ++i)
@@ -93,71 +123,99 @@ namespace AosHotfixRunTime
                     if (null != tmpSprRender)
                     {
                         mSceneMaskSprs.Add(tmpSprRender);
+                        tmpSprRender.color = Color.clear;
                     }
                 }
             }
 
-            Game.ResourcesMgr.LoadBundleByType(EABType.Misc, $"Instacen{mInstanceID}");
-            mInstanceRoot = Hotfix.Instantiate(Game.ResourcesMgr.GetAssetByType<GameObject>(EABType.Misc, $"Instacen{mInstanceID}"));
+            GameObject tmpInstanceRoot = GameObject.Find("InstanceRoot");
 
-            GameObject tmpTransferGo = Utility.GameObj.Find(mInstanceRoot, "Transfer");
+            GameObject tmpTransferGo = Utility.GameObj.Find(tmpInstanceRoot, "Transfer");
 
             if (tmpTransferGo)
             {
-                TriggerListener.Get(tmpTransferGo).OnEnter = OnTriggerEnterTransfer;
+                for (int i = 0, max = tmpTransferGo.transform.childCount; i < max; ++i)
+                {
+                    TriggerListener.Get(tmpTransferGo.transform.GetChild(i).gameObject).OnEnter = OnTriggerEnterTransfer;
+                }
             }
 
-            GameObject tmpTriggerGo = Utility.GameObj.Find(mInstanceRoot, "Trigger");
+            GameObject tmpTriggerGo = Utility.GameObj.Find(tmpInstanceRoot, "Trigger");
 
             if (tmpTriggerGo)
             {
-                TriggerListener.Get(tmpTriggerGo).OnEnter = OnTriggerEnterTrigger;
+                for (int i = 0, max = tmpTriggerGo.transform.childCount; i < max; ++i)
+                {
+                    TriggerListener.Get(tmpTriggerGo.transform.GetChild(i).gameObject).OnEnter = OnTriggerEnterTrigger;
+                }
             }
 
-            GameObject tmpBornPosGo = Utility.GameObj.Find(mInstanceRoot, "BornPos");
-            mLocalPlayer.SetPosition(tmpBornPosGo.transform.position);
-            mIsTriggerMonster = false;
+            GameObject tmpBornPosGo = Utility.GameObj.Find(tmpInstanceRoot, "BornPos");
+
+            if (tmpBornPosGo)
+            {
+                mLocalPlayer.SetPosition(tmpBornPosGo.transform.position);
+            }
+
         }
 
-        void OnTriggerEnterTransfer(Collider other)
+        void OnTriggerEnterTransfer(GameObject self, Collider other)
         {
             if (other.gameObject == mLocalPlayer.UGameObject)
             {
-                TransferNextScene();
+                for (int i = 0, max = mInstanceBase.TransferTriggerInfo.data.Count; i < max; ++i)
+                {
+                    var tmpTransferTrigger = mInstanceBase.TransferTriggerInfo.data[i];
+
+                    if (self.name.Equals(tmpTransferTrigger.TriggerName))
+                    {
+                        TransferNextScene(tmpTransferTrigger.InstanceName);
+                        break;
+                    }
+                }
             }
         }
 
-        void OnTriggerEnterTrigger(Collider other)
+        void OnTriggerEnterTrigger(GameObject self, Collider other)
         {
-            if (other.gameObject == mLocalPlayer.UGameObject && !mIsTriggerMonster)
+            if (other.gameObject == mLocalPlayer.UGameObject)
             {
-                mIsTriggerMonster = true;
-                TriggerMonster();
+                self.SetActive(false);
+
+                for (int i = 0, max = mInstanceBase.MonsterTriggerInfo.data.Count; i < max; ++i)
+                {
+                    var tmpMonsterTrigger = mInstanceBase.MonsterTriggerInfo.data[i];
+
+                    if (self.name.Equals(tmpMonsterTrigger.TriggerName))
+                    {
+                        var tmpTriggerBase = MonsterTriggerBaseManager.instance.Find(tmpMonsterTrigger.TriggerID);
+
+                        if (null != tmpTriggerBase)
+                        {
+                            TriggerMonster(tmpTriggerBase);
+                        }
+                        break;
+                    }
+                }
+
             }
         }
 
-        private void TriggerMonster()
+        private void TriggerMonster(MonsterTriggerBase triggerBase)
         {
-            if (mInstanceID == 1)
+            if (null == triggerBase)
             {
-                SpawnMonster(1004, 1, 0);
-                SpawnMonster(1004, 1, 0);
-                SpawnMonster(1004, 1, 0);
+                return;
             }
-            else if (mInstanceID == 2)
+
+            for (int i = 0, max = triggerBase.MonsterInfo.data.Count; i < max; ++i)
             {
-                SpawnMonster(1004, 1, 0);
-                SpawnMonster(1004, 1, 0);
-                SpawnMonster(1005, 1, 0);
-                SpawnMonster(1005, 1, 0);
-            }
-            else if (mInstanceID == 3)
-            {
-                SpawnMonster(1004, 1, 0);
-                SpawnMonster(1004, 1, 0);
-                SpawnMonster(1005, 1, 0);
-                SpawnMonster(1005, 1, 0);
-                SpawnMonster(1006, 1, 0);
+                var tmpMonsterInfo = triggerBase.MonsterInfo.data[i];
+
+                for (int j = 0, jmax = tmpMonsterInfo.Count; j < jmax; ++j)
+                {
+                    SpawnMonster(tmpMonsterInfo.MonsterID, tmpMonsterInfo.Level, tmpMonsterInfo.AIDiff);
+                }
             }
         }
 

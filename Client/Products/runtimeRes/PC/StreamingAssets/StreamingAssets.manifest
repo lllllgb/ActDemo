@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 4066950734
+CRC: 1393258048
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -55,8 +55,8 @@ AssetBundleManifest:
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
-        Dependency_2: shadow_179be74cc96e6e8489a307eae1a67145
-        Dependency_3: shadow_001_709b66f646376ff4b840ebf57f4e5550
+        Dependency_2: assets/res/models/misc/shadow/shadow_share.unity3d
+        Dependency_3: assets/res/models/misc/shadow/shadow_001_share.unity3d
     Info_11:
       Name: assets/bundles/audio/temp.unity3d
       Dependencies: {}
@@ -122,8 +122,8 @@ AssetBundleManifest:
       Name: assets/bundles/unit/m0002.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
-        Dependency_1: shadow_179be74cc96e6e8489a307eae1a67145
-        Dependency_2: shadow_001_709b66f646376ff4b840ebf57f4e5550
+        Dependency_1: assets/res/models/misc/shadow/shadow_share.unity3d
+        Dependency_2: assets/res/models/misc/shadow/shadow_001_share.unity3d
     Info_23:
       Name: assets/res/effect/texture/e_noise_fsw_001_share.unity3d
       Dependencies: {}
@@ -806,14 +806,14 @@ AssetBundleManifest:
       Name: assets/bundles/unit/m0001.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
-        Dependency_1: shadow_179be74cc96e6e8489a307eae1a67145
-        Dependency_2: shadow_001_709b66f646376ff4b840ebf57f4e5550
+        Dependency_1: assets/res/models/misc/shadow/shadow_share.unity3d
+        Dependency_2: assets/res/models/misc/shadow/shadow_001_share.unity3d
     Info_135:
       Name: assets/bundles/unit/b0001.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
-        Dependency_1: shadow_179be74cc96e6e8489a307eae1a67145
-        Dependency_2: shadow_001_709b66f646376ff4b840ebf57f4e5550
+        Dependency_1: assets/res/models/misc/shadow/shadow_share.unity3d
+        Dependency_2: assets/res/models/misc/shadow/shadow_001_share.unity3d
     Info_136:
       Name: assets/bundles/effect/e_1001_fsw_skill1.unity3d
       Dependencies:
@@ -929,6 +929,7 @@ AssetBundleManifest:
         Dependency_0: assets/bundles/atlas/common.unity3d
         Dependency_1: assets/bundles/atlas/fightmain.unity3d
         Dependency_2: assets/res/font/simkai_share.unity3d
+        Dependency_3: assets/res/ui/buttonscale_share.unity3d
     Info_160:
       Name: assets/res/models/scene/testaction/materials/wall_share.unity3d
       Dependencies:
@@ -1261,105 +1262,122 @@ AssetBundleManifest:
       Name: assets/bundles/ui/fadewnd.unity3d
       Dependencies: {}
     Info_222:
-      Name: assets/bundles/misc/instacen1.unity3d
-      Dependencies: {}
-    Info_223:
-      Name: assets/bundles/misc/instacen2.unity3d
-      Dependencies: {}
-    Info_224:
-      Name: assets/bundles/misc/instacen3.unity3d
-      Dependencies: {}
-    Info_225:
       Name: assets/bundles/ui/instancewnd.unity3d
       Dependencies:
         Dependency_0: assets/bundles/atlas/common.unity3d
         Dependency_1: assets/res/font/simkai_share.unity3d
-    Info_226:
+        Dependency_2: assets/res/ui/buttonscale_share.unity3d
+    Info_223:
       Name: assets/bundles/scene/maincity.unity3d
       Dependencies: {}
-    Info_227:
+    Info_224:
       Name: assets/bundles/ui/skillwnd.unity3d
       Dependencies:
         Dependency_0: assets/bundles/atlas/common.unity3d
         Dependency_1: assets/bundles/atlas/fightmain.unity3d
-    Info_228:
+    Info_225:
       Name: assets/res/effect/texture/e_glow_fsw_013_share.unity3d
       Dependencies: {}
-    Info_229:
+    Info_226:
       Name: assets/res/effect/texture/e_smoke_fsw_005_share.unity3d
       Dependencies: {}
-    Info_230:
+    Info_227:
       Name: assets/res/effect/texture/e_trail_fsw_014_share.unity3d
       Dependencies: {}
-    Info_231:
+    Info_228:
       Name: assets/res/effect/texture/e_smoke_fsw_004_share.unity3d
       Dependencies: {}
-    Info_232:
+    Info_229:
       Name: assets/res/effect/texture/e_debris_fsw_003_share.unity3d
       Dependencies: {}
-    Info_233:
+    Info_230:
       Name: assets/res/effect/texture/e_object_fsw_005_share.unity3d
       Dependencies: {}
-    Info_234:
+    Info_231:
       Name: assets/bundles/effect/e_1001_fsw_skill10_004.unity3d
       Dependencies:
         Dependency_0: assets/res/effect/model/fbx_yuan_fsw_005_share.unity3d
         Dependency_1: assets/res/effect/materials/e_trail_fsw_009_02_share.unity3d
-    Info_235:
+    Info_232:
       Name: assets/res/effect/materials/e_glow_fsw_013_01_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_glow_fsw_013_share.unity3d
-    Info_236:
+    Info_233:
       Name: assets/res/effect/materials/e_smoke_fsw_004_01_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_smoke_fsw_004_share.unity3d
-    Info_237:
+    Info_234:
       Name: assets/res/effect/materials/e_trail_fsw_009_02_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_trail_fsw_009_share.unity3d
-    Info_238:
+    Info_235:
       Name: assets/res/effect/materials/e_trail_fsw_014_001_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_trail_fsw_014_share.unity3d
-    Info_239:
+    Info_236:
       Name: assets/res/effect/materials/e_smoke_fsw_005_01_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_smoke_fsw_005_share.unity3d
-    Info_240:
+    Info_237:
       Name: assets/res/effect/materials/e_debris_fsw_003_01_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_debris_fsw_003_share.unity3d
-    Info_241:
+    Info_238:
       Name: assets/res/effect/materials/e_object_fsw_005_01_share.unity3d
       Dependencies:
         Dependency_0: assets/bundles/shadercollect.unity3d
         Dependency_1: assets/res/effect/texture/e_object_fsw_005_share.unity3d
-    Info_242:
+    Info_239:
       Name: assets/res/models/scene/xueshan_1/qianjingzhanlan3_share.unity3d
       Dependencies: {}
-    Info_243:
+    Info_240:
       Name: assets/bundles/icon/skill/block.unity3d
       Dependencies: {}
-    Info_244:
+    Info_241:
       Name: assets/res/models/scene/xueshan_1/qianjingzhanlan2_share.unity3d
       Dependencies: {}
-    Info_245:
+    Info_242:
       Name: assets/bundles/icon/skill/dodge.unity3d
       Dependencies: {}
-    Info_246:
-      Name: shadow_2f91d39605672e649abb8f6ad3219997
+    Info_243:
+      Name: assets/res/models/misc/shadow/shadow_share.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+    Info_244:
+      Name: assets/res/models/misc/shadow/shadow_001_share.unity3d
+      Dependencies:
+        Dependency_0: assets/res/models/misc/shadow/shadow_share.unity3d
+    Info_245:
+      Name: assets/res/ui/buttonscale_share.unity3d
       Dependencies: {}
+    Info_246:
+      Name: assets/bundles/ui/pvesettlewnd.unity3d
+      Dependencies:
+        Dependency_0: assets/res/ui/buttonscale_share.unity3d
     Info_247:
-      Name: shadow_179be74cc96e6e8489a307eae1a67145
+      Name: assets/bundles/scene/instance4.unity3d
       Dependencies:
-        Dependency_0: shadow_2f91d39605672e649abb8f6ad3219997
-    Info_248:
-      Name: shadow_001_709b66f646376ff4b840ebf57f4e5550
-      Dependencies:
-        Dependency_0: shadow_179be74cc96e6e8489a307eae1a67145
+        Dependency_0: assets/res/models/scene/testaction/materials/wall_share.unity3d
+        Dependency_1: assets/res/models/scene/xueshan_1/yuanjingzhanche1_share.unity3d
+        Dependency_2: assets/res/models/scene/xueshan_1/zhongjingzawu_share.unity3d
+        Dependency_3: assets/res/models/scene/xueshan_1/zhongjingzawu1_share.unity3d
+        Dependency_4: assets/res/models/scene/xueshan_1/zhongjingzhanche1_share.unity3d
+        Dependency_5: assets/res/models/scene/testaction/materials/floor_share.unity3d
+        Dependency_6: assets/res/models/scene/xueshan_1/qianjingzhanlan_share.unity3d
+        Dependency_7: assets/res/models/scene/xueshan_1/zhongjingshu2_share.unity3d
+        Dependency_8: assets/res/models/scene/xueshan_1/dimian_share.unity3d
+        Dependency_9: assets/res/models/scene/xueshan_1/zhongjingzhanche_share.unity3d
+        Dependency_10: assets/res/models/scene/xueshan_1/zhongjingshanshi_share.unity3d
+        Dependency_11: assets/res/models/scene/xueshan_1/yuanjingshu3_share.unity3d
+        Dependency_12: assets/res/models/scene/xueshan_1/yuanjingshu1_share.unity3d
+        Dependency_13: assets/res/models/scene/xueshan_1/zhongjingshu_share.unity3d
+        Dependency_14: assets/res/models/scene/xueshan_1/zhongjingshu1_share.unity3d
+        Dependency_15: assets/res/models/scene/xueshan_1/zhongjingshu3_share.unity3d
+        Dependency_16: assets/res/models/scene/xueshan_1/qianjingzhanlan3_share.unity3d
+        Dependency_17: assets/res/models/scene/xueshan_1/qianjingzhanlan2_share.unity3d

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4118430744
+CRC: 290611118
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d18d03af0147cb367e56bba02f72c34f
+    Hash: 0674ad1a896bbd4bf077356abcbc657c
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6370d3f9de9eca57f523bce048404a46
@@ -18,6 +18,7 @@ Assets:
 - Assets/Shaders/shader/Particles-Alpha-Blend-UV.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Mobile/Mobile-Particle-Add.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Mobile/Mobile-Particle-Alpha.shader
+- Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Unlit/Unlit-Alpha.shader
 - Assets/Shaders/shader/Obj-Texture.shader
 - Assets/Shaders/shader/Obj-Soft-Light.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Particle Alpha Blend.shader

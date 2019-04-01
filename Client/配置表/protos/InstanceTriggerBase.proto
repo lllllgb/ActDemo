@@ -1,9 +1,12 @@
 ﻿
-message InstanceTriggerBase [key=ID,excel="InstanceTriggerBase.xlsx"]
+message MonsterTriggerBase [key=ID,excel="MonsterTriggerBase.xlsx"]
 {
 	message MonsterInfoDef [separator = '-']
 	{
-		int32 data;
+		int32 MonsterID;
+		int32 Level;
+		int32 AIDiff;
+		int32 Count;
 	}
 	
 	message MultiMonsterDef [separator = ',']

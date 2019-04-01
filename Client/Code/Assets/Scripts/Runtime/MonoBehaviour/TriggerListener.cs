@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerListener : MonoBehaviour
 {
-    public delegate void VoidDelegate(Collider other);
+    public delegate void VoidDelegate(GameObject self, Collider other);
 
     public VoidDelegate OnEnter { get; set; }
     public VoidDelegate OnStay { get; set; }
@@ -22,16 +22,16 @@ public class TriggerListener : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        OnEnter?.Invoke(other);
+        OnEnter?.Invoke(gameObject, other);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        OnStay?.Invoke(other);
+        OnStay?.Invoke(gameObject, other);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        OnExit?.Invoke(other);
+        OnExit?.Invoke(gameObject, other);
     }
 }

@@ -13,7 +13,6 @@ namespace AosHotfixRunTime
 
             public override int Id { get { return EventID; } }
 
-            public int DifficultyLevel { get; set; }
         }
     }
 }
