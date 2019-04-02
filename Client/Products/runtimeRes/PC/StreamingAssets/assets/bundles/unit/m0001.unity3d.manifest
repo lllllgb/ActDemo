@@ -3,7 +3,7 @@ CRC: 1850934865
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6a8b5cc87a64f3ad930a1831dda09574
+    Hash: 6f9ff749562d222da131c49b8b5b2680
   TypeTreeHash:
     serializedVersion: 2
     Hash: b926c10ecf00ab4e3a7871b3320d7075
@@ -36,6 +36,6 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Unit/m0001.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_share.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_001_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_001_share.unity3d

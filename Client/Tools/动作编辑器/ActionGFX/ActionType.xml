@@ -35657,7 +35657,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>350</AnimTime>
+              <AnimTime>380</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -35998,7 +35998,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>200</AnimTime>
+              <AnimTime>300</AnimTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>2</ActionStatus>
               <Events>
@@ -36008,14 +36008,20 @@
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" OffsetY="100" Duration="500" />
                 </Event>
                 <Event>
-                  <EventType>SetVelocity</EventType>
-                  <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="600" />
-                </Event>
-                <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_004" OffsetY="150" Duration="500" />
+                </Event>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="1200" />
+                </Event>
+                <Event>
+                  <TriggerTime>50</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -36106,7 +36112,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>100</AnimTime>
+              <AnimTime>150</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events />
               <ActionInterrupts>
@@ -36129,7 +36135,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>200</AnimTime>
+              <AnimTime>300</AnimTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>2</ActionStatus>
               <Events>
@@ -36139,14 +36145,20 @@
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" OffsetY="100" Duration="500" />
                 </Event>
                 <Event>
-                  <EventType>SetVelocity</EventType>
-                  <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="600" />
-                </Event>
-                <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_004" OffsetY="150" Duration="500" />
+                </Event>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="1200" />
+                </Event>
+                <Event>
+                  <TriggerTime>50</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -36238,7 +36250,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>300</AnimTime>
+              <AnimTime>380</AnimTime>
               <HeightStatus>3</HeightStatus>
               <ActionStatus>2</ActionStatus>
               <Events>
@@ -36248,14 +36260,20 @@
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_001" OffsetY="100" Duration="500" />
                 </Event>
                 <Event>
-                  <EventType>SetVelocity</EventType>
-                  <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="600" />
-                </Event>
-                <Event>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill2_004" OffsetY="150" Duration="500" />
+                </Event>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="1200" />
+                </Event>
+                <Event>
+                  <TriggerTime>50</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
                 </Event>
               </Events>
               <ActionInterrupts>
@@ -36395,7 +36413,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>500</AnimTime>
+              <AnimTime>600</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -36482,13 +36500,7 @@
               </AnimSlotList>
               <AnimTime>500</AnimTime>
               <ActionStatus>2</ActionStatus>
-              <Events>
-                <Event>
-                  <EventType>PlayEffect</EventType>
-                  <EventTypeInt>1</EventTypeInt>
-                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_attack_lyj_001" OffsetY="100" OffsetZ="20" Duration="500" />
-                </Event>
-              </Events>
+              <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" InputKey2="1" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
@@ -36795,7 +36807,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>300</AnimTime>
+              <AnimTime>400</AnimTime>
               <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
@@ -36804,7 +36816,7 @@
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_skill6_001" OffsetY="80" Duration="1500" />
                 </Event>
                 <Event>
-                  <TriggerTime>20</TriggerTime>
+                  <TriggerTime>65</TriggerTime>
                   <EventType>PlayEffect</EventType>
                   <EventTypeInt>1</EventTypeInt>
                   <EventDetailData xsi:type="EventPlayEffect" EffectName="E_fsw_po01" OffsetY="200" Duration="500" />
@@ -36821,13 +36833,13 @@
                   <EnableSkillBuffer>0</EnableSkillBuffer>
                   <AlignmentTarget>0</AlignmentTarget>
                   <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>20</TriggerTime>
+                  <TriggerTime>65</TriggerTime>
                   <Duration>5000</Duration>
                   <MovingSpeed />
                   <Path>
                     <PathNode />
-                    <PathNode Ratio="10" Z="250" />
-                    <PathNode Ratio="100" Z="250" />
+                    <PathNode Ratio="3" Z="300" />
+                    <PathNode Ratio="100" Z="300" />
                   </Path>
                   <HitCount>20</HitCount>
                   <PassNum>20</PassNum>
