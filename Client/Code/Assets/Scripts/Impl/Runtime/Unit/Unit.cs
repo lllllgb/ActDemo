@@ -157,6 +157,10 @@ namespace AosHotfixRunTime
         {
             if (mIsPabodyState != flag)
             {
+                //if (UnitType == EUnitType.EUT_Monster)
+                //{
+                //    Logger.Log($" name-> {Name} Pabody->{flag}");
+                //}
                 mIsPabodyState = flag;
             }
         }
@@ -175,6 +179,10 @@ namespace AosHotfixRunTime
             if (0 != dpDamage)
             {
                 AddDp(-dpDamage);
+            }
+            else if (mUnitAttr.Get(EPA.CurDP) <= 0)
+            {
+                SetIsPabodyState(false);
             }
         }
 
