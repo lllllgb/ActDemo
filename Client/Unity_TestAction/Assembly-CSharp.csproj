@@ -278,7 +278,9 @@
      <Compile Include="Assets\Scripts\Impl\Runtime\Procedure\ProcedureTestAction.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Procedure\TestAction\TestAction.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Tables\CameraActionBase.cs" />
+     <Compile Include="Assets\Scripts\Impl\Runtime\Tables\InstanceBase.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Tables\MonsterAttrBase.cs" />
+     <Compile Include="Assets\Scripts\Impl\Runtime\Tables\MonsterTriggerBase.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Tables\PlayerAttrBase.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Tables\SkillAttrBase.cs" />
      <Compile Include="Assets\Scripts\Impl\Runtime\Tables\SkillBase.cs" />
