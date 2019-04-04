@@ -3,7 +3,7 @@ CRC: 2152657531
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7a8f18558714678c78ac323c897acecb
+    Hash: a040c7db03381a4a9d52efbb2307daca
   TypeTreeHash:
     serializedVersion: 2
     Hash: d74f6a97f2340464ebb374e24c1ad675
@@ -30,4 +30,4 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Unit/ms_diyushibin.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

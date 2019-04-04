@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 760155108
+CRC: 1452288394
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2d53710b5ed20e7ee5c59b765526b4ef
+    Hash: a98e87f3b8a8a026a7fc51e00938a731
   TypeTreeHash:
     serializedVersion: 2
     Hash: a867b8f68763895f990994203e01bccb
@@ -34,10 +34,10 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_skill10_002.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002a_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_014_001_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002a_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_014_001_share.unity3d

@@ -3,7 +3,7 @@ CRC: 3480537059
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: bfc159d30845d179bd1c9bc0576329f3
+    Hash: 2328e3cb58e120579e47369bfe046515
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,5 +18,5 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Materials/E_Glow_fsw_002_02.mat
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_glow_fsw_002_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_glow_fsw_002_share.unity3d

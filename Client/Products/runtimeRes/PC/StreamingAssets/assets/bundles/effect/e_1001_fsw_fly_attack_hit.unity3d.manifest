@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2733245287
+CRC: 2777817586
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e90560b6ba12d440d765144a114b8377
+    Hash: 5aed6c4da97f2b8b544bf5c186fbf0b9
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9e4b7539d71d9321524f29e73f3c601f
@@ -28,9 +28,9 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_fly_attack_hit.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002a_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_lyj_003_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_001_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002a_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_lyj_003_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_001_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d

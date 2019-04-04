@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 502114324
+CRC: 3499530587
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 20cfa82460a24f05036162bb909f59ed
+    Hash: e11f2031bd63dfd126fdff5531cc8cf2
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9e4b7539d71d9321524f29e73f3c601f
@@ -28,10 +28,10 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_m0001_fsw_skill2.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_by_fsw_001_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_by_fsw_003_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_by_fsw_002_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_knife_fsw_011_04_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_knife_fsw_003_02_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_knife_fsw_014_01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_knife_fsw_002_02_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_by_fsw_001_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_by_fsw_003_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_knife_fsw_011_04_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_by_fsw_002_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_knife_fsw_003_02_share.unity3d

@@ -3,7 +3,7 @@ CRC: 4104563678
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e49c98d93a3682ded987dc28d3c64a78
+    Hash: f01f33c16cb07691482c7e4e40bf7a3e
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,6 +18,6 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Materials/E_Knife_fsw_004_01.mat
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_noise_fsw_001_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_knife_fsw_004_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_noise_fsw_001_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_knife_fsw_004_share.unity3d

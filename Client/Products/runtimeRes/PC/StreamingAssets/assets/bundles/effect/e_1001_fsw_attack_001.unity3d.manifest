@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3156210160
+CRC: 3591183046
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2e406fbed66985537bd221ef899bb940
+    Hash: 9d86dd199786f294620a844ea1e95090
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9e4b7539d71d9321524f29e73f3c601f
@@ -28,7 +28,7 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_attack_001.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002a_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002a_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_003_03_share.unity3d

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 18442428
+CRC: 1175476698
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: bc9229fc65a0ff098925eb1cda69675d
+    Hash: b2fb3963756c20451527458a969f8208
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6370d3f9de9eca57f523bce048404a46
@@ -19,8 +19,8 @@ Assets:
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Mobile/Mobile-Particle-Add.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Mobile/Mobile-Particle-Alpha.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Unlit/Unlit-Alpha.shader
-- Assets/Shaders/shader/Obj-Texture.shader
 - Assets/Shaders/shader/Obj-Soft-Light.shader
+- Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Normal-Diffuse.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Particle Alpha Blend.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Particle Add.shader
 - Assets/Shaders/custom_shaders/AnyPlay-Particle-Dissolve-Add-VertexAlpha.shader

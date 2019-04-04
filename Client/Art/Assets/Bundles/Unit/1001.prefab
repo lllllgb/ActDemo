@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4257271102051404}
   - component: {fileID: 136222996979439442}
+  - component: {fileID: 114027541599669610}
   m_Layer: 11
   m_Name: 1001
   m_TagString: Untagged
@@ -4726,6 +4727,22 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &114027541599669610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016268040478230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4783a8e6eda7d74d8a16b76c7e1565f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers:
+  - {fileID: 137002493933366302}
+  - {fileID: 23356528848002960}
+  - {fileID: 23744775323881586}
+  - {fileID: 23838283091531998}
 --- !u!136 &136222996979439442
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -11753,7 +11770,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1757407540
+  randomSeed: -70356834
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -32,6 +32,8 @@ namespace AosHotfixRunTime
         float mRestoreLeft = 0.0f;
         //霸体状态
         bool mIsPabodyState;
+        //
+        UnitRenderers mUnitRenderer;
 
         public Unit()
         {
@@ -64,6 +66,7 @@ namespace AosHotfixRunTime
             }
 
             tmpGo = Hotfix.Instantiate(tmpGo);
+            mUnitRenderer = tmpGo.GetComponent<UnitRenderers>();
             tmpGo.transform.localEulerAngles = new Vector3(0, 90, 0);
             InitActUnit(tmpGo, tmpGo.transform.Find("model"));
             TopNode = Utility.GameObj.FindByName(tmpGo.transform, "topNode");
@@ -162,6 +165,11 @@ namespace AosHotfixRunTime
                 //    Logger.Log($" name-> {Name} Pabody->{flag}");
                 //}
                 mIsPabodyState = flag;
+
+                if (mUnitRenderer)
+                {
+                    mUnitRenderer.EnableRim(mIsPabodyState);
+                }
             }
         }
 

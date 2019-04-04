@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3002392793
+CRC: 3088720929
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d05f836ffcd1cc1822040b568f3fa9d5
+    Hash: 6385754dc994a8a95eb336c71961c9fc
   TypeTreeHash:
     serializedVersion: 2
-    Hash: b926c10ecf00ab4e3a7871b3320d7075
+    Hash: b732ea1c4d7744872ffea24b3d019a66
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -29,6 +29,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 111
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a4783a8e6eda7d74d8a16b76c7e1565f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 136
   Script: {instanceID: 0}
 - Class: 137
@@ -36,6 +40,6 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Unit/m0002.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_001_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_001_share.unity3d
