@@ -174,7 +174,10 @@ namespace AosHotfixRunTime
                     mUnitRenderer.EnableRim(mIsPabodyState);
                 }
 
-                Game.EffectMgr.PlayEffect("E_pojia_01", 1, MidNode, Vector3.zero, Quaternion.identity);
+                if (!flag)
+                {
+                    Game.EffectMgr.PlayEffect("E_pojia_01", 1, MidNode, Vector3.zero, Quaternion.identity);
+                }
             }
         }
 
