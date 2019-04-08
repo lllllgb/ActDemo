@@ -18,8 +18,7 @@ namespace AosHotfixRunTime
         public static IWindowsManager WindowsMgr { get; private set; }
         public static IObjectManager ObjectMgr { get; private set; }
         public static ITimerManager TimerMgr { get; private set; }
-
-        //public static GameObject PoolObjectRoot { get; private set; }
+        public static IEffectManager EffectMgr { get; private set; }
 
         public static void Init()
         {
@@ -107,6 +106,8 @@ namespace AosHotfixRunTime
             GameModuleManager.CreateModule<TimerManager>();
             TimerMgr = GameModuleManager.GetModule<ITimerManager>();
             GameModuleManager.CreateModule<ActionManager>();
+            GameModuleManager.CreateModule<EffectManager>();
+            EffectMgr = GameModuleManager.GetModule<IEffectManager>();
             GameModuleManager.CreateModule<ControllerManager>();
             ControllerMgr = GameModuleManager.GetModule<IControllerManager>();
             GameModuleManager.CreateModule<ObjectManager>();

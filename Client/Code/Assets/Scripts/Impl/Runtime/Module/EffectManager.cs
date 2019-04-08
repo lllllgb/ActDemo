@@ -5,15 +5,24 @@ using AosHotfixFramework;
 
 namespace AosHotfixRunTime
 {
-    public class EffectManager
+    public interface IEffectManager
     {
+        EffectObject PlayEffect(string effectName, float duration, Transform parent, Vector3 pos, Quaternion rotate);
+
+        void RemoveEffect(EffectObject effectObject);
+    }
+
+    internal class EffectManager : GameModuleBase, IEffectManager
+    {
+        internal override int Priority => base.Priority;
+
         List<EffectObject> mEffectList = new List<EffectObject>();
 
         public EffectManager()
         {
         }
 
-        public void Update(float deltaTime)
+        internal override void Update(float deltaTime)
         {
             for (int i = mEffectList.Count - 1; i >= 0; --i)
             {
@@ -27,8 +36,11 @@ namespace AosHotfixRunTime
                 }
             }
         }
+        internal override void LateUpdate(float deltaTime)
+        {
+        }
 
-        public void Release()
+        internal override void Shutdown()
         {
             var tmpPool = Game.PoolMgr.GetObjectPool<EffectObject>() as ObjectPoolBase;
 

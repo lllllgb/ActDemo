@@ -151,7 +151,10 @@ namespace AosHotfixRunTime
         {
             if (ActStatus.ActionState != ActData.EActionState.Hit)
             {
-                SetIsPabodyState(true);
+                if (mUnitAttr.Get(EPA.CurDP) > 0)
+                {
+                    SetIsPabodyState(true);
+                }
             }
         }
 
@@ -170,6 +173,8 @@ namespace AosHotfixRunTime
                 {
                     mUnitRenderer.EnableRim(mIsPabodyState);
                 }
+
+                Game.EffectMgr.PlayEffect("E_pojia_01", 1, MidNode, Vector3.zero, Quaternion.identity);
             }
         }
 
@@ -187,10 +192,6 @@ namespace AosHotfixRunTime
             if (0 != dpDamage)
             {
                 AddDp(-dpDamage);
-            }
-            else if (mUnitAttr.Get(EPA.CurDP) <= 0)
-            {
-                SetIsPabodyState(false);
             }
         }
 

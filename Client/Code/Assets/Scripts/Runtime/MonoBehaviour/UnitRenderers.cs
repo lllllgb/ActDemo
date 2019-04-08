@@ -37,7 +37,7 @@ public class UnitRenderers : MonoBehaviour
 
                 if (tempShaderName.Equals("Shader/Obj-Soft-Light"))
                 {
-                    mat.SetFloat("_RimPower", flag ? 1 : 0);
+                    mat.SetFloat("_RimToggle", flag ? 1 : 0);
                 }
             }
         }

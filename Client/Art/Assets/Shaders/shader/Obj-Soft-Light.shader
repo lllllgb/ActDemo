@@ -6,7 +6,8 @@ Shader "Shader/Obj-Soft-Light"
 	    _Color ("Color Tint", Color) = (0, 0, 0, 1)
 		_MainTex("Base 2D", 2D) = "white"{}
 		_RimColor("RimColor", Color) = (1,1,1,1)
-		[Toggle]_RimPower("RimPower", Range(0.0, 1.0)) = 1.0
+		_RimPower("RimPower", Range(0.0, 1.0)) = 1.0
+		[Toggle]_RimToggle("RimToggle", Range(0.0, 1.0)) = 1.0
 		_LightDir("Light Dir", Vector) = (-0.08, 0.5, 1, 0)
 		_LightColor("Light Color", Color) = (1.0, 1.0, 1.0, 1.0)
 		_LightIntensity("LightIntensity", Range(0.0, 1.0)) = 0.5
@@ -39,6 +40,7 @@ Shader "Shader/Obj-Soft-Light"
 			float4 _MainTex_ST;
 			fixed4 _RimColor;
 			float _RimPower;
+			float _RimToggle;
 	        fixed4 _Color;
             float4 _LightDir;
 			float  _LightIntensity;
@@ -88,11 +90,16 @@ Shader "Shader/Obj-Soft-Light"
 				fixed3 rimColor = _RimColor * pow(rim, 1 / _RimPower);
 			  
 
-			   fixed3 finalColor =texColor+halfLambert;
-			#ifndef RIMPOWER_OFF
-				return fixed4(finalColor+rimColor, 1);
-			  #endif 	
-			    return fixed4(finalColor, 1);
+				fixed3 finalColor =texColor+halfLambert;
+				
+				if(_RimToggle > 0.5)
+				{
+					return fixed4(finalColor+rimColor, 1);
+				}
+				else
+				{
+					return fixed4(finalColor, 1);
+				}
 			}
  
 			

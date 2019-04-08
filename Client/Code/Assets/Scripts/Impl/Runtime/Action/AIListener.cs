@@ -408,7 +408,7 @@ namespace ACT
             // choose a target when action finished.
             if (mActiveStatus != null && mActiveStatus.AILists.Count != 0)
             {
-                mActiveList = mActiveStatus.AILists[mActiveStatus.AILists.Count - 1];
+                mActiveList = null;
                 mTarget = getTargetObject((EAITragetType)mActiveStatus.TargetType);
                 if (mTarget == null) refreshTargetList();
                 mActionStatus.ActionTarget = mTarget;
@@ -513,7 +513,8 @@ namespace ACT
 
         IActUnit selectEnemy()
         {
-            return ActionSystem.Instance.ActUnitMgr.LocalPlayer;
+            IActUnit tmpTarget = ActionSystem.Instance.ActUnitMgr.LocalPlayer;
+            return null != tmpTarget ? tmpTarget.Dead ? null : tmpTarget : tmpTarget;
         }
 
         //-----------------------------------------------------------------------

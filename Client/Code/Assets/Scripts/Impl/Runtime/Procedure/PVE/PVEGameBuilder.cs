@@ -55,7 +55,7 @@ namespace AosHotfixRunTime
 
         public void LateUpdate(float deltaTime)
         {
-            if (null != mLocalPlayer)
+            if (null != mLocalPlayer && !mLocalPlayer.Dead)
             {
                 mLocalPlayer.LateUpdate(deltaTime);
             }
@@ -264,6 +264,7 @@ namespace AosHotfixRunTime
 
             if (tmpEventArg.Data.UnitType == EUnitType.EUT_LocalPlayer)
             {
+                ACT.ActionSystem.Instance.ActUnitMgr.LocalPlayer = null;
                 DelaySettle(false);
             }
             else
