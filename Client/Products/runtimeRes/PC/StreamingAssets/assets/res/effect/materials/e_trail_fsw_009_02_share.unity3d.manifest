@@ -3,7 +3,7 @@ CRC: 2326475778
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cc97e6cf18a0b4fc4493b3d70632f4be
+    Hash: f08a95612e5aa884530d4acb072f6dff
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,5 +18,5 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Materials/E_Trail_fsw_009_02.mat
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_trail_fsw_009_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_trail_fsw_009_share.unity3d

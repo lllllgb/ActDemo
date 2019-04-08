@@ -3,7 +3,7 @@ CRC: 3500584393
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: db58a7e40ef94927b4eb32b4222232e9
+    Hash: 2fa42ec0e9ab869cf2ef56bc00ba79e7
   TypeTreeHash:
     serializedVersion: 2
     Hash: 3d5b3a2a2c53a4261361acc933a97a07
@@ -36,4 +36,4 @@ ClassTypes:
 Assets:
 - Assets/Bundles/UI/PVESettleWnd.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/ui/buttonscale_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/ui/buttonscale_share.unity3d

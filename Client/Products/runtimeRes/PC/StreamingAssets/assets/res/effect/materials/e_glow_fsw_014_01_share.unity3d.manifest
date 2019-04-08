@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 82476214
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c461f2769613e180802e010decb08f10
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6f165f44e4778b6c9d85e7a145a54cb1
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/effect/Materials/E_Glow_fsw_014_01.mat
+Dependencies:
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_glow_fsw_014_share.unity3d

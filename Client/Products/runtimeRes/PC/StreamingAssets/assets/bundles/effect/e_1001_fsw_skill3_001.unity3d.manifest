@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4069443838
+CRC: 3486095981
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1bcbd3af69bc0b98ddb9992671c1ffb6
+    Hash: 9603fcf018a06f206cf17d1612545841
   TypeTreeHash:
     serializedVersion: 2
     Hash: 458d147a64fc653d31d9ab5cf127008d
@@ -32,7 +32,7 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_skill3_001.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_smoke_fsw_003_01_share.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_smoke_fsw_003_01_share.unity3d

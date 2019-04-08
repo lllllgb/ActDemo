@@ -1,0 +1,31 @@
+ManifestFileVersion: 0
+CRC: 164923683
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ea91a4bd3b4d1860fa6c0bd171cf0ed7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0605fe76d012b1a951d4b995dc7210fb
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Effect/E_pojia_01.prefab
+Dependencies:
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_object_fsw_001_01_share.unity3d
