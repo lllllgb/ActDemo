@@ -151,9 +151,13 @@ namespace AosHotfixRunTime
         {
             if (ActStatus.ActionState != ActData.EActionState.Hit)
             {
-                if (mUnitAttr.Get(EPA.CurDP) > 0)
+                if (mUnitAttr.Get(EPA.CurDP) > 0 || ActStatus.ActiveAction.SuperArmor)
                 {
                     SetIsPabodyState(true);
+                }
+                else
+                {
+                    SetIsPabodyState(false);
                 }
             }
         }

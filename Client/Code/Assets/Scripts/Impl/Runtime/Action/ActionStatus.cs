@@ -595,17 +595,17 @@ namespace ACT
 
         void SetDirection(ActData.Event actionEvent, int angle, bool local)
         {
-            if (local)
-            {
-                angle = angle > 0 ? 180 : -180;
-            }
-            else
-            {
-                angle = angle > 0 ? 90 : -90;
-            }
+            //if (local)
+            //{
+            //    angle = angle > 0 ? 180 : -180;
+            //}
+            //else
+            //{
+            //    angle = angle > 0 ? 90 : -90;
+            //}
 
-            float rad = Mathf.Deg2Rad * angle;
-            mOwner.SetOrientation(local ? mOwner.Orientation + rad : rad);
+            //float rad = Mathf.Deg2Rad * angle;
+            //mOwner.SetOrientation(local ? mOwner.Orientation + rad : rad);
         }
 
         void PlaySound(ActData.Event actionEvent, int soundIndex, bool checkMaterial)
@@ -745,7 +745,6 @@ namespace ACT
 
                 if (tmpTarget == mOwner ||
                     tmpTarget.Dead ||
-                    tmpTarget.Camp == EUnitCamp.EUC_FRIEND ||
                     tmpTarget.Camp == mOwner.Camp)
                     return;
 
@@ -848,23 +847,22 @@ namespace ACT
             if (ActionTarget == null || !ActionTarget.UGameObject || ActionTarget.Dead)
                 return;
 
-            int tmpOffsetX = data.Random ? Random.Range(0, data.OffsetX) : data.OffsetX;
-            int tmpOffsetZ = data.Random ? Random.Range(0, data.OffsetZ) : data.OffsetZ;
-            Vector3 tmpOffset = new Vector3(tmpOffsetX * 0.01f, 0, tmpOffsetZ * 0.01f);
+            int tmpOffsetX = 200;
+            int tmpOffsetZ = /*data.Random ? Random.Range(0, data.OffsetZ) :*/ data.OffsetZ;
+            Vector3 tmpOffset = new Vector3(Mathf.Sign(mOwner.Position.x - ActionTarget.Position.x) * tmpOffsetX * 0.01f, 0, 0);
 
-            if (tmpOffset != Vector3.zero)
-            {
-                if (data.Local)
-                    tmpOffset = ActionTarget.UGameObject.transform.rotation * tmpOffset;
-
-                tmpOffset += ActionTarget.Radius * tmpOffset.normalized;
-            }
-            else
-            {
-                tmpOffset = ActionTarget.Radius * (mOwner.Position - ActionTarget.Position).normalized;
-            }
+            //if (tmpOffset != Vector3.zero)
+            //{
+                //tmpOffset = ActionTarget.UGameObject.transform.rotation * tmpOffset;
+            //    tmpOffset += ActionTarget.Radius * tmpOffset.normalized;
+            //}
+            //else
+            //{
+            //    tmpOffset = ActionTarget.Radius * tmpDis.normalized;
+            //}
 
             mGotoTargetPos = ActionTarget.Position + tmpOffset;
+            Logger.Log($"gotoTargetPos-> {mGotoTargetPos}");
             Vector3 tmpDirection = mGotoTargetPos - mOwner.Position;
             float tmpMoveSpeed = mOwner.Speed * 0.01f;
             mIsGotoTarget = true;
@@ -872,6 +870,11 @@ namespace ACT
 
             mVelocity.x = -Mathf.Sign(tmpDirection.x) * Mathf.Sign(tmpDirection.z) * tmpMoveSpeed;
             mVelocity.z = tmpMoveSpeed;
+
+            float x = mGotoTargetPos.x - mOwner.Position.x;
+            float z = mGotoTargetPos.z - mOwner.Position.z;
+            float dir = Mathf.Atan2(x, 0);
+            mOwner.SetOrientation(dir);
         }
 
         void UpdateGoToTarget()

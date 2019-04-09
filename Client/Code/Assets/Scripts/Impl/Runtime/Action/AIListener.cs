@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using ActData.Helper;
 
 namespace ACT
 {
@@ -52,13 +53,14 @@ namespace ACT
 
         IPlaySkillListener mPlaySkillListener;
         int mSkillIDByCurrAction;
+        int mRunActionCache;
 
         public AIListener(IActUnit owner, IPlaySkillListener playSkillListener)
         {
             mOwner = owner;
             mPlaySkillListener = playSkillListener;
             mActionStatus = mOwner.ActStatus;
-
+            mRunActionCache = mActionStatus.ActionGroup.GetActionIdx(ActData.CommonAction.Run);
             changeAIDiff(owner.AIDiff);
         }
 
@@ -410,8 +412,27 @@ namespace ACT
             {
                 mActiveList = null;
                 mTarget = getTargetObject((EAITragetType)mActiveStatus.TargetType);
-                if (mTarget == null) refreshTargetList();
+                if (mTarget == null)
+                    refreshTargetList();
                 mActionStatus.ActionTarget = mTarget;
+
+                if (null == mTarget)
+                {
+                    return;
+                }
+
+                if (Mathf.Abs(mTarget.Position.z - mOwner.Position.z) > 1f)
+                {
+                    mSkillIDByCurrAction = 0;
+
+                    mActionChanging = true;
+                    play(mTarget, mRunActionCache);
+                    mActionChanging = false;
+
+                    mLoopCount = 1;
+                    mCurrentActionID = mRunActionCache;
+                    return;
+                }
 
                 if (fetchTargetPosition((EAITragetType)mActiveStatus.TargetType, ref mTargetPos))
                 {

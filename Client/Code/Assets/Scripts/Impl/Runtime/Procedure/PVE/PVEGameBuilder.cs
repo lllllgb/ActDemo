@@ -265,6 +265,7 @@ namespace AosHotfixRunTime
             if (tmpEventArg.Data.UnitType == EUnitType.EUT_LocalPlayer)
             {
                 ACT.ActionSystem.Instance.ActUnitMgr.LocalPlayer = null;
+                mLocalPlayer = null;
                 DelaySettle(false);
             }
             else

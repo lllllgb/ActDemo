@@ -7248,14 +7248,13 @@
                 <Event>
                   <EventType>GoToTargets</EventType>
                   <EventTypeInt>35</EventTypeInt>
-                  <EventDetailData xsi:type="EventGoToTargets" OffsetX="200" Random="true" />
+                  <EventDetailData xsi:type="EventGoToTargets" OffsetZ="200" Random="true" />
                 </Event>
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
-              <FaceTarget>true</FaceTarget>
               <CanMove>true</CanMove>
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
@@ -7450,7 +7449,6 @@
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
-              <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
               <NomalDiffTimeProp>90</NomalDiffTimeProp>
               <HardDiffTimeProp>70</HardDiffTimeProp>
@@ -7560,7 +7558,6 @@
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
-              <FaceTarget>true</FaceTarget>
               <CanMove>true</CanMove>
               <CanHurt>true</CanHurt>
               <NomalDiffTimeProp>90</NomalDiffTimeProp>
@@ -7671,7 +7668,6 @@
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
-              <FaceTarget>true</FaceTarget>
               <CanMove>true</CanMove>
               <CanHurt>true</CanHurt>
               <NomalDiffTimeProp>90</NomalDiffTimeProp>
@@ -7777,7 +7773,6 @@
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
-              <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
               <NomalDiffTimeProp>90</NomalDiffTimeProp>
               <HardDiffTimeProp>70</HardDiffTimeProp>
@@ -7884,7 +7879,6 @@
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
-              <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
               <NomalDiffTimeProp>90</NomalDiffTimeProp>
               <HardDiffTimeProp>70</HardDiffTimeProp>
