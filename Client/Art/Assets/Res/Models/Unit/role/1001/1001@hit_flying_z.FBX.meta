@@ -215,6 +215,7 @@ ModelImporter:
     400208: bone_43
     7400000: 1001_@hit_flying_z
     9500000: //RootNode
+    11100000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -293,5 +294,5 @@ ModelImporter:
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: assets/res/models/unit/role/1001/1001@hit_flying_z_share.unity3d
   assetBundleVariant: 

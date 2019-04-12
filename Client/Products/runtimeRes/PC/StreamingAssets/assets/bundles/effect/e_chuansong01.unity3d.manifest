@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 185113615
+CRC: 2028504276
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0a24549104260221a3c159f291747d74
+    Hash: 8164bff6d685856f8c4198c35db97623
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 6441f4c48b8293a736413520ea1a9530
+    Hash: 49c318d97990f2f843929a8bd7947255
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -15,11 +15,7 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
-- Class: 28
-  Script: {instanceID: 0}
 - Class: 43
-  Script: {instanceID: 0}
-- Class: 48
   Script: {instanceID: 0}
 - Class: 198
   Script: {instanceID: 0}
@@ -38,3 +34,5 @@ Dependencies:
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_fuwen_fsw_002_01_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_lyj_005_01_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_fuwen_fsw_003_01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_smoke_fsw_007_01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_smoke_fsw_007_02_share.unity3d

@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 1306620456
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4cd5717dcecc86572e9b89aa1d33b7fb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: da04d5352644e5aede0c7ec959090412
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/Models/Unit/role/1001/1001@skill9.FBX
+Dependencies: []

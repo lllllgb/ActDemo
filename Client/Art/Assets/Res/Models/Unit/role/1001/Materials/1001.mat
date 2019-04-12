@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: 1001
   m_Shader: {fileID: 4800000, guid: 4919917466140a649af5a0acacf346dc, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _RIMTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -68,8 +68,8 @@ Material:
     - _OcclusionStrength: 1
     - _Origin: 1
     - _Parallax: 0.02
-    - _RimPower: 0.08
-    - _RimToggle: 0
+    - _RimPower: 0.1
+    - _RimToggle: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

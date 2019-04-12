@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1631211725
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ae95efc5cd5e45108904077bb101742b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/Models/Unit/role/1001/textures/1001.png
+Dependencies: []

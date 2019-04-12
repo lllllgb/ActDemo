@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2385687102
+CRC: 40987021
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -21,7 +21,9 @@ AssetBundleManifest:
         Dependency_13: assets/res/models/scene/xueshan_1/zhongjingshu2_share.unity3d
         Dependency_14: assets/res/models/scene/testaction/materials/floor_share.unity3d
         Dependency_15: assets/res/models/scene/testaction/materials/wall_share.unity3d
-        Dependency_16: assets/res/models/scene/xueshan_1/yinying_share.unity3d
+        Dependency_16: assets/res/models/scene/xueshan_1/qianjingzhanlan2_share.unity3d
+        Dependency_17: assets/res/models/scene/xueshan_1/qianjingzhanlan3_share.unity3d
+        Dependency_18: assets/res/models/scene/xueshan_1/yinying_share.unity3d
     Info_1:
       Name: assets/res/effect/texture/e_line_lyj_002_share.unity3d
       Dependencies: {}
@@ -137,6 +139,41 @@ AssetBundleManifest:
         Dependency_1: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
         Dependency_2: assets/res/models/misc/shadow/shadow_share.unity3d
         Dependency_3: assets/res/models/misc/shadow/shadow_001_share.unity3d
+        Dependency_4: assets/res/models/unit/role/1001/1001@skill7_share.unity3d
+        Dependency_5: assets/res/models/unit/role/1001/1001@down_share.unity3d
+        Dependency_6: assets/res/models/unit/role/1001/1001@attack_4_share.unity3d
+        Dependency_7: assets/res/models/unit/role/1001/1001@hit_share.unity3d
+        Dependency_8: assets/res/models/unit/role/1001/1001@hit_flying_share.unity3d
+        Dependency_9: assets/res/models/unit/role/1001/1001@skill6_share.unity3d
+        Dependency_10: assets/res/models/unit/role/1001/1001@skill1_share.unity3d
+        Dependency_11: assets/res/models/unit/role/1001/1001@skill4_share.unity3d
+        Dependency_12: assets/res/models/unit/role/1001/1001@skill9_share.unity3d
+        Dependency_13: assets/res/models/unit/role/1001/1001@skill8_share.unity3d
+        Dependency_14: assets/res/models/unit/role/1001/1001@front_attack_share.unity3d
+        Dependency_15: assets/res/models/unit/role/1001/1001@skill2_1_share.unity3d
+        Dependency_16: assets/res/models/unit/role/1001/1001@skill2_2_share.unity3d
+        Dependency_17: assets/res/models/unit/role/1001/1001@attack_2_share.unity3d
+        Dependency_18: assets/res/models/unit/role/1001/textures/1001_share.unity3d
+        Dependency_19: assets/res/models/unit/weapon/materials/1001_share.unity3d
+        Dependency_20: assets/res/models/unit/role/1001/1001@skill10_share.unity3d
+        Dependency_21: assets/res/models/unit/role/1001/1001@skill5_share.unity3d
+        Dependency_22: assets/res/models/unit/role/1001/1001@stop_share.unity3d
+        Dependency_23: assets/res/models/unit/role/1001/1001@skill3_share.unity3d
+        Dependency_24: assets/res/models/unit/weapon/1001_share.unity3d
+        Dependency_25: assets/res/models/unit/role/1001/1001@hit_fly_share.unity3d
+        Dependency_26: assets/res/models/unit/role/1001/1001@fall_attack_share.unity3d
+        Dependency_27: assets/res/models/unit/role/1001/1001@hit_flying_z_share.unity3d
+        Dependency_28: assets/res/models/unit/role/1001/1001@block_share.unity3d
+        Dependency_29: assets/res/models/unit/role/1001/1001_share.unity3d
+        Dependency_30: assets/res/models/unit/role/1001/1001@attack_1_share.unity3d
+        Dependency_31: assets/res/models/unit/role/1001/1001@attack_3_share.unity3d
+        Dependency_32: assets/res/models/unit/role/1001/1001@fly_attack_share.unity3d
+        Dependency_33: assets/res/models/unit/role/1001/1001@hit_down_share.unity3d
+        Dependency_34: assets/res/models/unit/role/1001/1001@get up_share.unity3d
+        Dependency_35: assets/res/models/unit/role/1001/1001@jump_share.unity3d
+        Dependency_36: assets/res/models/unit/role/1001/1001@idle_share.unity3d
+        Dependency_37: assets/res/models/unit/role/1001/1001@skill2_3_share.unity3d
+        Dependency_38: assets/res/models/unit/role/1001/1001@run_share.unity3d
     Info_25:
       Name: assets/bundles/effect/e_1001_fsw_attack_001.unity3d
       Dependencies:
@@ -1002,6 +1039,7 @@ AssetBundleManifest:
         Dependency_15: assets/res/models/scene/xueshan_1/qianjingzhanlan2_share.unity3d
         Dependency_16: assets/res/models/scene/xueshan_1/qianjingzhanlan3_share.unity3d
         Dependency_17: assets/res/models/scene/xueshan_1/yinying_share.unity3d
+        Dependency_18: assets/bundles/effect/e_chuansong01.unity3d
     Info_179:
       Name: assets/bundles/scene/instance2.unity3d
       Dependencies:
@@ -1022,6 +1060,7 @@ AssetBundleManifest:
         Dependency_14: assets/res/models/scene/xueshan_1/qianjingzhanlan2_share.unity3d
         Dependency_15: assets/res/models/scene/xueshan_1/qianjingzhanlan3_share.unity3d
         Dependency_16: assets/res/models/scene/xueshan_1/yinying_share.unity3d
+        Dependency_17: assets/bundles/effect/e_chuansong01.unity3d
     Info_180:
       Name: assets/bundles/scene/instance3.unity3d
       Dependencies:
@@ -1395,6 +1434,8 @@ AssetBundleManifest:
         Dependency_7: assets/res/effect/materials/e_fuwen_fsw_002_01_share.unity3d
         Dependency_8: assets/res/effect/materials/e_glow_lyj_005_01_share.unity3d
         Dependency_9: assets/res/effect/materials/e_fuwen_fsw_003_01_share.unity3d
+        Dependency_10: assets/res/effect/materials/e_smoke_fsw_007_01_share.unity3d
+        Dependency_11: assets/res/effect/materials/e_smoke_fsw_007_02_share.unity3d
     Info_252:
       Name: assets/res/effect/model/fbx_yuan_fsw_004_share.unity3d
       Dependencies: {}
@@ -1438,3 +1479,207 @@ AssetBundleManifest:
         Dependency_0: assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
         Dependency_1: assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
         Dependency_2: assets/res/effect/materials/e_object_fsw_001_01_share.unity3d
+    Info_263:
+      Name: assets/bundles/unit/1002.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+        Dependency_1: assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
+        Dependency_2: assets/res/models/misc/shadow/shadow_share.unity3d
+        Dependency_3: assets/res/models/misc/shadow/shadow_001_share.unity3d
+        Dependency_4: assets/res/models/unit/role/1001/1001@skill7_share.unity3d
+        Dependency_5: assets/res/models/unit/role/1001/1001@down_share.unity3d
+        Dependency_6: assets/res/models/unit/role/1001/1001@attack_4_share.unity3d
+        Dependency_7: assets/res/models/unit/role/1001/1001@hit_share.unity3d
+        Dependency_8: assets/res/models/unit/role/1001/1001@hit_flying_share.unity3d
+        Dependency_9: assets/res/models/unit/role/1001/1001@skill6_share.unity3d
+        Dependency_10: assets/res/models/unit/role/1001/1001@skill1_share.unity3d
+        Dependency_11: assets/res/models/unit/role/1001/1001@skill4_share.unity3d
+        Dependency_12: assets/res/models/unit/role/1001/1001@skill9_share.unity3d
+        Dependency_13: assets/res/models/unit/role/1001/1001@skill8_share.unity3d
+        Dependency_14: assets/res/models/unit/role/1001/1001@front_attack_share.unity3d
+        Dependency_15: assets/res/models/unit/role/1001/1001@skill2_1_share.unity3d
+        Dependency_16: assets/res/models/unit/role/1001/1001@skill2_2_share.unity3d
+        Dependency_17: assets/res/models/unit/role/1001/1001@attack_2_share.unity3d
+        Dependency_18: assets/res/models/unit/weapon/materials/1001_share.unity3d
+        Dependency_19: assets/res/models/unit/role/1001/1001@skill10_share.unity3d
+        Dependency_20: assets/res/models/unit/role/1001/1001@skill5_share.unity3d
+        Dependency_21: assets/res/models/unit/role/1001/1001@stop_share.unity3d
+        Dependency_22: assets/res/models/unit/role/1001/1001@skill3_share.unity3d
+        Dependency_23: assets/res/models/unit/weapon/1001_share.unity3d
+        Dependency_24: assets/res/models/unit/role/1001/1001@hit_fly_share.unity3d
+        Dependency_25: assets/res/models/unit/role/1001/1001@fall_attack_share.unity3d
+        Dependency_26: assets/res/models/unit/role/1001/1001@hit_flying_z_share.unity3d
+        Dependency_27: assets/res/models/unit/role/1001/1001@block_share.unity3d
+        Dependency_28: assets/res/models/unit/role/1001/1001_share.unity3d
+        Dependency_29: assets/res/models/unit/role/1001/1001@attack_1_share.unity3d
+        Dependency_30: assets/res/models/unit/role/1001/1001@attack_3_share.unity3d
+        Dependency_31: assets/res/models/unit/role/1001/1001@fly_attack_share.unity3d
+        Dependency_32: assets/res/models/unit/role/1001/1001@hit_down_share.unity3d
+        Dependency_33: assets/res/models/unit/role/1001/1001@get up_share.unity3d
+        Dependency_34: assets/res/models/unit/role/1001/1001@jump_share.unity3d
+        Dependency_35: assets/res/models/unit/role/1001/1001@idle_share.unity3d
+        Dependency_36: assets/res/models/unit/role/1001/1001@skill2_3_share.unity3d
+        Dependency_37: assets/res/models/unit/role/1001/1001@run_share.unity3d
+    Info_264:
+      Name: assets/res/models/unit/role/1001/1001@skill7_share.unity3d
+      Dependencies: {}
+    Info_265:
+      Name: assets/res/models/unit/role/1001/1001@down_share.unity3d
+      Dependencies: {}
+    Info_266:
+      Name: assets/res/models/unit/role/1001/1001@attack_4_share.unity3d
+      Dependencies: {}
+    Info_267:
+      Name: assets/res/models/unit/role/1001/1001@hit_share.unity3d
+      Dependencies: {}
+    Info_268:
+      Name: assets/res/models/unit/role/1001/1001@hit_flying_share.unity3d
+      Dependencies: {}
+    Info_269:
+      Name: assets/res/models/unit/role/1001/1001@skill6_share.unity3d
+      Dependencies: {}
+    Info_270:
+      Name: assets/res/models/unit/role/1001/1001@skill1_share.unity3d
+      Dependencies: {}
+    Info_271:
+      Name: assets/res/models/unit/role/1001/1001@skill4_share.unity3d
+      Dependencies: {}
+    Info_272:
+      Name: assets/res/models/unit/role/1001/1001@skill9_share.unity3d
+      Dependencies: {}
+    Info_273:
+      Name: assets/res/models/unit/role/1001/1001@skill8_share.unity3d
+      Dependencies: {}
+    Info_274:
+      Name: assets/res/models/unit/role/1001/1001@front_attack_share.unity3d
+      Dependencies: {}
+    Info_275:
+      Name: assets/res/models/unit/role/1001/1001@skill2_1_share.unity3d
+      Dependencies: {}
+    Info_276:
+      Name: assets/res/models/unit/role/1001/1001@skill2_2_share.unity3d
+      Dependencies: {}
+    Info_277:
+      Name: assets/res/models/unit/role/1001/1001@attack_2_share.unity3d
+      Dependencies: {}
+    Info_278:
+      Name: assets/res/models/unit/role/1001/textures/1001_share.unity3d
+      Dependencies: {}
+    Info_279:
+      Name: assets/res/models/unit/weapon/materials/1001_share.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+        Dependency_1: assets/res/models/unit/weapon/textures/1001_share.unity3d
+    Info_280:
+      Name: assets/res/models/unit/role/1001/1001@skill10_share.unity3d
+      Dependencies: {}
+    Info_281:
+      Name: assets/res/models/unit/weapon/textures/1001_share.unity3d
+      Dependencies: {}
+    Info_282:
+      Name: assets/res/models/unit/role/1001/1001@skill5_share.unity3d
+      Dependencies: {}
+    Info_283:
+      Name: assets/res/models/unit/role/1001/1001@stop_share.unity3d
+      Dependencies: {}
+    Info_284:
+      Name: assets/res/models/unit/role/1001/1001@skill3_share.unity3d
+      Dependencies: {}
+    Info_285:
+      Name: assets/res/models/unit/weapon/1001_share.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+        Dependency_1: assets/res/models/unit/weapon/textures/1001_share.unity3d
+    Info_286:
+      Name: assets/res/models/unit/role/1001/1001@hit_fly_share.unity3d
+      Dependencies: {}
+    Info_287:
+      Name: assets/res/models/unit/role/1001/1001@fall_attack_share.unity3d
+      Dependencies: {}
+    Info_288:
+      Name: assets/res/models/unit/role/1001/1001@hit_flying_z_share.unity3d
+      Dependencies: {}
+    Info_289:
+      Name: assets/res/models/unit/role/1001/1001@block_share.unity3d
+      Dependencies: {}
+    Info_290:
+      Name: assets/res/models/unit/role/1001/1001_share.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+        Dependency_1: assets/res/models/unit/role/1001/1001@skill7_share.unity3d
+        Dependency_2: assets/res/models/unit/role/1001/1001@down_share.unity3d
+        Dependency_3: assets/res/models/unit/role/1001/1001@attack_4_share.unity3d
+        Dependency_4: assets/res/models/unit/role/1001/1001@hit_share.unity3d
+        Dependency_5: assets/res/models/unit/role/1001/1001@hit_flying_share.unity3d
+        Dependency_6: assets/res/models/unit/role/1001/1001@skill6_share.unity3d
+        Dependency_7: assets/res/models/unit/role/1001/1001@skill1_share.unity3d
+        Dependency_8: assets/res/models/unit/role/1001/1001@skill4_share.unity3d
+        Dependency_9: assets/res/models/unit/role/1001/1001@skill9_share.unity3d
+        Dependency_10: assets/res/models/unit/role/1001/1001@skill8_share.unity3d
+        Dependency_11: assets/res/models/unit/role/1001/1001@front_attack_share.unity3d
+        Dependency_12: assets/res/models/unit/role/1001/1001@skill2_1_share.unity3d
+        Dependency_13: assets/res/models/unit/role/1001/1001@skill2_2_share.unity3d
+        Dependency_14: assets/res/models/unit/role/1001/1001@attack_2_share.unity3d
+        Dependency_15: assets/res/models/unit/role/1001/textures/1001_share.unity3d
+        Dependency_16: assets/res/models/unit/role/1001/1001@skill10_share.unity3d
+        Dependency_17: assets/res/models/unit/role/1001/1001@skill5_share.unity3d
+        Dependency_18: assets/res/models/unit/role/1001/1001@stop_share.unity3d
+        Dependency_19: assets/res/models/unit/role/1001/1001@skill3_share.unity3d
+        Dependency_20: assets/res/models/unit/role/1001/1001@hit_fly_share.unity3d
+        Dependency_21: assets/res/models/unit/role/1001/1001@fall_attack_share.unity3d
+        Dependency_22: assets/res/models/unit/role/1001/1001@hit_flying_z_share.unity3d
+        Dependency_23: assets/res/models/unit/role/1001/1001@block_share.unity3d
+        Dependency_24: assets/res/models/unit/role/1001/1001@attack_1_share.unity3d
+        Dependency_25: assets/res/models/unit/role/1001/1001@attack_3_share.unity3d
+        Dependency_26: assets/res/models/unit/role/1001/1001@fly_attack_share.unity3d
+        Dependency_27: assets/res/models/unit/role/1001/1001@hit_down_share.unity3d
+        Dependency_28: assets/res/models/unit/role/1001/1001@get up_share.unity3d
+        Dependency_29: assets/res/models/unit/role/1001/1001@jump_share.unity3d
+        Dependency_30: assets/res/models/unit/role/1001/1001@idle_share.unity3d
+        Dependency_31: assets/res/models/unit/role/1001/1001@skill2_3_share.unity3d
+        Dependency_32: assets/res/models/unit/role/1001/1001@run_share.unity3d
+    Info_291:
+      Name: assets/res/models/unit/role/1001/1001@attack_1_share.unity3d
+      Dependencies: {}
+    Info_292:
+      Name: assets/res/models/unit/role/1001/1001@attack_3_share.unity3d
+      Dependencies: {}
+    Info_293:
+      Name: assets/res/models/unit/role/1001/1001@fly_attack_share.unity3d
+      Dependencies: {}
+    Info_294:
+      Name: assets/res/models/unit/role/1001/1001@hit_down_share.unity3d
+      Dependencies: {}
+    Info_295:
+      Name: assets/res/models/unit/role/1001/1001@get up_share.unity3d
+      Dependencies: {}
+    Info_296:
+      Name: assets/res/models/unit/role/1001/1001@jump_share.unity3d
+      Dependencies: {}
+    Info_297:
+      Name: assets/res/models/unit/role/1001/1001@idle_share.unity3d
+      Dependencies: {}
+    Info_298:
+      Name: assets/res/models/unit/role/1001/1001@skill2_3_share.unity3d
+      Dependencies: {}
+    Info_299:
+      Name: assets/res/models/unit/role/1001/1001@run_share.unity3d
+      Dependencies: {}
+    Info_300:
+      Name: assets/res/effect/materials/e_smoke_fsw_007_01_share.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+        Dependency_1: assets/res/effect/texture/e_smoke_fsw_007_share.unity3d
+        Dependency_2: assets/res/effect/texture/e_smoke_fsw_006_share.unity3d
+    Info_301:
+      Name: assets/res/effect/texture/e_smoke_fsw_007_share.unity3d
+      Dependencies: {}
+    Info_302:
+      Name: assets/res/effect/materials/e_smoke_fsw_007_02_share.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+        Dependency_1: assets/res/effect/texture/e_smoke_fsw_007_share.unity3d
+        Dependency_2: assets/res/effect/texture/e_smoke_fsw_006_share.unity3d
+    Info_303:
+      Name: assets/res/effect/texture/e_smoke_fsw_006_share.unity3d
+      Dependencies: {}

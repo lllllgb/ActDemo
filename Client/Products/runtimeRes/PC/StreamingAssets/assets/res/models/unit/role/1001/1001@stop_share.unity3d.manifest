@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3323582237
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8266cca6aeb97f7516d05da2068b5fb4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: da04d5352644e5aede0c7ec959090412
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/Models/Unit/role/1001/1001@stop.FBX
+Dependencies: []
