@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3c8c83fe403134b4ca338fc588329b6c
+guid: 680b6c15bdf1a9649a0a1183e3c3d554
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -8,7 +8,8 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Fbx_Plane_fsw_008
+    4300000: Fbx_Plane_fsw_011
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -61,8 +62,8 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
-    tangentImportMode: 3
+    normalImportMode: 2
+    tangentImportMode: 2
     normalCalculationMode: 4
   importAnimation: 0
   copyAvatar: 0
@@ -83,9 +84,9 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
-  assetBundleName: assets/res/effect/model/fbx_plane_fsw_008_share.unity3d
+  assetBundleName: 
   assetBundleVariant: 

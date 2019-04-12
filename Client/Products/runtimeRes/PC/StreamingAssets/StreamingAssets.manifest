@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2584896970
+CRC: 2309857208
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -1683,3 +1683,13 @@ AssetBundleManifest:
     Info_303:
       Name: assets/res/effect/texture/e_smoke_fsw_006_share.unity3d
       Dependencies: {}
+    Info_304:
+      Name: assets/bundles/effect/e_xueshan_01.unity3d
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
+        Dependency_1: assets/res/effect/model/fbx_plane_fsw_006_share.unity3d
+        Dependency_2: assets/res/effect/materials/e_object_fsw_006_01_share.unity3d
+        Dependency_3: assets/res/effect/model/fbx_plane_fsw_008_share.unity3d
+        Dependency_4: assets/res/effect/materials/e_smoke_fsw_007_01_share.unity3d
+        Dependency_5: assets/res/effect/materials/e_smoke_fsw_007_02_share.unity3d
+        Dependency_6: assets/res/effect/texture/e_smoke_fsw_006_share.unity3d

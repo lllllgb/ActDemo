@@ -392,7 +392,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action SuperArmor="true">
               <ID>at4_g</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -1498,7 +1498,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill_1_g</ID>
               <Name>技能1</Name>
               <Desc>升龙击</Desc>
@@ -1593,7 +1593,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill_1_y</ID>
               <Name>技能1</Name>
               <Desc>升龙击</Desc>
@@ -2355,7 +2355,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill4_g</ID>
               <Name>技能4</Name>
               <Desc>无锋重剑</Desc>
@@ -2450,7 +2450,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill4_y</ID>
               <Name>技能4</Name>
               <Desc>无锋重剑</Desc>
@@ -3111,7 +3111,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill8_q</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -3131,7 +3131,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill8_y</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -3736,7 +3736,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action SuperArmor="true">
               <ID>at4_g</ID>
               <Name>攻击</Name>
               <Desc>动作</Desc>
@@ -4804,7 +4804,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill_1_g</ID>
               <Name>技能1</Name>
               <Desc>升龙击</Desc>
@@ -4916,7 +4916,7 @@
               <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill_1_y</ID>
               <Name>技能1</Name>
               <Desc>升龙击</Desc>
@@ -5710,7 +5710,7 @@
               <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill4_g</ID>
               <Name>技能4</Name>
               <Desc>无锋重剑</Desc>
@@ -5819,7 +5819,7 @@
               <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill4_y</ID>
               <Name>技能4</Name>
               <Desc>无锋重剑</Desc>
@@ -6497,7 +6497,7 @@
               <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill8_q</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -6517,7 +6517,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action SuperArmor="true">
+            <Action>
               <ID>skill8_y</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
