@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ACT;
 using UnityEngine;
+using AosHotfixFramework;
 
 namespace AosHotfixRunTime
 {
@@ -59,6 +61,18 @@ namespace AosHotfixRunTime
             base.PlayCameraAction(cameraActionID);
 
             mCameraActionMgr.StartAction(cameraActionID);
+        }
+
+        public override ECombatResult Combat(IActUnit target, ISkillItem skillItem)
+        {
+            ECombatResult tmpResult = base.Combat(target, skillItem);
+
+            if (ECombatResult.ECR_Block != tmpResult)
+            {
+                Game.EventMgr.FireNow(this, ReferencePool.Fetch<UnitEvent.Combo>());
+            }
+
+            return tmpResult;
         }
     }
 }

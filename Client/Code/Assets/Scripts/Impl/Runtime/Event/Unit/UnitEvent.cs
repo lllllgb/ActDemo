@@ -42,5 +42,14 @@ namespace AosHotfixRunTime
 
             public Unit Data { get; set; }
         }
+
+        public class Combo : GameEventArgs
+        {
+            public static readonly int EventID = typeof(Combo).GetHashCode();
+
+            public override int Id { get { return EventID; } }
+
+            public int Count { get; set; } = 1;
+        }
     }
 }

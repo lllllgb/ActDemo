@@ -3,7 +3,7 @@ CRC: 2244162006
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b48491ff8b23a9783aef1c6ad3949384
+    Hash: d41e8a14fb785ad71a0b242f87c7dbf7
   TypeTreeHash:
     serializedVersion: 2
     Hash: c73412a662fd4e4f36af34cbdf078b85
@@ -12,5 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/effect/Texture/E_Debris_fsw_003.png
+- Assets/Res/Effect/Texture/E_Debris_fsw_003.png
 Dependencies: []

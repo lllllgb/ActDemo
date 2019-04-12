@@ -31,6 +31,7 @@ namespace AosHotfixRunTime
         private ImageLoader mEnemyIconLoader;
         private Image mEnemyHpImg;
         private Image mEnemyDpImg;
+        private UICombo mCombo;
 
         private GameObject mRB;
         private GameObject mSkillInfo;
@@ -67,6 +68,7 @@ namespace AosHotfixRunTime
             mEnemyIconLoader = ReferencePool.Fetch<ImageLoader>();
             mEnemyHpImg = Find<Image>(mEnemyInfo, "Image_Hp");
             mEnemyDpImg = Find<Image>(mEnemyInfo, "Image_Dp");
+            mCombo = new UICombo(Find(mRT, "Combo"));
 
             mLB = Find("LB");
             var tmpJoystickGo = Find(mLB, "UGUIJoystick");
@@ -113,6 +115,7 @@ namespace AosHotfixRunTime
             Game.EventMgr.Subscribe(UnitEvent.MpModify.EventID, OnEventUnitMpModify);
             Game.EventMgr.Subscribe(UnitEvent.DpModify.EventID, OnEventUnitDpModify);
             Game.EventMgr.Subscribe(SkillWndEvent.SkillSetChange.EventID, OnEventChangeSkillSet);
+            Game.EventMgr.Subscribe(UnitEvent.Combo.EventID, OnEventCombo);
         }
 
         protected override void Update(float deltaTime)
@@ -158,6 +161,7 @@ namespace AosHotfixRunTime
             Game.EventMgr.Unsubscribe(UnitEvent.MpModify.EventID, OnEventUnitMpModify);
             Game.EventMgr.Unsubscribe(UnitEvent.DpModify.EventID, OnEventUnitDpModify);
             Game.EventMgr.Unsubscribe(SkillWndEvent.SkillSetChange.EventID, OnEventChangeSkillSet);
+            Game.EventMgr.Unsubscribe(UnitEvent.Combo.EventID, OnEventCombo);
         }
 
         protected override void BeforeDestory()
@@ -356,6 +360,11 @@ namespace AosHotfixRunTime
         private void OnEventChangeSkillSet(object sender, GameEventArgs arg)
         {
             InitSkill();
+        }
+
+        private void OnEventCombo(object sender, GameEventArgs arg)
+        {
+            mCombo.ComboHit(1);
         }
     }
 }
