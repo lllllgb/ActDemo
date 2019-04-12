@@ -9284,7 +9284,7 @@
                       <AISlots>
                         <AISlot SkillID="2001" SwitchActionID="skill1" />
                         <AISlot SkillID="2001" SwitchActionID="skill2" />
-                        <AISlot Ratio="20" SkillID="3001" SwitchActionID="skill3" />
+                        <AISlot Ratio="20" SkillID="2001" SwitchActionID="skill3" />
                       </AISlots>
                     </AIList>
                   </AILists>
@@ -9319,8 +9319,8 @@
                       <AISlots>
                         <AISlot SkillID="2001" SwitchActionID="skill1" />
                         <AISlot SkillID="2001" SwitchActionID="skill2" />
-                        <AISlot Ratio="20" SkillID="3001" SwitchActionID="skill3" />
-                        <AISlot Ratio="30" SkillID="3001" SwitchActionID="skill4" />
+                        <AISlot Ratio="20" SkillID="2001" SwitchActionID="skill3" />
+                        <AISlot Ratio="30" SkillID="2001" SwitchActionID="skill4" />
                       </AISlots>
                     </AIList>
                   </AILists>
