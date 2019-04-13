@@ -3,7 +3,7 @@ CRC: 3801262116
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8b8aa82e355eaa509f55dcc9dcf55134
+    Hash: 944b5ac0e612747650aee41d41eda537
   TypeTreeHash:
     serializedVersion: 2
     Hash: bdbc43ed64013be0728e9e620401d86d
@@ -26,4 +26,4 @@ ClassTypes:
 Assets:
 - Assets/Res/Models/Misc/Shadow/shadow_001.FBX
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_share.unity3d
