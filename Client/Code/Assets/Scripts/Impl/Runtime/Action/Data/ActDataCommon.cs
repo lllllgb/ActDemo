@@ -40,7 +40,7 @@ namespace ActData
         public const string Run = "run"; //run in Fight;
         public const string RunInTown = "N1010";
         public const string Revive = "H0100";
-        public const string Bounce = "H1042";
+        public const string Bounce = "hit_s";
         public const string DieStand = "H1040";//stand Dying;
         public const string DieDown = "H1041"; // Lay Dying;
         public const string Knockout = "H0010"; //

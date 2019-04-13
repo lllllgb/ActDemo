@@ -460,6 +460,8 @@ namespace ACT
                 //}
 
                 mHitBlocked = true;
+
+                owner.PlayAction(ActData.CommonAction.Bounce);
                 return false;
             }
 

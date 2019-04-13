@@ -259,7 +259,7 @@ namespace AosHotfixRunTime
                 {
                     mCD = mCurrSkillItem.SkillAttrBase.CD * 0.001f;
                     Game.ControllerMgr.Get<PlayerController>().SetSkillCD(mCurrSkillItem.ID, mCD);
-                    TryReleaseAction(ACT.EOperation.EO_Block, ACT.EInputType.EIT_Click);
+                    TryReleaseExtraSkill(ACT.EOperation.EO_Block, ACT.EInputType.EIT_Click);
                 }
             }
         }
@@ -272,7 +272,7 @@ namespace AosHotfixRunTime
             }
             else if (ESkillType.Extra == mSkillType)
             {
-                TryReleaseAction(ACT.EOperation.EO_Block, ACT.EInputType.EIT_Release);
+                TryReleaseExtraSkill(ACT.EOperation.EO_Block, ACT.EInputType.EIT_Release);
             }
         }
 
@@ -302,7 +302,7 @@ namespace AosHotfixRunTime
             tmpLocalPlayer.LinkSkill(this, mInterruptIndex);
         }
 
-        private void TryReleaseAction(ACT.EOperation operation, ACT.EInputType inputType)
+        private void TryReleaseExtraSkill(ACT.EOperation operation, ACT.EInputType inputType)
         {
             LocalPlayer tmpLocalPlayer = Game.ControllerMgr.Get<UnitController>().LocalPlayer;
             var tmpInterruptIdx = tmpLocalPlayer.ActStatus.ActiveAction.GetActionInterruptIdx(operation, inputType);
@@ -310,6 +310,7 @@ namespace AosHotfixRunTime
             if (-1 != tmpInterruptIdx)
             {
                 tmpLocalPlayer.LinkSkill(null, tmpInterruptIdx);
+                tmpLocalPlayer.ActStatus.SkillItem = mCurrSkillItem;
             }
         }
 
