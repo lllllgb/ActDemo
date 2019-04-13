@@ -1274,6 +1274,44 @@
               <CanHurt>true</CanHurt>
             </Action>
             <Action>
+              <ID>hit_s</ID>
+              <Name>受击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit" Start="10">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>400</AnimTime>
+              <BlendTime>0</BlendTime>
+              <ActionStatus>3</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-400" />
+                </Event>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_pojia_01" Duration="1000" />
+                </Event>
+              </Events>
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
               <ID>idle</ID>
               <Name>待机</Name>
               <Desc>动作</Desc>
@@ -4602,6 +4640,44 @@
               <CanHurt>true</CanHurt>
             </Action>
             <Action>
+              <ID>hit_s</ID>
+              <Name>受击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit" Start="10">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>400</AnimTime>
+              <BlendTime>0</BlendTime>
+              <ActionStatus>3</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-400" />
+                </Event>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_pojia_01" Duration="1000" />
+                </Event>
+              </Events>
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" UnitDead="true" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
               <ID>idle</ID>
               <Name>待机</Name>
               <Desc>动作</Desc>
@@ -6989,6 +7065,46 @@
               <CanHurt>true</CanHurt>
             </Action>
             <Action>
+              <ID>hit_s</ID>
+              <Name>受击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit" Start="10">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>400</AnimTime>
+              <BlendTime>0</BlendTime>
+              <ActionStatus>3</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-400" />
+                </Event>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_pojia_01" Duration="1000" />
+                </Event>
+              </Events>
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+              <NomalDiffTimeProp>90</NomalDiffTimeProp>
+              <HardDiffTimeProp>70</HardDiffTimeProp>
+            </Action>
+            <Action>
               <ID>idle</ID>
               <Name>待机</Name>
               <Desc>动作</Desc>
@@ -7884,6 +8000,7 @@
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" UnitDead="true" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
@@ -8007,6 +8124,46 @@
               <AttackDefs />
               <IgnoreGravity>true</IgnoreGravity>
               <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>hit_s</ID>
+              <Name>受击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit" Start="10">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>400</AnimTime>
+              <BlendTime>0</BlendTime>
+              <ActionStatus>3</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-400" />
+                </Event>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_pojia_01" Duration="1000" />
+                </Event>
+              </Events>
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" UnitDead="true" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+              <NomalDiffTimeProp>90</NomalDiffTimeProp>
+              <HardDiffTimeProp>70</HardDiffTimeProp>
             </Action>
             <Action>
               <ID>idle</ID>
@@ -9387,6 +9544,7 @@
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" UnitDead="true" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
@@ -9510,6 +9668,46 @@
               <AttackDefs />
               <IgnoreGravity>true</IgnoreGravity>
               <CanHurt>true</CanHurt>
+            </Action>
+            <Action>
+              <ID>hit_s</ID>
+              <Name>受击</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="hit" Start="10">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <AnimTime>400</AnimTime>
+              <BlendTime>0</BlendTime>
+              <ActionStatus>3</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-400" />
+                </Event>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_pojia_01" Duration="1000" />
+                </Event>
+              </Events>
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" UnitDead="true" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <CanHurt>true</CanHurt>
+              <NomalDiffTimeProp>90</NomalDiffTimeProp>
+              <HardDiffTimeProp>70</HardDiffTimeProp>
             </Action>
             <Action>
               <ID>idle</ID>
