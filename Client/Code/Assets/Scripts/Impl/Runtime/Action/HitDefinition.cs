@@ -454,12 +454,13 @@ namespace ACT
                 //if (PvpClient.Instance != null && mOwner.UnitType != EUnitType.EUT_LocalPlayer)
                 //    return false;
 
-                if (mAttackDef.IsRemoteAttacks == 0 && mSkillItem == null)
-                {
-                    mHitBlocked = true;
-                    owner.PlayAction(ActData.CommonAction.Bounce);
-                    return false;
-                }
+                //if (mAttackDef.IsRemoteAttacks == 0 && mSkillItem == null)
+                //{
+                //    owner.PlayAction(ActData.CommonAction.Bounce);
+                //}
+
+                mHitBlocked = true;
+                return false;
             }
 
             // 击中目标。

@@ -272,7 +272,16 @@ namespace AosHotfixRunTime
             int tmpDamage = 0;
             int tmpDpDamage = 0;
             Unit tmpTarget = target as Unit;
-            ACT.ECombatResult tmpResult = MathUtility.Combat(this, tmpTarget, out tmpDamage);
+            ACT.ECombatResult tmpResult = ACT.ECombatResult.ECR_Normal;
+
+            if (tmpTarget.ActStatus.ActionState == ActData.EActionState.Defense)
+            {
+                tmpResult = ACT.ECombatResult.ECR_Block;
+            }
+            else
+            {
+                tmpResult = MathUtility.Combat(this, tmpTarget, out tmpDamage);
+            }
 
             if (ACT.ECombatResult.ECR_Block != tmpResult)
             {
@@ -291,6 +300,10 @@ namespace AosHotfixRunTime
                 tmpDamage = Mathf.Max(tmpDamage, 1);
 
                 tmpTarget.Hurt(this, tmpDamage, tmpDpDamage, tmpResult);
+            }
+            else
+            {
+                target.Combat(this, target.ActStatus.SkillItem);
             }
 
             return tmpResult;

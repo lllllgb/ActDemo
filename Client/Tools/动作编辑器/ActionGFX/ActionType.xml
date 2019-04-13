@@ -540,12 +540,12 @@
               <Desc>格挡持续</Desc>
               <DefaultLinkActionID>block_y</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="block" Start="10" End="80">
+                <AnimSlot Animation="block" Start="35" End="80">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>3000</AnimTime>
-              <ActionStatus>4</ActionStatus>
+              <AnimTime>2500</AnimTime>
+              <ActionStatus>2</ActionStatus>
               <Events>
                 <Event>
                   <EventType>PlayEffect</EventType>
@@ -557,85 +557,31 @@
                 <ActionInterrupt ActionID="block_y" CheckInput1="true" InputKey1="3" InputType1="3" InputType2="5" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
               </ActionInterrupts>
-              <AttackDefs>
-                <AttackDef>
-                  <ID />
-                  <Name />
-                  <EnableSkillBuffer>0</EnableSkillBuffer>
-                  <AlignmentTarget>0</AlignmentTarget>
-                  <MaxCountOuteDate>0</MaxCountOuteDate>
-                  <TriggerTime>10</TriggerTime>
-                  <Duration>200</Duration>
-                  <MovingSpeed />
-                  <Path>
-                    <PathNode Z="80" />
-                    <PathNode Ratio="100" Y="300" Z="80" />
-                  </Path>
-                  <HitCount>3</HitCount>
-                  <PassNum>1</PassNum>
-                  <FrameFinalFactor>
-                    <X>1</X>
-                    <Y>1</Y>
-                    <Z>1</Z>
-                  </FrameFinalFactor>
-                  <FrameType_Int>3</FrameType_Int>
-                  <FramType>SomatoType</FramType>
-                  <AttackType xsi:type="FrameSomato" />
-                  <Offset />
-                  <AttackerLash>
-                    <Z>-200</Z>
-                  </AttackerLash>
-                  <AttackerTime>100</AttackerTime>
-                  <AttackeeStraightTime>100</AttackeeStraightTime>
-                  <HitResult>KnockOut</HitResult>
-                  <GroundHit>
-                    <AttackeeLash />
-                  </GroundHit>
-                  <LowAirHit>
-                    <AttackeeLash />
-                  </LowAirHit>
-                  <HighAirHit>
-                    <AttackeeLash />
-                  </HighAirHit>
-                  <AttackeeLash>
-                    <Y>200</Y>
-                    <Z>-200</Z>
-                  </AttackeeLash>
-                  <AttackeeTime>100</AttackeeTime>
-                  <HoldOffset />
-                  <HitedEffect>E_1001_hit_lyj_001</HitedEffect>
-                  <HitedEffectDuration>200</HitedEffectDuration>
-                  <HitedEffectOffset>
-                    <Y>100</Y>
-                  </HitedEffectOffset>
-                  <GroundHitedEffectOffset>
-                    <Y>30</Y>
-                  </GroundHitedEffectOffset>
-                  <LowAirHitedEffectOffset>
-                    <Y>100</Y>
-                  </LowAirHitedEffectOffset>
-                  <HighAirHitedEffectOffset />
-                  <SelfEffectOffset />
-                  <BaseGround>1</BaseGround>
-                </AttackDef>
-              </AttackDefs>
+              <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
             <Action SuperArmor="true">
               <ID>block_q</ID>
               <Name>格挡</Name>
-              <Desc>前摇</Desc>
+              <Desc>前摇-有效格挡</Desc>
               <DefaultLinkActionID>block_g</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="block" End="10">
+                <AnimSlot Animation="block" End="35">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>150</AnimTime>
-              <ActionStatus>2</ActionStatus>
-              <Events />
+              <AnimTime>500</AnimTime>
+              <ActionStatus>4</ActionStatus>
+              <Events>
+                <Event>
+                  <EventType>PlayEffect</EventType>
+                  <EventTypeInt>1</EventTypeInt>
+                  <EventDetailData xsi:type="EventPlayEffect" EffectName="E_1001_fsw_gedang" StopMode="1" BindMode="1" Duration="5000" />
+                </Event>
+              </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+                <ActionInterrupt ActionID="block_y" CheckInput1="true" InputKey1="3" InputType1="3" InputType2="5" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
