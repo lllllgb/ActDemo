@@ -555,8 +555,8 @@
                 </Event>
               </Events>
               <ActionInterrupts>
-                <ActionInterrupt ActionID="block_y" CheckInput1="true" InputKey1="3" InputType1="3" InputType2="5" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+                <ActionInterrupt ActionID="block_y" CheckInput1="true" InputKey1="3" InputType1="3" InputType2="5" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
@@ -590,7 +590,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>150</AnimTime>
+              <AnimTime>50</AnimTime>
               <ActionStatus>4</ActionStatus>
               <Events />
               <ActionInterrupts>
@@ -3937,7 +3937,7 @@
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
-              <AnimTime>150</AnimTime>
+              <AnimTime>50</AnimTime>
               <ActionStatus>4</ActionStatus>
               <Events />
               <ActionInterrupts>
