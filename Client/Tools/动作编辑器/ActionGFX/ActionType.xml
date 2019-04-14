@@ -625,6 +625,7 @@
                 <ActionInterrupt ActionID="run" CheckInput1="true" InputKey1="4" InputType1="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill2_1_q" CheckInput1="true" InputKey1="7" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+                <ActionInterrupt ActionID="block_q" CheckInput1="true" InputKey1="3" CheckInput2="true" InputKey2="3" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
