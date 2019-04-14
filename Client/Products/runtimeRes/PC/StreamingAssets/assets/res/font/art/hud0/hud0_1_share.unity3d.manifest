@@ -3,7 +3,7 @@ CRC: 1359910918
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e44de229beea4b4bc601942d57be9c6b
+    Hash: fd277b8e712b45383675c1255ac5f6ab
   TypeTreeHash:
     serializedVersion: 2
     Hash: a4811cece99e400432add5586e2c6bb8
@@ -16,4 +16,4 @@ ClassTypes:
 Assets:
 - Assets/Res/Font/Art/Hud0/Hud0_1.fontsettings
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/art/hud0/hud0_2_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/art/hud0/hud0_2_share.unity3d

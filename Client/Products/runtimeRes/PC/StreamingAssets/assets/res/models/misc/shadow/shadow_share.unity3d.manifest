@@ -3,7 +3,7 @@ CRC: 3467912010
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 31f4cedec9da3d09fa954c1a986af8c1
+    Hash: 5b26cb06dda2a879d6f0adb8d1a5f8d9
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -19,4 +19,4 @@ Assets:
 - Assets/Res/Models/Misc/Shadow/shadow.png
 - Assets/Res/Models/Misc/Shadow/shadow.mat
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

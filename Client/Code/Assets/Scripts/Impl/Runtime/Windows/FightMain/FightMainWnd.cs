@@ -99,7 +99,7 @@ namespace AosHotfixRunTime
             //RegisterEventClickDown(tmpSkillExGo, OnDefenseBtnDown);
             //RegisterEventClickUp(tmpSkillExGo, OnDefenseBtnUp);
 
-            RegisterEventClick(Find(mRB, "Button_SkillSystem"), OnSkillModuleBtnClick);
+            RegisterEventClick(Find(mRT, "Button_SkillSystem"), OnSkillModuleBtnClick);
         }
 
         protected override void AfterShow()

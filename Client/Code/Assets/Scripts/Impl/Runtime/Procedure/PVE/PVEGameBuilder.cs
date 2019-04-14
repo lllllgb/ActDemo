@@ -73,6 +73,8 @@ namespace AosHotfixRunTime
             {
                 mMonsterList[i].Dispose();
             }
+
+            mMonsterList.Clear();
         }
 
         public void Release()
@@ -220,15 +222,16 @@ namespace AosHotfixRunTime
 
                 for (int j = 0, jmax = tmpMonsterInfo.Count; j < jmax; ++j)
                 {
-                    SpawnMonster(tmpMonsterInfo.MonsterID, tmpMonsterInfo.Level, tmpMonsterInfo.AIDiff);
+                    SpawnMonster(tmpMonsterInfo.MonsterID, tmpMonsterInfo.Level, tmpMonsterInfo.AIDiff, 1 == tmpMonsterInfo.IsBoss);
                 }
             }
         }
 
-        private void SpawnMonster(int unitID, int level, int aiDiff)
+        private void SpawnMonster(int unitID, int level, int aiDiff, bool isBoss)
         {
             var tmpMonster = new Monster();
             tmpMonster.Init(unitID, level, EUnitType.EUT_Monster, ACT.EUnitCamp.EUC_ENEMY, true, aiDiff);
+            tmpMonster.SetIsBoss(isBoss);
             tmpMonster.SetPosition(new Vector3(Random.Range(0, 5), 0f, Random.Range(0, 5)));
             float x = mLocalPlayer.Position.x - tmpMonster.Position.x;
             float dir = Mathf.Atan2(x, 0);
@@ -270,6 +273,16 @@ namespace AosHotfixRunTime
             }
             else
             {
+                if ((tmpEventArg.Data as Monster).IsBoss)
+                {
+                    for (int i = 0, max = mMonsterList.Count; i < max; ++i)
+                    {
+                        mMonsterList[i].Dispose();
+                    }
+
+                    mMonsterList.Clear();
+                }
+
                 if (mTriggerCount <= 0)
                 {
                     bool tmpFlag = true;

@@ -7,6 +7,7 @@ namespace AosHotfixRunTime
     {
         bool mAIEnable = false;
         List<SkillItem> mSkillItems = new List<SkillItem>();
+        public bool IsBoss { get; private set; }
 
         public Monster() : base()
         {
@@ -69,6 +70,11 @@ namespace AosHotfixRunTime
             }
 
             ActStatus.SkillItem = tmpSkillItem;
+        }
+
+        public void SetIsBoss(bool flag)
+        {
+            IsBoss = flag;
         }
     }
 }

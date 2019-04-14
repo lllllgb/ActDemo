@@ -218,7 +218,9 @@ namespace ACT
             mOrientation = orient;
             Vector3 eulerAngles = mTransform.eulerAngles;
             eulerAngles.y = mOrientation * Mathf.Rad2Deg;
-            mTransform.eulerAngles = eulerAngles;
+
+            if(Mathf.Abs(eulerAngles.y) < 95 && Mathf.Abs(eulerAngles.y) > 85)
+                mTransform.eulerAngles = eulerAngles;
         }
 
         public void PlayAction(string action)
