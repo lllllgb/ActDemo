@@ -3,7 +3,7 @@ CRC: 1073566449
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4b4982ea425ac2902882403d33fc9251
+    Hash: ae2f2d9853080d9de3d4442aee40b259
   TypeTreeHash:
     serializedVersion: 2
     Hash: 72c5ca061cb2a82c89686dfa2e04658b
@@ -44,8 +44,8 @@ ClassTypes:
 Assets:
 - Assets/Bundles/UI/FightMainWnd.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/ui/buttonscale_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/art/hud0/hud0_1_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/ui/buttonscale_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/art/hud0/hud0_1_share.unity3d

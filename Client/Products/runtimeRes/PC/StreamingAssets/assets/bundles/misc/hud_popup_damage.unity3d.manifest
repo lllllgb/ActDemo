@@ -3,7 +3,7 @@ CRC: 4294069540
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8c9ec8ba710f825746df88f28a0ca456
+    Hash: 100bd4540ae6bb818fb85955b3bff3a2
   TypeTreeHash:
     serializedVersion: 2
     Hash: 8931e75aefe594c9e0202d9f4a96d2d4
@@ -28,4 +28,4 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Misc/HUD_Popup_Damage.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/art/hud0/hud0_1_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/art/hud0/hud0_1_share.unity3d

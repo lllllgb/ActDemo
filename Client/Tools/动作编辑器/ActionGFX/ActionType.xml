@@ -597,6 +597,8 @@
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
               </ActionInterrupts>
               <AttackDefs />
+              <FaceTarget>true</FaceTarget>
+              <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
             <Action>
@@ -1158,7 +1160,6 @@
               <ActionStatus>3</ActionStatus>
               <Events />
               <ActionInterrupts>
-                <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
               </ActionInterrupts>
               <AttackDefs />
@@ -1495,7 +1496,7 @@
               <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action SuperArmor="true">
               <ID>skill_1_g</ID>
               <Name>技能1</Name>
               <Desc>升龙击</Desc>
@@ -2352,7 +2353,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action SuperArmor="true">
               <ID>skill4_g</ID>
               <Name>技能4</Name>
               <Desc>无锋重剑</Desc>
@@ -3108,7 +3109,7 @@
               </AttackDefs>
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action SuperArmor="true">
               <ID>skill8_q</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -3128,7 +3129,7 @@
               <AttackDefs />
               <CanHurt>true</CanHurt>
             </Action>
-            <Action>
+            <Action SuperArmor="true">
               <ID>skill8_y</ID>
               <Name>技能8</Name>
               <Desc>裂空斩</Desc>
@@ -3944,6 +3945,8 @@
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" UnitDead="true" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
+              <FaceTarget>true</FaceTarget>
+              <CanRotate>true</CanRotate>
               <CanHurt>true</CanHurt>
             </Action>
             <Action>
@@ -4488,8 +4491,8 @@
               <ActionStatus>3</ActionStatus>
               <Events />
               <ActionInterrupts>
-                <ActionInterrupt ActionID="hit" InputKey1="1" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" UnitDead="true" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="hit" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
@@ -5954,7 +5957,6 @@
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
-              <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
             </Action>
             <Action SuperArmor="true">
@@ -6634,7 +6636,6 @@
                   <BaseGround>1</BaseGround>
                 </AttackDef>
               </AttackDefs>
-              <FaceTarget>true</FaceTarget>
               <CanHurt>true</CanHurt>
             </Action>
             <Action>
@@ -6780,9 +6781,7 @@
                       </AISlots>
                     </AIList>
                   </AILists>
-                  <AIStatusSwitchList>
-                    <AIStatusSwitch SwitchStatusID="1" Condition="2" TargetExist="true" TargetVaribleCompare="5" TargetVaribleValue="2000" SelfActionID="get_up" />
-                  </AIStatusSwitchList>
+                  <AIStatusSwitchList />
                   <AIActionCDList>
                     <AIActionCD Action="skill_1_g" CD="2000" />
                     <AIActionCD Action="skill2_1_q" CD="1500" />
@@ -6794,25 +6793,6 @@
                     <AIActionCD Action="skill8_q" CD="10000" />
                     <AIActionCD Action="skill9_q" CD="18000" />
                     <AIActionCD Action="skill10_g1" CD="23000" />
-                  </AIActionCDList>
-                  <Location>
-                    <X>0</X>
-                    <Y>0</Y>
-                  </Location>
-                </AIStatus>
-                <AIStatus Name="格挡">
-                  <AILists>
-                    <AIList Distance="1000">
-                      <AISlots>
-                        <AISlot SkillID="1011" SwitchActionID="block_q" />
-                      </AISlots>
-                    </AIList>
-                  </AILists>
-                  <AIStatusSwitchList>
-                    <AIStatusSwitch Condition="2" SelfActionID="block_y" SelfTime="3000" />
-                  </AIStatusSwitchList>
-                  <AIActionCDList>
-                    <AIActionCD Action="block_q" CD="1000" />
                   </AIActionCDList>
                   <Location>
                     <X>0</X>
@@ -6899,7 +6879,7 @@
                     </AIList>
                   </AILists>
                   <AIStatusSwitchList>
-                    <AIStatusSwitch Condition="2" SelfActionID="block_y" SelfTime="3000" />
+                    <AIStatusSwitch Condition="2" SelfActionID="block_g1" SelfTime="3000" />
                   </AIStatusSwitchList>
                   <AIActionCDList>
                     <AIActionCD Action="block_q" CD="1000" />
@@ -6962,6 +6942,8 @@
                   </AILists>
                   <AIStatusSwitchList>
                     <AIStatusSwitch SwitchStatusID="1" Condition="2" TargetExist="true" TargetVaribleCompare="5" TargetVaribleValue="2000" SelfActionID="get_up" />
+                    <AIStatusSwitch SwitchStatusID="1" ActionSwitchNow="0" Condition="2" TargetVaribleCompare="5" TargetVaribleValue="2000" SelfActionID="hit_s" />
+                    <AIStatusSwitch SwitchStatusID="1" ActionSwitchNow="0" Condition="2" TargetVaribleCompare="5" TargetVaribleValue="2000" SelfActionID="skill7_g" />
                   </AIStatusSwitchList>
                   <AIActionCDList>
                     <AIActionCD Action="skill_1_g" CD="2000" />
@@ -6989,7 +6971,7 @@
                     </AIList>
                   </AILists>
                   <AIStatusSwitchList>
-                    <AIStatusSwitch Condition="2" SelfActionID="block_y" SelfTime="3000" />
+                    <AIStatusSwitch Condition="2" SelfActionID="block_g1" SelfTime="3000" />
                   </AIStatusSwitchList>
                   <AIActionCDList>
                     <AIActionCD Action="block_q" CD="1000" />

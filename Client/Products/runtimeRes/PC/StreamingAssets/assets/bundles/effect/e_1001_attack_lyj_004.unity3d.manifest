@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2335736862
+CRC: 4012640643
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 43cb608204b6d0c9b68ce0e9a54a7a73
+    Hash: 09d04f901fe1c85eaf4b8f258c32f391
   TypeTreeHash:
     serializedVersion: 2
     Hash: f8ec7e008f8962136904c059b2a16459
@@ -42,11 +42,11 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_attack_lyj_004.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_grain_lyj_001a_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_lyj_002_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_006_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_007_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_007a_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/jian01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_grain_lyj_001a_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_007_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_006_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/jian01_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_lyj_002_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_007a_share.unity3d

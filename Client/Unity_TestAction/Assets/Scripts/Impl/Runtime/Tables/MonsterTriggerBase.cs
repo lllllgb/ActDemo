@@ -14,6 +14,7 @@ public partial class MonsterTriggerBase : JW_Table.Binary, JW_Table.IKey
 		private int m_Level;
 		private int m_AIDiff;
 		private int m_Count;
+		private int m_IsBoss;
 
 		public int MonsterID
 		{
@@ -39,12 +40,19 @@ public partial class MonsterTriggerBase : JW_Table.Binary, JW_Table.IKey
 			set { m_Count = value; }
 		}
 
+		public int IsBoss
+		{
+			get { return m_IsBoss; }
+			set { m_IsBoss = value; }
+		}
+
 		public override void Read(JW_Table.Reader reader)
 		{
 			m_MonsterID = reader.ReadInt32();
 			m_Level = reader.ReadInt32();
 			m_AIDiff = reader.ReadInt32();
 			m_Count = reader.ReadInt32();
+			m_IsBoss = reader.ReadInt32();
 		}
 	}
 
@@ -93,7 +101,7 @@ public partial class MonsterTriggerBase : JW_Table.Binary, JW_Table.IKey
 //MonsterTriggerBase.xlsx
 public sealed class MonsterTriggerBaseManager : JW_Table.TableManager<MonsterTriggerBase>
 {
-	public const uint VERSION = 156707264;
+	public const uint VERSION = 3110407775;
 
 	private MonsterTriggerBaseManager()
 	{

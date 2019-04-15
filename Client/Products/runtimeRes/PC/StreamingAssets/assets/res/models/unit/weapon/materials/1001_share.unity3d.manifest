@@ -3,7 +3,7 @@ CRC: 3777201113
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cafe5e98bd90e735abbec1eecb7c36d3
+    Hash: 83cf75b7f664e524d2c8a4144a46e0bb
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,5 +18,5 @@ ClassTypes:
 Assets:
 - Assets/Res/Models/Unit/weapon/Materials/1001.mat
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/unit/weapon/textures/1001_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/unit/weapon/textures/1001_share.unity3d

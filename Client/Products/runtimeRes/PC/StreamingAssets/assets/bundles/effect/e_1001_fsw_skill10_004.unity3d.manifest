@@ -28,5 +28,5 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_skill10_004.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_yuan_fsw_005_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_009_02_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_yuan_fsw_005_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_009_02_share.unity3d

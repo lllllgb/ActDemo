@@ -3,7 +3,7 @@ CRC: 1100324095
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 07753ec25bebb01609fd65353a300a00
+    Hash: 767cbcdb07b4fd38f599073678f3ac4b
   TypeTreeHash:
     serializedVersion: 2
     Hash: bd0937b82ef9e644feeb905e41af2c8b
@@ -54,5 +54,5 @@ ClassTypes:
 Assets:
 - Assets/Bundles/UI/SkillWnd.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3042935173
+CRC: 2133829043
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 59b5e0fd6c0688cf287c145e2eddd689
+    Hash: f1ea3d4858746e1e4d8e1a5905381f25
   TypeTreeHash:
     serializedVersion: 2
     Hash: b732ea1c4d7744872ffea24b3d019a66
@@ -40,6 +40,6 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Unit/m0002.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_001_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/misc/shadow/shadow_001_share.unity3d

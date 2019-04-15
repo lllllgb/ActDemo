@@ -3,7 +3,7 @@ CRC: 3098419157
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 32718309fb9dcb511a77e88e922c4368
+    Hash: de70a19c0fa99da3fc8c57ec45d5fc59
   TypeTreeHash:
     serializedVersion: 2
     Hash: c73412a662fd4e4f36af34cbdf078b85
@@ -12,5 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Texture/E_Smoke_fsw_003.png
+- Assets/Res/effect/Texture/E_Smoke_fsw_003.png
 Dependencies: []
