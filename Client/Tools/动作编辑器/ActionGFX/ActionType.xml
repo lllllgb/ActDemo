@@ -850,6 +850,7 @@
                 <ActionInterrupt ActionID="fall_attack_g" CheckInput1="true" InputKey1="5" InputType1="1" CheckInput2="true" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="jump_g" CheckInput1="true" InputKey1="5" CheckInput2="true" InputKey2="5" InputType2="2" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+                <ActionInterrupt ActionID="block_q" CheckInput1="true" InputKey1="3" CheckInput2="true" InputKey2="3" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs>
                 <AttackDef>
@@ -1500,7 +1501,7 @@
               <ActionStatus>1</ActionStatus>
               <Events />
               <ActionInterrupts>
-                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" InputType1="4" CheckInput2="true" InputType2="4" TargetDistanceMax="1000" />
+                <ActionInterrupt ActionID="at1_g" CheckInput1="true" InputKey1="1" InputType1="4" CheckInput2="true" InputKey2="1" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="stop" CheckInput1="true" InputKey1="4" InputType1="5" CheckInput2="true" InputType2="3" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill_1_g" CheckInput1="true" InputKey1="6" CheckInput2="true" InputKey2="6" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill2_1_g" CheckInput1="true" InputKey1="7" CheckInput2="true" InputKey2="7" InputType2="4" TargetDistanceMax="1000" />
@@ -1705,6 +1706,7 @@
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+                <ActionInterrupt ActionID="block_q" CheckInput1="true" InputKey1="3" CheckInput2="true" InputKey2="3" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs>
                 <AttackDef>
@@ -1901,6 +1903,7 @@
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+                <ActionInterrupt ActionID="block_q" CheckInput1="true" InputKey1="3" CheckInput2="true" InputKey2="3" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs>
                 <AttackDef>
@@ -2501,7 +2504,6 @@
                 <ActionInterrupt ActionID="skill9_q" CheckInput1="true" InputKey1="14" InputKey2="14" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="skill10_g1" CheckInput1="true" InputKey1="15" InputKey2="15" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="block_q" CheckInput1="true" InputKey1="3" CheckInput2="true" InputKey2="3" InputType2="4" TargetDistanceMax="1000" />
-                <ActionInterrupt ActionID="block_q" CheckInput1="true" InputKey1="3" CheckInput2="true" InputKey2="3" InputType2="4" TargetDistanceMax="1000" />
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
               </ActionInterrupts>
               <AttackDefs />
@@ -2829,6 +2831,7 @@
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+                <ActionInterrupt ActionID="block_q" CheckInput1="true" InputKey1="3" CheckInput2="true" InputKey2="3" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs>
                 <AttackDef>
@@ -3073,6 +3076,7 @@
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+                <ActionInterrupt ActionID="block_q" CheckInput1="true" InputKey1="3" CheckInput2="true" InputKey2="3" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs>
                 <AttackDef>
@@ -3151,6 +3155,7 @@
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+                <ActionInterrupt ActionID="block_q" CheckInput1="true" InputKey1="3" CheckInput2="true" InputKey2="3" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
@@ -3212,6 +3217,7 @@
               </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+                <ActionInterrupt ActionID="block_q" CheckInput1="true" InputKey1="3" CheckInput2="true" InputKey2="3" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs>
                 <AttackDef>
@@ -3287,6 +3293,7 @@
               <Events />
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" InputType2="4" TargetDistanceMax="1000" DetectVariable="true" Variable="1" />
+                <ActionInterrupt ActionID="block_q" CheckInput1="true" InputKey1="3" CheckInput2="true" InputKey2="3" InputType2="4" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <CanHurt>true</CanHurt>
