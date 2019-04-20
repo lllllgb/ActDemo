@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2063530732
+CRC: 1123742808
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 42e16c71794e0722c6eece4e297a4e3b
+    Hash: e4a48a2e9520bf4598b78d5b0daf64cd
   TypeTreeHash:
     serializedVersion: 2
     Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
@@ -31,3 +31,4 @@ Dependencies:
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/qianjingzhanlan2_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/qianjingzhanlan3_share.unity3d
 - F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/scene/xueshan_1/yinying_share.unity3d
+- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/effect/e_xueshan_01.unity3d

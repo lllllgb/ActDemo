@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1874741870
+CRC: 1887998226
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -24,6 +24,7 @@ AssetBundleManifest:
         Dependency_16: assets/res/models/scene/xueshan_1/qianjingzhanlan2_share.unity3d
         Dependency_17: assets/res/models/scene/xueshan_1/qianjingzhanlan3_share.unity3d
         Dependency_18: assets/res/models/scene/xueshan_1/yinying_share.unity3d
+        Dependency_19: assets/bundles/effect/e_xueshan_01.unity3d
     Info_1:
       Name: assets/res/effect/texture/e_line_lyj_002_share.unity3d
       Dependencies: {}
