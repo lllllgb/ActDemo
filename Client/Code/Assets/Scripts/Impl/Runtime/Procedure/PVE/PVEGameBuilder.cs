@@ -170,13 +170,13 @@ namespace AosHotfixRunTime
         {
             if (other.gameObject == mLocalPlayer.UGameObject)
             {
-                --mTriggerCount;
                 for (int i = 0, max = mInstanceBase.TransferTriggerInfo.data.Count; i < max; ++i)
                 {
                     var tmpTransferTrigger = mInstanceBase.TransferTriggerInfo.data[i];
 
                     if (self.name.Equals(tmpTransferTrigger.TriggerName))
                     {
+                        --mTriggerCount;
                         TransferNextScene(tmpTransferTrigger.InstanceName);
                         break;
                     }
