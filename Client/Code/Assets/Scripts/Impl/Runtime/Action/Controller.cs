@@ -30,7 +30,6 @@ namespace ACT
         {
             mOwner = actUnit;
             mCameraTag = cameraTag;
-            mCameraTarget = mOwner.UGameObject.transform;
             mActionStatus = mOwner.ActStatus;
 
             OnEnable();
@@ -134,11 +133,24 @@ namespace ACT
                 mCameraPosCache = CameraPos;
             }
 
-            Vector3 targetPos = mOwner.Position + CameraPos;
+            if (null == mCameraTarget)
+            {
+                CreateCameraTarget();
+            }
+
+            mCameraTarget.position = Vector3.Lerp(mCameraTarget.position, mOwner.Position, deltaTime * 5);
+            Vector3 targetPos = mCameraTarget.position + CameraPos;
             targetPos.z = CameraPos.z;
             mCameraTag.position = targetPos;
-            //mCameraTag.LookAt(targetPos + CameraLookAtOffset);
             mCameraTag.Translate(mCameraOffset);
+        }
+
+        void CreateCameraTarget()
+        {
+            GameObject tmpCameraTargetGo = new GameObject("CameraTarget");
+            GameObject.DontDestroyOnLoad(tmpCameraTargetGo);
+            mCameraTarget = tmpCameraTargetGo.transform;
+            mCameraTarget.position = mOwner.Position;
         }
 
         void LockInput(bool flag)
@@ -148,6 +160,17 @@ namespace ACT
             mInputBox.ResetInput();
 
             CheckActionInput(Time.deltaTime);
+        }
+
+        public void RepositionCamera()
+        {
+            if (null == mOwner)
+                return;
+
+            if (null == mCameraTarget)
+                CreateCameraTarget();
+
+            mCameraTarget.position = mOwner.Position;
         }
     }
 }

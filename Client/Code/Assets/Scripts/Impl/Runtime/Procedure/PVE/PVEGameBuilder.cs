@@ -161,6 +161,7 @@ namespace AosHotfixRunTime
             if (tmpBornPosGo)
             {
                 mLocalPlayer.SetPosition(tmpBornPosGo.transform.position);
+                mLocalPlayer.Controller.RepositionCamera();
             }
 
         }

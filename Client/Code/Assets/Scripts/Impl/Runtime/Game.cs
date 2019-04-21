@@ -19,6 +19,7 @@ namespace AosHotfixRunTime
         public static IObjectManager ObjectMgr { get; private set; }
         public static ITimerManager TimerMgr { get; private set; }
         public static IEffectManager EffectMgr { get; private set; }
+        public static ICameraActionManager CameraActionMgr { get; private set; }
 
         public static void Init()
         {
@@ -47,6 +48,8 @@ namespace AosHotfixRunTime
             tmpHudGo = Hotfix.Instantiate(tmpHudGo);
             GameObject.DontDestroyOnLoad(tmpHudGo);
             CameraMgr.Instance.InitHudCamera(tmpHudGo);
+
+            CameraActionMgr.Init(CameraMgr.Instance.MainCamera, CameraMgr.Instance.CloseupGo, CameraMgr.Instance.ShakeGo);
 
             LoadTbl();
             InitActionSystem();
@@ -108,6 +111,8 @@ namespace AosHotfixRunTime
             GameModuleManager.CreateModule<ActionManager>();
             GameModuleManager.CreateModule<EffectManager>();
             EffectMgr = GameModuleManager.GetModule<IEffectManager>();
+            GameModuleManager.CreateModule<CameraActionManager>();
+            CameraActionMgr = GameModuleManager.GetModule<ICameraActionManager>();
             GameModuleManager.CreateModule<ControllerManager>();
             ControllerMgr = GameModuleManager.GetModule<IControllerManager>();
             GameModuleManager.CreateModule<ObjectManager>();

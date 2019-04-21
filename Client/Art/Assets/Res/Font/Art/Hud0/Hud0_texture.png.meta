@@ -70,7 +70,7 @@ TextureImporter:
     sprites: []
     outline: []
     physicsShape: []
-  spritePackingTag: HUD_Popup_Damage
+  spritePackingTag: FightMainWnd
   userData: 
-  assetBundleName: assets/res/font/art/hud0/hud0_texture_share.unity3d
+  assetBundleName: 
   assetBundleVariant: 

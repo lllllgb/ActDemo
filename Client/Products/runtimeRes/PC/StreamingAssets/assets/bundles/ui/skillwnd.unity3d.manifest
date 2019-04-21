@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1100324095
+CRC: 3330120578
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 767cbcdb07b4fd38f599073678f3ac4b
+    Hash: 4eb2c8af3ab3dc17ebaa622b06203d76
   TypeTreeHash:
     serializedVersion: 2
     Hash: bd0937b82ef9e644feeb905e41af2c8b
@@ -54,5 +54,6 @@ ClassTypes:
 Assets:
 - Assets/Bundles/UI/SkillWnd.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d

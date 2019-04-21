@@ -39,7 +39,7 @@ public class UGUIJoystick
         mBgInitPos = mBackgroundImg.rectTransform.anchoredPosition;
 
         ChangeAlpha(false);
-        mWorld2ScreenModify = 2688f / Screen.width;
+        mWorld2ScreenModify = 2521f / Screen.width;
         mRadius = mBackgroundImg.rectTransform.sizeDelta.x * 0.5f - mCenterImg.rectTransform.sizeDelta.x * 0.5f;
 
         UGUIEventListener.Get(root).onDown = OnPointerDown;

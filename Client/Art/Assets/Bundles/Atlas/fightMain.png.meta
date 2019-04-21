@@ -23,6 +23,7 @@ TextureImporter:
     21300036: yaogan2
     21300038: cdtiao
     21300040: jinengbiankuang
+    21300042: dang_cd
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -118,10 +119,24 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: dangdiban
+      name: dang_cd
       rect:
         serializedVersion: 2
         x: 1
+        y: 56
+        width: 144
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dangdiban
+      rect:
+        serializedVersion: 2
+        x: 147
         y: 84
         width: 431
         height: 180
@@ -149,8 +164,8 @@ TextureImporter:
       name: ghujia
       rect:
         serializedVersion: 2
-        x: 296
-        y: 313
+        x: 580
+        y: 240
         width: 441
         height: 24
       alignment: 0
@@ -219,8 +234,8 @@ TextureImporter:
       name: pao
       rect:
         serializedVersion: 2
-        x: 296
-        y: 344
+        x: 1
+        y: 386
         width: 134
         height: 140
       alignment: 0
@@ -233,8 +248,8 @@ TextureImporter:
       name: rhujia
       rect:
         serializedVersion: 2
-        x: 434
-        y: 339
+        x: 1
+        y: 297
         width: 342
         height: 39
       alignment: 0
@@ -247,8 +262,8 @@ TextureImporter:
       name: rlantiao
       rect:
         serializedVersion: 2
-        x: 1
-        y: 486
+        x: 296
+        y: 338
         width: 463
         height: 40
       alignment: 0
@@ -290,7 +305,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 284
+        y: 1
         width: 293
         height: 53
       alignment: 0
@@ -303,8 +318,8 @@ TextureImporter:
       name: tiao
       rect:
         serializedVersion: 2
-        x: 434
-        y: 86
+        x: 580
+        y: 60
         width: 193
         height: 178
       alignment: 0

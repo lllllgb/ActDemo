@@ -84,6 +84,8 @@ namespace AosHotfixRunTime
         int mSelectedEuqipedSoltIdx;
         List<SkillItemLink> mSkillLinkList;
 
+        SkillDescWnd mSkillDescWnd;
+
         protected override void AfterInit()
         {
             base.AfterInit();
@@ -135,6 +137,13 @@ namespace AosHotfixRunTime
             }
 
             RegisterEventClick(Find("Button_Back"), OnBackBtnClick);
+        }
+
+        protected override void InitSubWindow()
+        {
+            base.InitSubWindow();
+
+            mSkillDescWnd = CreateChildWindow<SkillDescWnd>(mGameObejct.transform, Find("SkillDescPanel"));
         }
 
         protected override void AfterShow()
@@ -233,6 +242,7 @@ namespace AosHotfixRunTime
                         RegistSkillTreeDragBegin(tmpSkillElem);
                         RegistSkillTreeDrag(tmpSkillElem);
                         RegistSkillTreeDragEnd(tmpSkillElem);
+                        RegistSkillTreeClick(tmpSkillElem);
                     }
                     else
                     {
@@ -357,7 +367,16 @@ namespace AosHotfixRunTime
                 }
             };
         }
-        
+
+        private void RegistSkillTreeClick(SkillElem skillElem)
+        {
+            UGUIEventListener.Get(skillElem.RootGo).onClick = arg => {
+                mSkillDescWnd.SetSkillData(skillElem.SkillBase.ID);
+                mSkillDescWnd.Show();
+            };
+        }
+
+
         private void RegistEquipingSkillDragBegin(SkillElem skillElem, int slotIdx)
         {
             UGUIDrogListener.Get(skillElem.RootGo).onBeginDrag = arg => {

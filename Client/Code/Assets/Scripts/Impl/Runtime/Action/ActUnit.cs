@@ -267,10 +267,42 @@ namespace ACT
                 if (mCollisionEnabled)
                 {
                     float addtiveCheckLength = mRadius * 2;
-                    if (trans.x != 0 || trans.z != 0)
+
+                    //if (trans.x != 0 || trans.z != 0)
+                    //{
+                    //    // normalize direction.
+                    //    Vector3 direction = new Vector3(trans.x, 0, trans.z);
+                    //    float length = direction.magnitude;
+                    //    direction /= length;
+
+                    //    float backCheckOffset = 0.05f;
+                    //    Vector3 checkPos = new Vector3(mPosition.x, mPosition.y + addtiveCheckLength, mPosition.z) - direction * backCheckOffset;
+                    //    float checkLength = length + addtiveCheckLength + backCheckOffset;
+
+                    //    RaycastHit hitInfo;
+                    //    mOnTouchWall = false;
+
+                    //    if (Physics.Raycast(checkPos, direction, out hitInfo, checkLength, mCacheLayerMask, QueryTriggerInteraction.Ignore))
+                    //    {
+                    //        mOnTouchWall = true;
+                    //        float hitDistance = hitInfo.distance - addtiveCheckLength;
+                    //        if (hitDistance > 0)
+                    //        {
+                    //            trans.x = direction.x * hitDistance;
+                    //            trans.z = direction.z * hitDistance;
+                    //        }
+                    //        else
+                    //        {
+                    //            trans.x = 0;
+                    //            trans.z = 0;
+                    //        }
+                    //    }
+                    //}
+
+                    if (trans.x != 0)
                     {
                         // normalize direction.
-                        Vector3 direction = new Vector3(trans.x, 0, trans.z);
+                        Vector3 direction = new Vector3(trans.x, 0, 0);
                         float length = direction.magnitude;
                         direction /= length;
 
@@ -288,11 +320,38 @@ namespace ACT
                             if (hitDistance > 0)
                             {
                                 trans.x = direction.x * hitDistance;
-                                trans.z = direction.z * hitDistance;
                             }
                             else
                             {
                                 trans.x = 0;
+                            }
+                        }
+                    }
+
+                    if (trans.z != 0)
+                    {
+                        // normalize direction.
+                        Vector3 direction = new Vector3(0, 0, trans.z);
+                        float length = direction.magnitude;
+                        direction /= length;
+
+                        float backCheckOffset = 0.05f;
+                        Vector3 checkPos = new Vector3(mPosition.x, mPosition.y + addtiveCheckLength, mPosition.z) - direction * backCheckOffset;
+                        float checkLength = length + addtiveCheckLength + backCheckOffset;
+
+                        RaycastHit hitInfo;
+                        mOnTouchWall = false;
+
+                        if (Physics.Raycast(checkPos, direction, out hitInfo, checkLength, mCacheLayerMask, QueryTriggerInteraction.Ignore))
+                        {
+                            mOnTouchWall = true;
+                            float hitDistance = hitInfo.distance - addtiveCheckLength;
+                            if (hitDistance > 0)
+                            {
+                                trans.z = direction.z * hitDistance;
+                            }
+                            else
+                            {
                                 trans.z = 0;
                             }
                         }

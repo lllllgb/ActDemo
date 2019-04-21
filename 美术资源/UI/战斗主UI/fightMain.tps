@@ -213,6 +213,7 @@
                 <false/>
             </struct>
             <key type="filename">dang.png</key>
+            <key type="filename">dang_cd.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -454,6 +455,7 @@
             <filename>touxiangkuang.png</filename>
             <filename>cdtiao.png</filename>
             <filename>jinengbiankuang.png</filename>
+            <filename>dang_cd.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

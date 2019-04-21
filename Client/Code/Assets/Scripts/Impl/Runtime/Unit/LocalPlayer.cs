@@ -13,12 +13,9 @@ namespace AosHotfixRunTime
         ACT.Controller mController;
         public ACT.Controller Controller { get { return mController; } }
 
-        CameraActionManager mCameraActionMgr = new CameraActionManager();
 
         public LocalPlayer() : base()
         {
-            CameraMgr tmpCameraMgr = CameraMgr.Instance;
-            mCameraActionMgr.Init(tmpCameraMgr.MainCamera, tmpCameraMgr.CloseupGo, tmpCameraMgr.ShakeGo);
         }
 
         public void Init(int unitID, int level)
@@ -32,8 +29,6 @@ namespace AosHotfixRunTime
         public override void Update(float deltaTime)
         {
             base.Update(deltaTime);
-
-            mCameraActionMgr.Update(deltaTime);
         }
 
         public override void LateUpdate(float deltaTime)
@@ -60,7 +55,7 @@ namespace AosHotfixRunTime
         {
             base.PlayCameraAction(cameraActionID);
 
-            mCameraActionMgr.StartAction(cameraActionID);
+            Game.CameraActionMgr.StartAction(cameraActionID);
         }
 
         public override ECombatResult Combat(IActUnit target, ISkillItem skillItem)

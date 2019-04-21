@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3543865522
+CRC: 1904091210
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9ab94df8842b018023e9ff08a41e0d9f
+    Hash: 7c0e9d4fb1da69cfafc25a0770be953f
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6370d3f9de9eca57f523bce048404a46
@@ -26,7 +26,6 @@ Assets:
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Particle Add.shader
 - Assets/Shaders/custom_shaders/AnyPlay-Particle-Dissolve-Add-VertexAlpha.shader
 - Assets/Shaders/shader/Particles-Alpha-Blended-Mask.shader
-- Assets/Shaders/builtin_shaders/DefaultResourcesExtra/UI/UI-Default.shader
 - Assets/Shaders/custom_shaders/DoubleSidedAlpha.shader
 - Assets/Shaders/custom_shaders/AnyPlay-Particle-Dissolve-Alpha Blend-VertexAlpha.shader
 - Assets/Shaders/shader/Particles-Dissolve-Alpha.shader

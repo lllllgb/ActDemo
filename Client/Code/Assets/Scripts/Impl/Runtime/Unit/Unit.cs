@@ -304,6 +304,7 @@ namespace AosHotfixRunTime
             else
             {
                 target.Combat(this, target.ActStatus.SkillItem);
+                Game.CameraActionMgr.StartAction(101);
             }
 
             return tmpResult;

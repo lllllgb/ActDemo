@@ -80,7 +80,7 @@ TextureImporter:
     sprites: []
     outline: []
     physicsShape: []
-  spritePackingTag: 
+  spritePackingTag: FightMainWnd
   userData: 
   assetBundleName: assets/bundles/icon/skill/block.unity3d
   assetBundleVariant: 

@@ -6,7 +6,7 @@ using System;
 
 namespace AosHotfixRunTime
 {
-    public class CameraActionManager
+    public class CameraActioner
     {
         [Flags]
         public enum EActionType
@@ -53,7 +53,7 @@ namespace AosHotfixRunTime
         #endregion
 
 
-        public CameraActionManager()
+        public CameraActioner()
         {
         }
 

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4294069540
+CRC: 1371247254
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 100bd4540ae6bb818fb85955b3bff3a2
+    Hash: 5e35c03b663df2407c41f340031eebac
   TypeTreeHash:
     serializedVersion: 2
     Hash: 8931e75aefe594c9e0202d9f4a96d2d4
@@ -27,5 +27,4 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/Bundles/Misc/HUD_Popup_Damage.prefab
-Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/art/hud0/hud0_1_share.unity3d
+Dependencies: []
