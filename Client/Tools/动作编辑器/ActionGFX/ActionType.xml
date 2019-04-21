@@ -5,7 +5,7 @@
       <ID>1001</ID>
       <UnitVaribleList />
       <ActionGroups>
-        <ActionGroup CheckDeath="true" SpasticityCD="0">
+        <ActionGroup RotateOnHit="false" CheckDeath="true" SpasticityCD="0">
           <ActionList>
             <Action>
               <ID>at1_g</ID>
@@ -1339,7 +1339,7 @@
                 <Event>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-400" />
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-600" />
                 </Event>
                 <Event>
                   <TriggerTime>20</TriggerTime>
@@ -4677,7 +4677,7 @@
                 <Event>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-400" />
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-600" />
                 </Event>
                 <Event>
                   <TriggerTime>20</TriggerTime>
@@ -7276,7 +7276,7 @@
                 <Event>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-400" />
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-600" />
                 </Event>
                 <Event>
                   <TriggerTime>20</TriggerTime>
@@ -8337,7 +8337,7 @@
                 <Event>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-400" />
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-600" />
                 </Event>
                 <Event>
                   <TriggerTime>20</TriggerTime>
@@ -9685,12 +9685,26 @@
                 </AnimSlot>
               </AnimSlotList>
               <ActionStatus>4</ActionStatus>
-              <Events />
+              <Events>
+                <Event>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-1000" />
+                </Event>
+                <Event>
+                  <TriggerTime>20</TriggerTime>
+                  <EventType>SetVelocity</EventType>
+                  <EventTypeInt>8</EventTypeInt>
+                  <EventDetailData xsi:type="EventSetVelocity" />
+                </Event>
+              </Events>
               <ActionInterrupts>
                 <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" UnitDead="true" TargetDistanceMax="1000" />
               </ActionInterrupts>
               <AttackDefs />
               <FaceTarget>true</FaceTarget>
+              <CanRotate>true</CanRotate>
+              <CanHurt>true</CanHurt>
             </Action>
             <Action>
               <ID>die</ID>
@@ -9899,7 +9913,7 @@
                 <Event>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-400" />
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-600" />
                 </Event>
                 <Event>
                   <TriggerTime>20</TriggerTime>
@@ -11231,7 +11245,7 @@
                     </AIList>
                   </AILists>
                   <AIStatusSwitchList>
-                    <AIStatusSwitch ActionSwitchNow="0" Condition="3" SelfActionID="block" SelfTime="1200" />
+                    <AIStatusSwitch Condition="1" SelfActionID="block" SelfTime="800" />
                   </AIStatusSwitchList>
                   <AIActionCDList />
                   <Location>
@@ -11292,7 +11306,7 @@
                     </AIList>
                   </AILists>
                   <AIStatusSwitchList>
-                    <AIStatusSwitch ActionSwitchNow="0" Condition="3" SelfActionID="block" SelfTime="1200" />
+                    <AIStatusSwitch Condition="1" SelfActionID="block" SelfTime="800" />
                   </AIStatusSwitchList>
                   <AIActionCDList />
                   <Location>
