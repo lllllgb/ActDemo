@@ -106,6 +106,7 @@ namespace AosHotfixRunTime
                 mMonsterList[i].Dispose();
             }
 
+            --mTriggerCount;
             mMonsterList.Clear();
             Game.WindowsMgr.ShowWindow<FadeWnd, bool, bool>(true, false);
             SceneLoader.Instance.LoadSceneAsync(sceneName, OnSceneLoaded);
@@ -176,7 +177,6 @@ namespace AosHotfixRunTime
 
                     if (self.name.Equals(tmpTransferTrigger.TriggerName))
                     {
-                        --mTriggerCount;
                         TransferNextScene(tmpTransferTrigger.InstanceName);
                         break;
                     }
