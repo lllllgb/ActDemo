@@ -1,15 +1,21 @@
 ManifestFileVersion: 0
-CRC: 1371247254
+CRC: 3614203435
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5e35c03b663df2407c41f340031eebac
+    Hash: 2030c6939e338a90b9546e33c4ce52fd
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 8931e75aefe594c9e0202d9f4a96d2d4
+    Hash: 3825929b5337b5343fa58b543964f9ba
 HashAppended: 0
 ClassTypes:
 - Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
   Script: {instanceID: 0}
 - Class: 74
   Script: {instanceID: 0}
@@ -27,4 +33,5 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/Bundles/Misc/HUD_Popup_Damage.prefab
-Dependencies: []
+Dependencies:
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

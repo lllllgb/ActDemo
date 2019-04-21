@@ -70,7 +70,7 @@ TextureImporter:
     sprites: []
     outline: []
     physicsShape: []
-  spritePackingTag: 
+  spritePackingTag: HUD_Popup_Damage
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2838700744
+CRC: 4196217734
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: abd428b4f5bc689ca2914ee8b87d8193
+    Hash: d7f991cc095d659883a644e680538ab5
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 9280b79ec16b60df6cdd899bdd3ad587
+    Hash: 49b55d66b1b769f5e6af47a259f7ac03
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -30,9 +30,9 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 4a0750875a2311148a61e7f6b740fbfe, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -50,6 +50,7 @@ ClassTypes:
 Assets:
 - Assets/Bundles/UI/FightMainWnd.prefab
 Dependencies:
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
 - E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
 - E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
 - E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d

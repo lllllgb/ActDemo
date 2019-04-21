@@ -15,6 +15,7 @@ namespace AosHotfixRunTime
             public Toggle SkillTge;
             public Image IconImg;
             public ImageLoader IconLoader;
+            public Text SkillName;
             public Image Checkmark;
             public GameObject LinkLineGo;
             public SkillBase SkillBase { get; private set; }
@@ -25,6 +26,7 @@ namespace AosHotfixRunTime
                 RootGo = go;
                 SkillTge = go.GetComponent<Toggle>();
                 IconImg = Find<Image>(go, "Image_Icon");
+                SkillName = Find<Text>(go, "Text_SkillName");
                 Checkmark = Find<Image>(go, "Checkmark");
                 LinkLineGo = Find(go, "Image_LinkLine");
             }
@@ -44,6 +46,11 @@ namespace AosHotfixRunTime
                 }
 
                 IconLoader.Load(ImageLoader.EIconType.Skill, data.Icon, IconImg);
+
+                if (null != SkillName)
+                {
+                    SkillName.text = data.Name;
+                }
             }
 
             public void Release()

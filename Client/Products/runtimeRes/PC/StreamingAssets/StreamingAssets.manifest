@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1828643331
+CRC: 2659807177
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -912,11 +912,12 @@ AssetBundleManifest:
     Info_149:
       Name: assets/bundles/ui/fightmainwnd.unity3d
       Dependencies:
-        Dependency_0: assets/bundles/atlas/common.unity3d
-        Dependency_1: assets/bundles/atlas/fightmain.unity3d
-        Dependency_2: assets/res/font/simkai_share.unity3d
-        Dependency_3: assets/bundles/icon/skill/block.unity3d
-        Dependency_4: assets/res/ui/buttonscale_share.unity3d
+        Dependency_0: assets/bundles/shadercollect.unity3d
+        Dependency_1: assets/bundles/atlas/common.unity3d
+        Dependency_2: assets/bundles/atlas/fightmain.unity3d
+        Dependency_3: assets/res/font/simkai_share.unity3d
+        Dependency_4: assets/bundles/icon/skill/block.unity3d
+        Dependency_5: assets/res/ui/buttonscale_share.unity3d
     Info_150:
       Name: assets/bundles/effect/e_1001_fsw_skill2_003.unity3d
       Dependencies:
@@ -1284,6 +1285,7 @@ AssetBundleManifest:
         Dependency_0: assets/bundles/atlas/common.unity3d
         Dependency_1: assets/bundles/atlas/fightmain.unity3d
         Dependency_2: assets/res/font/simkai_share.unity3d
+        Dependency_3: assets/bundles/audio/jianqihuti.unity3d
     Info_222:
       Name: assets/bundles/effect/e_1001_fsw_skill10_004.unity3d
       Dependencies:
@@ -1291,7 +1293,8 @@ AssetBundleManifest:
         Dependency_1: assets/res/effect/materials/e_trail_fsw_009_02_share.unity3d
     Info_223:
       Name: assets/bundles/misc/hud_popup_damage.unity3d
-      Dependencies: {}
+      Dependencies:
+        Dependency_0: assets/bundles/shadercollect.unity3d
     Info_224:
       Name: assets/res/effect/materials/e_glow_fsw_013_01_share.unity3d
       Dependencies:
