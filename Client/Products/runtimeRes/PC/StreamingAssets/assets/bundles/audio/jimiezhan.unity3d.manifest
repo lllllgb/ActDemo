@@ -1,18 +1,16 @@
 ManifestFileVersion: 0
-CRC: 1265598941
+CRC: 4034962090
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 63f74f317cb4b9328da45ce788310255
+    Hash: 2e9ab6945a8376838a11c0c611813c2c
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 0a9d000c67bb3b371a8c4e0fe8b14a8f
+    Hash: 4c6c8fc99ead083a5f8ccf318eab7a09
 HashAppended: 0
 ClassTypes:
-- Class: 1
-  Script: {instanceID: 0}
-- Class: 4
+- Class: 329
   Script: {instanceID: 0}
 Assets:
-- Assets/Bundles/Audio/Temp.prefab
+- Assets/Bundles/Audio/jimiezhan.ogv
 Dependencies: []

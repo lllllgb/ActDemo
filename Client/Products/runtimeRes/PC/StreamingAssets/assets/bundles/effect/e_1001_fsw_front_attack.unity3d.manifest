@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 372840944
+CRC: 1805027591
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ac864d5fed8645c73b8e0ebe3d7437c4
+    Hash: 43153be1aca924a341c6e711f6c952e5
   TypeTreeHash:
     serializedVersion: 2
     Hash: f8ec7e008f8962136904c059b2a16459
@@ -42,11 +42,11 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_front_attack.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_knife_fsw_007_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_line_lyj_004_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_noise_fsw_002_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002_02_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_noise_fsw_003_02_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_006_01_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_plane_fsw_006_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_knife_fsw_007_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_line_lyj_004_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_noise_fsw_002_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002_02_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_noise_fsw_003_02_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_006_01_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_plane_fsw_006_share.unity3d

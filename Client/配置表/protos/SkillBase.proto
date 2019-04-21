@@ -7,4 +7,5 @@ message SkillBase [key=ID,excel="SkillBase.xlsx"]
 	string 		Action                            [option = "动作"];
 	string 		Desc                              [option = "技能描述"];
 	int32 		TreeType                          [option = "技能系"];
+	string 		VideoName                         [option = "视频名"];
 }

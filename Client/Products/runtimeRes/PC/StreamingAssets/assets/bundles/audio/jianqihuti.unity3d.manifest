@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 261789894
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 37b3769fb68ac793380dfa8c1a1f8c19
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4c6c8fc99ead083a5f8ccf318eab7a09
+HashAppended: 0
+ClassTypes:
+- Class: 329
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Audio/jianqihuti.ogv
+Dependencies: []

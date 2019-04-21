@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3493554458
+CRC: 3687946588
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 43ffe86ec008e7f30c672192328ea0dc
+    Hash: 078fd8bc088c680cb271a6b1dc9ac53e
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,5 +18,5 @@ ClassTypes:
 Assets:
 - Assets/Res/Models/Unit/weapon/Materials/1001.mat
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/unit/weapon/textures/1001_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/unit/weapon/textures/1001_share.unity3d

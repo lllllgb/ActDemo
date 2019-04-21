@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 using AosHotfixFramework;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 namespace AosHotfixRunTime
 {
@@ -13,6 +15,8 @@ namespace AosHotfixRunTime
 
         private Text mSkillNameLab;
         private Text mSkillDescLab;
+        private VideoPlayer mSkillVideo;
+        private RawImage mSkillVideoRawImg;
 
         private int mSkillID;
 
@@ -22,6 +26,8 @@ namespace AosHotfixRunTime
 
             mSkillNameLab = Find<Text>("Text_SkillName");
             mSkillDescLab = Find<Text>("Text_SkillDesc");
+            mSkillVideoRawImg = Find<RawImage>("RawImage_Video");
+            mSkillVideo = mSkillVideoRawImg.GetComponent<VideoPlayer>();
 
             RegisterEventClick(Find("Image_Mask"), OnClickMask);
         }
@@ -41,7 +47,19 @@ namespace AosHotfixRunTime
             {
                 mSkillNameLab.text = tmpSkillBase.Name;
                 mSkillDescLab.text = tmpSkillBase.Desc;
+                PlayVideo(tmpSkillBase.VideoName);
             }
+        }
+
+        void PlayVideo(string videoName)
+        {
+            Game.ResourcesMgr.LoadBundleByType(EABType.Audio, videoName);
+            var tmpVideoClip = Game.ResourcesMgr.GetAssetByType<VideoClip>(EABType.Audio, videoName);
+            mSkillVideo.clip = tmpVideoClip;
+            mSkillVideo.Play();
+            mSkillVideoRawImg.color = Color.clear;
+            //mSkillVideoRawImg.DOFade(1, 0.5f);
+            mSkillVideoRawImg.DOColor(Color.white, 1f);
         }
 
         protected override void BeforeClose()

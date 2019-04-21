@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 652968144
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 48c95910ff7e59c13cfebf6c8f9cebf2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4c6c8fc99ead083a5f8ccf318eab7a09
+HashAppended: 0
+ClassTypes:
+- Class: 329
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Audio/shenglongji.ogv
+Dependencies: []

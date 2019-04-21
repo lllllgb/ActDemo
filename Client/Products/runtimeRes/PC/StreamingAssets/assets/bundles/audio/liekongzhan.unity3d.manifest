@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3424340847
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: be3fcd6f0d88054715ffc23a0ff5e1ad
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4c6c8fc99ead083a5f8ccf318eab7a09
+HashAppended: 0
+ClassTypes:
+- Class: 329
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Audio/liekongzhan.ogv
+Dependencies: []

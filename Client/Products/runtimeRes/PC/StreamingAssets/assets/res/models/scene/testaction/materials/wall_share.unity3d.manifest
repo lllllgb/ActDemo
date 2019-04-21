@@ -3,7 +3,7 @@ CRC: 518799859
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8f6bb710865afcc6ead99051e343effd
+    Hash: 4edd477add63313d3ef6d42f9e347f4c
   TypeTreeHash:
     serializedVersion: 2
     Hash: c2bdabd68c118aabc18c59eaf5951821
@@ -16,4 +16,4 @@ ClassTypes:
 Assets:
 - Assets/Res/Models/Scene/TestAction/Materials/wall.mat
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

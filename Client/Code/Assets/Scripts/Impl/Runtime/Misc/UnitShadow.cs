@@ -18,13 +18,16 @@ namespace AosHotfixRunTime
             mOwner = owner;
             mShadowGo = shadow;
 
-            mInitOffset = mShadowGo.transform.localPosition;
+            if (null != mShadowGo)
+            {
+                mInitOffset = mShadowGo.transform.localPosition;
+            }
         }
 
         // Update is called once per frame
         public void Update(float deltaTime)
         {
-            if (null == mOwner)
+            if (null == mOwner || null == mShadowGo)
                 return;
 
             // we only do raycast shadow when unit on air.

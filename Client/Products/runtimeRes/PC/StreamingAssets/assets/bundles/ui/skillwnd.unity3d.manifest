@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3330120578
+CRC: 2267947561
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 670f48c50349d4732354c21ca6a25213
+    Hash: a6a1d221559fb75205ae7360bc96540d
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f7d240a191b1df4ea92afd9d5edb4865
+    Hash: f85806351324a3cc86d4cfa36c1c158f
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -20,11 +20,17 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
+  Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
   Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
   Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
   Script: {fileID: -1200242548, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
   Script: {fileID: 1367256648, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
@@ -34,11 +40,9 @@ ClassTypes:
 - Class: 114
   Script: {fileID: -1184210157, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
-  Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-- Class: 114
-  Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-- Class: 114
   Script: {fileID: 1297475563, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 43b02c1864f407844a890fb9ad879d4e, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -51,9 +55,11 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 224
   Script: {instanceID: 0}
+- Class: 328
+  Script: {instanceID: 0}
 Assets:
 - Assets/Bundles/UI/SkillWnd.prefab
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d

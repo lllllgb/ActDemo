@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1520394371
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e3d4c30d89d219714b2292185d87e9d9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4c6c8fc99ead083a5f8ccf318eab7a09
+HashAppended: 0
+ClassTypes:
+- Class: 329
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Audio/lingkongjianzhen.ogv
+Dependencies: []

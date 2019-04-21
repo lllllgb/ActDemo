@@ -3,7 +3,7 @@ CRC: 3301114999
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 262cf57bdcbec737dcd593f423259852
+    Hash: 1a5ef907ed4961e01ae28952deb719e6
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/effect/Materials/E_Debris_fsw_003_01.mat
+- Assets/Res/Effect/Materials/E_Debris_fsw_003_01.mat
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_debris_fsw_003_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_debris_fsw_003_share.unity3d

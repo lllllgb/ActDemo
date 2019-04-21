@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3249946093
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e13977dd769cb2c8f28a5ae393f598e7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4c6c8fc99ead083a5f8ccf318eab7a09
+HashAppended: 0
+ClassTypes:
+- Class: 329
+  Script: {instanceID: 0}
+Assets:
+- Assets/Bundles/Audio/jianqijiaosha.ogv
+Dependencies: []

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1360876025
+CRC: 1623077418
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6c58d593852f4f60f5b84a8a58d9f568
+    Hash: 4b41a472e0bc4ae861222e00ecdcef55
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,8 +16,8 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/effect/Materials/E_Line_lyj_008_01.mat
+- Assets/Res/Effect/Materials/E_Line_lyj_008_01.mat
 Dependencies:
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_noise_fsw_004_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_line_lyj_008_share.unity3d
-- F:/ACT/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_noise_fsw_004_share.unity3d
+- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_line_lyj_008_share.unity3d
