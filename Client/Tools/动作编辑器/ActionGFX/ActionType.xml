@@ -1328,7 +1328,7 @@
               <Desc>动作</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit" Start="10">
+                <AnimSlot Animation="hit_s" Start="10">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
@@ -4666,7 +4666,7 @@
               <Desc>动作</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit" Start="10">
+                <AnimSlot Animation="hit_s" Start="10">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
@@ -9674,6 +9674,24 @@
       <ActionGroups>
         <ActionGroup RotateOnHit="false" CheckDeath="true" SpasticityCD="10000" HasCollision="true">
           <ActionList>
+            <Action SuperArmor="true">
+              <ID>block</ID>
+              <Name>闪避</Name>
+              <Desc>动作</Desc>
+              <DefaultLinkActionID>idle</DefaultLinkActionID>
+              <AnimSlotList>
+                <AnimSlot Animation="block">
+                  <AnimControlList />
+                </AnimSlot>
+              </AnimSlotList>
+              <ActionStatus>4</ActionStatus>
+              <Events />
+              <ActionInterrupts>
+                <ActionInterrupt ActionID="die" CheckInput1="true" InputType2="4" UnitDead="true" TargetDistanceMax="1000" />
+              </ActionInterrupts>
+              <AttackDefs />
+              <FaceTarget>true</FaceTarget>
+            </Action>
             <Action>
               <ID>die</ID>
               <Name>死亡</Name>
@@ -9870,7 +9888,7 @@
               <Desc>动作</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit" Start="10">
+                <AnimSlot Animation="hit_s" Start="10">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
@@ -11155,9 +11173,7 @@
                       </AISlots>
                     </AIList>
                   </AILists>
-                  <AIStatusSwitchList>
-                    <AIStatusSwitch SwitchStatusID="1" Condition="1" TargetExist="true" TargetActionID="skill_1_y" TargetSkill="1" SelfActionID="skill_1_y(技能1)" SelfTime="10000" SelfSkill="1" />
-                  </AIStatusSwitchList>
+                  <AIStatusSwitchList />
                   <AIActionCDList>
                     <AIActionCD Action="skill3" CD="8000" />
                   </AIActionCDList>
@@ -11194,11 +11210,30 @@
                       </AISlots>
                     </AIList>
                   </AILists>
-                  <AIStatusSwitchList />
+                  <AIStatusSwitchList>
+                    <AIStatusSwitch SwitchStatusID="1" Condition="2" TargetExist="true" TargetVaribleCompare="5" TargetVaribleValue="2000" SelfActionID="get_up" />
+                  </AIStatusSwitchList>
                   <AIActionCDList>
                     <AIActionCD Action="skill4" CD="5000" />
                     <AIActionCD Action="skill3" CD="10000" />
                   </AIActionCDList>
+                  <Location>
+                    <X>0</X>
+                    <Y>0</Y>
+                  </Location>
+                </AIStatus>
+                <AIStatus Name="闪避">
+                  <AILists>
+                    <AIList Distance="1000">
+                      <AISlots>
+                        <AISlot SkillID="1011" SwitchActionID="block" />
+                      </AISlots>
+                    </AIList>
+                  </AILists>
+                  <AIStatusSwitchList>
+                    <AIStatusSwitch ActionSwitchNow="0" Condition="3" SelfActionID="block" SelfTime="1200" />
+                  </AIStatusSwitchList>
+                  <AIActionCDList />
                   <Location>
                     <X>0</X>
                     <Y>0</Y>
@@ -11233,12 +11268,33 @@
                       </AISlots>
                     </AIList>
                   </AILists>
-                  <AIStatusSwitchList />
+                  <AIStatusSwitchList>
+                    <AIStatusSwitch SwitchStatusID="1" Condition="2" TargetExist="true" TargetVaribleCompare="5" TargetVaribleValue="2000" SelfActionID="get_up" />
+                    <AIStatusSwitch SwitchStatusID="1" ActionSwitchNow="0" Condition="2" TargetVaribleCompare="5" TargetVaribleValue="2000" SelfActionID="hit_s" />
+                    <AIStatusSwitch SwitchStatusID="1" ActionSwitchNow="0" Condition="2" TargetVaribleCompare="5" TargetVaribleValue="2000" SelfActionID="skill5_2" />
+                  </AIStatusSwitchList>
                   <AIActionCDList>
                     <AIActionCD Action="skill5" CD="15000" />
                     <AIActionCD Action="skill4" CD="8000" />
                     <AIActionCD Action="skill3" CD="5000" />
                   </AIActionCDList>
+                  <Location>
+                    <X>0</X>
+                    <Y>0</Y>
+                  </Location>
+                </AIStatus>
+                <AIStatus Name="闪避">
+                  <AILists>
+                    <AIList Distance="1000">
+                      <AISlots>
+                        <AISlot SkillID="1011" SwitchActionID="block" />
+                      </AISlots>
+                    </AIList>
+                  </AILists>
+                  <AIStatusSwitchList>
+                    <AIStatusSwitch ActionSwitchNow="0" Condition="3" SelfActionID="block" SelfTime="1200" />
+                  </AIStatusSwitchList>
+                  <AIActionCDList />
                   <Location>
                     <X>0</X>
                     <Y>0</Y>
