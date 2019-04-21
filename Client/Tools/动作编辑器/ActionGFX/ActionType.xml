@@ -1328,7 +1328,7 @@
               <Desc>动作</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_s" Start="10">
+                <AnimSlot Animation="hit_s">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
@@ -4666,7 +4666,7 @@
               <Desc>动作</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_s" Start="10">
+                <AnimSlot Animation="hit_s">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
@@ -9565,7 +9565,7 @@
                     <AIList Distance="800">
                       <AISlots>
                         <AISlot SwitchActionID="run" />
-                        <AISlot SkillID="3001" SwitchActionID="skill3" />
+                        <AISlot SkillID="2001" SwitchActionID="skill3" />
                       </AISlots>
                     </AIList>
                     <AIList Distance="400">
@@ -9600,7 +9600,7 @@
                       <AISlots>
                         <AISlot SwitchActionID="run" />
                         <AISlot Ratio="20" SkillID="3001" SwitchActionID="skill4" />
-                        <AISlot SkillID="3001" SwitchActionID="slill3" />
+                        <AISlot SkillID="2001" SwitchActionID="slill3" />
                       </AISlots>
                     </AIList>
                     <AIList Distance="400">
@@ -9689,7 +9689,7 @@
                 <Event>
                   <EventType>SetVelocity</EventType>
                   <EventTypeInt>8</EventTypeInt>
-                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="-1000" />
+                  <EventDetailData xsi:type="EventSetVelocity" VelocityZ="2000" />
                 </Event>
                 <Event>
                   <TriggerTime>20</TriggerTime>
@@ -9902,7 +9902,7 @@
               <Desc>动作</Desc>
               <DefaultLinkActionID>idle</DefaultLinkActionID>
               <AnimSlotList>
-                <AnimSlot Animation="hit_s" Start="10">
+                <AnimSlot Animation="hit_s" End="60">
                   <AnimControlList />
                 </AnimSlot>
               </AnimSlotList>
