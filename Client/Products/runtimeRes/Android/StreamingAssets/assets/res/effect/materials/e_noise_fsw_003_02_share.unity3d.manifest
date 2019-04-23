@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2113452851
+CRC: 3281046466
 Hashes:
   AssetFileHash:
     serializedVersion: 2
@@ -18,8 +18,8 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Materials/E_Noise_fsw_003_02.mat
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_noise_fsw_001_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_knife_fsw_007_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_trail_fsw_008_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_noise_fsw_003_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d

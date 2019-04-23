@@ -13,6 +13,7 @@ namespace AosBaseFramework
         {
             Table,
             Action,
+            Video,
         }
 
         public const string GAME_FOLDER = "GSYZ";
@@ -31,6 +32,7 @@ namespace AosBaseFramework
         {
             { EBytesFileType.Table, "table"},
             { EBytesFileType.Action, "action"},
+            { EBytesFileType.Video, "video"},
         };
 
         private static string msPersistentPath = string.Empty;

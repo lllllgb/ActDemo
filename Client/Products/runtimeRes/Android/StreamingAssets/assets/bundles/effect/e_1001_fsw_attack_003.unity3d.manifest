@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2663065757
+CRC: 4286743777
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cfdf34c2a3957a11b2b274cd48e941be
+    Hash: f56e5d188f5f743df9c759d4203f9ad7
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 49c318d97990f2f843929a8bd7947255
+    Hash: 9e4b7539d71d9321524f29e73f3c601f
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,6 +17,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 198
   Script: {instanceID: 0}
 - Class: 199
@@ -24,7 +28,7 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_attack_003.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_004_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_knife_fsw_004_01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/plane01_share.unity3d

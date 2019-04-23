@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1414020655
+CRC: 2247909946
 Hashes:
   AssetFileHash:
     serializedVersion: 2
@@ -30,5 +30,5 @@ ClassTypes:
 Assets:
 - Assets/Res/Models/Unit/weapon/1001.FBX
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/unit/weapon/textures/1001_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/models/unit/weapon/textures/1001_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

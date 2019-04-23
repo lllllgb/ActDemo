@@ -238,18 +238,18 @@ namespace AosBaseFramework
 
 		public void UnloadBundle(string assetBundleName)
 		{
-			assetBundleName = assetBundleName.ToLower();
-			
-			this.UnloadOneBundle(assetBundleName);
+            assetBundleName = assetBundleName.ToLower();
 
-			string[] dependencies = ResourcesHelper.GetSortedDependencies(assetBundleName);
+            this.UnloadOneBundle(assetBundleName);
 
-			//Logger.Log($"-----------dep unload {assetBundleName} dep: {dependencies.ToList().ListToString()}");
-			foreach (string dependency in dependencies)
-			{
-				this.UnloadOneBundle(dependency);
-			}
-		}
+            string[] dependencies = ResourcesHelper.GetSortedDependencies(assetBundleName);
+
+            //Logger.Log($"-----------dep unload {assetBundleName} dep: {dependencies.ToList().ListToString()}");
+            foreach (string dependency in dependencies)
+            {
+                this.UnloadOneBundle(dependency);
+            }
+        }
 
 		private void UnloadOneBundle(string assetBundleName)
 		{
@@ -356,8 +356,10 @@ namespace AosBaseFramework
             string[] dependencies = ResourcesHelper.GetSortedDependencies(assetBundleName);
 
             //Logger.Log($"-----------dep load {assetBundleName} dep: {dependencies.ToList().ListToString()}");
-            foreach (string dependency in dependencies)
+            //foreach (string dependency in dependencies)
+            for (int i = dependencies.Length - 1; i >= 0; --i)
             {
+                string dependency = dependencies[i];
                 if (string.IsNullOrEmpty(dependency))
                 {
                     continue;

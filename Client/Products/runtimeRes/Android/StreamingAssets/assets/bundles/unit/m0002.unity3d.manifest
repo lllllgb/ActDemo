@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2410661994
+CRC: 3617266276
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7cad5c9c0419d5f04dbe16c3d8e44774
+    Hash: 3e3635ca6c5089027e6d64e32944af83
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 9fa7a8e4aa78884d62e4fe9af9ed69a4
+    Hash: b732ea1c4d7744872ffea24b3d019a66
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -15,7 +15,11 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 33
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
@@ -25,6 +29,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 111
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a4783a8e6eda7d74d8a16b76c7e1565f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 136
   Script: {instanceID: 0}
 - Class: 137
@@ -32,4 +40,6 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Unit/m0002.prefab
 Dependencies:
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/models/misc/shadow/shadow_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/models/misc/shadow/shadow_001_share.unity3d

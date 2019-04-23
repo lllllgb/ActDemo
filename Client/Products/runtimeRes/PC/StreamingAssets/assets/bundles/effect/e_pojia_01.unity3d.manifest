@@ -3,7 +3,7 @@ CRC: 3530497229
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 22e4922991a4ce35c17c3f03f4e8f750
+    Hash: 242b3ab84b2c1b4049dc2368965fcded
   TypeTreeHash:
     serializedVersion: 2
     Hash: 0605fe76d012b1a951d4b995dc7210fb
@@ -26,6 +26,6 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_pojia_01.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_object_fsw_001_01_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_object_fsw_001_01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_glow_fsw_002_01_share.unity3d

@@ -1,19 +1,21 @@
 ManifestFileVersion: 0
-CRC: 2777179382
+CRC: 250106094
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0da69ebadd79b036a9b0e1de2422b09a
+    Hash: 60e0ed9df86cf5a2ee25ddd127a71edf
   TypeTreeHash:
     serializedVersion: 2
-    Hash: b33f261d3acb9c3b2bb66890a808c4c4
+    Hash: 9280b79ec16b60df6cdd899bdd3ad587
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
 - Class: 28
   Script: {instanceID: 0}
-- Class: 74
+- Class: 48
   Script: {instanceID: 0}
 - Class: 91
   Script: {instanceID: 0}
@@ -27,6 +29,10 @@ ClassTypes:
   Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
   Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4a0750875a2311148a61e7f6b740fbfe, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -39,9 +45,14 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 224
   Script: {instanceID: 0}
+- Class: 225
+  Script: {instanceID: 0}
 Assets:
 - Assets/Bundles/UI/FightMainWnd.prefab
 Dependencies:
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/atlas/common.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/icon/skill/block.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/font/simkai_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/ui/buttonscale_share.unity3d

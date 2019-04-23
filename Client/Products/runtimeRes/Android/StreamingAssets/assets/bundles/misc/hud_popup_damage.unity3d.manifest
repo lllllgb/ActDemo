@@ -1,15 +1,21 @@
 ManifestFileVersion: 0
-CRC: 297290134
+CRC: 838476720
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: bb2a7e23e0c6cfa0f8a01e8f838036ae
+    Hash: 99d4ced4643c421dd96b295fa7f029bc
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 8931e75aefe594c9e0202d9f4a96d2d4
+    Hash: 3825929b5337b5343fa58b543964f9ba
 HashAppended: 0
 ClassTypes:
 - Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
   Script: {instanceID: 0}
 - Class: 74
   Script: {instanceID: 0}
@@ -28,4 +34,4 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Misc/HUD_Popup_Damage.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/font/simkai_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d

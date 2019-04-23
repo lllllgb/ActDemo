@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3636176743
+CRC: 721195515
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a2da38a3baf257fff3dccbe99c5269be
+    Hash: 8c9ebe6525f3520a9088769e4f1056da
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f38824681169df2b8fb05a288a4abe56
+    Hash: ee9c911e1ad9509dd49c9c426b0cfa82
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -27,6 +27,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 95
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 198
   Script: {instanceID: 0}
 - Class: 199
@@ -34,6 +38,6 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_gedang.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_smoke_fsw_002_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_002_02_share.unity3d

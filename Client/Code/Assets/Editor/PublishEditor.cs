@@ -96,6 +96,7 @@ namespace MyEditor
             string tmpBundlePath = $"{tmpRuntimeResFullPath}/{string.Format(PathHelper.BUNDLE_FOLDER, mPlatform)}/"; //源资源bundle路径
             string tmpTblFolder = PathHelper.GetBytesFileFoldNameByType(PathHelper.EBytesFileType.Table); //源资源tbl文件夹
             string tmpSkillActionFolder = PathHelper.GetBytesFileFoldNameByType(PathHelper.EBytesFileType.Action);//源资源SkillAction文件夹
+            string tmpVideoFolder = PathHelper.GetBytesFileFoldNameByType(PathHelper.EBytesFileType.Video);//源资源video文件夹
 
             string tmpPublishResourcesPath = Application.dataPath.Replace("\\", "/") + "/Publish/Resources/";//发布存放.bytes的目录
             string tmpStreamingAssetsPath = Application.streamingAssetsPath.Replace("\\", "/") + "/";//发布存放bundle的路径
@@ -128,16 +129,21 @@ namespace MyEditor
             PublishUtility.CopyRes2Path(tmpActionList, tmpPublishResourcesPath, ".bytes");
             PublishUtility.CopyRes2Path(tmpActionList, tmpPatchPath, string.Empty);
 
+            //录像
+            List<ResouceElement> tmpVideoList = PublishUtility.GetResouceElements($"{tmpRuntimeResFullPath}/{tmpVideoFolder}", ResouceElement.EResType.Bytes, tmpVideoFolder);
+            PublishUtility.CopyRes2Path(tmpVideoList, tmpPublishResourcesPath, ".bytes");
+            PublishUtility.CopyRes2Path(tmpVideoList, tmpPatchPath, string.Empty);
 
 
-//#if UNITY_EDITOR
-//            Process.Start("Explorer.exe", tmpPatchPath.Replace("/", "\\"));
-//#endif
+            //#if UNITY_EDITOR
+            //            Process.Start("Explorer.exe", tmpPatchPath.Replace("/", "\\"));
+            //#endif
 
             List<ResouceElement> tmpAllResList = new List<ResouceElement>();
             tmpAllResList.AddRange(tmpStreamingAssetsList);
             tmpAllResList.AddRange(tmpTblList);
             tmpAllResList.AddRange(tmpActionList);
+            tmpAllResList.AddRange(tmpVideoList);
 
             uint tmpVersionFileCrc = FileHelper.ResVersionFileCRC;
             uint tmpResDescFileCrc = 0;

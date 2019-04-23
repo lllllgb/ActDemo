@@ -11,7 +11,7 @@ public class PlayVideo : MonoBehaviour
 
     //定义参数获取VideoPlayer组件和RawImage组件
     private VideoPlayer videoPlayer;
-
+    
     private RawImage rawImage;
 
     void Start()
@@ -24,6 +24,7 @@ public class PlayVideo : MonoBehaviour
 
         rawImage = this.GetComponent<RawImage>();
 
+        
     }
 
     void Update()

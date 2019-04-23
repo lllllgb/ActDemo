@@ -3,10 +3,10 @@ CRC: 3723454905
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4eded0b6d17fd5afbd31ea3de964ea5f
+    Hash: 664d0a727a6ef2fb0e959bb9aa66e0be
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 80acf2071f2ed97567a13e9146ff8166
+    Hash: ec492d20becd25dc5700f56ed9b7973d
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -42,9 +42,9 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 1297475563, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 4a0750875a2311148a61e7f6b740fbfe, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 43b02c1864f407844a890fb9ad879d4e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4a0750875a2311148a61e7f6b740fbfe, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -64,7 +64,7 @@ ClassTypes:
 Assets:
 - Assets/Bundles/UI/SkillWnd.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/audio/jianqihuti.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/common.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/atlas/fightmain.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/font/simkai_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/audio/jianqihuti.unity3d

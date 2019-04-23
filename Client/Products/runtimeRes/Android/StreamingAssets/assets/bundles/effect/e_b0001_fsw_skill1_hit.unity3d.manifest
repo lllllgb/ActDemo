@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1494505063
+CRC: 2146081271
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 40a4ddac4e74518037b3bc14fe01fd8c
+    Hash: d328be5c5c71c29d43a39a879176de7b
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 49c318d97990f2f843929a8bd7947255
+    Hash: 9e4b7539d71d9321524f29e73f3c601f
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,6 +17,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 198
   Script: {instanceID: 0}
 - Class: 199
@@ -24,11 +28,11 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_b0001_fsw_skill1_hit.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_002a_share.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_lyj_003_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_fsw_002_02_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_fsw_006_01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_002a_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_trail_fsw_002_01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_003_03_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/plane01_share.unity3d

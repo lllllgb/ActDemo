@@ -3,7 +3,7 @@ CRC: 3614203435
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2030c6939e338a90b9546e33c4ce52fd
+    Hash: a5568398aba685e6742ca63d56010242
   TypeTreeHash:
     serializedVersion: 2
     Hash: 3825929b5337b5343fa58b543964f9ba
@@ -34,4 +34,4 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Misc/HUD_Popup_Damage.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d

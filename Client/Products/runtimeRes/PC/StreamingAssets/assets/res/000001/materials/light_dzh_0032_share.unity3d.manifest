@@ -3,7 +3,7 @@ CRC: 2099462837
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 718c9ff1d00abd9db40f862025640a70
+    Hash: 2792dc84e7ebfaf034300b146b751dd4
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,4 +18,4 @@ ClassTypes:
 Assets:
 - Assets/Res/000001/Materials/light_dzh_0032.mat
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/000001/light_dzh_0032_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/000001/light_dzh_0032_share.unity3d

@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2201457719
+CRC: 118016809
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: bf594bc1404e747a2817b8aeb05ea348
+    Hash: d57753bba0f34f95a4807eeb305e0522
   TypeTreeHash:
     serializedVersion: 2
-    Hash: c72fd6479aa1c2cc290a147c657eef88
+    Hash: f8ec7e008f8962136904c059b2a16459
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -31,6 +31,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 95
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 198
   Script: {instanceID: 0}
 - Class: 199
@@ -38,11 +42,13 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_skill9_002.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_noise_fsw_001_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_noise_fsw_003_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_fuwen_fsw_002_01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_fsw_008_01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_fsw_002_02_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_fuwen_fsw_001_01_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_trail_fsw_009_02_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/fbx_yuan_fsw_004_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/fbx_yuan_fsw_002_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/fbx_xian_fsw_002_share.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_trail_fsw_009_02_share.unity3d

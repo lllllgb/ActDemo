@@ -35,17 +35,22 @@ namespace AosHotfixRunTime
 
             var tmpUnitCtrl = Game.ControllerMgr.Get<UnitController>();
 
-            mLocalPlayer = new LocalPlayer();
-            mLocalPlayer.Init(1003, 1);
-            mLocalPlayer.SetPosition(new Vector3(1000, 0, 0));
-            GameObject.DontDestroyOnLoad(mLocalPlayer.UGameObject);
-            ACT.ActionSystem.Instance.ActUnitMgr.Add(mLocalPlayer);
-            ACT.ActionSystem.Instance.ActUnitMgr.LocalPlayer = mLocalPlayer;
-            tmpUnitCtrl.SetLocalPlayer(mLocalPlayer);
-
             Game.WindowsMgr.ShowWindow<FadeWnd, bool, bool>(true, false);
-            Game.WindowsMgr.ShowWindow<FightMainWnd>();
-            SceneLoader.Instance.LoadSceneAsync(mInstanceBase.SceneName, OnSceneLoaded);
+
+            Game.TimerMgr.AddTimer(0.5f, obj => {
+
+                Game.WindowsMgr.CloseWindow<InstanceWnd>();
+                mLocalPlayer = new LocalPlayer();
+                mLocalPlayer.Init(1003, 1);
+                mLocalPlayer.SetPosition(new Vector3(1000, 0, 0));
+                GameObject.DontDestroyOnLoad(mLocalPlayer.UGameObject);
+                ACT.ActionSystem.Instance.ActUnitMgr.Add(mLocalPlayer);
+                ACT.ActionSystem.Instance.ActUnitMgr.LocalPlayer = mLocalPlayer;
+                tmpUnitCtrl.SetLocalPlayer(mLocalPlayer);
+                Game.WindowsMgr.ShowWindow<FightMainWnd>();
+                SceneLoader.Instance.LoadSceneAsync(mInstanceBase.SceneName, OnSceneLoaded);
+
+            }, null);
         }
 
         public void Update(float deltaTime)
@@ -109,7 +114,10 @@ namespace AosHotfixRunTime
             --mTriggerCount;
             mMonsterList.Clear();
             Game.WindowsMgr.ShowWindow<FadeWnd, bool, bool>(true, false);
-            SceneLoader.Instance.LoadSceneAsync(sceneName, OnSceneLoaded);
+
+            Game.TimerMgr.AddTimer(0.5f, obj => {
+                SceneLoader.Instance.LoadSceneAsync(sceneName, OnSceneLoaded);
+            }, null);
         }
 
         void OnSceneLoaded()

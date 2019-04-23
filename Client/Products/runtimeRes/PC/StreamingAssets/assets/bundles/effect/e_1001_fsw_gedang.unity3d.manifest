@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2055014701
+CRC: 4120714406
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 244cf58576f427cec940bff37002f177
+    Hash: 1df807e194cba569db51200777805372
   TypeTreeHash:
     serializedVersion: 2
     Hash: ee9c911e1ad9509dd49c9c426b0cfa82
@@ -38,6 +38,6 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_gedang.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_smoke_fsw_002_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002_02_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_smoke_fsw_002_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/bundles/shadercollect.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_line_lyj_002_02_share.unity3d

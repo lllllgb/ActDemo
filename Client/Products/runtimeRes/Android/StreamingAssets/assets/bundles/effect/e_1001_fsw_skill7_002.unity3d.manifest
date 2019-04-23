@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1211275550
+CRC: 1662531770
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d58b304e1ac5bdab4f6be48a31a8a756
+    Hash: 4d418534a516bb1199ac97daaba8e0dd
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 77c0a258cbeb415febf6373a80a5154c
+    Hash: f80d3a8b7928d0cbac010d8ee7301f01
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -23,6 +23,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 95
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 198
   Script: {instanceID: 0}
 - Class: 199
@@ -30,9 +34,9 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_skill7_002.prefab
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_noise_fsw_001_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_knife_fsw_012_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_object_fsw_002_02_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_object_fsw_002_01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_trail_fsw_001_01_share.unity3d

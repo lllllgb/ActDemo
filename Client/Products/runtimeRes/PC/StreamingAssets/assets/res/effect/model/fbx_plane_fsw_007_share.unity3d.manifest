@@ -3,7 +3,7 @@ CRC: 2644808746
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 71c459d82a6d3e2abc26bfa2d5dd0c4f
+    Hash: ab09960a603902b533affd337ad71ef0
   TypeTreeHash:
     serializedVersion: 2
     Hash: dd75b9401610cb5abcccea16a153f100
@@ -26,5 +26,5 @@ ClassTypes:
 - Class: 111
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Model/Fbx_Plane_fsw_007.FBX
+- Assets/Res/effect/Model/Fbx_Plane_fsw_007.FBX
 Dependencies: []

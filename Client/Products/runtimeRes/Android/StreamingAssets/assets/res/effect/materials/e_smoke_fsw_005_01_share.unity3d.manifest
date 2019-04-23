@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3703275602
+CRC: 2823392943
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0b3aa7292ba16c43e2d40a9b405aa54a
+    Hash: 246febf8504a6e023076861fadadc7b0
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,5 +18,4 @@ ClassTypes:
 Assets:
 - Assets/Res/effect/Materials/E_Smoke_fsw_005_01.mat
 Dependencies:
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_smoke_fsw_005_share.unity3d

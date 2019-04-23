@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 946616632
+CRC: 2896249445
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b64fc7a805f7e4d6efab0bb354f25de3
+    Hash: c36a899f02ddc949f95cf5f5a218423d
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 6441f4c48b8293a736413520ea1a9530
+    Hash: 458d147a64fc653d31d9ab5cf127008d
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,6 +21,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 198
   Script: {instanceID: 0}
 - Class: 199
@@ -29,12 +33,12 @@ Assets:
 - Assets/Bundles/Effect/E_1001_fsw_attack_004.prefab
 Dependencies:
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/texture/e_glow_lyj_002_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_grain_lyj_001a_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_fsw_010_01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_lyj_002_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_006_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_007_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_lyj_005_01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_007a_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/fbx_plane_fsw_005_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/jian01_share.unity3d

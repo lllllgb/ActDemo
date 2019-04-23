@@ -42,14 +42,79 @@ public class UGUIJoystick
         mWorld2ScreenModify = 2521f / Screen.width;
         mRadius = mBackgroundImg.rectTransform.sizeDelta.x * 0.5f - mCenterImg.rectTransform.sizeDelta.x * 0.5f;
 
-        UGUIEventListener.Get(root).onDown = OnPointerDown;
-        UGUIEventListener.Get(root).onUp = OnPointerUp;
+        //UGUIEventListener.Get(root).onDown = OnPointerDown;
+        //UGUIEventListener.Get(root).onUp = OnPointerUp;
+
+        UGUIEventListener.Get(mRoot).onDown = OnBeginDrag;
+        UGUIDrogListener.Get(mRoot).onDrag = OnDraging;
+        UGUIEventListener.Get(mRoot).onUp = OnEndDrag;
     }
+
+    void OnBeginDrag(PointerEventData eventData)
+    {
+        if (mIsTouching)
+        {
+            return;
+        }
+
+        mIsTouching = true;
+        sJoystickPressed = true;
+        ChangeAlpha(true);
+        mTouchedID = eventData.pointerId;
+
+        Drag(eventData.position);
+    }
+
+    void OnDraging(PointerEventData eventData)
+    {
+        if (eventData.pointerId != mTouchedID)
+        {
+            return;
+        }
+
+        Drag(eventData.position);
+    }
+
+    void OnEndDrag(PointerEventData eventData)
+    {
+        if (eventData.pointerId != mTouchedID)
+        {
+            return;
+        }
+
+        sJoystickPressed = false;
+        sJoystickDelta = Vector2.zero;
+        ChangeAlpha(false);
+        mCenterImg.rectTransform.anchoredPosition = Vector2.zero;
+        mIsTouching = false;
+        mTouchedID = -100;
+    }
+
+    void Drag(Vector2 dragPos)
+    {
+        Vector2 tmpTouchPos = dragPos * mWorld2ScreenModify;
+        float distance = Vector2.Distance(tmpTouchPos, mBackgroundImg.rectTransform.anchoredPosition);
+
+        if (distance < mRadius)
+        {
+            //当距离小于半径就开始移动 摇杆重心
+            mCenterImg.rectTransform.anchoredPosition = tmpTouchPos - mBackgroundImg.rectTransform.anchoredPosition;
+        }
+        else
+        {
+            //求圆上的一点：(目标点-原点) * 半径/原点到目标点的距离
+            Vector2 endPosition = (tmpTouchPos - mBackgroundImg.rectTransform.anchoredPosition) * mRadius / distance;
+            mCenterImg.rectTransform.anchoredPosition = endPosition;
+        }
+
+        sJoystickDelta = mCenterImg.rectTransform.anchoredPosition;
+    }
+
 
     // Update is called once per frame
     public void Update(float deltaTime)
     {
-        JoystickController();
+        //JoystickController();
     }
 
     void JoystickController()

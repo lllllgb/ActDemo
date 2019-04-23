@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1685111513
+CRC: 183169697
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 90030ebb086e05e91980a1a4f4b02cb2
+    Hash: 73e4717a5b5aaab1acccda9427380506
   TypeTreeHash:
     serializedVersion: 2
-    Hash: c72fd6479aa1c2cc290a147c657eef88
+    Hash: f8ec7e008f8962136904c059b2a16459
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -31,6 +31,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 95
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5967dc87071f405498d4fdb4299e073f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 198
   Script: {instanceID: 0}
 - Class: 199
@@ -39,10 +43,10 @@ Assets:
 - Assets/Bundles/Effect/E_1001_attack_lyj_004.prefab
 Dependencies:
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/bundles/shadercollect.unity3d
-- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_grain_lyj_001a_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_glow_lyj_002_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_006_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_007_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/materials/e_line_lyj_007a_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/plane01_share.unity3d
 - D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/Android/StreamingAssets/assets/res/effect/model/jian01_share.unity3d

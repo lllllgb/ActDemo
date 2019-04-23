@@ -39,7 +39,6 @@ namespace AosHotfixRunTime
         {
             base.OnLeave(procedureOwner, isShutdown);
 
-            Game.WindowsMgr.CloseWindow(WindowBase.EWindowType.ALL);
             Game.EventMgr.Unsubscribe(InstanceWndEvent.StartInstanceEvent.EventID, OnEventInstanceStart);
         }
 

@@ -3,7 +3,7 @@ CRC: 2694083316
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9aba48991d860d55fe681e9cfde94374
+    Hash: 9b74782185850556e73d596a079e5650
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Materials/E_Smoke_fsw_005_01.mat
+- Assets/Res/effect/Materials/E_Smoke_fsw_005_01.mat
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_smoke_fsw_005_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_smoke_fsw_005_share.unity3d

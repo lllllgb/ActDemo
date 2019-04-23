@@ -3,7 +3,7 @@ CRC: 4190641530
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dd2d44a50c530f2c6a1e6fa4d8d475f8
+    Hash: 48399cd5a98fcce333cd34505a06bb6f
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9e4b7539d71d9321524f29e73f3c601f
@@ -28,5 +28,5 @@ ClassTypes:
 Assets:
 - Assets/Bundles/Effect/E_1001_fsw_skill2_004.prefab
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_plane_fsw_008_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/materials/e_noise_fsw_003_03_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/model/fbx_plane_fsw_008_share.unity3d

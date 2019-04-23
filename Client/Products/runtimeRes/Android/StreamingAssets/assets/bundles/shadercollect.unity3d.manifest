@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1761424197
+CRC: 3141196828
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f43b19a81a44f825db226f21faf8d3ff
+    Hash: c8b18188d3eed5148cd388dce4c37583
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6370d3f9de9eca57f523bce048404a46
@@ -16,15 +16,17 @@ Assets:
 - Assets/Shaders/shader/Particles-Additive-UV.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Standard.shader
 - Assets/Shaders/shader/Particles-Alpha-Blend-UV.shader
+- Assets/Shaders/shader/Scroll2TexBend.add.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Mobile/Mobile-Particle-Add.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Mobile/Mobile-Particle-Alpha.shader
-- Assets/Shaders/shader/Obj-Texture.shader
+- Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Unlit/Unlit-Alpha.shader
 - Assets/Shaders/shader/Obj-Soft-Light.shader
+- Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Normal-Diffuse.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Particle Alpha Blend.shader
 - Assets/Shaders/builtin_shaders/DefaultResourcesExtra/Particle Add.shader
 - Assets/Shaders/custom_shaders/AnyPlay-Particle-Dissolve-Add-VertexAlpha.shader
 - Assets/Shaders/shader/Particles-Alpha-Blended-Mask.shader
-- Assets/Shaders/custom_shaders/DoubleSidedAlpha.shader
+- Assets/Shaders/builtin_shaders/DefaultResourcesExtra/UI/UI-Default.shader
 - Assets/Shaders/custom_shaders/AnyPlay-Particle-Dissolve-Alpha Blend-VertexAlpha.shader
 - Assets/Shaders/shader/Particles-Dissolve-Alpha.shader
 Dependencies: []

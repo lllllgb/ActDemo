@@ -3,7 +3,7 @@ CRC: 3079533558
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 96594f93e385d70adb695474ddb40fe3
+    Hash: 8e32a7a16969291ebc30ab257cc7ccc4
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -16,6 +16,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Res/Effect/Materials/E_Object_fsw_005_01.mat
+- Assets/Res/effect/Materials/E_Object_fsw_005_01.mat
 Dependencies:
-- E:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_object_fsw_005_share.unity3d
+- D:/Project/GitHub/ActDemo/Client/Art/../Products/runtimeRes/PC/StreamingAssets/assets/res/effect/texture/e_object_fsw_005_share.unity3d

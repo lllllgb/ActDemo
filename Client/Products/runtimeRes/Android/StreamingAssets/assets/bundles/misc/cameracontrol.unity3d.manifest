@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 4209312780
+CRC: 1351296522
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1e48fb4c2fa2e7a55c2aefd4020354cc
+    Hash: 8f8e957ab5499f00a266889b831ae2a5
   TypeTreeHash:
     serializedVersion: 2
-    Hash: d57e9087eaad4aa007f2ac76cee07812
+    Hash: 96fd03f3d1e5d17693e813140f3adeee
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -15,19 +15,9 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 20
   Script: {instanceID: 0}
-- Class: 21
-  Script: {instanceID: 0}
-- Class: 28
-  Script: {instanceID: 0}
-- Class: 48
-  Script: {instanceID: 0}
 - Class: 81
   Script: {instanceID: 0}
 - Class: 124
-  Script: {instanceID: 0}
-- Class: 212
-  Script: {instanceID: 0}
-- Class: 213
   Script: {instanceID: 0}
 Assets:
 - Assets/Bundles/Misc/CameraControl.prefab
